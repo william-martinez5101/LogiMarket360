@@ -490,3 +490,8 @@ $RECYCLE.BIN/
 # Configuracion local
 .env
 appsettings.Local.json
+
+# Archivos de trabajo y entregas regenerables
+tmp/
+artifacts/
+TestResults/

@@ -1,0 +1,1066 @@
+EXTRACCION DE APOYO. Consultar el PDF original para wireframes, tablas y maquetacion.
+
+=== PAGINA 1 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+INFORME DE GUÍA PRÁCTICA 4 
+ 
+I. PORTADA 
+Tema:  Desarrollo integral de un aplicativo LogiMarket 360 
+mediante programación limpia, SOLID y 23 patrones 
+GoF en Clean Architecture.  
+Unidad de Organización Curricular : PROFESIONAL 
+Nivel y Paralelo:   Nivel - Paralelo 
+Participante:                             Apellidos y nombres  
+Asignatura :    Nombre de la asignatura  
+Responsable de la asignatura:               Ing. Nombre y Apellido, Mg.  
+ 
+II. INFORME DE GUÍA PRÁCTICA 
+2.1 Objetivos 
+ 
+General: 
+Diseñar, implementar, probar y documentar desde cero una aplicación empresarial de 
+escritorio con persistencia real, arquitectura limpia y trazabilidad operativa, integrando 
+Clean Code, KISS, DRY, YAGNI, los cinco principios SOLID y las tres familias compl etas 
+de patrones GoF en procesos de negocio verificables . 
+ 
+Específicos: 
+• Analizar el dominio de ventas y logística; definir requisitos, actores, invariantes, 
+casos de uso, modelo de datos y restricciones técnicas.  
+• Construir cinco proyectos .NET organizados en Domain, Application, 
+Infrastructure, WinForms y Tests, con dirección de dependencias verificable.  
+• Implementar y demostrar en ejecución los 5 patrones creacionales, 7 estructurales y 
+11 comportamentales, justificando su necesidad y consecuencias.  
+• Garantizar operaciones consistentes de inventario, cobro simulado, devoluciones y 
+eventos, con protección frente a duplicados y fallos.  
+• Validar la calidad mediante pruebas automatizadas, matriz funcional, revisión de 
+antipatrones, Git, diagramas y evidencias reproducibles.  
+2.2 Modalidad 
+Presencial e individual.  
+ 
+2.3 Tiempo de duración 
+Presenciales: 8  
+ 
+2.4 Instrucciones 
+ 
+Se desarrollará desde cero la solución completa LogiMarket 360, incluyendo análisis, 
+modelado, implementación de los 23 patrones GoF, arquitectura, persistencia, 
+interfaz Windows Forms , pruebas automatizadas, evidencias y documentación. La 
+autoría del código y del informe deberá ser individual y verificable mediante el 
+historial de Git y la sustentación. No se admitirán entregas compartidas ni proyectos 
+reutilizados de las APE anteriore s. 
+Duración: proyecto final de desarrollo progresivo; las horas presenciales y autónomas 
+se ajustarán al cronograma de la asignatura. El resultado consistirá en una aplicación 
+ejecutable e integrada, no solamente en pantallas prototipo o ejemplos aislados.  
+ 
+
+=== PAGINA 2 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+Caso empresarial: LogiMarket 360  
+ 
+Una empresa comercializa accesorios de computación individuales y kits anidados, 
+gestiona un catálogo con existencias, registra pedidos por cliente, calcula 
+promociones y costos de despacho, procesa cobros simulados y controla el ciclo hasta 
+la entrega. También administra devoluciones totales, auditoría y consultas operativas. 
+Se requiere que el negocio pueda cambiar proveedores, políticas y presentaciones sin 
+modificar los casos de uso estables.  
+Actores: ADMIN (todas las operaciones), VENTAS (clientes, pedidos, validación y 
+cobro), BODEGA (preparación, despacho y entrega) y CONSULTA (solo lectura). 
+La autorización debe existir en Application/servicios protegidos, no depender 
+exclusivamente de boto nes ocultos.  
+ 
+Alcance funcional mínimo:  
+• Acceso local con identificación de usuario y rol, contraseñas almacenadas 
+mediante hash y usuarios de prueba iniciales; cierre de sesión y permisos por 
+operación. 
+• Catálogo CRUD de productos con SKU único, precio monetario positivo, 
+peso no negativo, stock entero no negativo y búsqueda; kits con productos y 
+otros kits, sin referencias circulares.  
+• Gestión de clientes, creación y edición de borradores, selección de 
+productos/kits y cantidades, visualización del detalle, subtotales, descuentos 
+y tarifa. 
+• Validación de pedidos, confirmación con cobro simulado, descuento de 
+existencias, historial del estado y prevención de cobros duplicados.  
+• Despacho y entrega según permisos; guía simulada, consulta de seguimiento 
+y comprobantes de venta/devolución con dos medios de salida.  
+• Devolución TOTAL de pedidos entregados con política por motivo, 
+reintegro de existencias cuando proceda y reembolso simulado único.  
+• Consulta de bitácora, historial de movimientos de inventario, indicadores de 
+sesión y reportes de pedidos; almacenamiento y recuperación después de 
+reiniciar. 
+ 
+REGLAS DEL NEGOCIO 
+ 
+Catálogo de control y operaciones aritméticas  
+ 
+SKU Producto Precio USD Stock inicial  Peso kg 
+P01 Mouse USB 20.00 8 0.20 
+P02 Teclado  30.00 5 0.70 
+P03 Memoria USB 10.00 20 0.10 
+P04 Webcam 40.00 4 0.35 
+P05 Alfombrilla  5.00 30 0.10 
+ 
+Kits obligatorios: KIT_OFICINA = P01 + P02 = USD 50.00. KIT_TELETRABAJO 
+= KIT_OFICINA + P03 = USD 60.00. Un kit puede contener otro kit; para controlar 
+existencias, sus componentes se expanden hasta los SKU finales. No se permite que 
+un kit se contenga dir ecta o indirectamente.  
+ 
+Promociones excluyentes: MAYORISTA aplica 15 % si el total de unidades físicas 
+finales es al menos 10, sin importar la categoría del cliente; en caso contrario, VIP 
+aplica 10 % si el cliente pertenece a esa categoría; NORMAL aplica 0 % en los demás 
+casos. Si coinciden requisitos VIP y MAYORISTA, tiene prioridad MAYORISTA. 
+Nunca se acumulan descuentos.  
+ 
+
+=== PAGINA 3 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+Tarifa y plazo de entrega de prueba: ESTÁNDAR USD 5.00 / 3 días; EXPRÉS USD 
+12.00 / 1 día. Fórmula: subtotal = Σ(precio de cada componente × cantidad); 
+descuento = redondear(subtotal × tasa, 2 decimales); total = subtotal − descuento + 
+tarifa. Se utiliza decimal, redondeo MidpointRounding.AwayFromZero, y los valores 
+monetarios se muestran con dos decimales.  
+ 
+Precio de venta: al registrar el pedido se conserva una instantánea de los precios y de 
+la composición de cada kit. Cambios posteriores al catálogo no alteran pedidos 
+pagados. No se calcula IVA en esta práctica: los importes son valores de simulación 
+definidos por el caso. 
+ 
+Ciclo de pedido y permisos:  
+ 
+Estados del pedido: BORRADOR → VALIDADO → PAGADO → DESPACHADO 
+→ ENTREGADO. Se permite CANCELADO únicamente desde BORRADOR o 
+VALIDADO. No se permite despachar antes de pagar, cobrar más de una vez, editar 
+un pedido PAGADO ni retroceder estados mediante el f ormulario.  
+ 
+El stock se descuenta una sola vez cuando el cobro simulado es aceptado y la 
+operación queda confirmada correctamente. Si hay error de validación, falta de stock 
+o rechazo del cobro, el estado, el inventario, el pago y los eventos de negocio deben 
+permanecer coherentes. La confirmación usa una clave de idempotencia y una 
+restricción de unicidad que impiden duplicaciones.  
+ 
+Devolución total: únicamente desde un pedido ENTREGADO y no devuelto. 
+DEFECTO se acepta hasta 30 días después de la entrega; ARREPENTIMIENTO 
+hasta 7 días, siempre que el producto esté sin uso. Se reintegra el stock solo una vez 
+y el reembolso simulado corr esponde al importe de los productos después del 
+descuento, sin devolver la tarifa de envío. Una devolución rechazada no altera stock 
+ni genera reembolso.  
+ 
+Las transacciones de base de datos protegen las modificaciones locales. 
+Notificaciones y auditorías de negocio posteriores a una confirmación se registran 
+como eventos pendientes (Outbox) en la misma transacción y son procesados 
+después. El trabajo no exig e transacciones distribuidas ni pagos reales.  
+ 
+Casos numéricos oficiales de comprobación:  
+ 
+Escenario  Cálculo esperado  Resultado / inventario  
+Ana; VIP; 
+KIT_TELETRABAJO 
+×1; ESTÁNDAR 
+60.00 − 6.00 + 5.00  USD 59.00; P01 8→7; P02 5→4; 
+P03 20→19. 
+Luis; NORMAL; P04 ×2 
+y P05 ×2; EXPRÉS 
+(80.00 + 10.00) + 12.00 USD 102.00; P04 4→2; P05 
+30→28. 
+Carmen; MAYORISTA; 
+P03 ×10; ESTÁNDAR 
+100.00 − 15.00 + 5.00  USD 90.00; P03 20→10 si la base 
+está reiniciada.  
+KIT_TELETRABAJO 
+×6; sin más operaciones  
+Requiere seis P02 y 
+solo existen cinco  
+Rechazo; ningún stock modificado 
+ni cobro creado.  
+ 
+Para comparar cifras entre escenarios se restablecerá una base de pruebas 
+controlada, excepto en las pruebas que verifican explícitamente acumulación o 
+persistencia. 
+ 
+DISEÑO DE CLEAN ARCHITECTURE  
+ 
+
+=== PAGINA 4 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+Solución y direcciones permitidas : 
+ 
+Solución sugerida: LogiMarket360.sln, compuesta por cuatro proyectos de 
+producción y uno de pruebas. Crear bibliotecas de clases independientes; cuatro 
+carpetas dentro de una única aplicación NO equivalen a cuatro proyectos.  
+ 
+Proyecto  Referencias permitidas  Responsabilidad 
+LogiMarket.Domain  Ningún proyecto propio  Entidades, agregados, 
+invariantes, estados, 
+composición de kits y políticas 
+puras. 
+LogiMarket.Application  Domain Casos de uso, 
+comandos/consultas, DTO, 
+puertos, validación y 
+orquestación.  
+LogiMarket.Infrastructure  Application; Domain  EF Core/SQLite, repositorios, 
+gateways simulados, 
+adaptadores, Outbox, salidas y 
+bitácora.  
+LogiMarket.WinForms  Application; 
+Infrastructure solo para 
+configuración (Domain si 
+es necesario para tipos)  
+Formularios, mediación visual, 
+composición DI y presentación 
+de resultados.  
+LogiMarket.Tests  Domain; Application; 
+Infrastructure  
+Pruebas unitarias y de 
+integración con base aislada y 
+dobles de prueba.  
+ 
+Regla de dependencia de código: WinForms → Application → Domain; 
+Infrastructure → Application/Domain. El diagrama anterior representa referencias de 
+compilación, NO la secuencia de ejecución. WinForms puede referenciar 
+Infrastructure únicamente para regist rar dependencias.  
+ 
+Diagrama de recorrido funcional : 
+ 
+Etapa Operación Componente 
+1. Presentación  Capturar pedido y solicitar 
+confirmación  
+WinForms / Mediator  
+2. Aplicación  Autorizar, encadenar validaciones 
+y ejecutar operación  
+Proxy, Chain, Command / Facade  
+3. Dominio Evaluar State, Composite, 
+Strategy, invariantes  
+Domain 
+4. Puerto externo  Autorizar cobro y enriquecer 
+trazas  
+IPasarelaPago → Proxy → 
+Decorator → Adapter  
+5. Persistencia  Guardar pedido, pago, stock y 
+Outbox en transacción  
+EF Core / SQLite 
+6. Postconfirmación Publicar evento, notificar y 
+refrescar vistas  
+Observer, Factory Method, 
+Mediator  
+7. Consulta  Recorrer componentes, reportar y 
+exportar  
+Iterator, Visitor, Interpreter, Bridge 
+ 
+El orden de Proxy y Decorator importa: un rol CONSULTA no debe alcanzar al 
+cobro ni producir LOG de inicio/fin de cobro. Los intentos no autorizados pueden 
+registrarse en una auditoría de seguridad separada.  
+ 
+Modelo relacional mínimo : 
+
+=== PAGINA 5 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+Entidades/tablas mínimas: Usuario (rol y hash de contraseña); Cliente; Producto; Kit 
+y KitComponente; Pedido y PedidoDetalle; PedidoDetalleComponente (instantánea 
+de SKU/qty del kit); Pago; MovimientoInventario; Despacho; Devolucion ; 
+EventoOutbox; Auditoria. Se aceptan nombres o estructuras equivalentes si 
+preservan claves, relaciones, restricciones y trazabilidad.  
+ 
+• Se deberá definir PK y FK reales, índices para búsquedas y unicidad de SKU, 
+referencia de cobro, clave de idempotencia y devolución única por pedido.  
+• Se deberá configurar migraciones EF Core y seed idempotente de productos, 
+kits y cuentas de prueba; se demostrará la creación desde una base vacía sin 
+editar tablas manualmente.  
+• Se deberá distinguir valores actuales de catálogo frente a instantáneas de 
+precios/kit registradas en las líneas de venta. Registrar movimientos 
+positivos y negativos con motivo y referencia.  
+• Se deberá implementar transacción para cobro/stock/pedido/Outbox y otro 
+flujo consistente para devolución/stock/reembolso simulado. Usar 
+concurrencia optimista o control equivalente contra sobreventa.  
+• Se deberá evitar guardar contraseñas en texto claro; no incluir credenciales 
+productivas, tokens o datos secretos en el ZIP. Los datos de ejemplo deben 
+ser ficticios. 
+ 
+Patrones de arquitectura y principios transversales : 
+ 
+Repository es obligatorio con interfaces del núcleo y adaptadores EF Core. Aplicar 
+separación Command/Query (CQRS básico) en operaciones críticas; Unit of Work 
+se materializa como DbContext /transacción real, no una clase vacía. Las 
+dependencias se reciben por constructor. El modelo de dominio conserva invariantes 
+en sus operaciones y no expone setters públicos que permitan saltarse sus reglas.  
+ 
+Se deberá demostrar SRP, OCP, LSP, ISP y DIP con fragmentos de código e 
+invocaciones reales. LSP se verifica sustituyendo dos implementaciones de un mismo 
+contrato y comprobando condiciones de entrada, resultados y excepciones 
+compatibles. ISP requiere int erfaces pequeñas sin operaciones no aplicables. KISS, 
+DRY y YAGNI no justifican eliminar obligaciones de este caso, pero sí evitan 
+abstracciones y lógica duplicada adicionales.  
+ 
+CINCO PATRONES CREACIONALES  
+ 
+Cada patrón se evalúa por la participación efectiva en un caso de uso; una clase 
+llamada Factory, Builder o Singleton sin colaboración real no constituye 
+implementación válida.  
+ 
+Patrón Implementación requerida  Comprobación objetiva  
+Factory Method  Creadores especializados de aviso 
+EMAIL y SMS (y, si se desea, tercera 
+variante). Cada creador implementa el 
+método de fábrica y entrega un 
+notificador con el mismo contrato. La 
+selección sucede fuera del formulario y 
+los avisos provienen de eventos de 
+pedido, despacho y devolución.  
+Cambiar EMAIL o SMS 
+sin crear concretos en 
+WinForms; comprobar 
+mensaje/registro emitido 
+por el colaborador 
+correcto.  
+
+=== PAGINA 6 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+Abstract Factory Dos familias de entrega, ESTÁNDAR y 
+EXPRÉS. Cada fábrica produce objetos 
+compatibles para calcular tarifa, calcular 
+plazo estimado y construir etiqueta/guía; 
+impedir mezclar inadvertidamente 
+variantes de familias.  
+ESTÁNDAR = 5.00 y 
+EXPRÉS = 12.00; 
+familias distinguibles en 
+etiqueta y plazo, sin 
+cambiar el caso de uso.  
+Builder PedidoBuilder ensambla datos del 
+cliente, líneas simples y kits, forma de 
+entrega e instantáneas; el agregado se 
+construye válido y no es un contenedor de 
+setters públicos.  
+Registrar pedidos de 
+varios renglones; 
+bloquear construcción sin 
+cliente o sin líneas y evitar 
+objetos incompletos.  
+Prototype  Plantilla de carrito reutilizable: clonar 
+pedido BORRADOR con sus líneas y 
+estructura anidada, sin copiar 
+identificador ni estado de pago. La copia 
+es profunda para sus colecciones 
+mutables.  
+Modificar cantidad/kit en 
+la copia sin modificar 
+plantilla ni otra copia; 
+referencia de colección 
+distinta.  
+Singleton Servicio MetricasSesion compartido por 
+varias pantallas, registrado como único 
+objeto en DI. Contadores de la sesión y 
+sincronización segura; la base de datos 
+sigue siendo la fuente de verdad.  
+Dos consumidores 
+reciben la misma 
+instancia; contadores 
+acumulados visibles y 
+coherentes.  
+ 
+SIETE PATRONES ESTRUCTURALES  
+ 
+Patrón Implementación requerida  Comprobación objetiva  
+Adapter  Crear PasarelaLegadaSimulada con 
+operación incompatible 
+CobrarCentavos(long, string). Adaptarla 
+a IPasarelaPago.CobrarAsync (decimal, 
+clave) sin modificar el código legado. 
+Incluir segundo proveedor simulado 
+sustituible mediante DI.  
+Ambos proveedores ejecutan 
+una operación real; mismos 
+resultados contractuales. La 
+aplicación no conoce 
+CobrarCentavos.  
+Bridge ComprobanteVenta y 
+ComprobanteDevolucion son 
+abstracciones independientes de 
+ISalidaDocumento: VistaPrevia y 
+ArchivoTXT. Cada formato transmite 
+realmente el contenido a su salida.  
+Cuatro combinaciones 
+funcionales; archivo TXT 
+generado y vista visible, sin 
+duplicar cuatro clases de 
+combinación.  
+Composite  IElementoCatalogo con ProductoSimple 
+y KitCompuesto que acepta productos u 
+otros kits; cómputo recursivo, expansión 
+de SKU y detección de ciclos.  
+KIT_OFICINA = 50.00 y 
+KIT_TELETRABAJO = 
+60.00; el inventario se 
+descuenta por SKU finales.  
+Decorator  AuditoriaPagoDecorator envuelve 
+IPasarelaPago para registrar inicio, 
+resultado o error, con un identificador de 
+correlación, sin alterar el cobro concreto. 
+En permiso válido: INICIO → 
+PASARELA → FIN/ERROR. 
+En rechazo del Proxy no hay 
+nuevo LOG de cobro.  
+Facade ConfirmacionPedidoFacade ofrece una 
+única operación de confirmación: 
+coordina autorización, validación, 
+valoración, cobro simulado, persistencia, 
+stock y creación de Outbox; delega reglas 
+en sus colaboradores.  
+Pedido coherente en éxito, falla 
+e intento duplicado; facade  no 
+contiene SQL ni regla de 
+descuento.  
+Flyweight CatalogoVisualFlyweightFactory 
+comparte metadatos inmutables de SKU 
+(nombre, categoría, descripción) entre al 
+menos 1.000 renglones de vista. Stock, 
+cantidad y precio de venta son datos 
+externos por fila.  
+ReferenceEquals = true en 
+metadatos compartidos; 
+mostrar recuento de objetos y 
+comparar memoria bajo 
+condiciones equivalentes.  
+
+=== PAGINA 7 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+Proxy PagoAutorizadoProxy implementa 
+IPasarelaPago y verifica rol 
+VENTAS/ADMIN antes de delegar en 
+Decorator y Adapter . El control opera 
+incluso desde pruebas que no utilizan 
+WinForms. 
+CONSULTA o BODEGA: 
+cobro denegado, sin 
+invocación de pasarela ni LOG 
+de cobro; VENTAS/ADMIN 
+autorizados.  
+ 
+ 
+ONCE PATRONES COMPORTAMENTALES — OBLIGATORIOS 
+ 
+Patrón Implementación requerida  Comprobación objetiva  
+Chain of 
+Responsibility 
+Pipeline de validación: cliente activo 
+→ líneas/cantidades → reglas de stock 
+→ autorización/condiciones para 
+confirmación; cada eslabón delega o 
+devuelve rechazo estructurado. No 
+reemplaza invariantes del dominio. 
+Primer error detiene cadena; al 
+corregirlo se alcanza el 
+siguiente eslabón. Orden y 
+causa observables.  
+Command Objetos ConfirmarPedidoCommand, 
+CancelarPedidoCommand, 
+DespacharPedidoCommand y 
+ProcesarDevolucionCommand; un 
+invocador ejecuta y registra 
+comandos, separando interfaz del 
+receptor/caso de uso.  
+Una misma acción se invoca 
+desde botón y prueba sin 
+duplicar lógica; registro con 
+comando, entrada y resultado. 
+Interpreter  Filtro de consulta con gramática 
+acotada: ESTADO = valor, TOTAL 
+>= número, CLIENTE = texto; 
+AND/OR y paréntesis con 
+precedencia definida. Parser genera 
+árbol de expresiones y rechaza 
+sintaxis inválida; no ejecuta SQL 
+concatenado.  
+«ESTADO = PAGADO AND 
+TOTAL >= 50» devuelve 
+registros correctos; paréntesis 
+y error sintáctico probados.  
+Iterator Iterador propio de componentes 
+físicos en un kit anidado, sin entregar 
+la colección interna; recorrido 
+determinista que propaga cantidades y 
+termina correctamente.  
+KIT_TELETRABAJO 
+devuelve P01, P02, P03 con 
+cantidades correctas; no 
+recorre indefinidamente.  
+Mediator  FormularioPrincipalMediator 
+coordina actualizaciones entre 
+catálogo, carrito, pedidos y métricas 
+después de cada operación. Un 
+formulario no llama directamente a 
+métodos de otro.  
+Al confirmar pedido, las vistas 
+de stock, listado y métricas se 
+actualizan por el mediador.  
+Memento Historial de ediciones de 
+PedidoBorrador: capturar y restaurar 
+hasta cinco estados completos 
+(incluidos ítems anidados), con 
+deshacer/rehacer. No permite revertir 
+un cobro/stock ya confirmado.  
+Tres cambios y dos deshacer 
+restauran valores exactos; al 
+confirmar se limpia/bloquea 
+historial.  
+Observer  PedidoPagado/DespachoRegistrado/
+DevolucionAceptada disparan 
+observadores de notificación, métricas 
+y auditoría mediante un publicador. 
+Los eventos durables salen de Outbox 
+después de confirmar la transacción.  
+Al publicar una vez se 
+actualizan los suscriptores; no 
+hay evento de éxito en 
+transacción fallida; se evita 
+procesamiento duplicado.  
+
+=== PAGINA 8 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+State Objetos de estado del pedido modelan 
+acciones válidas e inválidas para 
+BORRADOR, VALIDADO, 
+PAGADO, DESPACHADO, 
+ENTREGADO y CANCELADO. No 
+aceptar una gran cadena switch como 
+sustituto.  
+BORRADOR→VALIDADO
+→PAGADO→DESPACHAD
+O→ENTREGADO; rechazo 
+de 
+PAGADO→CANCELADO y 
+estados repetidos.  
+Strategy Políticas SinDescuento , Vip10, 
+Mayorista15 elegidas por condiciones 
+y prioridad explícita. La calculadora 
+utiliza la interfaz, y añadir una política 
+no obliga a editar una cadena central 
+de condiciones.  
+Ana: descuento 6.00; Carmen: 
+15.00; sin descuento: 0.00. Sin 
+acumulación de estrategias.  
+Template 
+Method  
+ProcesarDevolucion define una 
+secuencia invariante: verificar 
+elegibilidad → inspeccionar 
+condición → calcular reembolso → 
+registrar devolución/stock → generar 
+evento. Variantes Defecto y 
+Arrepentimiento personalizan  pasos 
+permitidos.  
+Defecto al día 20 aceptado; 
+arrepentimiento día 10 
+rechazado; misma estructura 
+de operación.  
+Visitor Visitantes distintos sobre 
+ProductoSimple/KitCompuesto para 
+elaborar un desglose físico por SKU y 
+estimar peso logístico de kits, sin 
+añadir esos reportes a cada clase de 
+catálogo.  
+KIT_TELETRABAJO 
+enumera P01/P02/P03 y peso 
+total 1,00 kg; visita anidada 
+verificable.  
+ 
+2.5 Listado de equipos, materiales y recursos  
+ 
+•  Lenguaje y plataforma: C#, .NET 8 y Windows Forms  en Windows. La aplicación 
+debe compilar en Visual Studio 2022 o una edición compatible.  
+• Persistencia real obligatoria: SQLite con Entity Framework Core 8, entidades 
+mapeadas, migraciones, restricciones y operaciones transaccionales. No se aceptan 
+listas en memoria como almacenamiento principal.  
+• Se deberá aplicar Microsoft.Extensions.DependencyInjection como composition root 
+en WinForms. Las pruebas automatizadas pueden utilizar xUnit o NUnit.  
+• El cobro, correo, SMS y otras integraciones deben ser SIMULADOS, pero 
+implementados como colaboradores reales, no texto fijo que imite su ejecución. No 
+usar pasarelas bancarias ni envíos externos reales.  
+• No emitir facturas tributarias oficiales; los documentos son comprobantes internos 
+de demostración. No incorporar cálculos fiscales no definidos en esta guía.  
+• No sustituir WinForms por consola, web o API, ni concentrar la lógica en 
+formularios, Program.cs, controladores únicos o clases gigantes.  
+• Las únicas dependencias de implementación externas se ubican en Infrastructure y 
+en el composition root; ninguna capa interna depende de WinForms, SQLite o Entity 
+Framework Core. 
+ 
+ 
+
+=== PAGINA 9 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+TAC (Tecnologías para el Aprendizaje y Conocimiento ) empleados en la guía práctica : 
+☐Plataformas educativas  
+☐Simuladores y laboratorios virtuales  
+☐Aplicaciones educativas  
+☐Recursos audiovisuales  
+☐Gamificación 
+☐Inteligencia Artificial  
+Otros (Especifique): _____________________  
+ 
+2.6 Actividades por desarrollar  
+Actividad 1. Análisis y planificación del proyecto nuevo  
+Se deberá definir contexto, actores, casos de uso, historias o requisitos verificables, políticas de 
+acceso y supuestos. Se presentará un diagrama de contexto, mínimo 12 requisitos funcionales y 
+8 no funcionales medibles (integridad, mantenibilidad, usabil idad, rendimiento, seguridad local, 
+trazabilidad, testabilidad y recuperabilidad).  
+Actividad 2. Diseño arquitectónico  
+Se deberá crear solución .NET con cinco proyectos; documentar dependencias; elaborar 
+diagrama de componentes, clases críticas, diagramas de estados y al menos dos secuencias 
+(confirmación aprobada y operación rechazada). Las referencias prohibidas se compr ueban 
+mediante .csproj y compilación.  
+Actividad 3. Modelo de dominio y persistencia  
+Se deberá implementar entidades con invariantes, tablas, migraciones, seed idempotente y 
+repositorios; crear índice/unique  y relaciones; demostrar integridad y persistencia tras reinicio.  
+Actividad 4. Núcleo transaccional  
+Se deberá implementar catálogo, clientes, pedidos, inventario, cobro simulado, despacho, 
+devolución y Outbox; contemplar errores, duplicados, operaciones repetidas y estados no 
+válidos. 
+Actividad 5. Patrones GoF integrados  
+Se deberán implementar los 23 patrones conforme a las tablas de patrones creacionales, 
+estructurales y comportamentales. Para cada uno: problema concreto → clases participantes → 
+código y archivo → recorrido de ejecución → caso de prueba → beneficio y cost o. No basta un 
+diagrama o una definición.  
+Actividad 6. Aplicación visible en Windows Forms  
+Se implementará una navegación coherente, con componentes reutilizables, validaciones y 
+mensajes claros. Se utilizará DataGridView para productos, pedidos, inventario, movimientos y 
+auditoría, y se reflejarán cambios entre vistas mediante Mediator. La dist ribución visual se 
+orientará con los wireframes del apartado «Wireframes de referencia funcional».  
+Actividad 7. Programación limpia y SOLID  
+Se deberá identificar al menos 10 riesgos de diseño reales durante la construcción (duplicación, 
+acoplamiento, clase Dios, validaciones dispersas, estados primitivos, etc.); explicar 
+refactorización concreta con Git y prueba antes/después sin inventar defe ctos. 
+
+=== PAGINA 10 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+Actividad 8. Pruebas y control de calidad  
+Se deberá implementar mínimo 25 pruebas automatizadas entre dominio, aplicación e 
+integración; también se ejecutarán los 38 casos de la matriz de aceptación con 
+esperado/obtenido/evidencia. Registrar fallos detectados y correcciones reproducibles.  
+Actividad 9. Verificación operativa  
+Compilar desde cero, aplicar migraciones, ejecutar semilla, iniciar sesión, demostrar flujos 
+completos y cerrar/reabrir la aplicación. Confirmar ausencia de archivos bin/obj y credenciales 
+reales en el ZIP.  
+Actividad 10. Informe y defensa  
+Se elaborará una documentación técnica que conecte requisitos, patrones, arquitectura, código, 
+pruebas, resultados y conclusiones. La sustentación permitirá localizar y explicar los 
+componentes significativos de la solución y reproducir los flujos operativ os. 
+INTERFAZ MÍNIMA Y EXPERIENCIA DE USO  
+La aplicación tendrá como mínimo las siguientes pantallas o pestañas, navegables desde una 
+ventana principal: Acceso; Panel general; Catálogo y kits; Clientes; Carrito/borrador; Pedidos e 
+historial; Cobro; Despacho; Devoluciones; Inventario/movimientos; Re portes/comprobantes; 
+Auditoría y métricas. Se admiten combinaciones razonables sin perder funciones 
+independientes.  
+• Se deberá utilizar DataGridView  con columnas identificadas, formato decimal 
+consistente, filtros, selección persistente y confirmación antes de acciones 
+irreversibles. 
+• Se deberá mostrar estados y permisos mediante controles y mensajes claros; impedir 
+acciones inválidas también dentro de Application (el botón deshabilitado no es una 
+política de seguridad).  
+• No permitir pérdida accidental de un borrador sin ofrecer deshacer/rehacer; presentar 
+subtotal, descuento, costo de entrega y total de forma verificable.  
+• Se deberá aplicar accesibilidad básica: navegación con TAB, foco visible, etiquetas, 
+validación cercana al campo y escala de interfaz ante cambios de tamaño de ventana.  
+• Se deberá incluir una pantalla de demostración o pruebas para cambiar proveedor 
+simulado, inducir fallo de cobro y activar una operación de Outbox fallida; estas 
+opciones no deben alterar producción ni falsear resultados.  
+
+=== PAGINA 11 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+ Wireframes de referencia funcional  
+Las siguientes doce propuestas visuales representan la navegación, los campos, las tablas, los 
+controles y las respuestas esperadas. La implementación podrá ajustar la distribución, siempre 
+que conserve las operaciones, las validaciones y las restricciones  de acceso definidas en el 
+proyecto. Los nombres, importes, existencias y registros mostrados dentro de las imágenes son 
+datos ilustrativos; para la implementación y la evaluación prevalecen exclusivamente el 
+catálogo inicial, las políticas y los resultado s numéricos establecidos en esta guía.  
+01. Acceso 
+ 
+Identificación local, credenciales y perfil de acceso.  
+02. Panel general 
+ 
+Resumen operativo de pedidos, existencias y alertas.  
+
+
+=== PAGINA 12 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+ 
+03. Catálogo y kits 
+ 
+Gestión de SKU, precios, existencias y estructura de kits anidados.  
+Aclaración del wireframe: donde se observa P03 «Cable HDMI», corresponde P03 «Memoria USB». Para la carga 
+inicial se aplicarán los stocks oficiales: P01 = 8, P02 = 5, P03 = 20, P04 = 4 y P05 = 30; las cifras de la imagen no 
+sustituyen estos valores.  
+04. Clientes 
+ 
+Búsqueda, registro, categoría y edición de clientes.  
+
+
+=== PAGINA 13 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+ 
+05. Carrito y borrador 
+ 
+Selección de líneas, totales y operaciones Deshacer/Rehacer.  
+06. Pedidos e historial 
+ 
+Consulta de estados y trazabilidad de cambios.  
+
+
+=== PAGINA 14 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+ 
+07. Confirmación y cobro  
+ 
+Resumen de importes, selección de proveedor y cobro protegido.  
+08. Despacho y entrega 
+ 
+Gestión logística y transición de estados autorizada.  
+
+
+=== PAGINA 15 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+ 
+09. Devoluciones 
+ 
+Validación de políticas, reintegro y reembolso único.  
+Aclaración del wireframe: la cifra USD 59,00 representa el total pagado de ejemplo; no es el importe reembolsable. 
+En el caso oficial de Ana, el reembolso es USD 54,00, sin tarifa de envío.  
+10. Inventario y movimientos  
+ 
+Existencias, alertas y registros trazables de movimiento.  
+
+
+=== PAGINA 16 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+ 
+11. Reportes y comprobantes  
+ 
+Filtros de consulta y combinación de formatos y salidas.  
+12. Auditoría y demostración 
+ 
+Consulta de eventos y escenarios simulados controlados.  
+Estos esquemas son referenciales y no constituyen resultados de implementación. La evidencia 
+deberá mostrar las pantallas funcionales de Windows Forms y su correspondencia con los flujos 
+de las pruebas P01–P38. 
+
+
+=== PAGINA 17 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+MATRIZ DE 38 PRUEBAS  
+Todos los casos requieren: ID, precondición/entrada específica, resultado esperado, resultado 
+obtenido, evidencia (captura o log), fecha y archivo/método relevante. El sistema de pruebas 
+debe restablecer datos controlados cuando se indique. Las pruebas de rechazo deben verificar 
+además que NO se produjeron efectos colaterales no permitidos.  
+A. Funcionalidad y reglas P01–P10 
+Caso Entrada / escenario  Resultado esperado  
+P01 Creación de DB desde archivo inexistente 
+y seed. 
+Migraciones aplicadas; cinco productos, dos kits y 
+roles; sin duplicados al relanzar seed.  
+P02 Ana VIP compra KIT_TELETRABAJO 
+×1 ESTÁNDAR, base recién preparada.  
+Total 59.00; stock P01=7, P02=4, P03=19; estado 
+PAGADO y un pago. 
+P03 Luis NORMAL compra 2 P04 + 2 P05 
+EXPRÉS, base recién preparada.  
+Total 102.00; P04=2, P05=28; un pago.  
+P04 Carmen MAYORISTA compra P03 ×10 
+ESTÁNDAR, base recién preparada.  
+Total 90.00; P03=10; descuento 15.00.  
+P05 KIT_TELETRABAJO ×6 con stock 
+inicial, intentar confirmar.  
+Rechazo por P02 insuficiente; sin pago/stock/evento de 
+éxito. 
+P06 Simular error de cobro en pedido válido.  Se conserva inventario y estado previo; sin pago 
+aprobado ni Outbox de éxito.  
+P07 Repetir confirmación con misma clave de 
+idempotencia.  
+Un pago y un movimiento por SKU; devuelve el 
+resultado original sin cobro doble.  
+P08 Pedido PAGADO; intentar cancelar y 
+modificar precio.  
+Ambas operaciones denegadas; datos e historial 
+intactos.  
+P09 Despachar y entregar con BODEGA; 
+intentar despachar sin pago.  
+Éxito solo en secuencia permitida; rechazo sin cambios 
+en estado inválido.  
+P10 Cerrar y reabrir; consultar pedido, stock, 
+pago y auditoría.  
+Información persiste en SQLite y coincide con 
+operaciones anteriores.  
+ 
+B. Creacionales P11–P15 
+Caso Entrada / escenario  Resultado esperado  
+P11 Factory Method: alternar EMAIL/SMS 
+tras evento.  
+Cada creador retorna notificador concreto y registra el 
+aviso correcto.  
+P12 Abstract Factory: ESTÁNDAR/EXPRÉS. Tarifas 5/12 y plazos 3/1 días; guías coherentes con la 
+familia. 
+P13 Builder: pedido vacío y pedido completo.  Incompleto rechazado; completo crea agregado válido. 
+P14 Prototype: clonar KIT_TELETRABAJO; 
+editar cantidad.  
+Copia profunda; plantilla/copia previa permanecen 
+intactas.  
+P15 Singleton: consultar métricas desde dos 
+vistas. 
+Misma instancia compartida, contadores observables y 
+thread -safe. 
+ 
+C. Estructurales P16–P22 
+Caso Entrada / escenario  Resultado esperado 
+P16 Adapter: proveedor legado y alternativo.  Cobros desde ambos con mismo contrato; legado intacto. 
+P17 Bridge: dos comprobantes × dos medios.  Cuatro combinaciones; VistaPrevia visible y TXT real.  
+P18 Composite: kits y composición anidada; 
+intentar ciclo.  
+Precios 50/60; expansión correcta; ciclo rechazado.  
+P19 Decorator: cobro autorizado, 
+exitoso/fallido.  
+LOG de inicio y fin/error rodea la ejecución, no altera 
+resultado.  
+P20 Facade: confirmar con fallo en un 
+colaborador.  
+Operación consistente; ninguna persistencia parcial 
+indebida.  
+P21 Flyweight: 1.000 filas con metadatos 
+repetidos.  
+ReferenceEquals true; identidad y memoria 
+documentadas.  
+
+=== PAGINA 18 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+Caso Entrada / escenario  Resultado esperado 
+P22 Proxy: rol CONSULTA/BODEGA intenta 
+pagar. 
+Rechazo antes de Decorator/Adapter; sin cobro ni LOG 
+de cobro.  
+ 
+D. Comportamentales P23–P34 
+Caso Entrada / escenario  Resultado esperado  
+P23 Chain: pedido sin cliente y sin stock; 
+corregir un error.  
+Se informa primera validación y luego la siguiente; sin 
+ejecución de cobro.  
+P24 Command: confirmar desde UI e 
+invocador de prueba.  
+Mismo comando y resultado funcional; historial de 
+invocación.  
+P25 Interpreter: ESTADO = PAGADO AND 
+TOTAL >= 50. 
+Devuelve únicamente pedidos que cumplen el filtro.  
+P26 Interpreter: sintaxis errónea y paréntesis.  Error legible sin SQL concatenado; precedencia correcta. 
+P27 Iterator: recorrer KIT_TELETRABAJO. P01, P02, P03 una vez por unidad requerida, sin bucle.  
+P28 Mediator: confirmar y revisar tres vistas.  Catálogo, pedidos y métricas se refrescan sin 
+acoplamiento directo.  
+P29 Memento: tres ediciones, dos deshacer y 
+un rehacer.  
+Se restauran borradores completos; no se deshace un 
+pago. 
+P30 Observer: PedidoPagado con tres 
+suscriptores.  
+Notificación, auditoría y métrica actualizadas una vez.  
+P31 State: ciclo válido y 
+PAGADO→CANCELADO inválido. 
+Transiciones con reglas por estado, sin escritura directa.  
+P32 Strategy: VIP, MAYORISTA, NORMAL 
+y nueva promoción.  
+Descuentos 6/15/0; extensión sin editar la calculadora 
+central.  
+P33 Template Method: defecto día 20; 
+arrepentimiento día 10.  
+Defecto aceptado; arrepentimiento rechazado sin 
+reembolso/stock.  
+P34 Visitor: KIT_TELETRABAJO. Detalle P01/P02/P03; peso total 1.00 kg.  
+ 
+E. Integridad, recuperación y arquitectura P35–P38 
+Caso Entrada / escenario  Resultado esperado  
+P35 Devolver pedido ENTREGADO por 
+defecto y repetir solicitud.  
+Para Ana: USD 54.00 de reembolso sin flete; un solo 
+reintegro y devolución única.  
+P36 Dos cobros concurrentes sobre un SKU 
+cuyo stock se configuró previamente en 
+una unidad.  
+Máximo un cobro aprobado; stock no negativo; sin 
+sobreventa.  
+P37 Outbox: falla notificador y reiniciar 
+procesador.  
+Evento pendiente se recupera, se marca procesado una 
+vez y sin duplicar cobro.  
+P38 Pruebas de LSP/ISP/DIP y build desde 
+código limpio.  
+Reemplazo de proveedor, contratos segregados, 
+referencias correctas y 25 pruebas automatizadas 
+aprobadas.  
+ 
+CALIDAD, PRUEBAS Y EVIDENCIA TÉCNICA  
+Evidencias mínimas de la ejecución  
+• Mapa de requisitos (RF/RNF) y trazabilidad a los casos de uso; diagrama de 
+componentes, modelo relacional, diagrama de estados y al menos dos secuencias.  
+• Árbol de proyectos y referencias .csproj, punto de composición de DI, migraciones 
+EF Core y base creada desde cero.  
+• Se documentarán las pantallas y los wireframes  de referencia mediante capturas de 
+operaciones válidas e inválidas, valores monetarios, existencias antes/después y 
+persistencia tras reinicio.  
+
+=== PAGINA 19 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+• Matriz de los 23 patrones: problema, participante, proyecto/archivo/método, prueba y 
+captura; observar el colaborador real, no solo el resultado hardcodeado.  
+• Matriz de 38 pruebas con resultado obtenido; log de mínimo 25 pruebas 
+automatizadas y evidencia de fallo/reparación cuando proceda.  
+• Para P19, P22 y P37: secuencia de logs, diferencia de eventos, verificación de que una 
+denegación no alcanza al proveedor y recuperación del Outbox.  
+• Para P21: tamaño de prueba, número de instancias y condiciones de medición; no 
+atribuir mejoras de memoria a Flyweight sin comparar con un escenario equivalente.  
+• Se conservará un historial Git significativo con cambios de arquitectura, dominio, 
+persistencia, patrones, interfaz y pruebas. Los commits  deberán permitir comprobar 
+una evolución individual y trazable.  
+Revisión del código y prohibiciones  
+• No se permitirá entregar un proyecto que solo compile pero no ejecute el flujo real de 
+ventas hasta devolución.  
+• No se permitirá sustituir patrones por nombres de clases, métodos vacíos o salidas de 
+consola/texto que simulen falsamente una colaboración inexistente.  
+• No se permitirá incluir SQL/EF en Domain o Application , cálculos de tarifas en el 
+formulario, acceso a repositorios concretos desde casos de uso o acceso directo entre 
+formularios donde se exige Mediator.  
+• No se permitirá ejecutar stock y pago dos veces por reintento, registrar eventos de 
+éxito sobre operaciones fallidas, omitir claves únicas o almacenar contraseñas sin 
+hash.  
+• No se permitirá cambiar las reglas numéricas para que coincidan con capturas, ocultar 
+pruebas fallidas o presentar capturas que no correspondan con el código entregado.  
+• No se exige usar patrones adicionales a los 23 GoF ni infraestructura de nube, 
+servicios REST, contenedores o cobros reales: la prioridad es una implementación 
+rigurosa, mantenible y comprobable.  
+ENTREGABLES Y ESTRUCTURA DEL INFORME  
+Se presentarán DOS ARCHIVOS correspondientes a una autoría individual, identificados con 
+apellidos y nombres:  
+1. APE04_LogiMarket360_APELLIDOS_NOMBRES.zip: solución 
+LogiMarket360.sln/.slnx con Domain, Application, Infrastructure, WinForms y Tests; 
+formularios, .csproj , migraciones EF Core, datos semilla, configuraciones de ejemplo y 
+README de instalación/ejecución. El ZIP NO incluirá bin/, obj/, .vs/, contraseñas 
+reales ni la base de ejecución con datos personales.  
+2. APE04_Informe_APELLIDOS_NOMBRES.pdf: portada institucional, problema, 
+objetivos, requisitos, arquitectura, modelado de datos, diagramas, wireframes y capturas 
+de las pantallas implementadas, 23 patrones aplicados, principios SOLID/Clean  Code, 
+resultados numéricos, 38 pruebas y mínimo 25 automáticas, decisiones técnicas, 
+conclusiones, recomendaciones y referencias IEEE.  
+Orden obligatorio del informe PDF: 1) Portada; 2) Resumen ejecutivo; 3) Problema/requisitos; 
+4) Modelo de dominio y datos; 5) Arquitectura y dependencias; 6) Clean  Code y cinco 
+principios SOLID; 7) Cinco patrones creacionales; 8) Siete estructurales; 9) Once 
+comportamentales; 10) Desarrollo visual y flujo completo; 11) Pruebas y resultados; 12) 
+Riesgos/limitaciones; 13) Conclusiones vinculadas con los objetivos; 14)  Recomendaciones 
+vinculadas con conclusiones; 15) Referencias IEEE; 16) Anexos.  
+
+=== PAGINA 20 DE 20 ===
+UNIVERSIDAD TÉCNICA DE AMBATO  
+FACULTAD DE INGENIERÍ A EN SISTEMAS ELECTRÓNICA E INDUSTRIAL  
+CARRERA DE SOFTWARE 
+CICLO ACADÉMICO: JULIO 2026 – DICIEMBRE 2026 
+ 
+README incluido en el ZIP: requisitos, instalación de .NET 8/paquetes, restauración, 
+compilación, migración/seed , ejecución WinForms, cuentas de demostración, comando de 
+pruebas automatizadas y forma segura de restablecer datos de prueba.  
+2.7 Resultados obtenidos  
+Se deberá resumir qué operaciones se ejecutaron, cuáles fueron las cifras obtenidas, qué 
+pruebas pasaron o fallaron, cuáles riesgos quedaron mitigados y qué decisiones de diseño 
+tuvieron evidencia objetiva. Incluir una tabla final de cobertura de los 23 pa trones (23/23) y 
+un resumen de pruebas automatizadas aprobadas respecto del total ejecutado.  
+2.8 Habilidades blandas empleadas en la práctica  
+☐ Liderazgo 
+☐ Autogestión 
+☐ Comunicación asertiva  
+☐ La empatía  
+☐ Pensamiento crítico  
+☐ Flexibilidad 
+☐ La resolución de conflictos  
+☐ Adaptabilidad 
+☐ Responsabilidad 
+2.9 Conclusiones 
+Se deberá redactar conclusiones vinculadas directamente con los objetivos y sustentadas en 
+resultados de ejecución, calidad, arquitectura y extensibilidad. No se aceptan frases genéricas 
+sin relación con mediciones, código y casos observados .  
+2.10 Recomendaciones 
+Se deberá relacionar cada recomendación con una conclusión y con una limitación verificable 
+del proyecto. Se distinguirán las mejoras futuras de obligaciones que debían quedar 
+implementadas en la APE 04 .  
+2.11 Referencias bibliográficas  
+Insertar las referencias bibliográficas empleadas  aplicando la norma IEEE.  
+2.12 Anexos 
+Se podrán incorporar evidencias complementarias, diagramas ampliados o registros de pruebas pertinentes, sin 
+sustituir los archivos y elementos obligatorios de la entrega.  
