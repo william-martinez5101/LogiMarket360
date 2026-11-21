@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="LogiMarket.Application/LogiMarket.Application.csproj" />
+  <Project Path="LogiMarket.Domain/LogiMarket.Domain.csproj" />
+  <Project Path="LogiMarket.Infrastructure/LogiMarket.Infrastructure.csproj" />
+  <Project Path="LogiMarket.Tests/LogiMarket.Tests.csproj" />
+  <Project Path="LogiMarket.WinForms/LogiMarket.WinForms.csproj" />
+</Solution>
