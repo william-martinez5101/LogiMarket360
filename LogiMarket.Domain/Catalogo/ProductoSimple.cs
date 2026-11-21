@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace LogiMarket.Domain.Catalogo;
 
-public sealed class ProductoSimple
+public sealed class ProductoSimple : IElementoCatalogo
 {
     public Guid Id { get; private set; }
 
     public string Sku { get; private set; } = string.Empty;
+    public string Codigo => Sku;
 
     public string Nombre { get; private set; } = string.Empty;
 
@@ -87,6 +88,12 @@ public sealed class ProductoSimple
 
         // Evitar que un desbordamiento produzca existencias invalidas.
         Stock = checked(Stock + cantidad);
+    }
+
+    // Composite: el producto es una hoja del catalogo.
+    public decimal CalcularPrecio()
+    {
+        return Precio;
     }
 
     private static string TextoObligatorio(
