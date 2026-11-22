@@ -1,0 +1,163 @@
+{
+  "Caso": "P20",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T22:46:58.8360123+00:00",
+  "Metodo": "P20_FacadeRollbackYRecuperacionIdempotente",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionPatronesTests.cs",
+  "Esperado": "Fallo antes de commit sin persistencia parcial; reintento recupera cobro original",
+  "Obtenido": {
+    "PagoLocalAntes": 0,
+    "CobrosProveedorFinales": 1
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 7
+    },
+    {
+      "Sku": "P02",
+      "Stock": 4
+    },
+    {
+      "Sku": "P03",
+      "Stock": 19
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Existencias": [
+    {
+      "Sku": "P01",
+      "Fisico": 7,
+      "Comprometido": 0,
+      "Disponible": 7
+    },
+    {
+      "Sku": "P02",
+      "Fisico": 4,
+      "Comprometido": 0,
+      "Disponible": 4
+    },
+    {
+      "Sku": "P03",
+      "Fisico": 19,
+      "Comprometido": 0,
+      "Disponible": 19
+    },
+    {
+      "Sku": "P04",
+      "Fisico": 4,
+      "Comprometido": 0,
+      "Disponible": 4
+    },
+    {
+      "Sku": "P05",
+      "Fisico": 30,
+      "Comprometido": 0,
+      "Disponible": 30
+    }
+  ],
+  "Pagos": [
+    {
+      "Id": "ca828b10-1054-4d17-b41a-bd1a153dc042",
+      "PedidoId": "00275bba-ffbd-41e8-8f50-c6847778e85b",
+      "Clave": "rollback",
+      "Referencia": "SIM-0ade77548b2b488da2905efa99fe7b7b",
+      "Importe": 59.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Movimientos": [
+    {
+      "Id": "053426b6-fb59-4ea7-a9c0-39c9a91b7467",
+      "PedidoId": "00275bba-ffbd-41e8-8f50-c6847778e85b",
+      "Sku": "P03",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "ca828b10-1054-4d17-b41a-bd1a153dc042",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "3e5ee00d-4df0-48f5-8178-ded76bb7b85e",
+      "PedidoId": "00275bba-ffbd-41e8-8f50-c6847778e85b",
+      "Sku": "P02",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "ca828b10-1054-4d17-b41a-bd1a153dc042",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "64d6df11-1d21-4846-8640-61b4a2288212",
+      "PedidoId": "00275bba-ffbd-41e8-8f50-c6847778e85b",
+      "Sku": "P01",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "ca828b10-1054-4d17-b41a-bd1a153dc042",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Eventos": [
+    {
+      "Evento": {
+        "Id": "1829dcde-b284-41d9-ad02-e4a8c722f9f2",
+        "PedidoId": "00275bba-ffbd-41e8-8f50-c6847778e85b",
+        "Tipo": "PedidoPagado",
+        "Importe": 59.0,
+        "Canal": "EMAIL",
+        "Fecha": "2026-11-21T17:00:00+00:00"
+      },
+      "Intentos": 0,
+      "Procesado": null,
+      "Error": null
+    }
+  ],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T22:46:57.1513675+00:00"
+    }
+  ],
+  "Traza": [
+    {
+      "Id": "bb856cea-6fce-4a97-ae0a-a1a9087d5dbe",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "rollback",
+      "Mensaje": "Importe=59,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "1d3fe7b5-e316-4341-a129-04c00689b111",
+      "Tipo": "PASARELA",
+      "Correlacion": "rollback",
+      "Mensaje": "LEGADO: 5900 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "cc029b4c-c81a-4821-8cc2-13b747e8a91e",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "rollback",
+      "Mensaje": "LEGADO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": [
+    {
+      "Clave": "rollback",
+      "Monto": 59,
+      "Referencia": "SIM-0ade77548b2b488da2905efa99fe7b7b",
+      "Proveedor": "LEGADO",
+      "PedidoId": "00275bba-ffbd-41e8-8f50-c6847778e85b"
+    }
+  ]
+}

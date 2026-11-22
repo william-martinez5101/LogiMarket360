@@ -12,7 +12,7 @@ public sealed class CatalogoVista : VistaBase
     public override string Nombre => "Catalogo y kits";
     private readonly DataGridView _tabla = Ui.Tabla("Catalogo"); private readonly TreeView _arbol = new() { Dock = DockStyle.Fill, Font = new("Segoe UI", 11), AccessibleName = "Composicion del kit" };
     private readonly TextBox _buscar = Ui.Campo("Buscar producto o kit"); private readonly Label _detalle = Ui.Texto(""); private readonly CatalogoServicio _servicio;
-    private sealed record Fila(string Codigo, string Nombre, string Tipo, decimal Precio, int? Stock);
+    private sealed record Fila(string Codigo, string Nombre, string Tipo, decimal Precio, int? Fisico, int? Comprometido, int? Disponible);
     public CatalogoVista(FormularioPrincipalMediator mediador, CatalogoServicio servicio, SesionUsuario sesion, CatalogoVisualFlyweightFactory visuales)
         : base(mediador, "Catalogo y kits", "Productos individuales, estructura anidada, precios y existencias.")
     {
@@ -28,7 +28,8 @@ public sealed class CatalogoVista : VistaBase
     private void Filtrar()
     {
         if (Datos is null) return; var texto = _buscar.Text.Trim();
-        Ui.Cargar(_tabla, Datos.Productos.Select(p => new Fila(p.Sku, p.Nombre, "PRODUCTO", p.Precio, p.Stock)).Concat(Datos.Kits.Select(k => new Fila(k.Codigo, k.Nombre, "KIT", k.CalcularPrecio(), null)))
+        Ui.Cargar(_tabla, Datos.Productos.Select(p => { var e = Datos.Existencias.Single(x => x.Sku == p.Sku); return new Fila(p.Sku, p.Nombre, "PRODUCTO", p.Precio, e.Fisico, e.Comprometido, e.Disponible); })
+            .Concat(Datos.Kits.Select(k => new Fila(k.Codigo, k.Nombre, "KIT", k.CalcularPrecio(), null, null, null)))
             .Where(x => x.Codigo.Contains(texto, StringComparison.OrdinalIgnoreCase) || x.Nombre.Contains(texto, StringComparison.OrdinalIgnoreCase)));
         MostrarArbol();
     }

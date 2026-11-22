@@ -13,7 +13,7 @@ public sealed class InventarioVista : VistaBase
     private readonly ComboBox _producto = Ui.Combo("SKU para ajuste", 250); private readonly TextBox _motivo = Ui.Campo("Motivo del ajuste", 270), _buscar = Ui.Campo("Filtrar inventario", 180);
     private readonly NumericUpDown _cantidad = Ui.Numero("Variacion de stock", 0, -1000000, 1000000);
     public InventarioVista(FormularioPrincipalMediator mediador, CatalogoServicio catalogo, SesionUsuario sesion)
-        : base(mediador, "Inventario y movimientos", "Stock disponible y trazabilidad por SKU. Los ajustes requieren motivo y permiso de BODEGA / ADMIN.")
+        : base(mediador, "Inventario y movimientos", "Existencias fisicas, comprometidas por cobros pendientes y disponibles para vender. Ajustes: BODEGA / ADMIN.")
     {
         var dividir = new SplitContainer { Size = new(1100, 600), Dock = DockStyle.Fill, Orientation = Orientation.Horizontal, SplitterDistance = 260 }; dividir.Panel1.Controls.Add(_stock); dividir.Panel2.Controls.Add(_movimientos);
         var ajustar = Ui.Boton("Registrar ajuste", async () => {
@@ -27,7 +27,8 @@ public sealed class InventarioVista : VistaBase
     private void Filtrar()
     {
         if (Datos is null) return; var filtro = _buscar.Text.Trim();
-        Ui.Cargar(_stock, Datos.Productos.Where(p => p.Sku.Contains(filtro, StringComparison.OrdinalIgnoreCase) || p.Nombre.Contains(filtro, StringComparison.OrdinalIgnoreCase)).Select(p => new { p.Sku, p.Nombre, Disponible = p.Stock, Alerta = p.Stock <= 3 ? "BAJO" : "OK" }));
+        Ui.Cargar(_stock, Datos.Productos.Where(p => p.Sku.Contains(filtro, StringComparison.OrdinalIgnoreCase) || p.Nombre.Contains(filtro, StringComparison.OrdinalIgnoreCase))
+            .Select(p => { var e = Datos.Existencias.Single(x => x.Sku == p.Sku); return new { p.Sku, p.Nombre, e.Fisico, e.Comprometido, e.Disponible, Alerta = e.Disponible <= 3 ? "BAJO" : "OK" }; }));
         Ui.Cargar(_movimientos, Datos.Movimientos.Where(m => m.Sku.Contains(filtro, StringComparison.OrdinalIgnoreCase)).Select(m => new { m.Id, m.Sku, m.Cantidad, m.Motivo, m.Referencia, Fecha = m.Fecha.ToLocalTime() }));
     }
 }

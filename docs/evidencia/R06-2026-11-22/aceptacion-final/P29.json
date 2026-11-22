@@ -1,0 +1,165 @@
+{
+  "Caso": "P29",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T22:47:07.9610067+00:00",
+  "Metodo": "P29_MementoTresEdicionesDosUndoUnRedo",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionComportamientoTests.cs",
+  "Esperado": "Restauracion profunda completa y bloqueo despues de pago",
+  "Obtenido": {
+    "ClienteId": "5b789884-4c56-4727-b38e-27fd8e376060",
+    "Entrega": 0,
+    "Cantidad": 1,
+    "Estados": 0
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 7
+    },
+    {
+      "Sku": "P02",
+      "Stock": 4
+    },
+    {
+      "Sku": "P03",
+      "Stock": 19
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Existencias": [
+    {
+      "Sku": "P01",
+      "Fisico": 7,
+      "Comprometido": 0,
+      "Disponible": 7
+    },
+    {
+      "Sku": "P02",
+      "Fisico": 4,
+      "Comprometido": 0,
+      "Disponible": 4
+    },
+    {
+      "Sku": "P03",
+      "Fisico": 19,
+      "Comprometido": 0,
+      "Disponible": 19
+    },
+    {
+      "Sku": "P04",
+      "Fisico": 4,
+      "Comprometido": 0,
+      "Disponible": 4
+    },
+    {
+      "Sku": "P05",
+      "Fisico": 30,
+      "Comprometido": 0,
+      "Disponible": 30
+    }
+  ],
+  "Pagos": [
+    {
+      "Id": "eb205070-72ce-4ccd-bb66-ea294d340934",
+      "PedidoId": "3952fb1b-ec80-4656-a389-799b2a9318a5",
+      "Clave": "memento",
+      "Referencia": "SIM-570a52687a784a6baf5e369201dd12c3",
+      "Importe": 59.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Movimientos": [
+    {
+      "Id": "2566ed4a-9e45-4151-9768-e17fa9bea830",
+      "PedidoId": "3952fb1b-ec80-4656-a389-799b2a9318a5",
+      "Sku": "P02",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "eb205070-72ce-4ccd-bb66-ea294d340934",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "4d6927e4-3245-444c-8011-0b84f1726d6a",
+      "PedidoId": "3952fb1b-ec80-4656-a389-799b2a9318a5",
+      "Sku": "P01",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "eb205070-72ce-4ccd-bb66-ea294d340934",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "af30af6d-1593-40e8-a406-b4e81abbd67f",
+      "PedidoId": "3952fb1b-ec80-4656-a389-799b2a9318a5",
+      "Sku": "P03",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "eb205070-72ce-4ccd-bb66-ea294d340934",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Eventos": [
+    {
+      "Evento": {
+        "Id": "f192bfd6-fb21-43ec-bc2c-089b33aa9905",
+        "PedidoId": "3952fb1b-ec80-4656-a389-799b2a9318a5",
+        "Tipo": "PedidoPagado",
+        "Importe": 59.0,
+        "Canal": "EMAIL",
+        "Fecha": "2026-11-21T17:00:00+00:00"
+      },
+      "Intentos": 0,
+      "Procesado": null,
+      "Error": null
+    }
+  ],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T22:47:07.5798125+00:00"
+    }
+  ],
+  "Traza": [
+    {
+      "Id": "c433fa63-35a7-498d-b81a-ebe91d204810",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "memento",
+      "Mensaje": "Importe=59,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "0204ee11-8771-4e9c-83cc-62161a739d8f",
+      "Tipo": "PASARELA",
+      "Correlacion": "memento",
+      "Mensaje": "LEGADO: 5900 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "7dbb6e91-8e79-4c1e-9cad-db4f06f3a65b",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "memento",
+      "Mensaje": "LEGADO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": [
+    {
+      "Clave": "memento",
+      "Monto": 59,
+      "Referencia": "SIM-570a52687a784a6baf5e369201dd12c3",
+      "Proveedor": "LEGADO",
+      "PedidoId": "3952fb1b-ec80-4656-a389-799b2a9318a5"
+    }
+  ]
+}

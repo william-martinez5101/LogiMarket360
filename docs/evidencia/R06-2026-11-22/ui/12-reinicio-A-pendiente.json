@@ -1,0 +1,6 @@
+{
+  "document_text": "admin.demo",
+  "focused_element": "5 text field (editar) (settable, string) Usuario Value: admin.demo",
+  "selected_text": "admin.demo",
+  "tree": "Window: \"LogiMarket 360 - Acceso\", App: LogiMarket.WinForms.exe.\n\t0 window (ventana) LogiMarket 360 - Acceso Secondary Actions: Raise\n\t\t1 pane (panel)\n\t\t\t2 text (texto) LOGIMARKET 360\n\t\t\t3 text (texto) Ventas y logistica | Escritorio local\n\t\t\t4 text (texto) Usuario\n\t\t\t5 text field (editar) (settable, string) Usuario Value: admin.demo\n\t\t\t6 text (texto) Contrasena\n\t\t\t7 text field (editar) (settable, string) Contrasena Value: Acceso denegado\n\t\t\t8 button (botón) Ingresar\n\t\t\t9 text (texto) Cuentas ficticias: admin.demo, ventas.demo, bodega.demo, consulta.demo | Clave: Demo360!\n\t\t10 title bar (barra de título) (settable, string) Value: LogiMarket 360 - Acceso\n\t\t\t11 button (botón) Minimizar\n\t\t\t12 button (botón) (disabled) Maximizar\n\t\t\t13 button (botón) Cerrar\n\nSelected text: ```\nadmin.demo\n```\n\nNote: Pay special attention to the content selected by the user. If the user asks a question or refers to the content they are looking at on-screen, they might be referring to the selected content (but they might be referring to something else that's visible, too)."
+}

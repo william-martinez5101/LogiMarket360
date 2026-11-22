@@ -1,0 +1,102 @@
+{
+  "Caso": "P06",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T22:47:00.8617488+00:00",
+  "Metodo": "P06_CobroRechazadoSinEfectos",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Esperado": "Rechazo sin pago, stock ni evento",
+  "Obtenido": {
+    "Message": "Cobro rechazado: Rechazo simulado."
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Existencias": [
+    {
+      "Sku": "P01",
+      "Fisico": 8,
+      "Comprometido": 0,
+      "Disponible": 8
+    },
+    {
+      "Sku": "P02",
+      "Fisico": 5,
+      "Comprometido": 0,
+      "Disponible": 5
+    },
+    {
+      "Sku": "P03",
+      "Fisico": 20,
+      "Comprometido": 0,
+      "Disponible": 20
+    },
+    {
+      "Sku": "P04",
+      "Fisico": 4,
+      "Comprometido": 0,
+      "Disponible": 4
+    },
+    {
+      "Sku": "P05",
+      "Fisico": 30,
+      "Comprometido": 0,
+      "Disponible": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T22:47:00.5092464+00:00"
+    }
+  ],
+  "Traza": [
+    {
+      "Id": "ba6c18b8-33ab-4a46-b207-b3ce92b2d7ea",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "rechazo",
+      "Mensaje": "Importe=59,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "9f0df765-c34d-4924-947e-e4b5fe1d0960",
+      "Tipo": "PASARELA",
+      "Correlacion": "rechazo",
+      "Mensaje": "LEGADO: 5900 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "ca2a122b-ed0c-44b9-b484-0ba48743484c",
+      "Tipo": "PAGO_ERROR",
+      "Correlacion": "rechazo",
+      "Mensaje": "LEGADO; aprobado=False; Rechazo simulado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": []
+}

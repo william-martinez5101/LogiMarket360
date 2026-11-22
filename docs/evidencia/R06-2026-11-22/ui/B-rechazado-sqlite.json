@@ -1,0 +1,200 @@
+{
+  "FechaUtc": "2026-11-22T22:56:32.222363+00:00",
+  "Fase": "B-rechazado",
+  "Resultado": "APROBADO",
+  "BaseTemporal": "tmp\\R06-Windows\\datos\\logimarket.db",
+  "PedidoA": "E39FC6CE-363D-4179-8980-120DEEAEA580",
+  "PedidoB": "7CC07AC8-6C2D-4F01-87BA-C2C73E5BED14",
+  "StockP04": 4,
+  "ComprometidoP04Esperado": 4,
+  "DisponibleP04Esperado": 0,
+  "Integridad": "ok",
+  "ErroresFK": [],
+  "Datos": {
+    "Productos": [
+      {
+        "Id": "0E9362F6-887B-4258-8FEA-F26C2586DBD8",
+        "Sku": "P03",
+        "Nombre": "Memoria USB",
+        "Precio": "10.0",
+        "PesoKg": "0.1",
+        "Stock": 20
+      },
+      {
+        "Id": "5ECED38B-53B8-4F15-B8BF-230B3DF605D8",
+        "Sku": "P01",
+        "Nombre": "Mouse USB",
+        "Precio": "20.0",
+        "PesoKg": "0.2",
+        "Stock": 8
+      },
+      {
+        "Id": "9341C213-0789-44F2-BC6B-C8A26D4D01ED",
+        "Sku": "P02",
+        "Nombre": "Teclado",
+        "Precio": "30.0",
+        "PesoKg": "0.7",
+        "Stock": 5
+      },
+      {
+        "Id": "B1DA3FD3-03BD-4961-85A5-2C6E33B0FC92",
+        "Sku": "P05",
+        "Nombre": "Alfombrilla",
+        "Precio": "5.0",
+        "PesoKg": "0.1",
+        "Stock": 30
+      },
+      {
+        "Id": "FC960728-C7EB-4865-959D-D7BFC0372F56",
+        "Sku": "P04",
+        "Nombre": "Webcam",
+        "Precio": "40.0",
+        "PesoKg": "0.35",
+        "Stock": 4
+      }
+    ],
+    "Pedidos": [
+      {
+        "Id": "E39FC6CE-363D-4179-8980-120DEEAEA580",
+        "ClienteId": "514BA6A7-CB0D-4558-A9D7-1C7C40C41108",
+        "ClienteNombre": "Luis",
+        "Categoria": 0,
+        "Estado": 1,
+        "TipoEntrega": 0,
+        "Dias": 3,
+        "Guia": "GUIA-ESTANDAR-e39fc6ce363d41798980120deeaea580",
+        "Subtotal": "160.0",
+        "Descuento": "0.0",
+        "Tarifa": "5.0",
+        "Total": "165.0",
+        "Promocion": "SIN_DESCUENTO",
+        "Unidades": 4,
+        "Creado": "2026-11-22 22:49:33.0918177+00:00",
+        "Entregado": null,
+        "Devuelto": 0,
+        "Version": 2
+      },
+      {
+        "Id": "7CC07AC8-6C2D-4F01-87BA-C2C73E5BED14",
+        "ClienteId": "514BA6A7-CB0D-4558-A9D7-1C7C40C41108",
+        "ClienteNombre": "Luis",
+        "Categoria": 0,
+        "Estado": 1,
+        "TipoEntrega": 0,
+        "Dias": 3,
+        "Guia": "GUIA-ESTANDAR-7cc07ac86c2d4f0187bac2c73e5bed14",
+        "Subtotal": "160.0",
+        "Descuento": "0.0",
+        "Tarifa": "5.0",
+        "Total": "165.0",
+        "Promocion": "SIN_DESCUENTO",
+        "Unidades": 4,
+        "Creado": "2026-11-22 22:50:00.8007234+00:00",
+        "Entregado": null,
+        "Devuelto": 0,
+        "Version": 2
+      }
+    ],
+    "PedidoDetalles": [
+      {
+        "Id": "210AB90A-43B3-459C-8A33-1A4FDBF36633",
+        "PedidoId": "E39FC6CE-363D-4179-8980-120DEEAEA580",
+        "Orden": 0,
+        "Codigo": "P04",
+        "Cantidad": 4,
+        "Precio": "40.0",
+        "ArbolJson": "{\"Codigo\":\"P04\",\"Nombre\":\"Webcam\",\"Cantidad\":1,\"Precio\":40.0,\"PesoKg\":0.35,\"Hijos\":[]}"
+      },
+      {
+        "Id": "91008AFA-65DA-487B-90B8-FE1AC69A08FB",
+        "PedidoId": "7CC07AC8-6C2D-4F01-87BA-C2C73E5BED14",
+        "Orden": 0,
+        "Codigo": "P04",
+        "Cantidad": 4,
+        "Precio": "40.0",
+        "ArbolJson": "{\"Codigo\":\"P04\",\"Nombre\":\"Webcam\",\"Cantidad\":1,\"Precio\":40.0,\"PesoKg\":0.35,\"Hijos\":[]}"
+      }
+    ],
+    "PedidoDetalleComponentes": [
+      {
+        "Id": "246D010E-A20D-4CD2-9F84-AD176D16AB65",
+        "DetalleId": "210AB90A-43B3-459C-8A33-1A4FDBF36633",
+        "Sku": "P04",
+        "Nombre": "Webcam",
+        "Cantidad": 4,
+        "Precio": "40.0",
+        "PesoKg": "0.35"
+      },
+      {
+        "Id": "6A256655-DDA4-40D6-81FF-119CBD7756A4",
+        "DetalleId": "91008AFA-65DA-487B-90B8-FE1AC69A08FB",
+        "Sku": "P04",
+        "Nombre": "Webcam",
+        "Cantidad": 4,
+        "Precio": "40.0",
+        "PesoKg": "0.35"
+      }
+    ],
+    "Pagos": [],
+    "MovimientosInventario": [],
+    "EventosOutbox": [],
+    "Notificaciones": [],
+    "EntregasOutbox": [],
+    "MetricasEventos": [],
+    "Auditorias": [
+      {
+        "Id": "C3C36000-2026-4000-8000-000000000001",
+        "Tipo": "INICIALIZACION",
+        "Correlacion": "DATOS_DEMO_V1",
+        "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+        "Fecha": "2026-11-22 22:46:26.8479016+00:00"
+      },
+      {
+        "Id": "855CCCDB-BF8C-4542-950D-9BE624C882C3",
+        "Tipo": "COMMAND",
+        "Correlacion": "5e22ebb5-7ad8-4b80-8142-a305fef2847e",
+        "Mensaje": "ConfirmarPedidoCommand; admin.demo; INICIO; Pedido=e39fc6ce-363d-4179-8980-120deeaea580; clave=R06-UI-A-ACEPTADO; ",
+        "Fecha": "2026-11-22 22:50:58.8779527+00:00"
+      },
+      {
+        "Id": "11340394-DBEF-40A0-A65F-1B1E7001B4E9",
+        "Tipo": "COMMAND",
+        "Correlacion": "5e22ebb5-7ad8-4b80-8142-a305fef2847e",
+        "Mensaje": "ConfirmarPedidoCommand; admin.demo; ERROR; Pedido=e39fc6ce-363d-4179-8980-120deeaea580; clave=R06-UI-A-ACEPTADO; Fallo de persistencia del cobro inducido despues de la aceptacion y antes del commit. Reintente confirmar para conciliar.",
+        "Fecha": "2026-11-22 22:50:59.0438897+00:00"
+      },
+      {
+        "Id": "54815A00-E71E-43F8-BB49-A26B93D6CC59",
+        "Tipo": "COMMAND",
+        "Correlacion": "eee838f9-b1c7-404a-81d5-af2a87ad83de",
+        "Mensaje": "ConfirmarPedidoCommand; admin.demo; INICIO; Pedido=7cc07ac8-6c2d-4f01-87ba-c2c73e5bed14; clave=R06-UI-B-RECHAZAR; ",
+        "Fecha": "2026-11-22 22:56:27.5408197+00:00"
+      },
+      {
+        "Id": "A166AE55-6711-4FB0-B6C3-8FA14AE1294C",
+        "Tipo": "COMMAND",
+        "Correlacion": "eee838f9-b1c7-404a-81d5-af2a87ad83de",
+        "Mensaje": "ConfirmarPedidoCommand; admin.demo; ERROR; Pedido=7cc07ac8-6c2d-4f01-87ba-c2c73e5bed14; clave=R06-UI-B-RECHAZAR; STOCK: Stock insuficiente para P04: requiere 4, disponible 0.",
+        "Fecha": "2026-11-22 22:56:27.8313623+00:00"
+      }
+    ]
+  },
+  "CobrosSimulados": [
+    {
+      "Clave": "R06-UI-A-ACEPTADO",
+      "Monto": 165,
+      "Referencia": "SIM-fd7087267acb4bb8ab755a61a072002e",
+      "Proveedor": "LEGADO",
+      "PedidoId": "e39fc6ce-363d-4179-8980-120deeaea580"
+    }
+  ],
+  "Intentos": [
+    {
+      "PedidoId": "e39fc6ce-363d-4179-8980-120deeaea580",
+      "Importe": 165.0,
+      "Claves": [
+        "R06-UI-A-ACEPTADO"
+      ]
+    }
+  ]
+}

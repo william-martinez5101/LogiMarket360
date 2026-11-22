@@ -1,0 +1,224 @@
+{
+  "Caso": "P19",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T22:47:21.7164952+00:00",
+  "Metodo": "P19_DecoratorOrdenYResultado",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionPatronesTests.cs",
+  "Esperado": "INICIO-\u003EPASARELA-\u003EFIN/ERROR; resultado preservado",
+  "Obtenido": [
+    {
+      "Id": "75c23739-3013-425a-9cf4-c614e508c0b3",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "decorador-exito",
+      "Mensaje": "Importe=59,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "56baf931-7a65-4798-ad6a-fe0b1f80527a",
+      "Tipo": "PASARELA",
+      "Correlacion": "decorador-exito",
+      "Mensaje": "LEGADO: 5900 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "67da59e2-5d55-404a-b0fc-bf64a06f672c",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "decorador-exito",
+      "Mensaje": "LEGADO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "35cca3a3-121e-4317-9da6-fb07334a37c8",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "decorador-fallo",
+      "Mensaje": "Importe=10,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "60a5f756-c80c-4af8-8764-4f994bde8eb3",
+      "Tipo": "PASARELA",
+      "Correlacion": "decorador-fallo",
+      "Mensaje": "LEGADO: 1000 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "e835d6fe-2450-4156-a86e-da828a3e477e",
+      "Tipo": "PAGO_ERROR",
+      "Correlacion": "decorador-fallo",
+      "Mensaje": "LEGADO; aprobado=False; Rechazo simulado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 7
+    },
+    {
+      "Sku": "P02",
+      "Stock": 4
+    },
+    {
+      "Sku": "P03",
+      "Stock": 19
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Existencias": [
+    {
+      "Sku": "P01",
+      "Fisico": 7,
+      "Comprometido": 0,
+      "Disponible": 7
+    },
+    {
+      "Sku": "P02",
+      "Fisico": 4,
+      "Comprometido": 0,
+      "Disponible": 4
+    },
+    {
+      "Sku": "P03",
+      "Fisico": 19,
+      "Comprometido": 0,
+      "Disponible": 19
+    },
+    {
+      "Sku": "P04",
+      "Fisico": 4,
+      "Comprometido": 0,
+      "Disponible": 4
+    },
+    {
+      "Sku": "P05",
+      "Fisico": 30,
+      "Comprometido": 0,
+      "Disponible": 30
+    }
+  ],
+  "Pagos": [
+    {
+      "Id": "3e8bb740-5023-42fb-9dbc-d6eee02c35e8",
+      "PedidoId": "c51be7f9-cf50-4bd5-95ad-a3e2898581c7",
+      "Clave": "decorador-exito",
+      "Referencia": "SIM-bab9a844346944d99e3f001ed9b0dd94",
+      "Importe": 59.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Movimientos": [
+    {
+      "Id": "04aaaed0-0f6c-41bd-913f-e207daa76670",
+      "PedidoId": "c51be7f9-cf50-4bd5-95ad-a3e2898581c7",
+      "Sku": "P02",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "3e8bb740-5023-42fb-9dbc-d6eee02c35e8",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "4987022b-aadc-4676-b448-739b5ed8914f",
+      "PedidoId": "c51be7f9-cf50-4bd5-95ad-a3e2898581c7",
+      "Sku": "P03",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "3e8bb740-5023-42fb-9dbc-d6eee02c35e8",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "5d516fb1-98b0-4680-a609-4ae26587b3a2",
+      "PedidoId": "c51be7f9-cf50-4bd5-95ad-a3e2898581c7",
+      "Sku": "P01",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "3e8bb740-5023-42fb-9dbc-d6eee02c35e8",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Eventos": [
+    {
+      "Evento": {
+        "Id": "d06ba51e-f2c5-4037-9e36-f7d95af420af",
+        "PedidoId": "c51be7f9-cf50-4bd5-95ad-a3e2898581c7",
+        "Tipo": "PedidoPagado",
+        "Importe": 59.0,
+        "Canal": "EMAIL",
+        "Fecha": "2026-11-21T17:00:00+00:00"
+      },
+      "Intentos": 0,
+      "Procesado": null,
+      "Error": null
+    }
+  ],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T22:47:21.2187522+00:00"
+    }
+  ],
+  "Traza": [
+    {
+      "Id": "75c23739-3013-425a-9cf4-c614e508c0b3",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "decorador-exito",
+      "Mensaje": "Importe=59,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "56baf931-7a65-4798-ad6a-fe0b1f80527a",
+      "Tipo": "PASARELA",
+      "Correlacion": "decorador-exito",
+      "Mensaje": "LEGADO: 5900 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "67da59e2-5d55-404a-b0fc-bf64a06f672c",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "decorador-exito",
+      "Mensaje": "LEGADO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "35cca3a3-121e-4317-9da6-fb07334a37c8",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "decorador-fallo",
+      "Mensaje": "Importe=10,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "60a5f756-c80c-4af8-8764-4f994bde8eb3",
+      "Tipo": "PASARELA",
+      "Correlacion": "decorador-fallo",
+      "Mensaje": "LEGADO: 1000 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "e835d6fe-2450-4156-a86e-da828a3e477e",
+      "Tipo": "PAGO_ERROR",
+      "Correlacion": "decorador-fallo",
+      "Mensaje": "LEGADO; aprobado=False; Rechazo simulado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": [
+    {
+      "Clave": "decorador-exito",
+      "Monto": 59,
+      "Referencia": "SIM-bab9a844346944d99e3f001ed9b0dd94",
+      "Proveedor": "LEGADO",
+      "PedidoId": "c51be7f9-cf50-4bd5-95ad-a3e2898581c7"
+    }
+  ]
+}

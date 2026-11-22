@@ -1,0 +1,171 @@
+{
+  "Caso": "R06-RECHAZO-LEGADO",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T22:47:38.9161117+00:00",
+  "Metodo": "RechazoYCancelacionPermitida_NoComprometenExistencias",
+  "Fuente": "LogiMarket.Tests/Integracion/RegresionesReservasRevisionTests.cs",
+  "Esperado": "Rechazo no retiene unidades; cancelar impago y cobrar otro pedido usa las4 libres",
+  "Obtenido": {
+    "Id": "81e13f08-e8ef-4437-9448-fb2fab66f7c3",
+    "PedidoId": "8ddb8a0d-6c0c-49fd-adcc-0cd6461423d9",
+    "Clave": "aceptado",
+    "Referencia": "SIM-1c2ef42bd241455495d798773b081a72",
+    "Importe": 165.0,
+    "Proveedor": "LEGADO",
+    "Fecha": "2026-11-21T17:00:00+00:00"
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 0
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Existencias": [
+    {
+      "Sku": "P01",
+      "Fisico": 8,
+      "Comprometido": 0,
+      "Disponible": 8
+    },
+    {
+      "Sku": "P02",
+      "Fisico": 5,
+      "Comprometido": 0,
+      "Disponible": 5
+    },
+    {
+      "Sku": "P03",
+      "Fisico": 20,
+      "Comprometido": 0,
+      "Disponible": 20
+    },
+    {
+      "Sku": "P04",
+      "Fisico": 0,
+      "Comprometido": 0,
+      "Disponible": 0
+    },
+    {
+      "Sku": "P05",
+      "Fisico": 30,
+      "Comprometido": 0,
+      "Disponible": 30
+    }
+  ],
+  "Pagos": [
+    {
+      "Id": "81e13f08-e8ef-4437-9448-fb2fab66f7c3",
+      "PedidoId": "8ddb8a0d-6c0c-49fd-adcc-0cd6461423d9",
+      "Clave": "aceptado",
+      "Referencia": "SIM-1c2ef42bd241455495d798773b081a72",
+      "Importe": 165.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Movimientos": [
+    {
+      "Id": "d006fa58-ff55-48a3-a3ad-c44aad305924",
+      "PedidoId": "8ddb8a0d-6c0c-49fd-adcc-0cd6461423d9",
+      "Sku": "P04",
+      "Cantidad": -4,
+      "Motivo": "VENTA",
+      "Referencia": "81e13f08-e8ef-4437-9448-fb2fab66f7c3",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Eventos": [
+    {
+      "Evento": {
+        "Id": "b01ea796-2a9e-437d-8efc-ec4ad4248886",
+        "PedidoId": "8ddb8a0d-6c0c-49fd-adcc-0cd6461423d9",
+        "Tipo": "PedidoPagado",
+        "Importe": 165.0,
+        "Canal": "EMAIL",
+        "Fecha": "2026-11-21T17:00:00+00:00"
+      },
+      "Intentos": 0,
+      "Procesado": null,
+      "Error": null
+    }
+  ],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T22:47:38.4726354+00:00"
+    }
+  ],
+  "Traza": [
+    {
+      "Id": "85270014-a929-4fda-93d7-3ace564dd91d",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "rechazado",
+      "Mensaje": "Importe=165,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "fff330d5-221e-4059-86db-dafd3420e0f6",
+      "Tipo": "PASARELA",
+      "Correlacion": "rechazado",
+      "Mensaje": "LEGADO: 16500 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "7fb27620-eb8a-40c6-912f-3b7cf3c20132",
+      "Tipo": "PAGO_ERROR",
+      "Correlacion": "rechazado",
+      "Mensaje": "LEGADO; aprobado=False; Rechazo simulado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "d3762c8c-375a-4895-b838-ea4f1dfb2d7d",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "aceptado",
+      "Mensaje": "Importe=165,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "9eb06a89-81ae-481c-996c-ffe61cc2eee3",
+      "Tipo": "PASARELA",
+      "Correlacion": "aceptado",
+      "Mensaje": "LEGADO: 16500 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "e92dc146-337f-4683-8dc1-562fedd91066",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "aceptado",
+      "Mensaje": "LEGADO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": [
+    {
+      "Clave": "aceptado",
+      "Monto": 165,
+      "Referencia": "SIM-1c2ef42bd241455495d798773b081a72",
+      "Proveedor": "LEGADO",
+      "PedidoId": "8ddb8a0d-6c0c-49fd-adcc-0cd6461423d9"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+{
+  "Caso": "R06-ACEPTACIONES-CONCURRENTES",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T22:47:41.6860366+00:00",
+  "Metodo": "DosAceptacionesNuevasConcurrentesConFalloLocal_NoComprometenElMismoStock",
+  "Fuente": "LogiMarket.Tests/Integracion/RegresionesReservasRevisionTests.cs",
+  "Esperado": "Solo una aceptacion165 pese a rollback; segunda instancia observa compromiso durable y rechaza antes del proveedor",
+  "Obtenido": {
+    "pago": {
+      "Id": "e7038ffb-150f-4036-b204-2a8bb3dc24d0",
+      "PedidoId": "d7c68b98-0efd-4793-a71c-67a463ae8afb",
+      "Clave": "recuperacion-ganador",
+      "Referencia": "SIM-a43853a392044a429fb1dbb71ec3215a",
+      "Importe": 165.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    "Errores": [
+      "Fallo de persistencia del cobro inducido despues de la aceptacion y antes del commit. Reintente confirmar para conciliar.",
+      "STOCK: Stock insuficiente para P04: requiere 4, disponible 0."
+    ]
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 0
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Existencias": [
+    {
+      "Sku": "P01",
+      "Fisico": 8,
+      "Comprometido": 0,
+      "Disponible": 8
+    },
+    {
+      "Sku": "P02",
+      "Fisico": 5,
+      "Comprometido": 0,
+      "Disponible": 5
+    },
+    {
+      "Sku": "P03",
+      "Fisico": 20,
+      "Comprometido": 0,
+      "Disponible": 20
+    },
+    {
+      "Sku": "P04",
+      "Fisico": 0,
+      "Comprometido": 0,
+      "Disponible": 0
+    },
+    {
+      "Sku": "P05",
+      "Fisico": 30,
+      "Comprometido": 0,
+      "Disponible": 30
+    }
+  ],
+  "Pagos": [
+    {
+      "Id": "e7038ffb-150f-4036-b204-2a8bb3dc24d0",
+      "PedidoId": "d7c68b98-0efd-4793-a71c-67a463ae8afb",
+      "Clave": "recuperacion-ganador",
+      "Referencia": "SIM-a43853a392044a429fb1dbb71ec3215a",
+      "Importe": 165.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Movimientos": [
+    {
+      "Id": "4828c293-89c9-48a8-b460-a2a598c27702",
+      "PedidoId": "d7c68b98-0efd-4793-a71c-67a463ae8afb",
+      "Sku": "P04",
+      "Cantidad": -4,
+      "Motivo": "VENTA",
+      "Referencia": "e7038ffb-150f-4036-b204-2a8bb3dc24d0",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Eventos": [
+    {
+      "Evento": {
+        "Id": "fd33a6f2-56fc-49af-aee0-c3a3b72e294b",
+        "PedidoId": "d7c68b98-0efd-4793-a71c-67a463ae8afb",
+        "Tipo": "PedidoPagado",
+        "Importe": 165.0,
+        "Canal": "EMAIL",
+        "Fecha": "2026-11-21T17:00:00+00:00"
+      },
+      "Intentos": 0,
+      "Procesado": null,
+      "Error": null
+    }
+  ],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T22:47:40.8847904+00:00"
+    }
+  ],
+  "Traza": [
+    {
+      "Id": "80ae5c90-e044-4008-b6a5-792e089ae307",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "nueva-A",
+      "Mensaje": "Importe=165,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "31821432-2da5-453c-8678-43c6525a3f60",
+      "Tipo": "PASARELA",
+      "Correlacion": "nueva-A",
+      "Mensaje": "LEGADO: 16500 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "0d00882c-7cf5-4605-af33-fe5b097605d2",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "nueva-A",
+      "Mensaje": "LEGADO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": [
+    {
+      "Clave": "nueva-A",
+      "Monto": 165,
+      "Referencia": "SIM-a43853a392044a429fb1dbb71ec3215a",
+      "Proveedor": "LEGADO",
+      "PedidoId": "d7c68b98-0efd-4793-a71c-67a463ae8afb"
+    }
+  ]
+}

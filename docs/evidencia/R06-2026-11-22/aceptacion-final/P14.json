@@ -1,0 +1,91 @@
+{
+  "Caso": "P14",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T22:47:17.90135+00:00",
+  "Metodo": "P14_PrototypeProfundoPersistido",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionPatronesTests.cs",
+  "Esperado": "Tres identidades; editar copia2 no cambia plantilla ni copia1",
+  "Obtenido": [
+    {
+      "Id": "77850aa2-5798-45c6-b110-65da7c0cbddd",
+      "Cantidad": 1
+    },
+    {
+      "Id": "bc5b63e5-853a-447f-b7fc-ca8ea35c7099",
+      "Cantidad": 1
+    },
+    {
+      "Id": "ce7682d7-3b87-472b-86d3-5a469f10f809",
+      "Cantidad": 2
+    }
+  ],
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Existencias": [
+    {
+      "Sku": "P01",
+      "Fisico": 8,
+      "Comprometido": 0,
+      "Disponible": 8
+    },
+    {
+      "Sku": "P02",
+      "Fisico": 5,
+      "Comprometido": 0,
+      "Disponible": 5
+    },
+    {
+      "Sku": "P03",
+      "Fisico": 20,
+      "Comprometido": 0,
+      "Disponible": 20
+    },
+    {
+      "Sku": "P04",
+      "Fisico": 4,
+      "Comprometido": 0,
+      "Disponible": 4
+    },
+    {
+      "Sku": "P05",
+      "Fisico": 30,
+      "Comprometido": 0,
+      "Disponible": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T22:47:17.3990129+00:00"
+    }
+  ],
+  "Traza": [],
+  "CobrosSimulados": []
+}

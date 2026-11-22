@@ -20,6 +20,6 @@ public sealed class PanelVista : VistaBase
     {
         _indicadores.Text = $"Pedidos activos: {d.Pedidos.Count(p => p.Estado is not (EstadoPedido.CANCELADO or EstadoPedido.ENTREGADO))}     Por despachar: {d.Pedidos.Count(p => p.Estado == EstadoPedido.PAGADO)}     Ventas: USD {_metricas.Ventas:N2}     Reembolsos: USD {_metricas.Reembolsos:N2}";
         Ui.Cargar(_pedidos, d.Pedidos.Take(15).Select(p => new { p.Id, Pedido = p.Id.ToString("N")[..8], Cliente = p.ClienteNombre, p.Estado, Total = p.Valores.Total, Fecha = p.Creado.ToLocalTime() }));
-        _alertas.Text = $"Alertas: {d.Productos.Count(p => p.Stock <= 3)} productos con stock bajo | {d.Outbox.Count(e => e.Procesado is null)} eventos Outbox pendientes | Avisos locales: {d.Avisos.Count}";
+        _alertas.Text = $"Alertas: {d.Existencias.Count(p => p.Disponible <= 3)} productos con disponible bajo | {d.Outbox.Count(e => e.Procesado is null)} eventos Outbox pendientes | Avisos locales: {d.Avisos.Count}";
     }
 }

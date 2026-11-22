@@ -1,0 +1,169 @@
+{
+  "Caso": "R04-NUEVA-P01-1",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T22:47:28.0169146+00:00",
+  "Metodo": "NuevasLineas_SeCapturanDelCatalogoNoDelLlamador",
+  "Fuente": "LogiMarket.Tests/Integracion/RegresionesInstantaneasRevisionTests.cs",
+  "Esperado": "Precio, raiz y composicion capturados del catalogo en Application",
+  "Obtenido": {
+    "pago": {
+      "Id": "dc15b3b6-79fd-430e-a092-86d3077550f0",
+      "PedidoId": "84f784f8-b156-4ec8-a898-d5accad4078c",
+      "Clave": "canonico",
+      "Referencia": "SIM-6337052f02b449d9985d9470d5b90f1c",
+      "Importe": 25.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    "Lineas": [
+      {
+        "Elemento": {
+          "Codigo": "P01",
+          "Nombre": "Mouse USB",
+          "Cantidad": 1,
+          "Precio": 20.0,
+          "PesoKg": 0.2,
+          "Hijos": []
+        },
+        "Cantidad": 1,
+        "Codigo": "P01",
+        "PrecioUnitario": 20.0,
+        "Importe": 20.0,
+        "Unidades": 1
+      }
+    ]
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 7
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Existencias": [
+    {
+      "Sku": "P01",
+      "Fisico": 7,
+      "Comprometido": 0,
+      "Disponible": 7
+    },
+    {
+      "Sku": "P02",
+      "Fisico": 5,
+      "Comprometido": 0,
+      "Disponible": 5
+    },
+    {
+      "Sku": "P03",
+      "Fisico": 20,
+      "Comprometido": 0,
+      "Disponible": 20
+    },
+    {
+      "Sku": "P04",
+      "Fisico": 4,
+      "Comprometido": 0,
+      "Disponible": 4
+    },
+    {
+      "Sku": "P05",
+      "Fisico": 30,
+      "Comprometido": 0,
+      "Disponible": 30
+    }
+  ],
+  "Pagos": [
+    {
+      "Id": "dc15b3b6-79fd-430e-a092-86d3077550f0",
+      "PedidoId": "84f784f8-b156-4ec8-a898-d5accad4078c",
+      "Clave": "canonico",
+      "Referencia": "SIM-6337052f02b449d9985d9470d5b90f1c",
+      "Importe": 25.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Movimientos": [
+    {
+      "Id": "d93582eb-e273-46c8-ad1f-b6cfc2223a33",
+      "PedidoId": "84f784f8-b156-4ec8-a898-d5accad4078c",
+      "Sku": "P01",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "dc15b3b6-79fd-430e-a092-86d3077550f0",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Eventos": [
+    {
+      "Evento": {
+        "Id": "0963cb22-ea33-4148-add6-020bac819baa",
+        "PedidoId": "84f784f8-b156-4ec8-a898-d5accad4078c",
+        "Tipo": "PedidoPagado",
+        "Importe": 25.0,
+        "Canal": "EMAIL",
+        "Fecha": "2026-11-21T17:00:00+00:00"
+      },
+      "Intentos": 0,
+      "Procesado": null,
+      "Error": null
+    }
+  ],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T22:47:27.6732366+00:00"
+    }
+  ],
+  "Traza": [
+    {
+      "Id": "b9b886ad-3e75-42ce-a59c-3d4e196271d1",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "canonico",
+      "Mensaje": "Importe=25,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "c0fef267-653d-47b3-b3fb-6c70ebe3cd06",
+      "Tipo": "PASARELA",
+      "Correlacion": "canonico",
+      "Mensaje": "LEGADO: 2500 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "31fca273-a62e-459f-9544-8f539a82a09e",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "canonico",
+      "Mensaje": "LEGADO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": [
+    {
+      "Clave": "canonico",
+      "Monto": 25,
+      "Referencia": "SIM-6337052f02b449d9985d9470d5b90f1c",
+      "Proveedor": "LEGADO",
+      "PedidoId": "84f784f8-b156-4ec8-a898-d5accad4078c"
+    }
+  ]
+}

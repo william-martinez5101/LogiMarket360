@@ -1,0 +1,12 @@
+[
+  {
+    "ProcessId": 33284,
+    "ExecutablePath": "C:\\Users\\ASUS\\source\\repos\\LogiMarket360\\tmp\\R06-Windows\\bin\\LogiMarket.WinForms.exe",
+    "CommandLine": "\"C:\\Users\\ASUS\\source\\repos\\LogiMarket360\\tmp\\R06-Windows\\bin\\LogiMarket.WinForms.exe\" --db C:\\Users\\ASUS\\source\\repos\\LogiMarket360\\tmp\\R06-Windows\\datos\\logimarket.db"
+  },
+  {
+    "ProcessId": 1168,
+    "ExecutablePath": "C:\\Users\\ASUS\\source\\repos\\LogiMarket360\\tmp\\R06-Windows\\bin\\LogiMarket.WinForms.exe",
+    "CommandLine": "\"C:\\Users\\ASUS\\source\\repos\\LogiMarket360\\tmp\\R06-Windows\\bin\\LogiMarket.WinForms.exe\" --db C:\\Users\\ASUS\\source\\repos\\LogiMarket360\\tmp\\R06-Windows\\datos\\logimarket.db"
+  }
+]

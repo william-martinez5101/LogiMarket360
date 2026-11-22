@@ -1,0 +1,119 @@
+{
+  "Caso": "R03-ASC",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T22:47:33.3644895+00:00",
+  "Metodo": "ProyeccionOrdenada_DistingueDuplicadosRestauraHistorialYGuarda",
+  "Fuente": "LogiMarket.Tests/Integracion/RegresionesCarritoRevisionTests.cs",
+  "Esperado": "Seleccion enlazada, SKU repetido, cambio/quitar, deshacer/rehacer y recarga conservan articulo y cantidad",
+  "Obtenido": {
+    "Lineas": [
+      {
+        "Elemento": {
+          "Codigo": "P04",
+          "Nombre": "Webcam",
+          "Cantidad": 1,
+          "Precio": 40.0,
+          "PesoKg": 0.35,
+          "Hijos": []
+        },
+        "Cantidad": 1,
+        "Codigo": "P04",
+        "PrecioUnitario": 40.0,
+        "Importe": 40.0,
+        "Unidades": 1
+      },
+      {
+        "Elemento": {
+          "Codigo": "P01",
+          "Nombre": "Mouse USB",
+          "Cantidad": 1,
+          "Precio": 20.0,
+          "PesoKg": 0.2,
+          "Hijos": []
+        },
+        "Cantidad": 2,
+        "Codigo": "P01",
+        "PrecioUnitario": 20.0,
+        "Importe": 40.0,
+        "Unidades": 2
+      }
+    ],
+    "Valores": {
+      "Subtotal": 80.0,
+      "Descuento": 0.0,
+      "Tarifa": 5.0,
+      "Total": 85.0,
+      "Promocion": "SIN_DESCUENTO",
+      "Unidades": 3
+    }
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Existencias": [
+    {
+      "Sku": "P01",
+      "Fisico": 8,
+      "Comprometido": 0,
+      "Disponible": 8
+    },
+    {
+      "Sku": "P02",
+      "Fisico": 5,
+      "Comprometido": 0,
+      "Disponible": 5
+    },
+    {
+      "Sku": "P03",
+      "Fisico": 20,
+      "Comprometido": 0,
+      "Disponible": 20
+    },
+    {
+      "Sku": "P04",
+      "Fisico": 4,
+      "Comprometido": 0,
+      "Disponible": 4
+    },
+    {
+      "Sku": "P05",
+      "Fisico": 30,
+      "Comprometido": 0,
+      "Disponible": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T22:47:32.9987212+00:00"
+    }
+  ],
+  "Traza": [],
+  "CobrosSimulados": []
+}

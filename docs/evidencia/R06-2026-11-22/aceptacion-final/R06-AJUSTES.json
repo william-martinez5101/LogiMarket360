@@ -1,0 +1,170 @@
+{
+  "Caso": "R06-AJUSTES",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T22:47:35.6714744+00:00",
+  "Metodo": "AjustesNegativos_RespetanComprometidoYPermitenReducirSoloLibre",
+  "Fuente": "LogiMarket.Tests/Integracion/RegresionesReservasRevisionTests.cs",
+  "Esperado": "Ajuste-3 rechazado; ajuste-2 libre permitido; compromiso2 sigue recuperable",
+  "Obtenido": [
+    {
+      "Id": "38a183e5-bd83-4922-883d-a37344b22b41",
+      "PedidoId": null,
+      "Sku": "P04",
+      "Cantidad": -2,
+      "Motivo": "AJUSTE: Retirar solo las unidades libres",
+      "Referencia": "4875a5c5-18ad-4e1f-b139-9b0a1c0de9cb",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "61b2d256-72f9-46c3-882b-96f15134fb23",
+      "PedidoId": "9e635008-e25e-498b-80ce-6e9c9f7aca18",
+      "Sku": "P04",
+      "Cantidad": -2,
+      "Motivo": "VENTA",
+      "Referencia": "c4f24704-3c0d-481b-b7e4-eada2ed28fe2",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 0
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Existencias": [
+    {
+      "Sku": "P01",
+      "Fisico": 8,
+      "Comprometido": 0,
+      "Disponible": 8
+    },
+    {
+      "Sku": "P02",
+      "Fisico": 5,
+      "Comprometido": 0,
+      "Disponible": 5
+    },
+    {
+      "Sku": "P03",
+      "Fisico": 20,
+      "Comprometido": 0,
+      "Disponible": 20
+    },
+    {
+      "Sku": "P04",
+      "Fisico": 0,
+      "Comprometido": 0,
+      "Disponible": 0
+    },
+    {
+      "Sku": "P05",
+      "Fisico": 30,
+      "Comprometido": 0,
+      "Disponible": 30
+    }
+  ],
+  "Pagos": [
+    {
+      "Id": "c4f24704-3c0d-481b-b7e4-eada2ed28fe2",
+      "PedidoId": "9e635008-e25e-498b-80ce-6e9c9f7aca18",
+      "Clave": "ajuste-recuperacion",
+      "Referencia": "SIM-926f4402483640f4a4b96688023ba33b",
+      "Importe": 85.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Movimientos": [
+    {
+      "Id": "38a183e5-bd83-4922-883d-a37344b22b41",
+      "PedidoId": null,
+      "Sku": "P04",
+      "Cantidad": -2,
+      "Motivo": "AJUSTE: Retirar solo las unidades libres",
+      "Referencia": "4875a5c5-18ad-4e1f-b139-9b0a1c0de9cb",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "61b2d256-72f9-46c3-882b-96f15134fb23",
+      "PedidoId": "9e635008-e25e-498b-80ce-6e9c9f7aca18",
+      "Sku": "P04",
+      "Cantidad": -2,
+      "Motivo": "VENTA",
+      "Referencia": "c4f24704-3c0d-481b-b7e4-eada2ed28fe2",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Eventos": [
+    {
+      "Evento": {
+        "Id": "ae477e3a-4fee-4fe4-a69b-0bbb3ee5ce19",
+        "PedidoId": "9e635008-e25e-498b-80ce-6e9c9f7aca18",
+        "Tipo": "PedidoPagado",
+        "Importe": 85.0,
+        "Canal": "EMAIL",
+        "Fecha": "2026-11-21T17:00:00+00:00"
+      },
+      "Intentos": 0,
+      "Procesado": null,
+      "Error": null
+    }
+  ],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T22:47:35.1425685+00:00"
+    }
+  ],
+  "Traza": [
+    {
+      "Id": "62f7a272-3ef5-4c64-9a77-dcbb90ccd84d",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "ajuste-pendiente",
+      "Mensaje": "Importe=85,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "660ceee0-2994-4d0c-989b-4f21c8e521b3",
+      "Tipo": "PASARELA",
+      "Correlacion": "ajuste-pendiente",
+      "Mensaje": "LEGADO: 8500 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "7c2b9520-61ae-4d3e-8ca1-9312aaa603cf",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "ajuste-pendiente",
+      "Mensaje": "LEGADO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": [
+    {
+      "Clave": "ajuste-pendiente",
+      "Monto": 85,
+      "Referencia": "SIM-926f4402483640f4a4b96688023ba33b",
+      "Proveedor": "LEGADO",
+      "PedidoId": "9e635008-e25e-498b-80ce-6e9c9f7aca18"
+    }
+  ]
+}
