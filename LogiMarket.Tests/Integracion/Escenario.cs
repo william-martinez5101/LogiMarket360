@@ -4,6 +4,7 @@ using LogiMarket.Application.Contratos;
 using LogiMarket.Application.Consultas;
 using LogiMarket.Application.Eventos;
 using LogiMarket.Application.Gestion;
+using LogiMarket.Application.Inventario;
 using LogiMarket.Application.Pedidos;
 using LogiMarket.Application.Seguridad;
 using LogiMarket.Domain.Clientes;
@@ -39,6 +40,7 @@ public sealed class Escenario : IAsyncDisposable
     public InvocadorComandos Invocador { get; }
     public IPasarelaPago Pasarela { get; }
     public DiarioCobrosSimulados Diario { get; }
+    public DisponibilidadExistencias Existencias { get; }
     public ProcesadorOutbox Outbox { get; }
     public Autenticacion Acceso { get; }
     public CreadorNotificacion[] Creadores { get; }
@@ -46,13 +48,14 @@ public sealed class Escenario : IAsyncDisposable
     {
         Config = new(ruta ?? Path.Combine(Path.GetTempPath(), "LogiMarket360Tests", Guid.NewGuid().ToString("N"), "prueba.db"));
         Log = new BitacoraArchivo(Config, Reloj); Unidades = new UnidadTrabajoEfFactory(Config, Demo); Diario = new(Config);
+        Existencias = new(Diario);
         Creadores = [new CreadorEmail(Demo, Reloj, Log), new CreadorSms(Demo, Reloj, Log)];
         var selector = new SelectorPasarela(new(new(Diario, Demo, Log)), new(Diario, Demo, Log), Demo);
         Pasarela = new PagoAutorizadoProxy(new AuditoriaPagoDecorator(selector, Log), Sesion);
-        Consultas = new(Unidades, Sesion, Metricas); Pedidos = new(Unidades, Sesion, Reloj, Calculadora, Entregas, Demo, Diario);
+        Consultas = new(Unidades, Sesion, Metricas, Existencias); Pedidos = new(Unidades, Sesion, Reloj, Calculadora, Entregas, Demo, Diario, Existencias);
         Devoluciones = new(Unidades, Sesion, Reloj, [new DevolucionDefecto(), new DevolucionArrepentimiento()], Demo);
-        Catalogo = new(Unidades, Sesion, Reloj); Clientes = new(Unidades, Sesion);
-        Facade = new(Unidades, Sesion, new(), Pasarela, Reloj, Demo, Diario); Invocador = new(Unidades, Reloj, Sesion, Log);
+        Catalogo = new(Unidades, Sesion, Reloj, Existencias); Clientes = new(Unidades, Sesion);
+        Facade = new(Unidades, Sesion, new(), Pasarela, Reloj, Demo, Diario, Existencias); Invocador = new(Unidades, Reloj, Sesion, Log);
         Outbox = new(Unidades, new([new AuditoriaObserver(Reloj), new MetricasObserver(), new NotificacionObserver(Creadores)]), Metricas, Reloj, Log);
         Acceso = new(new UsuariosEf(Config), Hash, Sesion);
     }
@@ -85,7 +88,7 @@ public sealed class Escenario : IAsyncDisposable
         var datos = await Consultas.CargarAsync();
         var evidencia = new { Caso = id, Estado = "APROBADO", FechaUtc = DateTimeOffset.UtcNow, Metodo = metodo,
             Fuente = "LogiMarket.Tests/Integracion/" + Path.GetFileName(fuente), Esperado = esperado, Obtenido = obtenido,
-            Stock = datos.Productos.Select(p => new { p.Sku, p.Stock }), Pagos = datos.Pagos, Movimientos = datos.Movimientos,
+            Stock = datos.Productos.Select(p => new { p.Sku, p.Stock }), Existencias = datos.Existencias, Pagos = datos.Pagos, Movimientos = datos.Movimientos,
             Eventos = datos.Outbox, Avisos = datos.Avisos, Auditoria = datos.Auditoria, Traza = Log.Leer(), CobrosSimulados = Diario.Leer() };
         await File.WriteAllTextAsync(Path.Combine(raiz, id + ".json"), JsonSerializer.Serialize(evidencia, new JsonSerializerOptions { WriteIndented = true }));
     }

@@ -11,10 +11,17 @@ public sealed class DiarioCobrosSimulados(ConfiguracionBase configuracion) : IIn
     private sealed record Reserva(Guid PedidoId, decimal Importe, List<string> Claves);
     private string RutaCobros => Path.Combine(configuracion.Directorio, "cobros-simulados.json");
     private string RutaIntentos => Path.Combine(configuracion.Directorio, "intentos-cobro.json");
-    private FileStream Bloquear()
+    private FileStream Bloquear(CancellationToken ct = default)
     {
         Directory.CreateDirectory(configuracion.Directorio);
-        return new FileStream(RutaCobros + ".lock", FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None);
+        var espera = System.Diagnostics.Stopwatch.StartNew();
+        while (true)
+        {
+            ct.ThrowIfCancellationRequested();
+            try { return new FileStream(RutaCobros + ".lock", FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.None); }
+            catch (IOException) when (espera.Elapsed < TimeSpan.FromSeconds(5))
+            { Thread.Sleep(10); } // Consultas de otra ventana tambien leen el diario bajo este bloqueo.
+        }
     }
     private static List<T> LeerArchivo<T>(string ruta)
         => File.Exists(ruta) ? JsonSerializer.Deserialize<List<T>>(File.ReadAllText(ruta))
@@ -33,7 +40,7 @@ public sealed class DiarioCobrosSimulados(ConfiguracionBase configuracion) : IIn
     {
         ct.ThrowIfCancellationRequested(); ValidacionCobro.Exigir(importe, clave);
         if (pedidoId == Guid.Empty) throw new ArgumentException("Pedido obligatorio.");
-        using var cerrojo = Bloquear();
+        using var cerrojo = Bloquear(ct);
         var reservas = LeerArchivo<Reserva>(RutaIntentos); var cobros = LeerArchivo<CobroSimulado>(RutaCobros);
         // Un diario antiguo sin PedidoId no permite atribuir con certeza una aceptacion
         // huerfana. Se exige revision en vez de arriesgar otro cargo con una nueva clave.
@@ -55,7 +62,7 @@ public sealed class DiarioCobrosSimulados(ConfiguracionBase configuracion) : IIn
     }
     public Task<IntentoCobro?> BuscarAsync(Guid pedidoId, CancellationToken ct = default)
     {
-        ct.ThrowIfCancellationRequested(); using var cerrojo = Bloquear();
+        ct.ThrowIfCancellationRequested(); using var cerrojo = Bloquear(ct);
         var reserva = LeerArchivo<Reserva>(RutaIntentos).SingleOrDefault(x => x.PedidoId == pedidoId);
         var cobro = LeerArchivo<CobroSimulado>(RutaCobros).SingleOrDefault(x => x.PedidoId == pedidoId);
         return Task.FromResult<IntentoCobro?>(reserva is null ? null : new(pedidoId, reserva.Importe, cobro is null ? null : Respuesta(cobro)));
@@ -76,9 +83,18 @@ public sealed class DiarioCobrosSimulados(ConfiguracionBase configuracion) : IIn
         Guardar(RutaCobros, registros);
         return new(true, cobro.Referencia, proveedor, "Cobro simulado aprobado.");
     }
-    public IReadOnlyList<CobroSimulado> Leer()
+    public Task<IReadOnlyList<IntentoCobro>> AceptadosAsync(CancellationToken ct = default)
     {
-        using var cerrojo = Bloquear(); return LeerArchivo<CobroSimulado>(RutaCobros);
+        ct.ThrowIfCancellationRequested();
+        var aceptados = Leer(ct).Where(x => x.PedidoId.HasValue)
+            .Select(x => new IntentoCobro(x.PedidoId!.Value, x.Monto, Respuesta(x))).ToList();
+        if (aceptados.GroupBy(x => x.PedidoId).Any(g => g.Count() != 1))
+            throw new InvalidOperationException("Hay mas de una aceptacion para un pedido; requiere conciliacion.");
+        return Task.FromResult<IReadOnlyList<IntentoCobro>>(aceptados);
+    }
+    public IReadOnlyList<CobroSimulado> Leer(CancellationToken ct = default)
+    {
+        using var cerrojo = Bloquear(ct); return LeerArchivo<CobroSimulado>(RutaCobros);
     }
 }
 public static class ValidacionCobro

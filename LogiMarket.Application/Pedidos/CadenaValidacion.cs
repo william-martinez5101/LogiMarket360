@@ -8,7 +8,8 @@ namespace LogiMarket.Application.Pedidos;
 
 public sealed record RechazoValidacion(string Codigo, string Mensaje);
 public sealed record ContextoValidacion(Cliente? Cliente, IReadOnlyList<LineaPedido> Lineas,
-    IReadOnlyList<ProductoSimple> Productos, SesionUsuario Sesion, EstadoPedido Estado);
+    IReadOnlyList<ProductoSimple> Productos, SesionUsuario Sesion, EstadoPedido Estado,
+    IReadOnlyDictionary<string, int>? Disponibles = null);
 public abstract class ValidadorPedido
 {
     private ValidadorPedido? _siguiente;
@@ -34,8 +35,10 @@ public sealed class StockValidador : ValidadorPedido
         {
             var cantidad = grupo.Aggregate(0, (n, x) => checked(n + x.Cantidad));
             var producto = c.Productos.SingleOrDefault(x => x.Sku == grupo.Key);
-            if (producto is null || producto.Stock < cantidad)
-                return new("STOCK", $"Stock insuficiente para {grupo.Key}: requiere {cantidad}, disponible {producto?.Stock ?? 0}.");
+            var disponible = producto is null ? 0 : c.Disponibles is null ? producto.Stock
+                : Math.Min(producto.Stock, c.Disponibles.GetValueOrDefault(grupo.Key));
+            if (producto is null || disponible < cantidad)
+                return new("STOCK", $"Stock insuficiente para {grupo.Key}: requiere {cantidad}, disponible {disponible}.");
         }
         return null;
     }

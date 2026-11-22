@@ -1,10 +1,12 @@
 using LogiMarket.Application.Contratos;
+using LogiMarket.Application.Inventario;
 using LogiMarket.Application.Seguridad;
 
 namespace LogiMarket.Application.Pedidos;
 
 public sealed class ConfirmacionPedidoFacade(IUnidadTrabajoFactory unidades, SesionUsuario sesion,
-    CadenaConfirmacion cadena, IPasarelaPago pasarela, IReloj reloj, IDemostracion demo, IIntentosCobro intentos)
+    CadenaConfirmacion cadena, IPasarelaPago pasarela, IReloj reloj, IDemostracion demo, IIntentosCobro intentos,
+    DisponibilidadExistencias existencias)
 {
     public async Task<PagoRegistrado> ConfirmarAsync(Guid pedidoId, string clave, CancellationToken ct = default)
     {
@@ -27,7 +29,10 @@ public sealed class ConfirmacionPedidoFacade(IUnidadTrabajoFactory unidades, Ses
             return confirmado;
         }
         var clientes = await u.Clientes.ListarAsync(); var productos = await u.Catalogo.ProductosAsync();
-        var rechazo = cadena.Evaluar(new(clientes.SingleOrDefault(x => x.Id == pedido.ClienteId), pedido.Lineas, productos, sesion, pedido.Estado));
+        // Bajo BEGIN IMMEDIATE: ninguna venta ni ajuste puede tomar unidades de una aceptacion pendiente.
+        var disponibilidad = await existencias.CalcularAsync(productos, await u.Pedidos.ListarAsync(), pagos, pedidoId, ct);
+        var rechazo = cadena.Evaluar(new(clientes.SingleOrDefault(x => x.Id == pedido.ClienteId), pedido.Lineas, productos, sesion, pedido.Estado,
+            disponibilidad.ToDictionary(x => x.Sku, x => x.Disponible)));
         if (rechazo is not null) throw new InvalidOperationException($"{rechazo.Codigo}: {rechazo.Mensaje}");
         var intento = await intentos.PrepararAsync(pedidoId, clave, pedido.Valores.Total, referencias, ct);
         var cobro = intento.Aprobacion ?? await pasarela.CobrarAsync(pedido.Valores.Total, clave, ct);

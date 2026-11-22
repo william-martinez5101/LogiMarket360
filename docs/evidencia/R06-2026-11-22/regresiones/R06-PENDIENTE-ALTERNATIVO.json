@@ -1,0 +1,112 @@
+{
+  "Caso": "R06-PENDIENTE-ALTERNATIVO",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T22:43:46.363455+00:00",
+  "Metodo": "AceptacionPendiente_ComprometeTodoHastaConsumirUnaVez",
+  "Fuente": "LogiMarket.Tests/Integracion/RegresionesReservasRevisionTests.cs",
+  "Esperado": "Una aceptacion165 compromete P04x4 pese a dos rollback; stock fisico4 y operaciones locales0",
+  "Obtenido": {
+    "a": "981c1425-d7fe-489b-ad58-031833443150",
+    "b": "14c3d186-c15c-4270-933e-562d9f8efd01",
+    "referencia": "SIM-73f0c1d028344090a74b33c3835eda52"
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Existencias": [
+    {
+      "Sku": "P01",
+      "Fisico": 8,
+      "Comprometido": 0,
+      "Disponible": 8
+    },
+    {
+      "Sku": "P02",
+      "Fisico": 5,
+      "Comprometido": 0,
+      "Disponible": 5
+    },
+    {
+      "Sku": "P03",
+      "Fisico": 20,
+      "Comprometido": 0,
+      "Disponible": 20
+    },
+    {
+      "Sku": "P04",
+      "Fisico": 4,
+      "Comprometido": 4,
+      "Disponible": 0
+    },
+    {
+      "Sku": "P05",
+      "Fisico": 30,
+      "Comprometido": 0,
+      "Disponible": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T22:43:45.8180079+00:00"
+    }
+  ],
+  "Traza": [
+    {
+      "Id": "d053f3c1-06b2-400c-97b2-aa03661d7f0b",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "A-fallo",
+      "Mensaje": "Importe=165,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "41c54cc9-d23f-43e4-b956-e26419abbb3a",
+      "Tipo": "PASARELA",
+      "Correlacion": "A-fallo",
+      "Mensaje": "ALTERNATIVO: 165,00 USD",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "7ebd0340-c605-408a-a83b-b7fbb9a799da",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "A-fallo",
+      "Mensaje": "ALTERNATIVO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": [
+    {
+      "Clave": "A-fallo",
+      "Monto": 165.0,
+      "Referencia": "SIM-73f0c1d028344090a74b33c3835eda52",
+      "Proveedor": "ALTERNATIVO",
+      "PedidoId": "981c1425-d7fe-489b-ad58-031833443150"
+    }
+  ]
+}

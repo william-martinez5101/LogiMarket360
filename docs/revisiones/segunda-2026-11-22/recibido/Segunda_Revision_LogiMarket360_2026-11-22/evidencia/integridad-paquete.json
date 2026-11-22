@@ -1,0 +1,15 @@
+{
+  "archivo": "APE04_LogiMarket360_Correcciones_2026-11-22.zip",
+  "bytes": 6675899,
+  "sha256": "52d11f2b0919ee367ed788b8b4db219fd254d6243c0d911b1734cf7f97eef8d3",
+  "sha256_lateral_coincide": true,
+  "commit_manifiesto": "b2754b0013e000bd8e89d8bc9616d96a15c6e31b",
+  "entradas": 460,
+  "archivos_manifiesto": 458,
+  "errores_hash": [],
+  "diferencias_con_carpeta_recibida": [],
+  "rutas_invalidas": [],
+  "archivos_excluibles": [],
+  "duplicados": [],
+  "CRC": null
+}

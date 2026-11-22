@@ -1,0 +1,227 @@
+{
+  "Caso": "R06-RECUPERADO-LEGADO",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T22:43:45.7478812+00:00",
+  "Metodo": "AceptacionPendiente_ComprometeTodoHastaConsumirUnaVez",
+  "Fuente": "LogiMarket.Tests/Integracion/RegresionesReservasRevisionTests.cs",
+  "Esperado": "B sin cobro, A PAGADO165 con referencia original, un movimiento/evento/aviso tras reinicios y Outbox reintentado",
+  "Obtenido": {
+    "Id": "1f4d0627-c3c8-4af4-bc6d-1f1a50b1dc6d",
+    "PedidoId": "6343d53a-1c7d-4f95-9e77-f3a1256d5cc6",
+    "Clave": "A-reinicio",
+    "Referencia": "SIM-d47d5db29d7c410bae878741613e3610",
+    "Importe": 165.0,
+    "Proveedor": "LEGADO",
+    "Fecha": "2026-11-21T17:00:00+00:00"
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 0
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Existencias": [
+    {
+      "Sku": "P01",
+      "Fisico": 8,
+      "Comprometido": 0,
+      "Disponible": 8
+    },
+    {
+      "Sku": "P02",
+      "Fisico": 5,
+      "Comprometido": 0,
+      "Disponible": 5
+    },
+    {
+      "Sku": "P03",
+      "Fisico": 20,
+      "Comprometido": 0,
+      "Disponible": 20
+    },
+    {
+      "Sku": "P04",
+      "Fisico": 0,
+      "Comprometido": 0,
+      "Disponible": 0
+    },
+    {
+      "Sku": "P05",
+      "Fisico": 30,
+      "Comprometido": 0,
+      "Disponible": 30
+    }
+  ],
+  "Pagos": [
+    {
+      "Id": "1f4d0627-c3c8-4af4-bc6d-1f1a50b1dc6d",
+      "PedidoId": "6343d53a-1c7d-4f95-9e77-f3a1256d5cc6",
+      "Clave": "A-reinicio",
+      "Referencia": "SIM-d47d5db29d7c410bae878741613e3610",
+      "Importe": 165.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Movimientos": [
+    {
+      "Id": "596590e1-6d7c-4934-a3e6-baa5b0ad4f69",
+      "PedidoId": "6343d53a-1c7d-4f95-9e77-f3a1256d5cc6",
+      "Sku": "P04",
+      "Cantidad": -4,
+      "Motivo": "VENTA",
+      "Referencia": "1f4d0627-c3c8-4af4-bc6d-1f1a50b1dc6d",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Eventos": [
+    {
+      "Evento": {
+        "Id": "43d913c8-7590-4ba7-931b-3c257c9ce139",
+        "PedidoId": "6343d53a-1c7d-4f95-9e77-f3a1256d5cc6",
+        "Tipo": "PedidoPagado",
+        "Importe": 165.0,
+        "Canal": "EMAIL",
+        "Fecha": "2026-11-21T17:00:00+00:00"
+      },
+      "Intentos": 2,
+      "Procesado": "2026-11-21T17:00:00+00:00",
+      "Error": null
+    }
+  ],
+  "Avisos": [
+    {
+      "EventoId": "43d913c8-7590-4ba7-931b-3c257c9ce139",
+      "Canal": "EMAIL",
+      "Mensaje": "EMAIL: PedidoPagado; pedido 6343d53a-1c7d-4f95-9e77-f3a1256d5cc6; importe USD 165,00. Aviso local de demostracion.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T22:43:43.516929+00:00"
+    },
+    {
+      "Id": "9a4d8622-8897-4fb1-99f8-fa21200ed2aa",
+      "Tipo": "COMMAND",
+      "Correlacion": "678dd590-9ce9-4306-8b4a-6640f317491b",
+      "Mensaje": "ConfirmarPedidoCommand; admin.demo; INICIO; Pedido=6343d53a-1c7d-4f95-9e77-f3a1256d5cc6; clave=A-reinicio; ",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "ce10652e-a9f7-49e5-b837-b0cd94b0c571",
+      "Tipo": "COMMAND",
+      "Correlacion": "678dd590-9ce9-4306-8b4a-6640f317491b",
+      "Mensaje": "ConfirmarPedidoCommand; admin.demo; FIN; Pedido=6343d53a-1c7d-4f95-9e77-f3a1256d5cc6; clave=A-reinicio; {\u0022Id\u0022:\u00221f4d0627-c3c8-4af4-bc6d-1f1a50b1dc6d\u0022,\u0022PedidoId\u0022:\u00226343d53a-1c7d-4f95-9e77-f3a1256d5cc6\u0022,\u0022Clave\u0022:\u0022A-reinicio\u0022,\u0022Referencia\u0022:\u0022SIM-d47d5db29d7c410bae878741613e3610\u0022,\u0022Importe\u0022:165.0,\u0022Proveedor\u0022:\u0022LEGADO\u0022,\u0022Fecha\u0022:\u00222026-11-21T17:00:00\u002B00:00\u0022}",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "43d913c8-7590-4ba7-931b-3c257c9ce139",
+      "Tipo": "EVENTO",
+      "Correlacion": "6343d53a-1c7d-4f95-9e77-f3a1256d5cc6",
+      "Mensaje": "PedidoPagado; evento=43d913c8-7590-4ba7-931b-3c257c9ce139; importe=165,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Traza": [
+    {
+      "Id": "c2332c2c-55ba-4258-9f88-df27179554df",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "A-fallo",
+      "Mensaje": "Importe=165,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "ad243018-3082-4657-acab-afb9f53e4ee4",
+      "Tipo": "PASARELA",
+      "Correlacion": "A-fallo",
+      "Mensaje": "LEGADO: 16500 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "d7ad511c-00a3-4cae-81c3-0e05b43a6f9a",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "A-fallo",
+      "Mensaje": "LEGADO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "733296cc-3cd3-4fe7-81c2-886ee99b48dd",
+      "Tipo": "COMMAND",
+      "Correlacion": "678dd590-9ce9-4306-8b4a-6640f317491b",
+      "Mensaje": "ConfirmarPedidoCommand; admin.demo; INICIO; Pedido=6343d53a-1c7d-4f95-9e77-f3a1256d5cc6; clave=A-reinicio; ",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "108eb295-e8aa-404a-b235-1c0d56730b7f",
+      "Tipo": "COMMAND",
+      "Correlacion": "678dd590-9ce9-4306-8b4a-6640f317491b",
+      "Mensaje": "ConfirmarPedidoCommand; admin.demo; FIN; Pedido=6343d53a-1c7d-4f95-9e77-f3a1256d5cc6; clave=A-reinicio; {\u0022Id\u0022:\u00221f4d0627-c3c8-4af4-bc6d-1f1a50b1dc6d\u0022,\u0022PedidoId\u0022:\u00226343d53a-1c7d-4f95-9e77-f3a1256d5cc6\u0022,\u0022Clave\u0022:\u0022A-reinicio\u0022,\u0022Referencia\u0022:\u0022SIM-d47d5db29d7c410bae878741613e3610\u0022,\u0022Importe\u0022:165.0,\u0022Proveedor\u0022:\u0022LEGADO\u0022,\u0022Fecha\u0022:\u00222026-11-21T17:00:00\u002B00:00\u0022}",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "b7b845ee-446c-4d4a-aaa9-9e63d0e7acc9",
+      "Tipo": "OUTBOX_OK",
+      "Correlacion": "43d913c8-7590-4ba7-931b-3c257c9ce139",
+      "Mensaje": "AUDITORIA",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "de73625f-dc22-45d7-bc59-8530d604c60c",
+      "Tipo": "OUTBOX_OK",
+      "Correlacion": "43d913c8-7590-4ba7-931b-3c257c9ce139",
+      "Mensaje": "METRICAS",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "69eec8e7-c891-4b38-85ca-22c69eb6aa5a",
+      "Tipo": "OUTBOX_ERROR",
+      "Correlacion": "43d913c8-7590-4ba7-931b-3c257c9ce139",
+      "Mensaje": "NOTIFICACION: Fallo simulado de notificador EMAIL.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "d323e1e0-73a8-451a-8e02-0c37673bdad9",
+      "Tipo": "NOTIFICACION",
+      "Correlacion": "43d913c8-7590-4ba7-931b-3c257c9ce139",
+      "Mensaje": "EMAIL: PedidoPagado; pedido 6343d53a-1c7d-4f95-9e77-f3a1256d5cc6; importe USD 165,00. Aviso local de demostracion.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "f36904eb-fd46-49ab-9eba-ffc394c946e5",
+      "Tipo": "OUTBOX_OK",
+      "Correlacion": "43d913c8-7590-4ba7-931b-3c257c9ce139",
+      "Mensaje": "NOTIFICACION",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": [
+    {
+      "Clave": "A-fallo",
+      "Monto": 165,
+      "Referencia": "SIM-d47d5db29d7c410bae878741613e3610",
+      "Proveedor": "LEGADO",
+      "PedidoId": "6343d53a-1c7d-4f95-9e77-f3a1256d5cc6"
+    }
+  ]
+}

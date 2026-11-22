@@ -1,0 +1,171 @@
+{
+  "Caso": "R06-RECHAZO-ALTERNATIVO",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T22:43:52.6546678+00:00",
+  "Metodo": "RechazoYCancelacionPermitida_NoComprometenExistencias",
+  "Fuente": "LogiMarket.Tests/Integracion/RegresionesReservasRevisionTests.cs",
+  "Esperado": "Rechazo no retiene unidades; cancelar impago y cobrar otro pedido usa las4 libres",
+  "Obtenido": {
+    "Id": "e06d85e3-c2eb-4643-bb45-23f1b36f12bc",
+    "PedidoId": "3492c0d6-1aec-4ada-a9b3-8b08476a0bcf",
+    "Clave": "aceptado",
+    "Referencia": "SIM-88a33eb83c51409ab2dc4db2aa61bedc",
+    "Importe": 165.0,
+    "Proveedor": "ALTERNATIVO",
+    "Fecha": "2026-11-21T17:00:00+00:00"
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 0
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Existencias": [
+    {
+      "Sku": "P01",
+      "Fisico": 8,
+      "Comprometido": 0,
+      "Disponible": 8
+    },
+    {
+      "Sku": "P02",
+      "Fisico": 5,
+      "Comprometido": 0,
+      "Disponible": 5
+    },
+    {
+      "Sku": "P03",
+      "Fisico": 20,
+      "Comprometido": 0,
+      "Disponible": 20
+    },
+    {
+      "Sku": "P04",
+      "Fisico": 0,
+      "Comprometido": 0,
+      "Disponible": 0
+    },
+    {
+      "Sku": "P05",
+      "Fisico": 30,
+      "Comprometido": 0,
+      "Disponible": 30
+    }
+  ],
+  "Pagos": [
+    {
+      "Id": "e06d85e3-c2eb-4643-bb45-23f1b36f12bc",
+      "PedidoId": "3492c0d6-1aec-4ada-a9b3-8b08476a0bcf",
+      "Clave": "aceptado",
+      "Referencia": "SIM-88a33eb83c51409ab2dc4db2aa61bedc",
+      "Importe": 165.0,
+      "Proveedor": "ALTERNATIVO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Movimientos": [
+    {
+      "Id": "4a189b71-4a28-40d8-891e-5bccdf9f616f",
+      "PedidoId": "3492c0d6-1aec-4ada-a9b3-8b08476a0bcf",
+      "Sku": "P04",
+      "Cantidad": -4,
+      "Motivo": "VENTA",
+      "Referencia": "e06d85e3-c2eb-4643-bb45-23f1b36f12bc",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Eventos": [
+    {
+      "Evento": {
+        "Id": "563cb8f6-af86-4bbe-8c99-2f203fed14a0",
+        "PedidoId": "3492c0d6-1aec-4ada-a9b3-8b08476a0bcf",
+        "Tipo": "PedidoPagado",
+        "Importe": 165.0,
+        "Canal": "EMAIL",
+        "Fecha": "2026-11-21T17:00:00+00:00"
+      },
+      "Intentos": 0,
+      "Procesado": null,
+      "Error": null
+    }
+  ],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T22:43:52.0432463+00:00"
+    }
+  ],
+  "Traza": [
+    {
+      "Id": "a2e0b8cb-765c-4232-92eb-f6077c823fb2",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "rechazado",
+      "Mensaje": "Importe=165,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "5451ba48-bf7f-45ed-9a7e-c0ae6bac9414",
+      "Tipo": "PASARELA",
+      "Correlacion": "rechazado",
+      "Mensaje": "ALTERNATIVO: 165,00 USD",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "11126a6f-3f33-42b7-9cd0-e9f1a3814193",
+      "Tipo": "PAGO_ERROR",
+      "Correlacion": "rechazado",
+      "Mensaje": "ALTERNATIVO; aprobado=False; Rechazo simulado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "5809f06d-5ad4-4900-b446-dcb72991deda",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "aceptado",
+      "Mensaje": "Importe=165,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "ccc6cfdd-d66f-47bb-89bc-8fea48780c6e",
+      "Tipo": "PASARELA",
+      "Correlacion": "aceptado",
+      "Mensaje": "ALTERNATIVO: 165,00 USD",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "b4b49194-81ad-409f-8ec2-486ec82faf6e",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "aceptado",
+      "Mensaje": "ALTERNATIVO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": [
+    {
+      "Clave": "aceptado",
+      "Monto": 165.0,
+      "Referencia": "SIM-88a33eb83c51409ab2dc4db2aa61bedc",
+      "Proveedor": "ALTERNATIVO",
+      "PedidoId": "3492c0d6-1aec-4ada-a9b3-8b08476a0bcf"
+    }
+  ]
+}

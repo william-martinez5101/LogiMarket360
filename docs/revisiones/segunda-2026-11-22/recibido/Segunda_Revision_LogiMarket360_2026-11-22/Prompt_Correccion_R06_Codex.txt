@@ -1,0 +1,23 @@
+Continúa sobre el proyecto local C:\Users\ASUS\source\repos\LogiMarket360 y la rama de desarrollo actual codex/completar-logimarket360. Verifica primero el estado y conserva los cambios del usuario y todos los commits.
+
+La segunda revisión independiente comprobó el HEAD b2754b0013e000bd8e89d8bc9616d96a15c6e31b: la solución compila sin errores/advertencias, pasan 149 pruebas y también las cinco pruebas externas anteriores. Los veinte commits están presentes. Conserva estas correcciones.
+
+Adjunto Segunda_Revision_LogiMarket360_2026-11-22.zip. Lee LEEME_Segunda_Revision.md y reproduce la prueba nueva de prueba_nueva. Falta resolver R06: disponibilidad de existencias para un cobro aceptado pendiente de commit.
+
+Reproducción real:
+1. Base oficial con cuatro P04. Crear y validar A y B, pedidos distintos de Luis NORMAL, cada uno P04 x4 ESTÁNDAR: 165.00 por pedido.
+2. Activar FallarPersistencia y confirmar A. El proveedor acepta 165.00, el guardado falla y revierte; A sigue VALIDADO, sin pago local, stock cuatro.
+3. Desactivar el fallo y confirmar B. Se aprueba y consume las cuatro unidades.
+4. Reiniciar y reintentar A con otra clave. Se rechaza por STOCK insuficiente (requiere cuatro, disponible cero). Cancelar A también se rechaza porque hay aceptación pendiente y pide confirmarlo.
+Resultado: dos aceptaciones por 330.00 para dos pedidos distintos, solo un pago local de B y un cargo de A sin conciliación posible con el stock disponible. La deduplicación por pedido funciona; el problema restante es proteger la disponibilidad del cobro pendiente.
+
+Autorizo corregirlo, agregar pruebas, verificar y hacer commits por avances comprobados. Protege durablemente las unidades de un cobro aceptado pendiente frente a otras ventas, con reservas persistentes o una solución equivalente. La reserva debe sobrevivir rollback y reinicio; su propio pedido debe poder consumirla sin contarse dos veces. Mantén disponibles las unidades libres para ventas legítimas. Conserva stock no negativo, reglas del PDF, identidad del cobro, pago/movimientos/eventos únicos y Outbox idempotente. Omitir la validación de stock no resuelve el problema.
+
+Comprueba SKU agregados de kits/líneas repetidas, rechazos del proveedor, liberación/consumo correcto de reservas, reintentos, dos instancias y reinicios. La prueba adjunta favorece bloquear B cuando A compromete las cuatro unidades y luego recuperar A una sola vez con la referencia original.
+
+Desde la carpeta descomprimida, la prueba se ejecuta así:
+dotnet test .\prueba_nueva\RevisionProbes.csproj -p:LogiMarketRepo="C:\Users\ASUS\source\repos\LogiMarket360" --configuration Release
+
+Utiliza bases temporales y conserva la base de uso. Mantén aprobadas las 149 pruebas y las cinco externas; agrega esta regresión al proyecto y conserva los resultados antes/después. Compila Release con advertencias como errores, verifica el flujo afectado en la interfaz real Windows, actualiza estado/evidencia y realiza los commits correspondientes.
+
+Al finalizar regenera el ZIP limpio con HEAD y manifiesto actualizados; resume commits, pruebas y cualquier pendiente real. GitHub y el informe académico formal siguen aplazados.

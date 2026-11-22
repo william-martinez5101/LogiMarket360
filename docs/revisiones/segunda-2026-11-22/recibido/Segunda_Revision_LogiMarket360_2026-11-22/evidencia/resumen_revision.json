@@ -1,0 +1,66 @@
+{
+  "head": "b2754b0013e000bd8e89d8bc9616d96a15c6e31b",
+  "commits": 20,
+  "compilacion": {
+    "errores": 0,
+    "advertencias": 0
+  },
+  "pruebas": {
+    "suite": {
+      "total": "149",
+      "executed": "149",
+      "passed": "149",
+      "failed": "0",
+      "error": "0",
+      "timeout": "0",
+      "aborted": "0",
+      "inconclusive": "0",
+      "passedButRunAborted": "0",
+      "notRunnable": "0",
+      "notExecuted": "0",
+      "disconnected": "0",
+      "warning": "0",
+      "completed": "0",
+      "inProgress": "0",
+      "pending": "0"
+    },
+    "adjuntas_anteriores": {
+      "total": "5",
+      "executed": "5",
+      "passed": "5",
+      "failed": "0",
+      "error": "0",
+      "timeout": "0",
+      "aborted": "0",
+      "inconclusive": "0",
+      "passedButRunAborted": "0",
+      "notRunnable": "0",
+      "notExecuted": "0",
+      "disconnected": "0",
+      "warning": "0",
+      "completed": "0",
+      "inProgress": "0",
+      "pending": "0"
+    },
+    "nueva_R06": {
+      "total": "1",
+      "executed": "1",
+      "passed": "0",
+      "failed": "1",
+      "error": "0",
+      "timeout": "0",
+      "aborted": "0",
+      "inconclusive": "0",
+      "passedButRunAborted": "0",
+      "notRunnable": "0",
+      "notExecuted": "0",
+      "disconnected": "0",
+      "warning": "0",
+      "completed": "0",
+      "inProgress": "0",
+      "pending": "0"
+    }
+  },
+  "R06": "Reproducido: aceptacion pendiente bloqueada por stock consumido por otro pedido",
+  "UI": "Se reviso evidencia recibida, sin ejecucion interactiva Windows en esta revision"
+}

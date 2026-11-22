@@ -94,6 +94,7 @@ public interface IIntentosCobro
 {
     Task<IntentoCobro> PrepararAsync(Guid pedidoId, string clave, decimal importe, IReadOnlyCollection<string> referenciasConfirmadas, CancellationToken ct = default);
     Task<IntentoCobro?> BuscarAsync(Guid pedidoId, CancellationToken ct = default);
+    Task<IReadOnlyList<IntentoCobro>> AceptadosAsync(CancellationToken ct = default);
 }
 // Contrato comun: monto positivo con dos decimales y clave no vacia; mismos errores de entrada.
 public interface IPasarelaPago { Task<RespuestaCobro> CobrarAsync(decimal monto, string clave, CancellationToken ct = default); }

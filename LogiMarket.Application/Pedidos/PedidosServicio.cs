@@ -1,4 +1,5 @@
 using LogiMarket.Application.Contratos;
+using LogiMarket.Application.Inventario;
 using LogiMarket.Application.Seguridad;
 using LogiMarket.Domain.Catalogo;
 using LogiMarket.Domain.Ventas;
@@ -6,7 +7,8 @@ using LogiMarket.Domain.Ventas;
 namespace LogiMarket.Application.Pedidos;
 
 public sealed class PedidosServicio(IUnidadTrabajoFactory unidades, SesionUsuario sesion, IReloj reloj,
-    CalculadoraPedido calculadora, IEnumerable<FabricaEntrega> entregas, IDemostracion demo, IIntentosCobro intentos)
+    CalculadoraPedido calculadora, IEnumerable<FabricaEntrega> entregas, IDemostracion demo, IIntentosCobro intentos,
+    DisponibilidadExistencias existencias)
 {
     public async Task<Guid> RegistrarAsync(PedidoBorrador borrador, Guid? editarId = null, long? versionEsperada = null)
     {
@@ -40,8 +42,11 @@ public sealed class PedidosServicio(IUnidadTrabajoFactory unidades, SesionUsuari
     {
         Permisos.Exigir(sesion, Rol.VENTAS); await using var u = await unidades.AbrirAsync(true);
         var p = await ExigirPedido(u, id); var cliente = (await u.Clientes.ListarAsync()).Single(x => x.Id == p.ClienteId);
+        var productos = await u.Catalogo.ProductosAsync();
+        var disponibilidad = await existencias.CalcularAsync(productos, await u.Pedidos.ListarAsync(), await u.Operaciones.PagosAsync(), id);
         var cadena = new ClienteActivoValidador(); cadena.SeguidoDe(new LineasValidador()).SeguidoDe(new StockValidador());
-        var error = cadena.Evaluar(new(cliente, p.Lineas, await u.Catalogo.ProductosAsync(), sesion, p.Estado));
+        var error = cadena.Evaluar(new(cliente, p.Lineas, productos, sesion, p.Estado,
+            disponibilidad.ToDictionary(x => x.Sku, x => x.Disponible)));
         if (error is not null) throw new InvalidOperationException(error.Mensaje);
         p.Validar(reloj.Ahora, sesion.Exigir().Usuario); await u.Pedidos.GuardarAsync(p); await u.ConfirmarAsync();
     }

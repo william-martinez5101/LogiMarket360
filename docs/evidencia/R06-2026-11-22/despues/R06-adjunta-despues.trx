@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="4ab91831-1c49-4b60-b263-ebd554e6b2b5" name="ASUS@DESKTOP-4NJRTFA 2026-11-22 17:44:14" runUser="DESKTOP-4NJRTFA\ASUS" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-22T17:44:14.8340462-05:00" queuing="2026-11-22T17:44:14.8340469-05:00" start="2026-11-22T17:44:06.1566704-05:00" finish="2026-11-22T17:44:14.8443678-05:00" />
+  <TestSettings name="default" id="2857a2fc-85ab-4599-a260-135a78f1ec03">
+    <Deployment runDeploymentRoot="ASUS_DESKTOP-4NJRTFA_2026-11-22_17_44_14" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="a54029ba-f8d4-41db-b324-57dceb27b1be" testId="6be04372-8026-edb3-0809-12f0839beafe" testName="RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta" computerName="DESKTOP-4NJRTFA" duration="00:00:04.7238775" startTime="2026-11-22T17:44:14.6464580-05:00" endTime="2026-11-22T17:44:14.6464823-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a54029ba-f8d4-41db-b324-57dceb27b1be">
+      <Output>
+        <StdOut>Pedido A: d6920b9a-ceaa-413d-9333-260d51c6c426; pedido B: 22a1b908-65b4-4ccf-8c90-59e612b08382&#xD;
+Resultado venta B: STOCK: Stock insuficiente para P04: requiere 4, disponible 0.&#xD;
+Resultado recuperacion A: RECUPERADA&#xD;
+Estado A: PAGADO&#xD;
+Pagos locales de A: 1&#xD;
+Pagos locales de B: 0&#xD;
+Stock P04: 0&#xD;
+Cobros externos aceptados: 1&#xD;
+Importe externo acumulado: 165&#xD;
+Cancelar A: Hay un cobro aceptado. Concilie confirmando el pedido; si ya esta pagado, utilice devolucion.&#xD;
+Cobro: pedido=d6920b9a-ceaa-413d-9333-260d51c6c426; importe=165; referencia=SIM-aafc9ce422544493a5fa489cbcd4ad60</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta" storage="c:\users\asus\source\repos\logimarket360\docs\revisiones\segunda-2026-11-22\recibido\segunda_revision_logimarket360_2026-11-22\prueba_nueva\bin\release\net8.0\revisionprobes.dll" id="6be04372-8026-edb3-0809-12f0839beafe">
+      <Execution id="a54029ba-f8d4-41db-b324-57dceb27b1be" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\segunda-2026-11-22\recibido\Segunda_Revision_LogiMarket360_2026-11-22\prueba_nueva\bin\Release\net8.0\RevisionProbes.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RevisionStockPendiente.CobroPendienteStockTests" name="AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="6be04372-8026-edb3-0809-12f0839beafe" executionId="a54029ba-f8d4-41db-b324-57dceb27b1be" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.34)&#xD;
+[xUnit.net 00:00:02.12]   Discovering: RevisionProbes&#xD;
+[xUnit.net 00:00:02.17]   Discovered:  RevisionProbes&#xD;
+[xUnit.net 00:00:02.17]   Starting:    RevisionProbes&#xD;
+[xUnit.net 00:00:06.98]   Finished:    RevisionProbes&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

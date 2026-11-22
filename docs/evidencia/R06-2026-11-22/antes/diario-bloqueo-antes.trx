@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="bbb0eb62-e377-4329-833e-002003c8b66f" name="ASUS@DESKTOP-4NJRTFA 2026-11-22 17:42:55" runUser="DESKTOP-4NJRTFA\ASUS" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-22T17:42:55.2288542-05:00" queuing="2026-11-22T17:42:55.2288549-05:00" start="2026-11-22T17:42:51.6165482-05:00" finish="2026-11-22T17:42:55.2433080-05:00" />
+  <TestSettings name="default" id="f26316be-24cc-49cc-8385-1721c92c9216">
+    <Deployment runDeploymentRoot="ASUS_DESKTOP-4NJRTFA_2026-11-22_17_42_55" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="b6ac2777-2c89-4a6a-a360-6f4ed4417e6c" testId="876d391e-06e6-ef06-6b45-bbe665378dcd" testName="LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.EsperaDelDiario_RespetaCancelacionSinCrearAceptacion" computerName="DESKTOP-4NJRTFA" duration="00:00:02.0140861" startTime="2026-11-22T17:42:54.6054787-05:00" endTime="2026-11-22T17:42:54.6054978-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b6ac2777-2c89-4a6a-a360-6f4ed4417e6c">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.ThrowsAny() Failure: Exception type was not compatible&#xD;
+Expected: typeof(System.OperationCanceledException)&#xD;
+Actual:   typeof(System.IO.IOException)&#xD;
+---- System.IO.IOException : The process cannot access the file 'C:\Users\ASUS\AppData\Local\Temp\LogiMarket360Tests\8c393818dc6c40d28d7e11aa20d0dc87\cobros-simulados.json.lock' because it is being used by another process.</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.EsperaDelDiario_RespetaCancelacionSinCrearAceptacion() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesReservasRevisionTests.cs:line 26&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.EsperaDelDiario_RespetaCancelacionSinCrearAceptacion() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesReservasRevisionTests.cs:line 26&#xD;
+--- End of stack trace from previous location ---&#xD;
+----- Inner Stack Trace -----&#xD;
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)&#xD;
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)&#xD;
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)&#xD;
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)&#xD;
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)&#xD;
+   at LogiMarket.Infrastructure.Pagos.DiarioCobrosSimulados.Bloquear() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Pagos\DiarioCobrosSimulados.cs:line 17&#xD;
+   at LogiMarket.Infrastructure.Pagos.DiarioCobrosSimulados.Leer() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Pagos\DiarioCobrosSimulados.cs:line 90&#xD;
+   at LogiMarket.Infrastructure.Pagos.DiarioCobrosSimulados.AceptadosAsync(CancellationToken ct) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Pagos\DiarioCobrosSimulados.cs:line 82&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.&lt;&gt;c__DisplayClass1_0.&lt;&lt;EsperaDelDiario_RespetaCancelacionSinCrearAceptacion&gt;b__0&gt;d.MoveNext() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesReservasRevisionTests.cs:line 24&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7c46047c-8460-4417-a6a0-8e04fbc9d98f" testId="de473578-afbb-ca64-6049-bb514b9d9fa0" testName="LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.ConsultaDeAceptaciones_EsperaElBloqueoBreveDeOtraInstancia" computerName="DESKTOP-4NJRTFA" duration="00:00:00.4619688" startTime="2026-11-22T17:42:55.0638818-05:00" endTime="2026-11-22T17:42:55.0638823-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7c46047c-8460-4417-a6a0-8e04fbc9d98f">
+      <Output>
+        <ErrorInfo>
+          <Message>System.IO.IOException : The process cannot access the file 'C:\Users\ASUS\AppData\Local\Temp\LogiMarket360Tests\a678132de878451ca4747ce282dec541\cobros-simulados.json.lock' because it is being used by another process.</Message>
+          <StackTrace>   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)&#xD;
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)&#xD;
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)&#xD;
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)&#xD;
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)&#xD;
+   at LogiMarket.Infrastructure.Pagos.DiarioCobrosSimulados.Bloquear() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Pagos\DiarioCobrosSimulados.cs:line 17&#xD;
+   at LogiMarket.Infrastructure.Pagos.DiarioCobrosSimulados.Leer() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Pagos\DiarioCobrosSimulados.cs:line 90&#xD;
+   at LogiMarket.Infrastructure.Pagos.DiarioCobrosSimulados.AceptadosAsync(CancellationToken ct) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Pagos\DiarioCobrosSimulados.cs:line 82&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.&lt;&gt;c__DisplayClass0_0.&lt;&lt;ConsultaDeAceptaciones_EsperaElBloqueoBreveDeOtraInstancia&gt;b__0&gt;d.MoveNext() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesReservasRevisionTests.cs:line 14&#xD;
+--- End of stack trace from previous location ---&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.ConsultaDeAceptaciones_EsperaElBloqueoBreveDeOtraInstancia() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesReservasRevisionTests.cs:line 15&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.ConsultaDeAceptaciones_EsperaElBloqueoBreveDeOtraInstancia() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesReservasRevisionTests.cs:line 15&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.EsperaDelDiario_RespetaCancelacionSinCrearAceptacion" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="876d391e-06e6-ef06-6b45-bbe665378dcd">
+      <Execution id="b6ac2777-2c89-4a6a-a360-6f4ed4417e6c" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests" name="EsperaDelDiario_RespetaCancelacionSinCrearAceptacion" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.ConsultaDeAceptaciones_EsperaElBloqueoBreveDeOtraInstancia" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="de473578-afbb-ca64-6049-bb514b9d9fa0">
+      <Execution id="7c46047c-8460-4417-a6a0-8e04fbc9d98f" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests" name="ConsultaDeAceptaciones_EsperaElBloqueoBreveDeOtraInstancia" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="876d391e-06e6-ef06-6b45-bbe665378dcd" executionId="b6ac2777-2c89-4a6a-a360-6f4ed4417e6c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="de473578-afbb-ca64-6049-bb514b9d9fa0" executionId="7c46047c-8460-4417-a6a0-8e04fbc9d98f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="2" executed="2" passed="0" failed="2" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.34)&#xD;
+[xUnit.net 00:00:00.12]   Discovering: LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.19]   Discovered:  LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.19]   Starting:    LogiMarket.Tests&#xD;
+[xUnit.net 00:00:02.31]       Assert.ThrowsAny() Failure: Exception type was not compatible&#xD;
+[xUnit.net 00:00:02.31]       Expected: typeof(System.OperationCanceledException)&#xD;
+[xUnit.net 00:00:02.31]       Actual:   typeof(System.IO.IOException)&#xD;
+[xUnit.net 00:00:02.31]       ---- System.IO.IOException : The process cannot access the file 'C:\Users\ASUS\AppData\Local\Temp\LogiMarket360Tests\8c393818dc6c40d28d7e11aa20d0dc87\cobros-simulados.json.lock' because it is being used by another process.&#xD;
+[xUnit.net 00:00:02.31]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.31]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesReservasRevisionTests.cs(26,0): at LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.EsperaDelDiario_RespetaCancelacionSinCrearAceptacion()&#xD;
+[xUnit.net 00:00:02.31]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesReservasRevisionTests.cs(26,0): at LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.EsperaDelDiario_RespetaCancelacionSinCrearAceptacion()&#xD;
+[xUnit.net 00:00:02.31]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:02.31]         ----- Inner Stack Trace -----&#xD;
+[xUnit.net 00:00:02.31]            at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)&#xD;
+[xUnit.net 00:00:02.31]            at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)&#xD;
+[xUnit.net 00:00:02.31]            at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)&#xD;
+[xUnit.net 00:00:02.31]            at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)&#xD;
+[xUnit.net 00:00:02.31]            at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)&#xD;
+[xUnit.net 00:00:02.31]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Pagos\DiarioCobrosSimulados.cs(17,0): at LogiMarket.Infrastructure.Pagos.DiarioCobrosSimulados.Bloquear()&#xD;
+[xUnit.net 00:00:02.31]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Pagos\DiarioCobrosSimulados.cs(90,0): at LogiMarket.Infrastructure.Pagos.DiarioCobrosSimulados.Leer()&#xD;
+[xUnit.net 00:00:02.31]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Pagos\DiarioCobrosSimulados.cs(82,0): at LogiMarket.Infrastructure.Pagos.DiarioCobrosSimulados.AceptadosAsync(CancellationToken ct)&#xD;
+[xUnit.net 00:00:02.31]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesReservasRevisionTests.cs(24,0): at LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.&lt;&gt;c__DisplayClass1_0.&lt;&lt;EsperaDelDiario_RespetaCancelacionSinCrearAceptacion&gt;b__0&gt;d.MoveNext()&#xD;
+[xUnit.net 00:00:02.31]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:02.77]       System.IO.IOException : The process cannot access the file 'C:\Users\ASUS\AppData\Local\Temp\LogiMarket360Tests\a678132de878451ca4747ce282dec541\cobros-simulados.json.lock' because it is being used by another process.&#xD;
+[xUnit.net 00:00:02.77]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.77]            at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)&#xD;
+[xUnit.net 00:00:02.77]            at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)&#xD;
+[xUnit.net 00:00:02.77]            at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)&#xD;
+[xUnit.net 00:00:02.77]            at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize, Nullable`1 unixCreateMode)&#xD;
+[xUnit.net 00:00:02.77]            at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share)&#xD;
+[xUnit.net 00:00:02.77]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Pagos\DiarioCobrosSimulados.cs(17,0): at LogiMarket.Infrastructure.Pagos.DiarioCobrosSimulados.Bloquear()&#xD;
+[xUnit.net 00:00:02.77]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Pagos\DiarioCobrosSimulados.cs(90,0): at LogiMarket.Infrastructure.Pagos.DiarioCobrosSimulados.Leer()&#xD;
+[xUnit.net 00:00:02.77]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Pagos\DiarioCobrosSimulados.cs(82,0): at LogiMarket.Infrastructure.Pagos.DiarioCobrosSimulados.AceptadosAsync(CancellationToken ct)&#xD;
+[xUnit.net 00:00:02.77]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesReservasRevisionTests.cs(14,0): at LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.&lt;&gt;c__DisplayClass0_0.&lt;&lt;ConsultaDeAceptaciones_EsperaElBloqueoBreveDeOtraInstancia&gt;b__0&gt;d.MoveNext()&#xD;
+[xUnit.net 00:00:02.77]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:02.77]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesReservasRevisionTests.cs(15,0): at LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.ConsultaDeAceptaciones_EsperaElBloqueoBreveDeOtraInstancia()&#xD;
+[xUnit.net 00:00:02.77]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesReservasRevisionTests.cs(15,0): at LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.ConsultaDeAceptaciones_EsperaElBloqueoBreveDeOtraInstancia()&#xD;
+[xUnit.net 00:00:02.77]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:02.78]   Finished:    LogiMarket.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T17:42:54.6001063-05:00">
+        <Text>[xUnit.net 00:00:02.31]     LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.EsperaDelDiario_RespetaCancelacionSinCrearAceptacion [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T17:42:55.0626990-05:00">
+        <Text>[xUnit.net 00:00:02.77]     LogiMarket.Tests.Integracion.RegresionesReservasRevisionTests.ConsultaDeAceptaciones_EsperaElBloqueoBreveDeOtraInstancia [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

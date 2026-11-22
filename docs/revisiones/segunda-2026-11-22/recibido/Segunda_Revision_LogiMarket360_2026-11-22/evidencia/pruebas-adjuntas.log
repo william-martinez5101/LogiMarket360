@@ -1,0 +1,13 @@
+  LogiMarket.Domain -> /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Domain/bin/Release/net8.0/LogiMarket.Domain.dll
+  LogiMarket.Application -> /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Application/bin/Release/net8.0/LogiMarket.Application.dll
+  LogiMarket.Infrastructure -> /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Infrastructure/bin/Release/net8.0/LogiMarket.Infrastructure.dll
+  LogiMarket.Tests -> /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Tests/bin/Release/net8.0/LogiMarket.Tests.dll
+  RevisionProbes -> /workspace/scratch/704a2883b1c7/output/Revision_LogiMarket360_2026-11-22/pruebas/bin/Release/net8.0/RevisionProbes.dll
+Test run for /workspace/scratch/704a2883b1c7/output/Revision_LogiMarket360_2026-11-22/pruebas/bin/Release/net8.0/RevisionProbes.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+Results File: /workspace/scratch/704a2883b1c7/analysis/resultados_revision_corregido/adjuntas/adjuntas-corregidas.trx
+
+Passed!  - Failed:     0, Passed:     5, Skipped:     0, Total:     5, Duration: 869 ms - RevisionProbes.dll (net8.0)

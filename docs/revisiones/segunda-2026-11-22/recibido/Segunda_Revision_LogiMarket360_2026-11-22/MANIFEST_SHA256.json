@@ -1,0 +1,77 @@
+[
+  {
+    "archivo": "LEEME_Segunda_Revision.md",
+    "bytes": 11462,
+    "sha256": "29ed13d7f41a88c895d67851735eae23e3cce9fffe99ed75758f9802bb5937b9"
+  },
+  {
+    "archivo": "Prompt_Correccion_R06_Codex.txt",
+    "bytes": 3188,
+    "sha256": "80c152b0530a11144525422ad98089504669ee26cb35c49b22938b6627eebeab"
+  },
+  {
+    "archivo": "evidencia/adjuntas-corregidas.trx",
+    "bytes": 9627,
+    "sha256": "b7370956eb7999d144e0b10aecd5c919a482bc4cdb264fa0ca71210a5beaafe1"
+  },
+  {
+    "archivo": "evidencia/build-solucion.log",
+    "bytes": 1006,
+    "sha256": "367a02d0e4fb87ca21c0431e76c4bd6bf1a38d178184d1d1ae9185b5dee6618f"
+  },
+  {
+    "archivo": "evidencia/comparacion-pruebas.json",
+    "bytes": 78,
+    "sha256": "147c4478e24eff755360beb860f43db42b6d4799be1f5a3670b7152db3de4d77"
+  },
+  {
+    "archivo": "evidencia/integridad-paquete.json",
+    "bytes": 471,
+    "sha256": "fb0b9852c0541e609cfdf70d8fb532f5a4721fcb998f2398014a4b07ffddb7d5"
+  },
+  {
+    "archivo": "evidencia/pruebas-adjuntas.log",
+    "bytes": 1400,
+    "sha256": "3f39c54f6ae9c812a992e2dfb7a5576231d1ada63135c433875375d787d93053"
+  },
+  {
+    "archivo": "evidencia/pruebas-stock-pendiente.log",
+    "bytes": 7213,
+    "sha256": "f9f2da95dd8ff813930051fe8b0b057ef86d756d2f109ffd9c86c453ffd9e2d7"
+  },
+  {
+    "archivo": "evidencia/pruebas-suite.log",
+    "bytes": 546,
+    "sha256": "bd6cffc919398067d5d44a8b8c916ad56794984f9e2a5cfd9aefbc89300dfc56"
+  },
+  {
+    "archivo": "evidencia/restore-solucion.log",
+    "bytes": 1906,
+    "sha256": "9de9f0bd4a4b20c38ff240a17156a41e280147a289bd0d56122c3d341f413f5a"
+  },
+  {
+    "archivo": "evidencia/resumen_revision.json",
+    "bytes": 1574,
+    "sha256": "e5908bf4cca9d6c8376902fdf55454b8da29a09f42264fb566cf1862c2408ce9"
+  },
+  {
+    "archivo": "evidencia/stock-pendiente.trx",
+    "bytes": 8650,
+    "sha256": "289a33829da837b1212a4872eed9e0b5294ad7ad9c086d5e63134178ebb17e92"
+  },
+  {
+    "archivo": "evidencia/suite-corregida.trx",
+    "bytes": 225836,
+    "sha256": "7049a3610917299f1047e8d8ac80e41302059ebb271880e8bb2c094e1a960c66"
+  },
+  {
+    "archivo": "prueba_nueva/CobroPendienteStockTests.cs",
+    "bytes": 2464,
+    "sha256": "e96005b6377a6afdd9190d586b432dedd46198a6fae40674276050635f6cc79b"
+  },
+  {
+    "archivo": "prueba_nueva/RevisionProbes.csproj",
+    "bytes": 972,
+    "sha256": "82a1796c176612f49a2f8163c8cf7ab7f757813be7f7274865d94104e6c07b51"
+  }
+]

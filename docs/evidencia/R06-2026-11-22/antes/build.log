@@ -1,0 +1,11 @@
+  LogiMarket.Domain -> C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Domain\bin\Release\net8.0\LogiMarket.Domain.dll
+  LogiMarket.Application -> C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\bin\Release\net8.0\LogiMarket.Application.dll
+  LogiMarket.Infrastructure -> C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\bin\Release\net8.0\LogiMarket.Infrastructure.dll
+  LogiMarket.WinForms -> C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.WinForms\bin\Release\net8.0-windows\LogiMarket.WinForms.dll
+  LogiMarket.Tests -> C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll
+
+Compilación correcta.
+    0 Advertencia(s)
+    0 Errores
+
+Tiempo transcurrido 00:01:06.59

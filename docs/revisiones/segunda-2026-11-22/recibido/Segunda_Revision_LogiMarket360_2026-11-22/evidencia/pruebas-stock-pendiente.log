@@ -1,0 +1,74 @@
+  LogiMarket.Domain -> /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Domain/bin/Release/net8.0/LogiMarket.Domain.dll
+  LogiMarket.Application -> /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Application/bin/Release/net8.0/LogiMarket.Application.dll
+  LogiMarket.Infrastructure -> /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Infrastructure/bin/Release/net8.0/LogiMarket.Infrastructure.dll
+  LogiMarket.Tests -> /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Tests/bin/Release/net8.0/LogiMarket.Tests.dll
+  RevisionProbes -> /workspace/scratch/704a2883b1c7/analysis/probe_stock_pendiente_corregido/bin/Release/net8.0/RevisionProbes.dll
+Test run for /workspace/scratch/704a2883b1c7/analysis/probe_stock_pendiente_corregido/bin/Release/net8.0/RevisionProbes.dll (.NETCoreApp,Version=v8.0)
+VSTest version 17.11.1 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.26)
+[xUnit.net 00:00:00.07]   Discovering: RevisionProbes
+[xUnit.net 00:00:00.10]   Discovered:  RevisionProbes
+[xUnit.net 00:00:00.10]   Starting:    RevisionProbes
+[xUnit.net 00:00:01.93]     RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta [FAIL]
+[xUnit.net 00:00:01.94]       Assert.Null() Failure: Value is not null
+[xUnit.net 00:00:01.94]       Expected: null
+[xUnit.net 00:00:01.94]       Actual:   System.InvalidOperationException: STOCK: Stock insuficiente para P04: requiere 4, disponible 0.
+[xUnit.net 00:00:01.94]          at LogiMarket.Application.Pedidos.ConfirmacionPedidoFacade.ConfirmarAsync(Guid pedidoId, String clave, CancellationToken ct) in /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Application/Pedidos/ConfirmacionPedidoFacade.cs:line 31
+[xUnit.net 00:00:01.94]          at LogiMarket.Application.Pedidos.ConfirmacionPedidoFacade.ConfirmarAsync(Guid pedidoId, String clave, CancellationToken ct) in /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Application/Pedidos/ConfirmacionPedidoFacade.cs:line 45
+[xUnit.net 00:00:01.94]          at Xunit.Record.ExceptionAsync(Func`1 testCode) in /_/src/xunit.core/Record.cs:line 76
+[xUnit.net 00:00:01.94]       Stack Trace:
+[xUnit.net 00:00:01.94]         /workspace/scratch/704a2883b1c7/analysis/probe_stock_pendiente_corregido/CobroPendienteStockTests.cs(42,0): at RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta()
+[xUnit.net 00:00:01.94]         /workspace/scratch/704a2883b1c7/analysis/probe_stock_pendiente_corregido/CobroPendienteStockTests.cs(44,0): at RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta()
+[xUnit.net 00:00:01.94]         /workspace/scratch/704a2883b1c7/analysis/probe_stock_pendiente_corregido/CobroPendienteStockTests.cs(44,0): at RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta()
+[xUnit.net 00:00:01.94]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:01.94]       Output:
+[xUnit.net 00:00:01.94]         Pedido A: 369fe09e-9c2a-41d9-a5a5-eec9dc77eff7; pedido B: 46bd9574-7422-4ea8-99e1-6c91defea68a
+[xUnit.net 00:00:01.94]         Resultado venta B: APROBADA
+[xUnit.net 00:00:01.94]         Resultado recuperacion A: STOCK: Stock insuficiente para P04: requiere 4, disponible 0.
+[xUnit.net 00:00:01.94]         Estado A: VALIDADO
+[xUnit.net 00:00:01.94]         Pagos locales de A: 0
+[xUnit.net 00:00:01.94]         Pagos locales de B: 1
+[xUnit.net 00:00:01.94]         Stock P04: 0
+[xUnit.net 00:00:01.94]         Cobros externos aceptados: 2
+[xUnit.net 00:00:01.94]         Importe externo acumulado: 330
+[xUnit.net 00:00:01.94]         Cancelar A: Hay un cobro aceptado. Concilie confirmando el pedido; si ya esta pagado, utilice devolucion.
+[xUnit.net 00:00:01.94]         Cobro: pedido=369fe09e-9c2a-41d9-a5a5-eec9dc77eff7; importe=165; referencia=SIM-3893b595097f4c13a6710f9d25ade297
+[xUnit.net 00:00:01.94]         Cobro: pedido=46bd9574-7422-4ea8-99e1-6c91defea68a; importe=165; referencia=SIM-e79c9564636e436fbc11f01dd3be1ae4
+[xUnit.net 00:00:01.94]   Finished:    RevisionProbes
+  Failed RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta [1 s]
+  Error Message:
+   Assert.Null() Failure: Value is not null
+Expected: null
+Actual:   System.InvalidOperationException: STOCK: Stock insuficiente para P04: requiere 4, disponible 0.
+   at LogiMarket.Application.Pedidos.ConfirmacionPedidoFacade.ConfirmarAsync(Guid pedidoId, String clave, CancellationToken ct) in /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Application/Pedidos/ConfirmacionPedidoFacade.cs:line 31
+   at LogiMarket.Application.Pedidos.ConfirmacionPedidoFacade.ConfirmarAsync(Guid pedidoId, String clave, CancellationToken ct) in /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Application/Pedidos/ConfirmacionPedidoFacade.cs:line 45
+   at Xunit.Record.ExceptionAsync(Func`1 testCode) in /_/src/xunit.core/Record.cs:line 76
+  Stack Trace:
+     at RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta() in /workspace/scratch/704a2883b1c7/analysis/probe_stock_pendiente_corregido/CobroPendienteStockTests.cs:line 42
+   at RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta() in /workspace/scratch/704a2883b1c7/analysis/probe_stock_pendiente_corregido/CobroPendienteStockTests.cs:line 44
+   at RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta() in /workspace/scratch/704a2883b1c7/analysis/probe_stock_pendiente_corregido/CobroPendienteStockTests.cs:line 44
+--- End of stack trace from previous location ---
+  Standard Output Messages:
+ Pedido A: 369fe09e-9c2a-41d9-a5a5-eec9dc77eff7; pedido B: 46bd9574-7422-4ea8-99e1-6c91defea68a
+ Resultado venta B: APROBADA
+ Resultado recuperacion A: STOCK: Stock insuficiente para P04: requiere 4, disponible 0.
+ Estado A: VALIDADO
+ Pagos locales de A: 0
+ Pagos locales de B: 1
+ Stock P04: 0
+ Cobros externos aceptados: 2
+ Importe externo acumulado: 330
+ Cancelar A: Hay un cobro aceptado. Concilie confirmando el pedido; si ya esta pagado, utilice devolucion.
+ Cobro: pedido=369fe09e-9c2a-41d9-a5a5-eec9dc77eff7; importe=165; referencia=SIM-3893b595097f4c13a6710f9d25ade297
+ Cobro: pedido=46bd9574-7422-4ea8-99e1-6c91defea68a; importe=165; referencia=SIM-e79c9564636e436fbc11f01dd3be1ae4
+
+
+Results File: /workspace/scratch/704a2883b1c7/analysis/resultados_revision_corregido/stock-pendiente/stock-pendiente.trx
+
+Test Run Failed.
+Total tests: 1
+     Failed: 1
+ Total time: 2.4397 Seconds

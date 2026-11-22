@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="a754cda5-83c5-4c34-b1ed-78562987c88f" name="@21d29cf6bab8 2026-11-22 13:45:56" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-22T13:45:56.6052237-05:00" queuing="2026-11-22T13:45:56.6052237-05:00" start="2026-11-22T13:45:54.1540114-05:00" finish="2026-11-22T13:45:56.6129935-05:00" />
+  <TestSettings name="default" id="c1153b83-a62d-4f83-8d78-5aa9701054aa">
+    <Deployment runDeploymentRoot="_21d29cf6bab8_2026-11-22_13_45_56" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="f52d9a92-3089-43cc-a2f1-cf6704aaadd1" testId="6be04372-8026-edb3-0809-12f0839beafe" testName="RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta" computerName="21d29cf6bab8" duration="00:00:01.7889273" startTime="2026-11-22T13:45:56.5249814-05:00" endTime="2026-11-22T13:45:56.5249945-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f52d9a92-3089-43cc-a2f1-cf6704aaadd1">
+      <Output>
+        <StdOut>Pedido A: 369fe09e-9c2a-41d9-a5a5-eec9dc77eff7; pedido B: 46bd9574-7422-4ea8-99e1-6c91defea68a
+Resultado venta B: APROBADA
+Resultado recuperacion A: STOCK: Stock insuficiente para P04: requiere 4, disponible 0.
+Estado A: VALIDADO
+Pagos locales de A: 0
+Pagos locales de B: 1
+Stock P04: 0
+Cobros externos aceptados: 2
+Importe externo acumulado: 330
+Cancelar A: Hay un cobro aceptado. Concilie confirmando el pedido; si ya esta pagado, utilice devolucion.
+Cobro: pedido=369fe09e-9c2a-41d9-a5a5-eec9dc77eff7; importe=165; referencia=SIM-3893b595097f4c13a6710f9d25ade297
+Cobro: pedido=46bd9574-7422-4ea8-99e1-6c91defea68a; importe=165; referencia=SIM-e79c9564636e436fbc11f01dd3be1ae4</StdOut>
+        <ErrorInfo>
+          <Message>Assert.Null() Failure: Value is not null
+Expected: null
+Actual:   System.InvalidOperationException: STOCK: Stock insuficiente para P04: requiere 4, disponible 0.
+   at LogiMarket.Application.Pedidos.ConfirmacionPedidoFacade.ConfirmarAsync(Guid pedidoId, String clave, CancellationToken ct) in /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Application/Pedidos/ConfirmacionPedidoFacade.cs:line 31
+   at LogiMarket.Application.Pedidos.ConfirmacionPedidoFacade.ConfirmarAsync(Guid pedidoId, String clave, CancellationToken ct) in /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Application/Pedidos/ConfirmacionPedidoFacade.cs:line 45
+   at Xunit.Record.ExceptionAsync(Func`1 testCode) in /_/src/xunit.core/Record.cs:line 76</Message>
+          <StackTrace>   at RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta() in /workspace/scratch/704a2883b1c7/analysis/probe_stock_pendiente_corregido/CobroPendienteStockTests.cs:line 42
+   at RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta() in /workspace/scratch/704a2883b1c7/analysis/probe_stock_pendiente_corregido/CobroPendienteStockTests.cs:line 44
+   at RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta() in /workspace/scratch/704a2883b1c7/analysis/probe_stock_pendiente_corregido/CobroPendienteStockTests.cs:line 44
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta" storage="/workspace/scratch/704a2883b1c7/analysis/probe_stock_pendiente_corregido/bin/release/net8.0/revisionprobes.dll" id="6be04372-8026-edb3-0809-12f0839beafe">
+      <Execution id="f52d9a92-3089-43cc-a2f1-cf6704aaadd1" />
+      <TestMethod codeBase="/workspace/scratch/704a2883b1c7/analysis/probe_stock_pendiente_corregido/bin/Release/net8.0/RevisionProbes.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RevisionStockPendiente.CobroPendienteStockTests" name="AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="6be04372-8026-edb3-0809-12f0839beafe" executionId="f52d9a92-3089-43cc-a2f1-cf6704aaadd1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" passed="0" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.26)
+[xUnit.net 00:00:00.07]   Discovering: RevisionProbes
+[xUnit.net 00:00:00.10]   Discovered:  RevisionProbes
+[xUnit.net 00:00:00.10]   Starting:    RevisionProbes
+[xUnit.net 00:00:01.94]       Assert.Null() Failure: Value is not null
+[xUnit.net 00:00:01.94]       Expected: null
+[xUnit.net 00:00:01.94]       Actual:   System.InvalidOperationException: STOCK: Stock insuficiente para P04: requiere 4, disponible 0.
+[xUnit.net 00:00:01.94]          at LogiMarket.Application.Pedidos.ConfirmacionPedidoFacade.ConfirmarAsync(Guid pedidoId, String clave, CancellationToken ct) in /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Application/Pedidos/ConfirmacionPedidoFacade.cs:line 31
+[xUnit.net 00:00:01.94]          at LogiMarket.Application.Pedidos.ConfirmacionPedidoFacade.ConfirmarAsync(Guid pedidoId, String clave, CancellationToken ct) in /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Application/Pedidos/ConfirmacionPedidoFacade.cs:line 45
+[xUnit.net 00:00:01.94]          at Xunit.Record.ExceptionAsync(Func`1 testCode) in /_/src/xunit.core/Record.cs:line 76
+[xUnit.net 00:00:01.94]       Stack Trace:
+[xUnit.net 00:00:01.94]         /workspace/scratch/704a2883b1c7/analysis/probe_stock_pendiente_corregido/CobroPendienteStockTests.cs(42,0): at RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta()
+[xUnit.net 00:00:01.94]         /workspace/scratch/704a2883b1c7/analysis/probe_stock_pendiente_corregido/CobroPendienteStockTests.cs(44,0): at RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta()
+[xUnit.net 00:00:01.94]         /workspace/scratch/704a2883b1c7/analysis/probe_stock_pendiente_corregido/CobroPendienteStockTests.cs(44,0): at RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta()
+[xUnit.net 00:00:01.94]         --- End of stack trace from previous location ---
+[xUnit.net 00:00:01.94]       Output:
+[xUnit.net 00:00:01.94]         Pedido A: 369fe09e-9c2a-41d9-a5a5-eec9dc77eff7; pedido B: 46bd9574-7422-4ea8-99e1-6c91defea68a
+[xUnit.net 00:00:01.94]         Resultado venta B: APROBADA
+[xUnit.net 00:00:01.94]         Resultado recuperacion A: STOCK: Stock insuficiente para P04: requiere 4, disponible 0.
+[xUnit.net 00:00:01.94]         Estado A: VALIDADO
+[xUnit.net 00:00:01.94]         Pagos locales de A: 0
+[xUnit.net 00:00:01.94]         Pagos locales de B: 1
+[xUnit.net 00:00:01.94]         Stock P04: 0
+[xUnit.net 00:00:01.94]         Cobros externos aceptados: 2
+[xUnit.net 00:00:01.94]         Importe externo acumulado: 330
+[xUnit.net 00:00:01.94]         Cancelar A: Hay un cobro aceptado. Concilie confirmando el pedido; si ya esta pagado, utilice devolucion.
+[xUnit.net 00:00:01.94]         Cobro: pedido=369fe09e-9c2a-41d9-a5a5-eec9dc77eff7; importe=165; referencia=SIM-3893b595097f4c13a6710f9d25ade297
+[xUnit.net 00:00:01.94]         Cobro: pedido=46bd9574-7422-4ea8-99e1-6c91defea68a; importe=165; referencia=SIM-e79c9564636e436fbc11f01dd3be1ae4
+[xUnit.net 00:00:01.94]   Finished:    RevisionProbes
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="21d29cf6bab8" outcome="Error" timestamp="2026-11-22T13:45:56.5228200-05:00">
+        <Text>[xUnit.net 00:00:01.93]     RevisionStockPendiente.CobroPendienteStockTests.AceptacionPendiente_NoDebePerderSusUnidadesPorOtraVenta [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

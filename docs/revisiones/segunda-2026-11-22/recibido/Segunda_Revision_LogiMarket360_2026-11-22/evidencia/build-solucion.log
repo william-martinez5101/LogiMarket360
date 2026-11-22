@@ -1,0 +1,11 @@
+  LogiMarket.Domain -> /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Domain/bin/Release/net8.0/LogiMarket.Domain.dll
+  LogiMarket.Application -> /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Application/bin/Release/net8.0/LogiMarket.Application.dll
+  LogiMarket.Infrastructure -> /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Infrastructure/bin/Release/net8.0/LogiMarket.Infrastructure.dll
+  LogiMarket.WinForms -> /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.WinForms/bin/Release/net8.0-windows/LogiMarket.WinForms.dll
+  LogiMarket.Tests -> /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_corregido_20261122/LogiMarket360/LogiMarket.Tests/bin/Release/net8.0/LogiMarket.Tests.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:11.64

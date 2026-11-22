@@ -1,11 +1,12 @@
 using LogiMarket.Application.Contratos;
+using LogiMarket.Application.Inventario;
 using LogiMarket.Application.Seguridad;
 using LogiMarket.Domain.Catalogo;
 using LogiMarket.Domain.Clientes;
 
 namespace LogiMarket.Application.Gestion;
 
-public sealed class CatalogoServicio(IUnidadTrabajoFactory unidades, SesionUsuario sesion, IReloj reloj)
+public sealed class CatalogoServicio(IUnidadTrabajoFactory unidades, SesionUsuario sesion, IReloj reloj, DisponibilidadExistencias existencias)
 {
     public async Task GuardarProductoAsync(string sku, string nombre, decimal precio, decimal peso, int stockInicial)
     {
@@ -35,7 +36,13 @@ public sealed class CatalogoServicio(IUnidadTrabajoFactory unidades, SesionUsuar
     {
         Permisos.Exigir(sesion, Rol.BODEGA);
         if (variacion == 0 || string.IsNullOrWhiteSpace(motivo)) throw new ArgumentException("Cantidad no nula y motivo obligatorios.");
-        await using var u = await unidades.AbrirAsync(true); var p = (await u.Catalogo.ProductosAsync()).Single(x => x.Sku == sku);
+        await using var u = await unidades.AbrirAsync(true); var productos = await u.Catalogo.ProductosAsync(); var p = productos.Single(x => x.Sku == sku);
+        if (variacion < 0)
+        {
+            var disponibilidad = await existencias.CalcularAsync(productos, await u.Pedidos.ListarAsync(), await u.Operaciones.PagosAsync());
+            var libre = disponibilidad.Single(x => x.Sku == sku).Disponible;
+            if (checked(-variacion) > libre) throw new InvalidOperationException($"STOCK: El ajuste requiere {checked(-variacion)} de {sku}, disponible {libre}; respete las unidades comprometidas.");
+        }
         if (variacion > 0) p.ReintegrarStock(variacion); else p.DescontarStock(checked(-variacion));
         await u.Catalogo.GuardarProductoAsync(p);
         await u.Operaciones.AgregarMovimientoAsync(new(Guid.NewGuid(), null, sku, variacion, "AJUSTE: " + motivo.Trim(), Guid.NewGuid().ToString(), reloj.Ahora));
