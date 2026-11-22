@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="cb4c5b71-1e9a-46f3-98b4-ce49c87e0259" name="ASUS@DESKTOP-4NJRTFA 2026-11-22 12:40:07" runUser="DESKTOP-4NJRTFA\ASUS" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-22T12:40:07.6690546-05:00" queuing="2026-11-22T12:40:07.6690551-05:00" start="2026-11-22T12:40:04.1255456-05:00" finish="2026-11-22T12:40:08.7908661-05:00" />
+  <TestSettings name="default" id="c49e233c-1519-4d44-8fff-9b7e6c3e1492">
+    <Deployment runDeploymentRoot="ASUS_DESKTOP-4NJRTFA_2026-11-22_12_40_07" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="1117269c-d78c-40e3-82a8-3560f9ce57b7" testId="2cd3d038-25e2-7d6a-e2c5-71f9758a0e72" testName="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(legado: True)" computerName="DESKTOP-4NJRTFA" duration="00:00:02.4134019" startTime="2026-11-22T12:40:07.6345506-05:00" endTime="2026-11-22T12:40:07.6345681-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1117269c-d78c-40e3-82a8-3560f9ce57b7">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.DoesNotContain() Failure: Filter matched in collection&#xD;
+                                                                                                                                                                                                                                                                                                                                                                                                                               ↓ (pos 3)&#xD;
+Collection: [ProductoSimple { Codigo = "P01", Id = 3fc67248-fbce-4ec5-84b4-63750617993c, Nombre = "Mouse USB", PesoKg = 0,2, Precio = 20,0, ··· }, ProductoSimple { Codigo = "P02", Id = bb2cac9b-5c9e-410f-9582-1836cf1fa960, Nombre = "Teclado", PesoKg = 0,7, Precio = 30,0, ··· }, ProductoSimple { Codigo = "P03", Id = a1917bbb-112b-47ad-8296-68f17199712d, Nombre = "Memoria USB", PesoKg = 0,1, Precio = 10,0, ··· }, ProductoSimple { Codigo = "P04", Id = 7a2be611-664e-4fa1-96c2-fc243f315276, Nombre = "Webcam", PesoKg = 0,35, Precio = 40,0, ··· }, ProductoSimple { Codigo = "P05", Id = 2501ce72-c167-4bc4-ae45-4be9bb708200, Nombre = "Nombre editado", PesoKg = 0,3, Precio = 7,0, ··· }]</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(Boolean legado) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesSeedRevisionTests.cs:line 23&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(Boolean legado) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesSeedRevisionTests.cs:line 31&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(Boolean legado) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesSeedRevisionTests.cs:line 31&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="77862b1c-ead6-48e7-bfee-31bcdcb62542" testId="7659bf38-4560-0846-2449-2a9ff0b79bfd" testName="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.InicializacionInterrumpida_RevierteTodoYPermiteReintentarDesdeCero" computerName="DESKTOP-4NJRTFA" duration="00:00:00.4399032" startTime="2026-11-22T12:40:08.7036922-05:00" endTime="2026-11-22T12:40:08.7036925-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="77862b1c-ead6-48e7-bfee-31bcdcb62542">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Single() Failure: The collection was empty</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.InicializacionInterrumpida_RevierteTodoYPermiteReintentarDesdeCero() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesSeedRevisionTests.cs:line 52&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.InicializacionInterrumpida_RevierteTodoYPermiteReintentarDesdeCero() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesSeedRevisionTests.cs:line 53&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f209def0-493e-438d-a156-fa9b69f7f18a" testId="3f55b966-58fb-cf76-f327-06cb848fccd3" testName="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(legado: False)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.6327086" startTime="2026-11-22T12:40:08.2631882-05:00" endTime="2026-11-22T12:40:08.2631883-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f209def0-493e-438d-a156-fa9b69f7f18a">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.DoesNotContain() Failure: Filter matched in collection&#xD;
+                                                                                                                                                                                                                                                                                                                                                                                                                               ↓ (pos 3)&#xD;
+Collection: [ProductoSimple { Codigo = "P01", Id = 69ffc2a9-cf53-4aed-b7ac-06bbc7c9d1f9, Nombre = "Mouse USB", PesoKg = 0,2, Precio = 20,0, ··· }, ProductoSimple { Codigo = "P02", Id = 195afa45-18aa-4a19-94e1-a4b3e25e091d, Nombre = "Teclado", PesoKg = 0,7, Precio = 30,0, ··· }, ProductoSimple { Codigo = "P03", Id = 7c77bb75-f808-44ff-9b31-242ffd8bcc0d, Nombre = "Memoria USB", PesoKg = 0,1, Precio = 10,0, ··· }, ProductoSimple { Codigo = "P04", Id = 139f4ab4-ed8a-4535-8a34-7d290dd5d573, Nombre = "Webcam", PesoKg = 0,35, Precio = 40,0, ··· }, ProductoSimple { Codigo = "P05", Id = bc4712b7-6fef-4747-8795-ebdea7fca80b, Nombre = "Nombre editado", PesoKg = 0,3, Precio = 7,0, ··· }]</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(Boolean legado) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesSeedRevisionTests.cs:line 23&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(Boolean legado) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesSeedRevisionTests.cs:line 31&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(Boolean legado) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesSeedRevisionTests.cs:line 31&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(legado: True)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="2cd3d038-25e2-7d6a-e2c5-71f9758a0e72">
+      <Execution id="1117269c-d78c-40e3-82a8-3560f9ce57b7" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests" name="ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.InicializacionInterrumpida_RevierteTodoYPermiteReintentarDesdeCero" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="7659bf38-4560-0846-2449-2a9ff0b79bfd">
+      <Execution id="77862b1c-ead6-48e7-bfee-31bcdcb62542" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests" name="InicializacionInterrumpida_RevierteTodoYPermiteReintentarDesdeCero" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(legado: False)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="3f55b966-58fb-cf76-f327-06cb848fccd3">
+      <Execution id="f209def0-493e-438d-a156-fa9b69f7f18a" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests" name="ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="2cd3d038-25e2-7d6a-e2c5-71f9758a0e72" executionId="1117269c-d78c-40e3-82a8-3560f9ce57b7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7659bf38-4560-0846-2449-2a9ff0b79bfd" executionId="77862b1c-ead6-48e7-bfee-31bcdcb62542" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3f55b966-58fb-cf76-f327-06cb848fccd3" executionId="f209def0-493e-438d-a156-fa9b69f7f18a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="3" executed="3" passed="0" failed="3" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.34)&#xD;
+[xUnit.net 00:00:00.37]   Discovering: LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.44]   Discovered:  LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.44]   Starting:    LogiMarket.Tests&#xD;
+[xUnit.net 00:00:02.91]       Assert.DoesNotContain() Failure: Filter matched in collection&#xD;
+[xUnit.net 00:00:02.91]                                                                                                                                                                                                                                                                                                                                                                                                                                      ↓ (pos 3)&#xD;
+[xUnit.net 00:00:02.91]       Collection: [ProductoSimple { Codigo = "P01", Id = 3fc67248-fbce-4ec5-84b4-63750617993c, Nombre = "Mouse USB", PesoKg = 0,2, Precio = 20,0, ··· }, ProductoSimple { Codigo = "P02", Id = bb2cac9b-5c9e-410f-9582-1836cf1fa960, Nombre = "Teclado", PesoKg = 0,7, Precio = 30,0, ··· }, ProductoSimple { Codigo = "P03", Id = a1917bbb-112b-47ad-8296-68f17199712d, Nombre = "Memoria USB", PesoKg = 0,1, Precio = 10,0, ··· }, ProductoSimple { Codigo = "P04", Id = 7a2be611-664e-4fa1-96c2-fc243f315276, Nombre = "Webcam", PesoKg = 0,35, Precio = 40,0, ··· }, ProductoSimple { Codigo = "P05", Id = 2501ce72-c167-4bc4-ae45-4be9bb708200, Nombre = "Nombre editado", PesoKg = 0,3, Precio = 7,0, ··· }]&#xD;
+[xUnit.net 00:00:02.91]       Stack Trace:&#xD;
+[xUnit.net 00:00:02.91]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesSeedRevisionTests.cs(23,0): at LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(Boolean legado)&#xD;
+[xUnit.net 00:00:02.91]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesSeedRevisionTests.cs(31,0): at LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(Boolean legado)&#xD;
+[xUnit.net 00:00:02.91]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesSeedRevisionTests.cs(31,0): at LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(Boolean legado)&#xD;
+[xUnit.net 00:00:02.91]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:03.54]       Assert.DoesNotContain() Failure: Filter matched in collection&#xD;
+[xUnit.net 00:00:03.54]                                                                                                                                                                                                                                                                                                                                                                                                                                      ↓ (pos 3)&#xD;
+[xUnit.net 00:00:03.54]       Collection: [ProductoSimple { Codigo = "P01", Id = 69ffc2a9-cf53-4aed-b7ac-06bbc7c9d1f9, Nombre = "Mouse USB", PesoKg = 0,2, Precio = 20,0, ··· }, ProductoSimple { Codigo = "P02", Id = 195afa45-18aa-4a19-94e1-a4b3e25e091d, Nombre = "Teclado", PesoKg = 0,7, Precio = 30,0, ··· }, ProductoSimple { Codigo = "P03", Id = 7c77bb75-f808-44ff-9b31-242ffd8bcc0d, Nombre = "Memoria USB", PesoKg = 0,1, Precio = 10,0, ··· }, ProductoSimple { Codigo = "P04", Id = 139f4ab4-ed8a-4535-8a34-7d290dd5d573, Nombre = "Webcam", PesoKg = 0,35, Precio = 40,0, ··· }, ProductoSimple { Codigo = "P05", Id = bc4712b7-6fef-4747-8795-ebdea7fca80b, Nombre = "Nombre editado", PesoKg = 0,3, Precio = 7,0, ··· }]&#xD;
+[xUnit.net 00:00:03.54]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.54]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesSeedRevisionTests.cs(23,0): at LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(Boolean legado)&#xD;
+[xUnit.net 00:00:03.54]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesSeedRevisionTests.cs(31,0): at LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(Boolean legado)&#xD;
+[xUnit.net 00:00:03.54]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesSeedRevisionTests.cs(31,0): at LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(Boolean legado)&#xD;
+[xUnit.net 00:00:03.54]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:03.98]       Assert.Single() Failure: The collection was empty&#xD;
+[xUnit.net 00:00:03.98]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.98]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesSeedRevisionTests.cs(52,0): at LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.InicializacionInterrumpida_RevierteTodoYPermiteReintentarDesdeCero()&#xD;
+[xUnit.net 00:00:03.98]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesSeedRevisionTests.cs(53,0): at LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.InicializacionInterrumpida_RevierteTodoYPermiteReintentarDesdeCero()&#xD;
+[xUnit.net 00:00:03.98]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:03.98]   Finished:    LogiMarket.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:40:07.6323385-05:00">
+        <Text>[xUnit.net 00:00:02.91]     LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(legado: True) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:40:08.2631337-05:00">
+        <Text>[xUnit.net 00:00:03.54]     LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(legado: False) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:40:08.7041351-05:00">
+        <Text>[xUnit.net 00:00:03.98]     LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.InicializacionInterrumpida_RevierteTodoYPermiteReintentarDesdeCero [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

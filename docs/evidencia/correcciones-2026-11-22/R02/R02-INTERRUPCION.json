@@ -1,0 +1,49 @@
+{
+  "Caso": "R02-INTERRUPCION",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T17:40:44.6851045+00:00",
+  "Metodo": "InicializacionInterrumpida_RevierteTodoYPermiteReintentarDesdeCero",
+  "Fuente": "LogiMarket.Tests/Integracion/RegresionesSeedRevisionTests.cs",
+  "Esperado": "Fallo real de SQLite en kits revierte la siembra completa; reintento sin duplicados",
+  "Obtenido": {
+    "Productos": 5,
+    "Kits": 2
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T17:40:44.3988255+00:00"
+    }
+  ],
+  "Traza": [],
+  "CobrosSimulados": []
+}

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="fb8aae9c-ec93-467f-a442-cb1cd3e5d99c" name="ASUS@DESKTOP-4NJRTFA 2026-11-22 12:40:43" runUser="DESKTOP-4NJRTFA\ASUS" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-22T12:40:43.7880530-05:00" queuing="2026-11-22T12:40:43.7880537-05:00" start="2026-11-22T12:40:40.2345644-05:00" finish="2026-11-22T12:40:45.7123731-05:00" />
+  <TestSettings name="default" id="a391d107-3125-46d4-88ef-85b635453064">
+    <Deployment runDeploymentRoot="ASUS_DESKTOP-4NJRTFA_2026-11-22_12_40_43" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="4eb6125f-2c06-4015-abf8-aac7ad70b965" testId="7659bf38-4560-0846-2449-2a9ff0b79bfd" testName="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.InicializacionInterrumpida_RevierteTodoYPermiteReintentarDesdeCero" computerName="DESKTOP-4NJRTFA" duration="00:00:00.5047388" startTime="2026-11-22T12:40:44.6936244-05:00" endTime="2026-11-22T12:40:44.6936247-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4eb6125f-2c06-4015-abf8-aac7ad70b965" />
+    <UnitTestResult executionId="f7466390-5215-45a7-ba2f-8906b550008d" testId="3f55b966-58fb-cf76-f327-06cb848fccd3" testName="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(legado: False)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.6130257" startTime="2026-11-22T12:40:44.1875347-05:00" endTime="2026-11-22T12:40:44.1875351-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f7466390-5215-45a7-ba2f-8906b550008d" />
+    <UnitTestResult executionId="f708e1ac-d3a7-4744-b21b-f30c8b26c2d6" testId="2cd3d038-25e2-7d6a-e2c5-71f9758a0e72" testName="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(legado: True)" computerName="DESKTOP-4NJRTFA" duration="00:00:02.4121594" startTime="2026-11-22T12:40:43.5738122-05:00" endTime="2026-11-22T12:40:43.5738279-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f708e1ac-d3a7-4744-b21b-f30c8b26c2d6" />
+    <UnitTestResult executionId="430b8bc5-53e2-4710-9b80-20c574950670" testId="e5f88c2c-e96c-58b2-dd5c-28b2cd81d359" testName="LogiMarket.Tests.Integracion.AceptacionTests.P01_MigracionesYSeedIdempotente" computerName="DESKTOP-4NJRTFA" duration="00:00:00.4854299" startTime="2026-11-22T12:40:45.6401312-05:00" endTime="2026-11-22T12:40:45.6401313-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="430b8bc5-53e2-4710-9b80-20c574950670" />
+    <UnitTestResult executionId="f3e774ab-6b7e-446d-819c-8bfdc54d2313" testId="19c14843-f9cc-fda9-94f0-9f31215a390d" testName="LogiMarket.Tests.Integracion.AceptacionTests.P10_PersistenciaEntreInstancias" computerName="DESKTOP-4NJRTFA" duration="00:00:00.4573620" startTime="2026-11-22T12:40:45.1543148-05:00" endTime="2026-11-22T12:40:45.1543150-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f3e774ab-6b7e-446d-819c-8bfdc54d2313" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(legado: True)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="2cd3d038-25e2-7d6a-e2c5-71f9758a0e72">
+      <Execution id="f708e1ac-d3a7-4744-b21b-f30c8b26c2d6" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests" name="ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.InicializacionInterrumpida_RevierteTodoYPermiteReintentarDesdeCero" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="7659bf38-4560-0846-2449-2a9ff0b79bfd">
+      <Execution id="4eb6125f-2c06-4015-abf8-aac7ad70b965" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests" name="InicializacionInterrumpida_RevierteTodoYPermiteReintentarDesdeCero" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.AceptacionTests.P01_MigracionesYSeedIdempotente" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="e5f88c2c-e96c-58b2-dd5c-28b2cd81d359">
+      <Execution id="430b8bc5-53e2-4710-9b80-20c574950670" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.AceptacionTests" name="P01_MigracionesYSeedIdempotente" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests.ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones(legado: False)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="3f55b966-58fb-cf76-f327-06cb848fccd3">
+      <Execution id="f7466390-5215-45a7-ba2f-8906b550008d" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesSeedRevisionTests" name="ReinicioConOSinMarcaPrevia_ConservaBajasEdicionesYOperaciones" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.AceptacionTests.P10_PersistenciaEntreInstancias" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="19c14843-f9cc-fda9-94f0-9f31215a390d">
+      <Execution id="f3e774ab-6b7e-446d-819c-8bfdc54d2313" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.AceptacionTests" name="P10_PersistenciaEntreInstancias" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="7659bf38-4560-0846-2449-2a9ff0b79bfd" executionId="4eb6125f-2c06-4015-abf8-aac7ad70b965" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3f55b966-58fb-cf76-f327-06cb848fccd3" executionId="f7466390-5215-45a7-ba2f-8906b550008d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2cd3d038-25e2-7d6a-e2c5-71f9758a0e72" executionId="f708e1ac-d3a7-4744-b21b-f30c8b26c2d6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e5f88c2c-e96c-58b2-dd5c-28b2cd81d359" executionId="430b8bc5-53e2-4710-9b80-20c574950670" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="19c14843-f9cc-fda9-94f0-9f31215a390d" executionId="f3e774ab-6b7e-446d-819c-8bfdc54d2313" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="5" executed="5" passed="5" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.34)&#xD;
+[xUnit.net 00:00:00.10]   Discovering: LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.16]   Discovered:  LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.16]   Starting:    LogiMarket.Tests&#xD;
+[xUnit.net 00:00:04.68]   Finished:    LogiMarket.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
