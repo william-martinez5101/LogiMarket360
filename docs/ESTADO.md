@@ -35,6 +35,7 @@
 - Resultado actual: **149/149** (109 originales +40 regresiones), **5/5 adjuntas**, **P01-P38 aprobadas**; restore bloqueado y build Release con advertencias como errores, 0/0. Se mantienen .NET8/WinForms/EF Core8 y las capas independientes.
 - Windows real: quitar/cambiar tras ordenar, SKU repetidos, Deshacer/Rehacer, guardado/recarga tras reinicio; cobro59 aceptado con fallo local, reinicio, clave/proveedor distintos, misma referencia original, otro reinicio y tercera clave. Estado real: un cargo/pago/aviso, tres movimientos y un evento procesado; integridad `ok`, sin errores FK.
 - La base de uso del usuario conserva el SHA-256 inicial; las pruebas usaron bases temporales.
+- La extraccion limpia tambien aprueba149/149 y5/5 con SDK8.0.420 y build sin advertencias. Migracion desde cero y seed doble por CLI: datos oficiales sin duplicados, integridad ok. Sus94 archivos de codigo/dependencias coinciden con el codigo entregado; registros en evidencia/correcciones-2026-11-22/copia-limpia.
 - No quedan comprobaciones pendientes de los cinco puntos. Los cobros simulados y las limitaciones del diario antiguo se explican en DECISIONES.md. GitHub e informe academico formal siguen aplazados.
 
 | Commit | Correccion comprobada |

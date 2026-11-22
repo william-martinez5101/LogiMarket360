@@ -1,0 +1,85 @@
+SDK DE .NET:
+ Version:           8.0.420
+ Commit:            bb7a9c12e2
+ Workload version:  8.0.400-manifests.2a8a79bb
+ MSBuild version:   17.11.48+02bf66295
+
+Entorno de tiempo de ejecución:
+ OS Name:     Windows
+ OS Version:  10.0.26300
+ OS Platform: Windows
+ RID:         win-x64
+ Base Path:   C:\Program Files\dotnet\sdk\8.0.420\
+
+Cargas de trabajo de .NET instaladas:
+Configurado para usar loose manifests al instalar nuevos manifiestos.
+ [ios]
+   Origen de la instalación: VS 18.11.12402.416
+   Versión del manifiesto:    17.0.8478/8.0.100
+   Ruta de acceso del manifiesto:       C:\Program Files\dotnet\sdk-manifests\8.0.100\microsoft.net.sdk.ios\17.0.8478\WorkloadManifest.json
+   Tipo de instalación:        FileBased
+
+ [android]
+   Origen de la instalación: VS 18.11.12402.416
+   Versión del manifiesto:    34.0.43/8.0.100
+   Ruta de acceso del manifiesto:       C:\Program Files\dotnet\sdk-manifests\8.0.100\microsoft.net.sdk.android\34.0.43\WorkloadManifest.json
+   Tipo de instalación:        FileBased
+
+ [maui-windows]
+   Origen de la instalación: VS 18.11.12402.416
+   Versión del manifiesto:    8.0.3/8.0.100
+   Ruta de acceso del manifiesto:       C:\Program Files\dotnet\sdk-manifests\8.0.100\microsoft.net.sdk.maui\8.0.3\WorkloadManifest.json
+   Tipo de instalación:        FileBased
+
+ [maccatalyst]
+   Origen de la instalación: VS 18.11.12402.416
+   Versión del manifiesto:    17.0.8478/8.0.100
+   Ruta de acceso del manifiesto:       C:\Program Files\dotnet\sdk-manifests\8.0.100\microsoft.net.sdk.maccatalyst\17.0.8478\WorkloadManifest.json
+   Tipo de instalación:        FileBased
+
+
+Host:
+  Version:      10.0.15
+  Architecture: x64
+  Commit:       8e0f8ed231
+
+.NET SDKs installed:
+  8.0.420 [C:\Program Files\dotnet\sdk]
+  10.0.201 [C:\Program Files\dotnet\sdk]
+  10.0.404 [C:\Program Files\dotnet\sdk]
+
+.NET runtimes installed:
+  Microsoft.AspNetCore.App 8.0.26 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 8.0.34 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 10.0.5 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.AspNetCore.App 10.0.15 [C:\Program Files\dotnet\shared\Microsoft.AspNetCore.App]
+  Microsoft.NETCore.App 6.0.16 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 8.0.17 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 8.0.21 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 8.0.26 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 8.0.34 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 9.0.7 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 10.0.5 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.NETCore.App 10.0.15 [C:\Program Files\dotnet\shared\Microsoft.NETCore.App]
+  Microsoft.WindowsDesktop.App 8.0.17 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+  Microsoft.WindowsDesktop.App 8.0.26 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+  Microsoft.WindowsDesktop.App 8.0.34 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+  Microsoft.WindowsDesktop.App 9.0.7 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+  Microsoft.WindowsDesktop.App 10.0.5 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+  Microsoft.WindowsDesktop.App 10.0.15 [C:\Program Files\dotnet\shared\Microsoft.WindowsDesktop.App]
+
+Other architectures found:
+  x86   [C:\Program Files (x86)\dotnet]
+    registered at [HKLM\SOFTWARE\dotnet\Setup\InstalledVersions\x86\InstallLocation]
+
+Environment variables:
+  Not set
+
+global.json file:
+  C:\Users\ASUS\source\repos\LogiMarket360\tmp\revision-correcciones-sdk8-20261122\LogiMarket360\global.json
+
+Learn more:
+  https://aka.ms/dotnet/info
+
+Download .NET:
+  https://aka.ms/dotnet/download

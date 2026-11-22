@@ -109,6 +109,8 @@ Cada escenario crea un archivo SQLite nuevo en `%TEMP%\LogiMarket360Tests\<guid>
 
 Resultado despues de la revision del 22/11/2026: **149/149 pruebas** (109 originales conservadas y 40 regresiones), **5/5 pruebas adjuntas**, P01-P38 aprobadas y 23/23 patrones. Restore bloqueado y build Release con advertencias como errores: 0 errores, 0 advertencias. El [registro de correcciones](docs/evidencia/correcciones-2026-11-22/RESULTADOS.md) contiene fallos previos, commits, comandos, capturas reales del carrito ordenado y del cobro con fallo/reinicio/reintentos, y las inspecciones de SQLite. La base de uso del usuario se conservo sin cambios. Los registros de la entrega anterior con 109 pruebas se conservan como evidencia historica.
 
+La copia limpia extraida tambien compilo con SDK8.0.420, aprobo149/149 y5/5, y ejecuto la migracion inicial y el seed doble del README. Los94 archivos de codigo/dependencias probados coinciden con los entregados; [registro de la copia limpia](docs/evidencia/correcciones-2026-11-22/copia-limpia/verificacion.json).
+
 Los JSON por aceptacion contienen esperado, obtenido, fecha, metodo, stock, pagos, eventos y trazas. Los TRX conservan tanto la ejecucion inicial fallida como las reparaciones y la verificacion final. Las capturas proceden de la aplicacion ejecutada; los wireframes del PDF son referencias.
 
 ## Garantias y alcance tecnico

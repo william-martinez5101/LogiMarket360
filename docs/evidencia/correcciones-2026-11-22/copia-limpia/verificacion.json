@@ -1,0 +1,451 @@
+{
+  "FechaUtc": "2026-11-22T18:14:47.301465+00:00",
+  "Resultado": "APROBADO",
+  "SDK": "8.0.420",
+  "CommitExtraido": "a2bcd3f4f1d616feea4ce4a19d33353004b0f3a3",
+  "Restauracion": "locked-mode",
+  "Build": "Release -warnaserror: 0 errores, 0 advertencias",
+  "Pruebas": {
+    "suite-sdk8.trx": {
+      "total": "149",
+      "executed": "149",
+      "passed": "149",
+      "failed": "0",
+      "error": "0",
+      "timeout": "0",
+      "aborted": "0",
+      "inconclusive": "0",
+      "passedButRunAborted": "0",
+      "notRunnable": "0",
+      "notExecuted": "0",
+      "disconnected": "0",
+      "warning": "0",
+      "completed": "0",
+      "inProgress": "0",
+      "pending": "0"
+    },
+    "adjuntas-sdk8.trx": {
+      "total": "5",
+      "executed": "5",
+      "passed": "5",
+      "failed": "0",
+      "error": "0",
+      "timeout": "0",
+      "aborted": "0",
+      "inconclusive": "0",
+      "passedButRunAborted": "0",
+      "notRunnable": "0",
+      "notExecuted": "0",
+      "disconnected": "0",
+      "warning": "0",
+      "completed": "0",
+      "inProgress": "0",
+      "pending": "0"
+    }
+  },
+  "ArchivosCodigoYDependenciasIdenticos": 94,
+  "InsumosVerificados": [
+    {
+      "Archivo": ".config/dotnet-tools.json",
+      "SHA256": "0ec2212336d3c6ff3425ec5c5e11a8b925971d9be8b50783aae4453dfd5e26e3"
+    },
+    {
+      "Archivo": "Directory.Build.props",
+      "SHA256": "9b5e88a280e1595cf4c270c06f7437d2993687a3a77bdebcb431baadbdaf68fe"
+    },
+    {
+      "Archivo": "docs/revisiones/2026-11-22/recibido/Revision_LogiMarket360_2026-11-22/pruebas/packages.lock.json",
+      "SHA256": "51ba893a51fd436dba2ebd6f3401a830944d34fbf83e7428372554d23244b4ec"
+    },
+    {
+      "Archivo": "docs/revisiones/2026-11-22/recibido/Revision_LogiMarket360_2026-11-22/pruebas/RevisionAdicionalTests.cs",
+      "SHA256": "15f3f08ddb183c14d934c1981ef8ff95b0945d074130c9997135edae25555ed6"
+    },
+    {
+      "Archivo": "docs/revisiones/2026-11-22/recibido/Revision_LogiMarket360_2026-11-22/pruebas/RevisionProbes.csproj",
+      "SHA256": "82a1796c176612f49a2f8163c8cf7ab7f757813be7f7274865d94104e6c07b51"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Consultas/ConsultasApp.cs",
+      "SHA256": "d67e79c762ae1e9005d851b0294e1f6f86f863ed780bfff3c58e7ca36f776402"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Consultas/FiltroPedidos.cs",
+      "SHA256": "4686d6fd129252aec07f564297bd70e2869a2009f97d915e364b323e77f6e9c1"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Contratos/Puertos.cs",
+      "SHA256": "10e137b6e3764b6dbd2a12596e54057b7da0dee92864dba779ea475543adb029"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Documentos/Comprobantes.cs",
+      "SHA256": "0ba7c7f02e6c221a7484e0eb00ffb84446233a6931f0bb8420a15d7448802140"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Eventos/Outbox.cs",
+      "SHA256": "8cf21f826d375e98a9dc4141ec049a91755995b5b8b2aed9882e413ffe1306a6"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Gestion/CatalogoYClientes.cs",
+      "SHA256": "1a6489b46034446f2bb9d9c9ddb35ed9c2d294f1f1e76177b2173e714bbc4fc5"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Gestion/DemostracionServicio.cs",
+      "SHA256": "83399620df500dac5b72f34106e0b58eb235ee02edfae8f7e7c02865813e2f90"
+    },
+    {
+      "Archivo": "LogiMarket.Application/LogiMarket.Application.csproj",
+      "SHA256": "41b9636c3f50310bcdf6bb4ea8976ddbd4634f64d18160e8f785a5a96f346965"
+    },
+    {
+      "Archivo": "LogiMarket.Application/packages.lock.json",
+      "SHA256": "5e15992040deb1af13334522772d10c8c04926e93f6a1d1ab70830a430d77c15"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Pedidos/CadenaValidacion.cs",
+      "SHA256": "eb8a5ebb50399a8a2111f77bf6c6a20671addb890e72e4995c8fe62958bf85f1"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Pedidos/CapturadorLineasPedido.cs",
+      "SHA256": "6b4ed50cf1aea634eb56049c1a2fb9a488773ecd5fcb8ac9b745747e39e7aef4"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Pedidos/Comandos.cs",
+      "SHA256": "26340bb6b99e287b37d4090afae7f631dcdcc3e890af9a187e3cadd2f5b00be7"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Pedidos/ConfirmacionPedidoFacade.cs",
+      "SHA256": "4de6ebcc68c4ccfc58bd224f5627342ed54b7532049b1bb016c818caea64d6c2"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Pedidos/Devoluciones.cs",
+      "SHA256": "6080a43a5dfd468a6e162bdf96b40da22a482fa4bd7ac172e7553f7e5713175e"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Pedidos/PedidosServicio.cs",
+      "SHA256": "3e0460e495061dc45c86583157c9dbbf548ea0e2e1845ad051b0ca998c922cf4"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Pedidos/ValoradorBorrador.cs",
+      "SHA256": "5fad41c4063bff768e0e570054dd7f44189c6c8eabbb86d87ad44eb39faa2a21"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Presentacion/FilaLineaCarrito.cs",
+      "SHA256": "b388bbc4c04e45c37ec4faf89cff0a9c40373999cb994411434b9368d33c3bc3"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Presentacion/MediadorYFlyweight.cs",
+      "SHA256": "f135ce3272ed0f31e95c44d0c4675cb94a0a73449d642cf5a2826c0ea0cfd1ac"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Presentacion/RutasAplicacion.cs",
+      "SHA256": "71575eb457d753cbc5319e0eed0a3e30f9191d56e4c7c6f292c599b918ff8708"
+    },
+    {
+      "Archivo": "LogiMarket.Application/Seguridad/Acceso.cs",
+      "SHA256": "3cd0316a925182d3cc3cd038cf213afe7ae8220356dc3762fc043d581308a7b1"
+    },
+    {
+      "Archivo": "LogiMarket.Domain/Catalogo/ComponenteKit.cs",
+      "SHA256": "0241194dea2ec2688c5ad7cad551c6b8ea7159a28961ada49de32922384bb18c"
+    },
+    {
+      "Archivo": "LogiMarket.Domain/Catalogo/IElementoCatalogo.cs",
+      "SHA256": "80788982a80eac855902de5cf8fd7d37179d233b9a147573b18e17d926ce027b"
+    },
+    {
+      "Archivo": "LogiMarket.Domain/Catalogo/KitCompuesto.cs",
+      "SHA256": "922b6b23c62ec6b759f5cdda125eff60f22ca017008df864ba911e38faa9fb01"
+    },
+    {
+      "Archivo": "LogiMarket.Domain/Catalogo/ProductoSimple.cs",
+      "SHA256": "a84636228acfbe2fc3bfa79df169cb7ea1dd2efa193650cef8c184c333cb0576"
+    },
+    {
+      "Archivo": "LogiMarket.Domain/Catalogo/RecorridoCatalogo.cs",
+      "SHA256": "fe6832b3e932da2fced2f23568f2135b162480431ca14c3f66728f2b654c3b2b"
+    },
+    {
+      "Archivo": "LogiMarket.Domain/Clientes/CategoriaCliente.cs",
+      "SHA256": "781943e8841568a6e14294899ce1f638ff8f83ce71b39c84bd4c9270914a1ea8"
+    },
+    {
+      "Archivo": "LogiMarket.Domain/Clientes/Cliente.cs",
+      "SHA256": "3493e1efb28be6bcb2ab93cc2dbcd1574730a3564163747d4fdc96db3da8c119"
+    },
+    {
+      "Archivo": "LogiMarket.Domain/LogiMarket.Domain.csproj",
+      "SHA256": "e151f959964eb450a5b86b72765e3f9c505645fa9516eae485743d2b43911c8e"
+    },
+    {
+      "Archivo": "LogiMarket.Domain/packages.lock.json",
+      "SHA256": "3cc7952787be7d43489891ec4a98f0d089ab0cedb68a61da0244c43df6a02398"
+    },
+    {
+      "Archivo": "LogiMarket.Domain/Ventas/Entregas.cs",
+      "SHA256": "0621722fbe5120fc53eb80980751a48d5f7c09b74d194b1e850a6fb89486fe20"
+    },
+    {
+      "Archivo": "LogiMarket.Domain/Ventas/EstadosPedido.cs",
+      "SHA256": "07fb28d0722f65f4c28ff6907e650d84ab7b9e9f78edfed07398ba62a96749e5"
+    },
+    {
+      "Archivo": "LogiMarket.Domain/Ventas/Instantaneas.cs",
+      "SHA256": "50364b2d8ef8b7c36a9aee80673d69c72a0e773ad2ad6f1a671d18b145a08f69"
+    },
+    {
+      "Archivo": "LogiMarket.Domain/Ventas/Pedido.cs",
+      "SHA256": "f5f6a9de81701a6be5339202d4ac6137c517be066ce97271ec75a0c5b92ca780"
+    },
+    {
+      "Archivo": "LogiMarket.Domain/Ventas/PedidoBorrador.cs",
+      "SHA256": "a6fa8a1552edb84fc986c86a3bc1c9b603012154584e4a154cadd42c34ddbacc"
+    },
+    {
+      "Archivo": "LogiMarket.Domain/Ventas/Promociones.cs",
+      "SHA256": "5d69be7d5e979a9a7d920101e602a7c38ee9196abb7fc873a40ec4273da5fec5"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/Documentos/ArchivoTxt.cs",
+      "SHA256": "98bbe79db44be6485ad1b6a96047bd646a94007d56eeb7f9c1f844f4cebbdf2a"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/Eventos/Notificaciones.cs",
+      "SHA256": "1a50a6def594f5d11c3b648c0c09cdb4f9f5241cf7048c3528c3773261020a82"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/LogiMarket.Infrastructure.csproj",
+      "SHA256": "c987c0f0dac1dc8b450cf88fa5828a5fa35026a9dff70a4c5ca0b4f39302cebd"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/packages.lock.json",
+      "SHA256": "c30e5da5e4c5afd96f809971211717b9c994437a745bcc82207be75ffbe064c6"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/Pagos/DiarioCobrosSimulados.cs",
+      "SHA256": "244ba2ee9a083bd92b91506851c2a1e4f629f0b33ef8fde8a214c34b940e2707"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/Pagos/PasarelaLegadaSimulada.cs",
+      "SHA256": "3a6d307b35498ec7dac30a87a1b85cb37bf2db149f03eddba19a91adf5b73681"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/Pagos/Pasarelas.cs",
+      "SHA256": "a43fdfabecbfb8198d794f0435bbc75d78a5ffdcb999382ffbd49d73d468d784"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/Persistencia/CatalogoEf.cs",
+      "SHA256": "e3e8ee027e5aad99fa3a07020374d665f46c87019959bb07214c2203a57c1336"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/Persistencia/Filas.cs",
+      "SHA256": "116850ff51017534236dafdcff7c14aee1bdd6b07039c0cb95ff9fef5abc6424"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/Persistencia/InicializadorBase.cs",
+      "SHA256": "92ae01ddd442a6bdc4c88809bb83394f7b2a9b59386a42b1bfcb4e33ff33f106"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/Persistencia/LogiMarketDbContext.cs",
+      "SHA256": "db18653400f1143cb2fa596a9ae0eb206381b708b046b10dfd1598bcf8e3bb7f"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/Persistencia/Migraciones/20261122001802_Inicial.cs",
+      "SHA256": "32b06c50b2fab295fd2de4fd72add84e33856191b6d830532c827b1bb9ebae6f"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/Persistencia/Migraciones/20261122001802_Inicial.Designer.cs",
+      "SHA256": "de23392b011e00c87d4a9ce8954ba6a41a66eecd60b9060a396c898349e55896"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/Persistencia/Migraciones/LogiMarketDbContextModelSnapshot.cs",
+      "SHA256": "4749780e97c9aaed364b625957a59499dd849c5a5c2ceb9fc5bab40914f3189f"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/Persistencia/OperacionesEf.cs",
+      "SHA256": "54cf42459eff8b44b430cc62d2c1cbcc3225ba18f1b19ada0196701e02cd58b2"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/Persistencia/PedidosEf.cs",
+      "SHA256": "d9bbc58a5a18c41e9ff471ae4275d8892467912b854efc495e4a570e373e29cc"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/Persistencia/UnidadTrabajoEf.cs",
+      "SHA256": "7269560b04a753ba7d41657272f9c790aa455d8fa707029a2878da26741bded0"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/Seguridad/IdentidadLocal.cs",
+      "SHA256": "92f84f18c6433291dee57abfe27b2a84e89a42978e4a7d97dd01888d40645654"
+    },
+    {
+      "Archivo": "LogiMarket.Infrastructure/ServiciosLocales.cs",
+      "SHA256": "aa59cf8439c03016576215a589cd017cbed874bec48c770e3847e38a9cc2cca8"
+    },
+    {
+      "Archivo": "LogiMarket.Tests/Domain/Catalogo/KitCompuestoTests.cs",
+      "SHA256": "e3de284f6a39ec3305cfeaa35f557c71bc99290778a4b271a9d80cf569858fab"
+    },
+    {
+      "Archivo": "LogiMarket.Tests/Domain/Catalogo/ProductoSimpleTests.cs",
+      "SHA256": "88bc883b97d3e94e77ce8a424c13f0465d80d59983fcb19862411d74d5e21320"
+    },
+    {
+      "Archivo": "LogiMarket.Tests/Domain/Clientes/ClienteTests.cs",
+      "SHA256": "62591933672377a924e54e9c759eb25046e2171f06fb5be89b977fa03c9937b9"
+    },
+    {
+      "Archivo": "LogiMarket.Tests/Domain/VentasTests.cs",
+      "SHA256": "3b338166a60d34c070f2ba7598d5b0344ea7248a7c31ec3587633bfcaeb16fc3"
+    },
+    {
+      "Archivo": "LogiMarket.Tests/Integracion/AceptacionComportamientoTests.cs",
+      "SHA256": "45367372dc4b2335cd6e54d1a248f69c2ee0790542e5c25df505534fc24f3089"
+    },
+    {
+      "Archivo": "LogiMarket.Tests/Integracion/AceptacionIntegridadTests.cs",
+      "SHA256": "2265e9a363cca4182fa2fb53ba744700ef88a0a8fe62000eefd89ae8e93acdfb"
+    },
+    {
+      "Archivo": "LogiMarket.Tests/Integracion/AceptacionPatronesTests.cs",
+      "SHA256": "fb589092b2383bfd250f7d854856e82f6d91fd6f753069742635a335373c2c1a"
+    },
+    {
+      "Archivo": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+      "SHA256": "9a86b8c98b4e5116125f3cd425abd9706ae632dadc3f6dbb48f54e1869cbdd4c"
+    },
+    {
+      "Archivo": "LogiMarket.Tests/Integracion/EdicionPersistidaTests.cs",
+      "SHA256": "4ab01e20eab5512199c50df904e436fbf6fc4b7a80acfb5caff748a9d4d38593"
+    },
+    {
+      "Archivo": "LogiMarket.Tests/Integracion/Escenario.cs",
+      "SHA256": "8b26a7de9b082972998537a341e23212d33ae826bb9196caf5614ad9d7798895"
+    },
+    {
+      "Archivo": "LogiMarket.Tests/Integracion/RegresionesCarritoRevisionTests.cs",
+      "SHA256": "dad905af5d55673fd31421c6fc2a35e0fc24748ca1558afce44b6d8f7c0b8831"
+    },
+    {
+      "Archivo": "LogiMarket.Tests/Integracion/RegresionesCobroRevisionTests.cs",
+      "SHA256": "6dbf573210cc1846e94b8a5a40fa68c0c32dc8df0868c93f5eb1a1ac15f231e4"
+    },
+    {
+      "Archivo": "LogiMarket.Tests/Integracion/RegresionesFiltrosRevisionTests.cs",
+      "SHA256": "b3eb2fffcfb420353933570d66fe53ccff5dce1cecc603de29af54eeadefe50b"
+    },
+    {
+      "Archivo": "LogiMarket.Tests/Integracion/RegresionesInstantaneasRevisionTests.cs",
+      "SHA256": "37a28f850caf6b91e056df6d04b975775ffe29d215c3df620ac7e526145db40d"
+    },
+    {
+      "Archivo": "LogiMarket.Tests/Integracion/RegresionesSeedRevisionTests.cs",
+      "SHA256": "a3107e2b99324a8440552a663479038b9d63053de289f2d8d4061af3b1ff2032"
+    },
+    {
+      "Archivo": "LogiMarket.Tests/LogiMarket.Tests.csproj",
+      "SHA256": "951f97c2fb1c8224edda42b089ec1468423825e3bc65e3440d778f6e2cdd7f3d"
+    },
+    {
+      "Archivo": "LogiMarket.Tests/packages.lock.json",
+      "SHA256": "e9286c28924e508ec2d9106342ef1ac6ce029f273f06860cba27c3d08b185bd4"
+    },
+    {
+      "Archivo": "LogiMarket.WinForms/AccesoForm.cs",
+      "SHA256": "cae88cecea62f612492768f8c21c5bc8508aff5a69d9f07bd5b1e1aea6629ecc"
+    },
+    {
+      "Archivo": "LogiMarket.WinForms/LogiMarket.WinForms.csproj",
+      "SHA256": "ffba54c24c771ada6b40e07cf8c7771cb6bfd18b1c6da5ddc6d7b0a105cfcfb7"
+    },
+    {
+      "Archivo": "LogiMarket.WinForms/packages.lock.json",
+      "SHA256": "edec4228215ff1e118584f16092a96b317d3eb2907012731f08e65babf5dcba5"
+    },
+    {
+      "Archivo": "LogiMarket.WinForms/Program.cs",
+      "SHA256": "b8eed99a06b2ecca5b3ca84efb43d968c23f7c2315522b35df11cb48c0f57fa3"
+    },
+    {
+      "Archivo": "LogiMarket.WinForms/VentanaPrincipal.cs",
+      "SHA256": "367b1a014ff552a2041b482676cf4b33353a1f080e212dedf2994b3d2f1b0745"
+    },
+    {
+      "Archivo": "LogiMarket.WinForms/Vistas/AuditoriaVista.cs",
+      "SHA256": "67f056e504b43b47e3aa96b02ff112cd49b01c386063f6ffe1873c28d70af68d"
+    },
+    {
+      "Archivo": "LogiMarket.WinForms/Vistas/CarritoVista.cs",
+      "SHA256": "51e8804ecfddeace841e86cf0b6746532d45e5231a4c5f201c04ac0de8713ffd"
+    },
+    {
+      "Archivo": "LogiMarket.WinForms/Vistas/CatalogoVista.cs",
+      "SHA256": "0c8c649adaa917d7aa4e9f8c7a7975587fe75b9b21b4401a37d80534d4ed669c"
+    },
+    {
+      "Archivo": "LogiMarket.WinForms/Vistas/ClientesVista.cs",
+      "SHA256": "a356d4cc3c10912a02019be2c122cd35cdef9644b78939b341679220893edf0e"
+    },
+    {
+      "Archivo": "LogiMarket.WinForms/Vistas/DialogoEdicion.cs",
+      "SHA256": "b0a008576a9a81f03ee93851e86e90a85af737e1834c138caefbb185756fa6b2"
+    },
+    {
+      "Archivo": "LogiMarket.WinForms/Vistas/InventarioVista.cs",
+      "SHA256": "ddfb0e53a76a07eeb38c039b8f762d6b41c4b8ae120510afc7109807a5ab28dd"
+    },
+    {
+      "Archivo": "LogiMarket.WinForms/Vistas/OperacionPedidoVistas.cs",
+      "SHA256": "a0023128a359425156d28aa1bebff0a39ca47d62ae8847cbb911d995c6c7142b"
+    },
+    {
+      "Archivo": "LogiMarket.WinForms/Vistas/PanelVista.cs",
+      "SHA256": "7836fd2d8fd40ad34787c380809354ff56b60a90e30b8345b4ddfd71e6d4bf25"
+    },
+    {
+      "Archivo": "LogiMarket.WinForms/Vistas/PedidosVista.cs",
+      "SHA256": "a28d69ce1a1a50bcc7f56a0f95f4cb6b7d80562c3a75b0b9f8880f69616a977f"
+    },
+    {
+      "Archivo": "LogiMarket.WinForms/Vistas/ReportesVista.cs",
+      "SHA256": "3e20cfb5a158ed1eabad94ffda93371d01bf424de8c45341f164351879fe9e6f"
+    },
+    {
+      "Archivo": "LogiMarket.WinForms/Vistas/Ui.cs",
+      "SHA256": "f4db8b5163c9784d46451306e57cb6e520e88514a4576300a1defa1e423b4348"
+    },
+    {
+      "Archivo": "LogiMarket360.sln",
+      "SHA256": "2acb5a6f572bd1f02c06095e705c22c241627f0889a1b2aead447447f5335393"
+    },
+    {
+      "Archivo": "LogiMarket360.slnx",
+      "SHA256": "67dd18ec8c0439148b7a8fb93ef5a466179d7c68dda044c0ad7df02ed5f1b4ed"
+    }
+  ],
+  "InicializacionPorCLI": {
+    "Datos": {
+      "Productos": 5,
+      "Kits": 2,
+      "Clientes": 3,
+      "Usuarios": 4,
+      "Pagos": 0,
+      "MovimientosInventario": 0,
+      "EventosOutbox": 0
+    },
+    "Stock": {
+      "P01": 8,
+      "P02": 5,
+      "P03": 20,
+      "P04": 4,
+      "P05": 30
+    },
+    "MarcasSeed": 1,
+    "Migraciones": [
+      "20261122001802_Inicial"
+    ],
+    "Integridad": "ok",
+    "ErroresFK": [],
+    "BaseTemporal": "tmp\\revision-correcciones-sdk8-20261122\\LogiMarket360\\tmp\\cli-desde-cero\\logimarket.db"
+  },
+  "ArchivosAdjuntoOriginalVerificados": 12
+}

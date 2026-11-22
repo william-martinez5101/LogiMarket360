@@ -88,4 +88,31 @@ Las fases Windows deben inspeccionarse en ese orden mientras se ejecuta el recor
 
 ## Paquete para revision
 
-Se genera `artifacts/APE04_LogiMarket360_Correcciones_2026-11-22.zip` despues de registrar los cambios. MANIFIESTO_REVISION.json identifica HEAD, cada archivo y su SHA-256; HISTORIAL_COMMITS.txt conserva la secuencia completa. El repositorio conserva su .git y el ZIP excluye bases, diarios de uso, binarios generados y archivos de entorno. La comprobacion de la copia limpia se registra al concluir el empaquetado.
+Se genera `artifacts/APE04_LogiMarket360_Correcciones_2026-11-22.zip` despues de registrar los cambios. MANIFIESTO_REVISION.json identifica HEAD, cada archivo y su SHA-256; HISTORIAL_COMMITS.txt conserva la secuencia completa. El repositorio conserva su .git y el ZIP excluye bases, diarios de uso, binarios generados y archivos de entorno.
+
+La extraccion preliminar del commit a2bcd3f se verifico por completo antes de compilar: rutas contenidas, exclusiones, entradas sin duplicados y todos los SHA-256. [Registro del paquete preliminar](paquete-preliminar.json). Despues se ejecuto realmente sobre esa extraccion:
+
+- SDK **8.0.420**, fijado mediante un global.json exclusivo del directorio temporal de comprobacion. El proyecto conserva sus destinos net8.0/net8.0-windows; ese archivo temporal no se incluye en la entrega.
+- Tool restore, restore de solucion y proyecto adjunto en modo bloqueado, build Release -warnaserror: **0 errores y0 advertencias**.
+- Suite de la copia: **149/149**; pruebas adjuntas de la copia: **5/5**.
+- `dotnet ef database update` sobre una ruta nueva: aplico realmente20261122001802_Inicial. Se ejecuto la aplicacion con `--initialize` y luego `--seed` sobre esa misma base.
+- Inspeccion SQLite de solo lectura:5 productos,2 kits,3 clientes,4 usuarios,una marca V1,stock8/5/20/4/30,cero operaciones; integridad ok y sin FK rotas.
+- Los **94 archivos de codigo C#, proyectos, soluciones, configuracion de compilacion y dependencias** de la copia probada coinciden byte a byte con el repositorio final. Los doce archivos originales del adjunto tambien conservan sus huellas. El ZIP se regenera incorporando estos registros; los cambios posteriores de esta etapa corresponden a documentacion y herramientas de comprobacion.
+
+Registros: [verificacion de codigo/datos/pruebas](copia-limpia/verificacion.json), [SDK](copia-limpia/sdk-info.log), [build](copia-limpia/build.log), [149 pruebas](copia-limpia/suite-sdk8.trx), [cinco adjuntas](copia-limpia/adjuntas-sdk8.trx), [migracion](copia-limpia/migraciones.log), [seed repetido](copia-limpia/seed-repetido.log). La huella del ZIP final esta junto al archivo, en su `.sha256`; el manifiesto interno registra su HEAD definitivo. `paquete-preliminar.json` documenta expresamente el paquete usado para la compilacion limpia, no pretende ser la huella del ZIP final regenerado.
+
+Comandos de migracion/seed usados desde la raiz de la copia extraida:
+
+```powershell
+$env:LOGIMARKET_DB = Join-Path (Get-Location) 'tmp\cli-desde-cero\logimarket.db'
+dotnet tool restore
+dotnet ef database update --project .\LogiMarket.Infrastructure --configuration Release --no-build
+dotnet run --project .\LogiMarket.WinForms --configuration Release --no-build -- --db $env:LOGIMARKET_DB --initialize
+dotnet run --project .\LogiMarket.WinForms --configuration Release --no-build -- --db $env:LOGIMARKET_DB --seed
+```
+
+Desde el repositorio de trabajo, la inspeccion de esa copia se acredito con:
+
+```powershell
+python .\scripts\Comprobar-Copia-Limpia.py .\tmp\revision-correcciones-sdk8-20261122\LogiMarket360
+```

@@ -1,0 +1,4 @@
+2026-11-22T18:12:23.3553579+00:00
+Migraciones y seed aplicados.
+Base: C:\Users\ASUS\source\repos\LogiMarket360\tmp\revision-correcciones-sdk8-20261122\LogiMarket360\tmp\cli-desde-cero\logimarket.db
+Outbox: ResultadoOutbox { Procesados = 0, Pendientes = 0 }

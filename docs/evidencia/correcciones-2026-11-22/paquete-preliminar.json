@@ -1,0 +1,11 @@
+{
+  "FechaUtc": "2026-11-22T18:09:24.941731+00:00",
+  "Resultado": "APROBADO",
+  "ZIP": "APE04_LogiMarket360_Correcciones_2026-11-22.zip",
+  "Commit": "a2bcd3f4f1d616feea4ce4a19d33353004b0f3a3",
+  "Entradas": 448,
+  "ArchivosConSHA256Verificado": 446,
+  "SHA256ZIP": "6647e93a2aafed5ccb4c8141fa5219df44639d6acb0d5ae9b2fbbca55690a597",
+  "Exclusiones": "Sin .git/.vs/bin/obj/tmp/artifacts/TestResults, bases de uso o .env",
+  "DestinoTemporal": "tmp\\revision-correcciones-sdk8-20261122"
+}
