@@ -1,22 +1,22 @@
 {
   "Caso": "P14",
   "Estado": "APROBADO",
-  "FechaUtc": "2026-11-22T00:22:55.7069881+00:00",
+  "FechaUtc": "2026-11-22T03:42:10.371083+00:00",
   "Metodo": "P14_PrototypeProfundoPersistido",
-  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionPatronesTests.cs",
   "Esperado": "Tres identidades; editar copia2 no cambia plantilla ni copia1",
   "Obtenido": [
     {
-      "Id": "075225d5-43a8-48d4-baea-9ea691059830",
+      "Id": "16caf89d-ed00-4a77-87bc-1497b83c7238",
       "Cantidad": 1
     },
     {
-      "Id": "0b72f316-e093-4ad1-9cf6-86a6cfb7f10c",
+      "Id": "1b1d8a35-e56e-44eb-be8a-3452ed6b9930",
+      "Cantidad": 1
+    },
+    {
+      "Id": "9860623c-dbf3-476f-8774-a364090280ec",
       "Cantidad": 2
-    },
-    {
-      "Id": "a0b177f7-ba86-4eb4-bef1-b817923ac4ed",
-      "Cantidad": 1
     }
   ],
   "Stock": [

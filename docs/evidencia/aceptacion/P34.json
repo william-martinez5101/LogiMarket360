@@ -1,9 +1,9 @@
 {
   "Caso": "P34",
   "Estado": "APROBADO",
-  "FechaUtc": "2026-11-22T00:22:53.6693466+00:00",
+  "FechaUtc": "2026-11-22T03:42:07.1617135+00:00",
   "Metodo": "P34_VisitorDetalleYPeso",
-  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionComportamientoTests.cs",
   "Esperado": "Visita anidada con detalle P01/P02/P03 y peso 1.00kg",
   "Obtenido": {
     "Unidades": {

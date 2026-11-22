@@ -78,13 +78,13 @@ public sealed class Escenario : IAsyncDisposable
     { var id = await ValidadoAsync(cliente, entrega, lineas); await Invocador.EjecutarAsync(new ConfirmarPedidoCommand(Facade, id, "pago-" + id)); return id; }
     public async Task<Guid> EntregadoAsync()
     { var id = await PagadoAsync(); await Pedidos.DespacharAsync(id); await Pedidos.EntregarAsync(id); return id; }
-    public async Task EvidenciaAsync(string id, string esperado, object obtenido, [CallerMemberName] string metodo = "")
+    public async Task EvidenciaAsync(string id, string esperado, object obtenido, [CallerMemberName] string metodo = "", [CallerFilePath] string fuente = "")
     {
         var raiz = Environment.GetEnvironmentVariable("LOGIMARKET_EVIDENCE") ?? Path.Combine(AppContext.BaseDirectory, "evidencia");
         Directory.CreateDirectory(raiz);
         var datos = await Consultas.CargarAsync();
         var evidencia = new { Caso = id, Estado = "APROBADO", FechaUtc = DateTimeOffset.UtcNow, Metodo = metodo,
-            Fuente = "LogiMarket.Tests/Integracion/AceptacionTests.cs", Esperado = esperado, Obtenido = obtenido,
+            Fuente = "LogiMarket.Tests/Integracion/" + Path.GetFileName(fuente), Esperado = esperado, Obtenido = obtenido,
             Stock = datos.Productos.Select(p => new { p.Sku, p.Stock }), Pagos = datos.Pagos, Movimientos = datos.Movimientos,
             Eventos = datos.Outbox, Avisos = datos.Avisos, Auditoria = datos.Auditoria, Traza = Log.Leer(), CobrosSimulados = Diario.Leer() };
         await File.WriteAllTextAsync(Path.Combine(raiz, id + ".json"), JsonSerializer.Serialize(evidencia, new JsonSerializerOptions { WriteIndented = true }));

@@ -1,9 +1,9 @@
 {
   "Caso": "P13",
   "Estado": "APROBADO",
-  "FechaUtc": "2026-11-22T00:22:42.8927194+00:00",
+  "FechaUtc": "2026-11-22T03:41:50.544234+00:00",
   "Metodo": "P13_BuilderValidoEIncompleto",
-  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionPatronesTests.cs",
   "Esperado": "Sin cliente/lineas rechazado; agregado valido de varias lineas",
   "Obtenido": {
     "Valores": {

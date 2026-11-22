@@ -1,9 +1,9 @@
 {
   "Caso": "P18",
   "Estado": "APROBADO",
-  "FechaUtc": "2026-11-22T00:22:48.6596884+00:00",
+  "FechaUtc": "2026-11-22T03:41:59.5715024+00:00",
   "Metodo": "P18_CompositeYCiclosPersistidos",
-  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionPatronesTests.cs",
   "Esperado": "Precios 50/60; expansion P01/P02/P03; ciclo sin cambios",
   "Obtenido": {
     "P01": 1,

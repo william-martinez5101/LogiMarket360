@@ -1,7 +1,7 @@
 {
   "Caso": "P05",
   "Estado": "APROBADO",
-  "FechaUtc": "2026-11-22T00:22:57.7803382+00:00",
+  "FechaUtc": "2026-11-22T03:42:12.6234646+00:00",
   "Metodo": "P05_StockInsuficienteSinEfectos",
   "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
   "Esperado": "Rechazo por P02; cero efectos",

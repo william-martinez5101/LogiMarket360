@@ -1,9 +1,9 @@
 {
   "Caso": "P15",
   "Estado": "APROBADO",
-  "FechaUtc": "2026-11-22T00:22:57.2078023+00:00",
+  "FechaUtc": "2026-11-22T03:42:12.0104048+00:00",
   "Metodo": "P15_SingletonMetricasThreadSafe",
-  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionPatronesTests.cs",
   "Esperado": "Misma instancia DI; 1000 ids aplicados por 10 hilos sin duplicar",
   "Obtenido": {
     "MismaInstancia": true,

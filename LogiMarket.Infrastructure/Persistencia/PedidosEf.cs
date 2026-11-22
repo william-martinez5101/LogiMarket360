@@ -26,7 +26,8 @@ internal sealed class PedidosEf(LogiMarketDbContext db) : IPedidoRepository
         p.Subtotal = pedido.Valores.Subtotal; p.Descuento = pedido.Valores.Descuento; p.Tarifa = pedido.Valores.Tarifa; p.Total = pedido.Valores.Total;
         p.Promocion = pedido.Valores.Promocion; p.Unidades = pedido.Valores.Unidades; p.Creado = pedido.Creado; p.Entregado = pedido.FechaEntrega;
         p.Devuelto = pedido.Devuelto; p.Version = checked(pedido.Version + 1);
-        for (int i = p.Detalles.Count - 1; i >= pedido.Lineas.Count; i--) { db.Remove(p.Detalles[i]); p.Detalles.RemoveAt(i); }
+        foreach (var sobrante in p.Detalles.Where(d => d.Orden >= pedido.Lineas.Count).ToArray())
+        { db.Remove(sobrante); p.Detalles.Remove(sobrante); }
         for (int i = 0; i < pedido.Lineas.Count; i++)
         {
             var linea = pedido.Lineas[i]; var arbol = JsonSerializer.Serialize(linea.Elemento);

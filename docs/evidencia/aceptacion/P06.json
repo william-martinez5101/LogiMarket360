@@ -1,7 +1,7 @@
 {
   "Caso": "P06",
   "Estado": "APROBADO",
-  "FechaUtc": "2026-11-22T00:22:43.5646782+00:00",
+  "FechaUtc": "2026-11-22T03:41:51.6479514+00:00",
   "Metodo": "P06_CobroRechazadoSinEfectos",
   "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
   "Esperado": "Rechazo sin pago, stock ni evento",
@@ -37,21 +37,21 @@
   "Auditoria": [],
   "Traza": [
     {
-      "Id": "ad53b26b-893a-4533-ac80-b90865e5d19a",
+      "Id": "60a80d9d-7e6a-47a1-9c5a-ca8a31999dac",
       "Tipo": "PAGO_INICIO",
       "Correlacion": "rechazo",
       "Mensaje": "Importe=59,00",
       "Fecha": "2026-11-21T17:00:00+00:00"
     },
     {
-      "Id": "0e258920-bed9-44d4-89c3-83016200d194",
+      "Id": "900f765b-771f-4f98-9e97-220344d21644",
       "Tipo": "PASARELA",
       "Correlacion": "rechazo",
       "Mensaje": "LEGADO: 5900 centavos",
       "Fecha": "2026-11-21T17:00:00+00:00"
     },
     {
-      "Id": "4f2bdefb-1b5f-4de0-a4f2-e254f792871b",
+      "Id": "f9090555-ffe2-4e13-9cdc-f0d3c591b503",
       "Tipo": "PAGO_ERROR",
       "Correlacion": "rechazo",
       "Mensaje": "LEGADO; aprobado=False; Rechazo simulado.",

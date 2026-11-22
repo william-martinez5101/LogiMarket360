@@ -1,9 +1,9 @@
 {
   "Caso": "P22",
   "Estado": "APROBADO",
-  "FechaUtc": "2026-11-22T00:22:50.1393644+00:00",
+  "FechaUtc": "2026-11-22T03:42:01.7377061+00:00",
   "Metodo": "P22_ProxyDeniegaAntesDeLogYCobro",
-  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionPatronesTests.cs",
   "Esperado": "CONSULTA/BODEGA: 0 log de pago, 0 proveedor, 0 efectos",
   "Obtenido": {
     "Antes": 0,

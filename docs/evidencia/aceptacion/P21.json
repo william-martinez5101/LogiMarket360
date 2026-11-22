@@ -1,9 +1,9 @@
 {
   "Caso": "P21",
   "Estado": "APROBADO",
-  "FechaUtc": "2026-11-22T00:22:55.3843039+00:00",
+  "FechaUtc": "2026-11-22T03:42:09.8516129+00:00",
   "Metodo": "P21_FlyweightMilFilasMedicionEquivalente",
-  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionPatronesTests.cs",
   "Esperado": "1000 filas identicas en ambos escenarios; 5 vs 1000 metadatos; bytes asignados del mismo hilo con calentamiento",
   "Obtenido": {
     "Filas": 1000,

@@ -1,9 +1,9 @@
 {
   "Caso": "P32",
   "Estado": "APROBADO",
-  "FechaUtc": "2026-11-22T00:22:54.1593116+00:00",
+  "FechaUtc": "2026-11-22T03:42:07.9110239+00:00",
   "Metodo": "P32_StrategyExtensibleYPrioridad",
-  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionComportamientoTests.cs",
   "Esperado": "VIP6/MAYORISTA15/NORMAL0; nueva politica12; prioridad y AwayFromZero",
   "Obtenido": {
     "Extension": {

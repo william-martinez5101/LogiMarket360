@@ -1,7 +1,7 @@
 {
   "Caso": "P01",
   "Estado": "APROBADO",
-  "FechaUtc": "2026-11-22T00:22:53.0465471+00:00",
+  "FechaUtc": "2026-11-22T03:42:06.1918368+00:00",
   "Metodo": "P01_MigracionesYSeedIdempotente",
   "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
   "Esperado": "5 productos, 2 kits, 4 roles, una migracion; seed sin duplicados",

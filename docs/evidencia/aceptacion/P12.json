@@ -1,22 +1,22 @@
 {
   "Caso": "P12",
   "Estado": "APROBADO",
-  "FechaUtc": "2026-11-22T00:22:50.3649003+00:00",
+  "FechaUtc": "2026-11-22T03:42:02.0619775+00:00",
   "Metodo": "P12_AbstractFactoryFamilias",
-  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionPatronesTests.cs",
   "Esperado": "Tarifas 5/12, plazos 3/1, guias compatibles y mezcla rechazada",
   "Obtenido": {
     "a": {
       "Tipo": 0,
       "Tarifa": 5,
       "Dias": 3,
-      "Guia": "GUIA-ESTANDAR-43612cfe8cd645948e3ba09ea72b227e"
+      "Guia": "GUIA-ESTANDAR-3633dec33be64c5a89778a678a2cca0a"
     },
     "b": {
       "Tipo": 1,
       "Tarifa": 12,
       "Dias": 1,
-      "Guia": "GUIA-EXPRES-43612cfe8cd645948e3ba09ea72b227e"
+      "Guia": "GUIA-EXPRES-3633dec33be64c5a89778a678a2cca0a"
     }
   },
   "Stock": [

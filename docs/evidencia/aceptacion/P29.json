@@ -1,12 +1,12 @@
 {
   "Caso": "P29",
   "Estado": "APROBADO",
-  "FechaUtc": "2026-11-22T00:22:48.361585+00:00",
+  "FechaUtc": "2026-11-22T03:41:59.1185548+00:00",
   "Metodo": "P29_MementoTresEdicionesDosUndoUnRedo",
-  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionComportamientoTests.cs",
   "Esperado": "Restauracion profunda completa y bloqueo despues de pago",
   "Obtenido": {
-    "ClienteId": "01a5eeff-1db2-45dc-964a-2e71d1559235",
+    "ClienteId": "3204a0c8-0a37-42e0-b061-43684efdf7cd",
     "Entrega": 0,
     "Cantidad": 1,
     "Estados": 0
@@ -35,10 +35,10 @@
   ],
   "Pagos": [
     {
-      "Id": "c5307fac-9713-4bf7-9c7e-528ad43499aa",
-      "PedidoId": "9cd2f000-ac99-47d2-b676-7b54fea955e6",
+      "Id": "a5e41acc-07fc-435a-9b5e-2c0816247009",
+      "PedidoId": "d78799a2-704c-4899-ba66-fe266062d975",
       "Clave": "memento",
-      "Referencia": "SIM-f399752125ca4128abc4e8177505a67c",
+      "Referencia": "SIM-bb4633d9b96449c8b963c8c5b9ba3ce2",
       "Importe": 59.0,
       "Proveedor": "LEGADO",
       "Fecha": "2026-11-21T17:00:00+00:00"
@@ -46,38 +46,38 @@
   ],
   "Movimientos": [
     {
-      "Id": "416e1ba6-c61a-42db-a85d-ac8982fedd94",
-      "PedidoId": "9cd2f000-ac99-47d2-b676-7b54fea955e6",
-      "Sku": "P03",
-      "Cantidad": -1,
-      "Motivo": "VENTA",
-      "Referencia": "c5307fac-9713-4bf7-9c7e-528ad43499aa",
-      "Fecha": "2026-11-21T17:00:00+00:00"
-    },
-    {
-      "Id": "79960608-0cb7-489c-b4f8-3cbc7cf93b4e",
-      "PedidoId": "9cd2f000-ac99-47d2-b676-7b54fea955e6",
-      "Sku": "P01",
-      "Cantidad": -1,
-      "Motivo": "VENTA",
-      "Referencia": "c5307fac-9713-4bf7-9c7e-528ad43499aa",
-      "Fecha": "2026-11-21T17:00:00+00:00"
-    },
-    {
-      "Id": "e0aee6f2-74af-44f8-921b-ee58f93f19f6",
-      "PedidoId": "9cd2f000-ac99-47d2-b676-7b54fea955e6",
+      "Id": "56471c35-59ca-4f9e-8ada-414560fd1861",
+      "PedidoId": "d78799a2-704c-4899-ba66-fe266062d975",
       "Sku": "P02",
       "Cantidad": -1,
       "Motivo": "VENTA",
-      "Referencia": "c5307fac-9713-4bf7-9c7e-528ad43499aa",
+      "Referencia": "a5e41acc-07fc-435a-9b5e-2c0816247009",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "cf4296c8-0ef2-4a1b-9c6a-57905ef1d46a",
+      "PedidoId": "d78799a2-704c-4899-ba66-fe266062d975",
+      "Sku": "P03",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "a5e41acc-07fc-435a-9b5e-2c0816247009",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "d5d2fb78-2f25-41dc-9419-4aafe3f7f91b",
+      "PedidoId": "d78799a2-704c-4899-ba66-fe266062d975",
+      "Sku": "P01",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "a5e41acc-07fc-435a-9b5e-2c0816247009",
       "Fecha": "2026-11-21T17:00:00+00:00"
     }
   ],
   "Eventos": [
     {
       "Evento": {
-        "Id": "8e7ae463-efa0-480f-950d-72786105af06",
-        "PedidoId": "9cd2f000-ac99-47d2-b676-7b54fea955e6",
+        "Id": "cf93b9a5-3dc3-4e98-9208-03864b90f203",
+        "PedidoId": "d78799a2-704c-4899-ba66-fe266062d975",
         "Tipo": "PedidoPagado",
         "Importe": 59.0,
         "Canal": "EMAIL",
@@ -92,21 +92,21 @@
   "Auditoria": [],
   "Traza": [
     {
-      "Id": "f9ecc4ee-e79a-47ce-b603-748e77df491e",
+      "Id": "104272f7-21ef-494d-ad1c-9326368e3ffa",
       "Tipo": "PAGO_INICIO",
       "Correlacion": "memento",
       "Mensaje": "Importe=59,00",
       "Fecha": "2026-11-21T17:00:00+00:00"
     },
     {
-      "Id": "fdc0e3f4-b0ff-4150-81f1-7b64fb8126c1",
+      "Id": "5aea6c3d-1749-4a1a-b63f-322cc5bf3c4f",
       "Tipo": "PASARELA",
       "Correlacion": "memento",
       "Mensaje": "LEGADO: 5900 centavos",
       "Fecha": "2026-11-21T17:00:00+00:00"
     },
     {
-      "Id": "07c4e3b0-e057-42bf-a2d0-cfbde6f8e2e0",
+      "Id": "41446b32-19da-4a41-9d1b-c25dfb208265",
       "Tipo": "PAGO_FIN",
       "Correlacion": "memento",
       "Mensaje": "LEGADO; aprobado=True; Cobro simulado aprobado.",
@@ -117,7 +117,7 @@
     {
       "Clave": "memento",
       "Monto": 59,
-      "Referencia": "SIM-f399752125ca4128abc4e8177505a67c",
+      "Referencia": "SIM-bb4633d9b96449c8b963c8c5b9ba3ce2",
       "Proveedor": "LEGADO"
     }
   ]
