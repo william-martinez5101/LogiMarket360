@@ -1,0 +1,62 @@
+[
+  {
+    "archivo": "LEEME_Revision.md",
+    "bytes": 17148,
+    "sha256": "a56356bb3edbb6ea71b586db318e96a9b1f010ccf30a4a519295e3c6794a61a4"
+  },
+  {
+    "archivo": "Prompt_Correcciones_Codex.txt",
+    "bytes": 6504,
+    "sha256": "a306a1114b167f2026f9b186f16d0a2e6ad45c32f691221662bf5dabc4ccf020"
+  },
+  {
+    "archivo": "evidencia/adicionales.trx",
+    "bytes": 22888,
+    "sha256": "6444ecfcdedf5ee392e911e4cf71505fd2e82e23d4a54961c694fc1655704927"
+  },
+  {
+    "archivo": "evidencia/build-solucion.log",
+    "bytes": 956,
+    "sha256": "95d9e68954645c0d559dc8e7604655577e3d02c9b3d1e0c54006acfb8e9e6eaa"
+  },
+  {
+    "archivo": "evidencia/dotnet-info.log",
+    "bytes": 1117,
+    "sha256": "d39eef56ac1e72ade7617f55e4906bdd0fa2e1baf1fd2400946f010f3e42aa6e"
+  },
+  {
+    "archivo": "evidencia/originales.trx",
+    "bytes": 160064,
+    "sha256": "bf52df90d217b023ae71ee3dc38843f63291916b4b9bce4fade349a9c3294e82"
+  },
+  {
+    "archivo": "evidencia/pruebas-adicionales.log",
+    "bytes": 8080,
+    "sha256": "09c65ad1aea105c618cd73aaa2d60d3d5f9c35c49d858b810df303fb2c609088"
+  },
+  {
+    "archivo": "evidencia/restore-pruebas-adicionales.log",
+    "bytes": 787,
+    "sha256": "bc95031c282085aa24588920195f2fa6b6681dc1d60eb175fbd43c72717c6c23"
+  },
+  {
+    "archivo": "evidencia/restore-solucion.log",
+    "bytes": 816,
+    "sha256": "9305b6d99da178446dce402ea70a6fb4adcf244d15c83207d37329ae598768d8"
+  },
+  {
+    "archivo": "evidencia/resumen_revision.json",
+    "bytes": 1458,
+    "sha256": "16723b2b19163da31cddeba6c160f932a85f524fa36e22186481ff87f6751468"
+  },
+  {
+    "archivo": "pruebas/RevisionAdicionalTests.cs",
+    "bytes": 4265,
+    "sha256": "15f3f08ddb183c14d934c1981ef8ff95b0945d074130c9997135edae25555ed6"
+  },
+  {
+    "archivo": "pruebas/RevisionProbes.csproj",
+    "bytes": 972,
+    "sha256": "82a1796c176612f49a2f8163c8cf7ab7f757813be7f7274865d94104e6c07b51"
+  }
+]

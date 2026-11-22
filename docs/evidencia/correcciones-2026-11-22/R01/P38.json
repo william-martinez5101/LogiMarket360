@@ -1,0 +1,199 @@
+{
+  "Caso": "P38",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T17:37:35.7220681+00:00",
+  "Metodo": "P38_ArquitecturaLspIspDipNet8",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionIntegridadTests.cs",
+  "Esperado": "Referencias y TFM correctos; contratos segregados; proveedores sustituibles en entradas, resultados y excepciones; build limpio en log externo",
+  "Obtenido": {
+    "Framework": ".NET 8",
+    "Proveedores": [
+      {
+        "Clave": "lsp-LEGADO",
+        "Monto": 1,
+        "Referencia": "SIM-56f32fd566e94f6d88b25905f397dc69",
+        "Proveedor": "LEGADO",
+        "PedidoId": null
+      },
+      {
+        "Clave": "lsp-ALTERNATIVO",
+        "Monto": 1,
+        "Referencia": "SIM-c197ad2ea5a246c796cbbe8ca1374308",
+        "Proveedor": "ALTERNATIVO",
+        "PedidoId": null
+      }
+    ],
+    "ContratoPagoMetodos": 1
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [],
+  "Traza": [
+    {
+      "Id": "ba76be4d-54ca-4be3-a056-cf8a6910fd77",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "lsp",
+      "Mensaje": "Importe=0,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "1ad80d2d-f4bb-4608-80aa-1c58fee01f97",
+      "Tipo": "PAGO_ERROR",
+      "Correlacion": "lsp",
+      "Mensaje": "El monto debe ser positivo y tener como maximo dos decimales. (Parameter \u0027monto\u0027)",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "a092aca5-5238-4140-8e1c-d2a196f957de",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "",
+      "Mensaje": "Importe=1,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "23bb1255-971c-4cd4-9acc-2134f958a290",
+      "Tipo": "PAGO_ERROR",
+      "Correlacion": "",
+      "Mensaje": "Clave invalida. (Parameter \u0027clave\u0027)",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "c84bb9bd-a0b4-4721-b866-0acc7ce4af81",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "cancelado",
+      "Mensaje": "Importe=1,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "e921ab9c-f791-4e7f-96ed-279849c08118",
+      "Tipo": "PAGO_ERROR",
+      "Correlacion": "cancelado",
+      "Mensaje": "The operation was canceled.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "742a617c-b2ff-4115-80ad-21a05ac63a09",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "lsp-LEGADO",
+      "Mensaje": "Importe=1,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "a0cf049c-9b0c-4e91-8073-39e24bb039e8",
+      "Tipo": "PASARELA",
+      "Correlacion": "lsp-LEGADO",
+      "Mensaje": "LEGADO: 100 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "36729929-a61f-4909-8298-477e836630d4",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "lsp-LEGADO",
+      "Mensaje": "LEGADO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "55b12c9d-087d-4666-b591-dcc20f84a315",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "lsp",
+      "Mensaje": "Importe=0,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "6d558f71-fc86-4e9c-88e5-2b31ad3b741b",
+      "Tipo": "PAGO_ERROR",
+      "Correlacion": "lsp",
+      "Mensaje": "El monto debe ser positivo y tener como maximo dos decimales. (Parameter \u0027monto\u0027)",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "c30982c1-138a-4006-ab6d-205fa365ea28",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "",
+      "Mensaje": "Importe=1,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "04ca0d3c-f3fa-43b4-98f9-783a8015e4f7",
+      "Tipo": "PAGO_ERROR",
+      "Correlacion": "",
+      "Mensaje": "Clave invalida. (Parameter \u0027clave\u0027)",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "a162dec1-bfff-4aad-87c4-6decfe0c67e1",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "cancelado",
+      "Mensaje": "Importe=1,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "153d20c8-71d7-47e5-bf72-968c88178d13",
+      "Tipo": "PAGO_ERROR",
+      "Correlacion": "cancelado",
+      "Mensaje": "The operation was canceled.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "957d6a8f-9b16-4007-9456-6e961660eb7b",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "lsp-ALTERNATIVO",
+      "Mensaje": "Importe=1,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "a1fdd1ca-c594-4000-933e-30b4bea83614",
+      "Tipo": "PASARELA",
+      "Correlacion": "lsp-ALTERNATIVO",
+      "Mensaje": "ALTERNATIVO: 1,00 USD",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "c49e9978-4a0a-4d1b-852b-645f788476e9",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "lsp-ALTERNATIVO",
+      "Mensaje": "ALTERNATIVO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": [
+    {
+      "Clave": "lsp-LEGADO",
+      "Monto": 1,
+      "Referencia": "SIM-56f32fd566e94f6d88b25905f397dc69",
+      "Proveedor": "LEGADO",
+      "PedidoId": null
+    },
+    {
+      "Clave": "lsp-ALTERNATIVO",
+      "Monto": 1,
+      "Referencia": "SIM-c197ad2ea5a246c796cbbe8ca1374308",
+      "Proveedor": "ALTERNATIVO",
+      "PedidoId": null
+    }
+  ]
+}

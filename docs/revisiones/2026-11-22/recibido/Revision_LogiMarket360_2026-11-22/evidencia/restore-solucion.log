@@ -1,0 +1,6 @@
+  Determining projects to restore...
+  Restored /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_20261122/LogiMarket360/LogiMarket.WinForms/LogiMarket.WinForms.csproj (in 5.99 sec).
+  Restored /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_20261122/LogiMarket360/LogiMarket.Application/LogiMarket.Application.csproj (in 7 ms).
+  Restored /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_20261122/LogiMarket360/LogiMarket.Infrastructure/LogiMarket.Infrastructure.csproj (in 63 ms).
+  Restored /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_20261122/LogiMarket360/LogiMarket.Domain/LogiMarket.Domain.csproj (in 2 ms).
+  Restored /workspace/scratch/704a2883b1c7/analysis/revision_logimarket_20261122/LogiMarket360/LogiMarket.Tests/LogiMarket.Tests.csproj (in 74 ms).

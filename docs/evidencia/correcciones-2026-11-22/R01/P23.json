@@ -1,0 +1,51 @@
+{
+  "Caso": "P23",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T17:37:31.0706224+00:00",
+  "Metodo": "P23_ChainPrimerError",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionComportamientoTests.cs",
+  "Esperado": "CLIENTE, luego LINEAS, luego STOCK/P02; sin cobro",
+  "Obtenido": {
+    "primero": {
+      "Codigo": "CLIENTE",
+      "Mensaje": "Seleccione un cliente activo."
+    },
+    "segundo": {
+      "Codigo": "LINEAS",
+      "Mensaje": "Agregue lineas con cantidades positivas."
+    },
+    "tercero": {
+      "Codigo": "STOCK",
+      "Mensaje": "Stock insuficiente para P02: requiere 6, disponible 5."
+    }
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [],
+  "Traza": [],
+  "CobrosSimulados": []
+}

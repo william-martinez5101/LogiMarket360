@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="fc271239-f286-40ff-a58b-b5945a767281" name="ASUS@DESKTOP-4NJRTFA 2026-11-22 12:29:54" runUser="DESKTOP-4NJRTFA\ASUS" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-22T12:29:54.7354181-05:00" queuing="2026-11-22T12:29:54.7354187-05:00" start="2026-11-22T12:29:45.5487300-05:00" finish="2026-11-22T12:29:56.5732723-05:00" />
+  <TestSettings name="default" id="5a99ab72-568d-4f57-9b34-1787ba84314a">
+    <Deployment runDeploymentRoot="ASUS_DESKTOP-4NJRTFA_2026-11-22_12_29_54" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="baa12ce8-63d2-4b6c-834e-1930cbe862af" testId="9ddb65f2-4fbf-c547-1793-397291192912" testName="RevisionLogiMarket360.RevisionAdicionalTests.REV02_ProductoEliminado_DebeSeguirEliminadoTrasReiniciar" computerName="DESKTOP-4NJRTFA" duration="00:00:04.9081228" startTime="2026-11-22T12:29:54.6805344-05:00" endTime="2026-11-22T12:29:54.6805746-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="baa12ce8-63d2-4b6c-834e-1930cbe862af">
+      <Output>
+        <StdOut>Productos antes del reinicio: 4&#xD;
+Productos despues del reinicio: 5&#xD;
+P04 reaparece: True</StdOut>
+        <ErrorInfo>
+          <Message>Assert.DoesNotContain() Failure: Filter matched in collection&#xD;
+                                                                                                                                                                                                                                                                                                                                                                                                                               ↓ (pos 3)&#xD;
+Collection: [ProductoSimple { Codigo = "P01", Id = c42eda1c-f850-480c-b368-93ae8b37a8ed, Nombre = "Mouse USB", PesoKg = 0,2, Precio = 20,0, ··· }, ProductoSimple { Codigo = "P02", Id = 1db742ec-4542-4311-b90f-929c026ddd8c, Nombre = "Teclado", PesoKg = 0,7, Precio = 30,0, ··· }, ProductoSimple { Codigo = "P03", Id = 45a10444-9d03-4526-8298-f2ea5a6055a5, Nombre = "Memoria USB", PesoKg = 0,1, Precio = 10,0, ··· }, ProductoSimple { Codigo = "P04", Id = 4fe7b148-9140-43dd-b7be-e196c18f4c24, Nombre = "Webcam", PesoKg = 0,35, Precio = 40,0, ··· }, ProductoSimple { Codigo = "P05", Id = abb6c14c-9cdf-4fcd-ba75-6ca19fc76459, Nombre = "Alfombrilla", PesoKg = 0,1, Precio = 5,0, ··· }]</Message>
+          <StackTrace>   at RevisionLogiMarket360.RevisionAdicionalTests.REV02_ProductoEliminado_DebeSeguirEliminadoTrasReiniciar() in C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs:line 57&#xD;
+   at RevisionLogiMarket360.RevisionAdicionalTests.REV02_ProductoEliminado_DebeSeguirEliminadoTrasReiniciar() in C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs:line 57&#xD;
+   at RevisionLogiMarket360.RevisionAdicionalTests.REV02_ProductoEliminado_DebeSeguirEliminadoTrasReiniciar() in C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs:line 57&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2a76a147-f81c-4bad-ba5d-2ea9da9eb8f1" testId="c569dc66-1f72-5a7d-e4e6-5963980efc18" testName="RevisionLogiMarket360.RevisionAdicionalTests.REV04_Interpreter_RechazaUnOperadorComoValorDeCliente(filtro: &quot;CLIENTE = &gt;=&quot;)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0113808" startTime="2026-11-22T12:29:54.7051260-05:00" endTime="2026-11-22T12:29:54.7051262-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2a76a147-f81c-4bad-ba5d-2ea9da9eb8f1">
+      <Output>
+        <StdOut>Filtro invalido: CLIENTE = &gt;=</StdOut>
+        <ErrorInfo>
+          <Message>Assert.Throws() Failure: No exception was thrown&#xD;
+Expected: typeof(System.FormatException)</Message>
+          <StackTrace>   at RevisionLogiMarket360.RevisionAdicionalTests.REV04_Interpreter_RechazaUnOperadorComoValorDeCliente(String filtro) in C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs:line 100&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="a53fc597-74b5-4cdb-bdd8-2ae6fc84f210" testId="3bab5080-1d02-914c-41ff-cb28d27e8205" testName="RevisionLogiMarket360.RevisionAdicionalTests.REV01_ReintentoConOtraClaveTrasRollback_NoDebeDuplicarCobro" computerName="DESKTOP-4NJRTFA" duration="00:00:00.6956652" startTime="2026-11-22T12:29:56.4544407-05:00" endTime="2026-11-22T12:29:56.4544409-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a53fc597-74b5-4cdb-bdd8-2ae6fc84f210">
+      <Output>
+        <StdOut>Pedido: 2730ca5e-a200-4c6c-9d26-0905b934d2e7&#xD;
+Pagos locales: 1&#xD;
+Cobros aceptados del proveedor: 2&#xD;
+Importe aceptado acumulado: 118&#xD;
+revision-intento-1: 59, SIM-25b216f0973f47088b6687e6e07a3510&#xD;
+revision-intento-2: 59, SIM-1f45f79e000a4e7e8fd4d9000abf019b</StdOut>
+        <ErrorInfo>
+          <Message>Assert.Single() Failure: The collection contained 2 items&#xD;
+Collection: [CobroSimulado { Clave = revision-intento-1, Monto = 59, Referencia = SIM-25b216f0973f47088b6687e6e07a3510, Proveedor = LEGADO }, CobroSimulado { Clave = revision-intento-2, Monto = 59, Referencia = SIM-1f45f79e000a4e7e8fd4d9000abf019b, Proveedor = LEGADO }]</Message>
+          <StackTrace>   at RevisionLogiMarket360.RevisionAdicionalTests.REV01_ReintentoConOtraClaveTrasRollback_NoDebeDuplicarCobro() in C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs:line 39&#xD;
+   at RevisionLogiMarket360.RevisionAdicionalTests.REV01_ReintentoConOtraClaveTrasRollback_NoDebeDuplicarCobro() in C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs:line 39&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="da6145da-7681-4c37-9a23-6192c47daa0b" testId="b8b1c658-c0e0-e82f-a043-9428bf1eca3d" testName="RevisionLogiMarket360.RevisionAdicionalTests.REV03_RegistrarPedido_NoDebeAceptarPrecioInventadoPorElLlamador" computerName="DESKTOP-4NJRTFA" duration="00:00:01.0744172" startTime="2026-11-22T12:29:55.7584223-05:00" endTime="2026-11-22T12:29:55.7584225-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="da6145da-7681-4c37-9a23-6192c47daa0b">
+      <Output>
+        <StdOut>Precio real del SKU P01: 20,0&#xD;
+Precio aportado por el llamador: 1.00&#xD;
+Total cobrado con tarifa 5.00: 6,0</StdOut>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: 25,0&#xD;
+Actual:   6,0</Message>
+          <StackTrace>   at RevisionLogiMarket360.RevisionAdicionalTests.REV03_RegistrarPedido_NoDebeAceptarPrecioInventadoPorElLlamador() in C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs:line 91&#xD;
+   at RevisionLogiMarket360.RevisionAdicionalTests.REV03_RegistrarPedido_NoDebeAceptarPrecioInventadoPorElLlamador() in C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs:line 91&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="20f1ca7a-90ff-4970-88bf-7734f179505d" testId="ea5e14ec-e774-a770-9bb7-6912a23d2957" testName="RevisionLogiMarket360.RevisionAdicionalTests.REV04_Interpreter_RechazaUnOperadorComoValorDeCliente(filtro: &quot;CLIENTE = =&quot;)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0006275" startTime="2026-11-22T12:29:54.7279957-05:00" endTime="2026-11-22T12:29:54.7279959-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="20f1ca7a-90ff-4970-88bf-7734f179505d">
+      <Output>
+        <StdOut>Filtro invalido: CLIENTE = =</StdOut>
+        <ErrorInfo>
+          <Message>Assert.Throws() Failure: No exception was thrown&#xD;
+Expected: typeof(System.FormatException)</Message>
+          <StackTrace>   at RevisionLogiMarket360.RevisionAdicionalTests.REV04_Interpreter_RechazaUnOperadorComoValorDeCliente(String filtro) in C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs:line 100&#xD;
+   at InvokeStub_RevisionAdicionalTests.REV04_Interpreter_RechazaUnOperadorComoValorDeCliente(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="RevisionLogiMarket360.RevisionAdicionalTests.REV04_Interpreter_RechazaUnOperadorComoValorDeCliente(filtro: &quot;CLIENTE = &gt;=&quot;)" storage="c:\users\asus\source\repos\logimarket360\docs\revisiones\2026-11-22\recibido\revision_logimarket360_2026-11-22\pruebas\bin\release\net8.0\revisionprobes.dll" id="c569dc66-1f72-5a7d-e4e6-5963980efc18">
+      <Execution id="2a76a147-f81c-4bad-ba5d-2ea9da9eb8f1" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\bin\Release\net8.0\RevisionProbes.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RevisionLogiMarket360.RevisionAdicionalTests" name="REV04_Interpreter_RechazaUnOperadorComoValorDeCliente" />
+    </UnitTest>
+    <UnitTest name="RevisionLogiMarket360.RevisionAdicionalTests.REV04_Interpreter_RechazaUnOperadorComoValorDeCliente(filtro: &quot;CLIENTE = =&quot;)" storage="c:\users\asus\source\repos\logimarket360\docs\revisiones\2026-11-22\recibido\revision_logimarket360_2026-11-22\pruebas\bin\release\net8.0\revisionprobes.dll" id="ea5e14ec-e774-a770-9bb7-6912a23d2957">
+      <Execution id="20f1ca7a-90ff-4970-88bf-7734f179505d" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\bin\Release\net8.0\RevisionProbes.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RevisionLogiMarket360.RevisionAdicionalTests" name="REV04_Interpreter_RechazaUnOperadorComoValorDeCliente" />
+    </UnitTest>
+    <UnitTest name="RevisionLogiMarket360.RevisionAdicionalTests.REV03_RegistrarPedido_NoDebeAceptarPrecioInventadoPorElLlamador" storage="c:\users\asus\source\repos\logimarket360\docs\revisiones\2026-11-22\recibido\revision_logimarket360_2026-11-22\pruebas\bin\release\net8.0\revisionprobes.dll" id="b8b1c658-c0e0-e82f-a043-9428bf1eca3d">
+      <Execution id="da6145da-7681-4c37-9a23-6192c47daa0b" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\bin\Release\net8.0\RevisionProbes.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RevisionLogiMarket360.RevisionAdicionalTests" name="REV03_RegistrarPedido_NoDebeAceptarPrecioInventadoPorElLlamador" />
+    </UnitTest>
+    <UnitTest name="RevisionLogiMarket360.RevisionAdicionalTests.REV02_ProductoEliminado_DebeSeguirEliminadoTrasReiniciar" storage="c:\users\asus\source\repos\logimarket360\docs\revisiones\2026-11-22\recibido\revision_logimarket360_2026-11-22\pruebas\bin\release\net8.0\revisionprobes.dll" id="9ddb65f2-4fbf-c547-1793-397291192912">
+      <Execution id="baa12ce8-63d2-4b6c-834e-1930cbe862af" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\bin\Release\net8.0\RevisionProbes.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RevisionLogiMarket360.RevisionAdicionalTests" name="REV02_ProductoEliminado_DebeSeguirEliminadoTrasReiniciar" />
+    </UnitTest>
+    <UnitTest name="RevisionLogiMarket360.RevisionAdicionalTests.REV01_ReintentoConOtraClaveTrasRollback_NoDebeDuplicarCobro" storage="c:\users\asus\source\repos\logimarket360\docs\revisiones\2026-11-22\recibido\revision_logimarket360_2026-11-22\pruebas\bin\release\net8.0\revisionprobes.dll" id="3bab5080-1d02-914c-41ff-cb28d27e8205">
+      <Execution id="a53fc597-74b5-4cdb-bdd8-2ae6fc84f210" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\bin\Release\net8.0\RevisionProbes.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RevisionLogiMarket360.RevisionAdicionalTests" name="REV01_ReintentoConOtraClaveTrasRollback_NoDebeDuplicarCobro" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="9ddb65f2-4fbf-c547-1793-397291192912" executionId="baa12ce8-63d2-4b6c-834e-1930cbe862af" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c569dc66-1f72-5a7d-e4e6-5963980efc18" executionId="2a76a147-f81c-4bad-ba5d-2ea9da9eb8f1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3bab5080-1d02-914c-41ff-cb28d27e8205" executionId="a53fc597-74b5-4cdb-bdd8-2ae6fc84f210" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b8b1c658-c0e0-e82f-a043-9428bf1eca3d" executionId="da6145da-7681-4c37-9a23-6192c47daa0b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ea5e14ec-e774-a770-9bb7-6912a23d2957" executionId="20f1ca7a-90ff-4970-88bf-7734f179505d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="5" executed="5" passed="0" failed="5" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.34)&#xD;
+[xUnit.net 00:00:01.41]   Discovering: RevisionProbes&#xD;
+[xUnit.net 00:00:01.52]   Discovered:  RevisionProbes&#xD;
+[xUnit.net 00:00:01.52]   Starting:    RevisionProbes&#xD;
+[xUnit.net 00:00:06.56]       Assert.DoesNotContain() Failure: Filter matched in collection&#xD;
+[xUnit.net 00:00:06.56]                                                                                                                                                                                                                                                                                                                                                                                                                                      ↓ (pos 3)&#xD;
+[xUnit.net 00:00:06.56]       Collection: [ProductoSimple { Codigo = "P01", Id = c42eda1c-f850-480c-b368-93ae8b37a8ed, Nombre = "Mouse USB", PesoKg = 0,2, Precio = 20,0, ··· }, ProductoSimple { Codigo = "P02", Id = 1db742ec-4542-4311-b90f-929c026ddd8c, Nombre = "Teclado", PesoKg = 0,7, Precio = 30,0, ··· }, ProductoSimple { Codigo = "P03", Id = 45a10444-9d03-4526-8298-f2ea5a6055a5, Nombre = "Memoria USB", PesoKg = 0,1, Precio = 10,0, ··· }, ProductoSimple { Codigo = "P04", Id = 4fe7b148-9140-43dd-b7be-e196c18f4c24, Nombre = "Webcam", PesoKg = 0,35, Precio = 40,0, ··· }, ProductoSimple { Codigo = "P05", Id = abb6c14c-9cdf-4fcd-ba75-6ca19fc76459, Nombre = "Alfombrilla", PesoKg = 0,1, Precio = 5,0, ··· }]&#xD;
+[xUnit.net 00:00:06.56]       Stack Trace:&#xD;
+[xUnit.net 00:00:06.56]         C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs(57,0): at RevisionLogiMarket360.RevisionAdicionalTests.REV02_ProductoEliminado_DebeSeguirEliminadoTrasReiniciar()&#xD;
+[xUnit.net 00:00:06.56]         C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs(57,0): at RevisionLogiMarket360.RevisionAdicionalTests.REV02_ProductoEliminado_DebeSeguirEliminadoTrasReiniciar()&#xD;
+[xUnit.net 00:00:06.56]         C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs(57,0): at RevisionLogiMarket360.RevisionAdicionalTests.REV02_ProductoEliminado_DebeSeguirEliminadoTrasReiniciar()&#xD;
+[xUnit.net 00:00:06.56]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:06.56]       Output:&#xD;
+[xUnit.net 00:00:06.56]         Productos antes del reinicio: 4&#xD;
+[xUnit.net 00:00:06.56]         Productos despues del reinicio: 5&#xD;
+[xUnit.net 00:00:06.56]         P04 reaparece: True&#xD;
+[xUnit.net 00:00:06.59]       Assert.Throws() Failure: No exception was thrown&#xD;
+[xUnit.net 00:00:06.59]       Expected: typeof(System.FormatException)&#xD;
+[xUnit.net 00:00:06.59]       Stack Trace:&#xD;
+[xUnit.net 00:00:06.59]         C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs(100,0): at RevisionLogiMarket360.RevisionAdicionalTests.REV04_Interpreter_RechazaUnOperadorComoValorDeCliente(String filtro)&#xD;
+[xUnit.net 00:00:06.59]            at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+[xUnit.net 00:00:06.59]            at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)&#xD;
+[xUnit.net 00:00:06.59]       Output:&#xD;
+[xUnit.net 00:00:06.59]         Filtro invalido: CLIENTE = &gt;=&#xD;
+[xUnit.net 00:00:06.59]       Assert.Throws() Failure: No exception was thrown&#xD;
+[xUnit.net 00:00:06.59]       Expected: typeof(System.FormatException)&#xD;
+[xUnit.net 00:00:06.59]       Stack Trace:&#xD;
+[xUnit.net 00:00:06.59]         C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs(100,0): at RevisionLogiMarket360.RevisionAdicionalTests.REV04_Interpreter_RechazaUnOperadorComoValorDeCliente(String filtro)&#xD;
+[xUnit.net 00:00:06.61]            at InvokeStub_RevisionAdicionalTests.REV04_Interpreter_RechazaUnOperadorComoValorDeCliente(Object, Span`1)&#xD;
+[xUnit.net 00:00:06.61]            at System.Reflection.MethodBaseInvoker.InvokeWithOneArg(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:06.61]       Output:&#xD;
+[xUnit.net 00:00:06.61]         Filtro invalido: CLIENTE = =&#xD;
+[xUnit.net 00:00:07.64]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:07.64]       Expected: 25,0&#xD;
+[xUnit.net 00:00:07.64]       Actual:   6,0&#xD;
+[xUnit.net 00:00:07.64]       Stack Trace:&#xD;
+[xUnit.net 00:00:07.64]         C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs(91,0): at RevisionLogiMarket360.RevisionAdicionalTests.REV03_RegistrarPedido_NoDebeAceptarPrecioInventadoPorElLlamador()&#xD;
+[xUnit.net 00:00:07.64]         C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs(91,0): at RevisionLogiMarket360.RevisionAdicionalTests.REV03_RegistrarPedido_NoDebeAceptarPrecioInventadoPorElLlamador()&#xD;
+[xUnit.net 00:00:07.64]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:07.64]       Output:&#xD;
+[xUnit.net 00:00:07.64]         Precio real del SKU P01: 20,0&#xD;
+[xUnit.net 00:00:07.64]         Precio aportado por el llamador: 1.00&#xD;
+[xUnit.net 00:00:07.64]         Total cobrado con tarifa 5.00: 6,0&#xD;
+[xUnit.net 00:00:08.34]       Assert.Single() Failure: The collection contained 2 items&#xD;
+[xUnit.net 00:00:08.34]       Collection: [CobroSimulado { Clave = revision-intento-1, Monto = 59, Referencia = SIM-25b216f0973f47088b6687e6e07a3510, Proveedor = LEGADO }, CobroSimulado { Clave = revision-intento-2, Monto = 59, Referencia = SIM-1f45f79e000a4e7e8fd4d9000abf019b, Proveedor = LEGADO }]&#xD;
+[xUnit.net 00:00:08.34]       Stack Trace:&#xD;
+[xUnit.net 00:00:08.34]         C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs(39,0): at RevisionLogiMarket360.RevisionAdicionalTests.REV01_ReintentoConOtraClaveTrasRollback_NoDebeDuplicarCobro()&#xD;
+[xUnit.net 00:00:08.34]         C:\Users\ASUS\source\repos\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\RevisionAdicionalTests.cs(39,0): at RevisionLogiMarket360.RevisionAdicionalTests.REV01_ReintentoConOtraClaveTrasRollback_NoDebeDuplicarCobro()&#xD;
+[xUnit.net 00:00:08.34]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:08.34]       Output:&#xD;
+[xUnit.net 00:00:08.34]         Pedido: 2730ca5e-a200-4c6c-9d26-0905b934d2e7&#xD;
+[xUnit.net 00:00:08.34]         Pagos locales: 1&#xD;
+[xUnit.net 00:00:08.34]         Cobros aceptados del proveedor: 2&#xD;
+[xUnit.net 00:00:08.34]         Importe aceptado acumulado: 118&#xD;
+[xUnit.net 00:00:08.34]         revision-intento-1: 59, SIM-25b216f0973f47088b6687e6e07a3510&#xD;
+[xUnit.net 00:00:08.34]         revision-intento-2: 59, SIM-1f45f79e000a4e7e8fd4d9000abf019b&#xD;
+[xUnit.net 00:00:08.34]   Finished:    RevisionProbes&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:29:54.6724313-05:00">
+        <Text>[xUnit.net 00:00:06.56]     RevisionLogiMarket360.RevisionAdicionalTests.REV02_ProductoEliminado_DebeSeguirEliminadoTrasReiniciar [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:29:54.7516596-05:00">
+        <Text>[xUnit.net 00:00:06.59]     RevisionLogiMarket360.RevisionAdicionalTests.REV04_Interpreter_RechazaUnOperadorComoValorDeCliente(filtro: "CLIENTE = &gt;=") [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:29:54.7518069-05:00">
+        <Text>[xUnit.net 00:00:06.59]     RevisionLogiMarket360.RevisionAdicionalTests.REV04_Interpreter_RechazaUnOperadorComoValorDeCliente(filtro: "CLIENTE = =") [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:29:55.7575929-05:00">
+        <Text>[xUnit.net 00:00:07.64]     RevisionLogiMarket360.RevisionAdicionalTests.REV03_RegistrarPedido_NoDebeAceptarPrecioInventadoPorElLlamador [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:29:56.4533659-05:00">
+        <Text>[xUnit.net 00:00:08.34]     RevisionLogiMarket360.RevisionAdicionalTests.REV01_ReintentoConOtraClaveTrasRollback_NoDebeDuplicarCobro [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

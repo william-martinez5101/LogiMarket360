@@ -1,0 +1,45 @@
+{
+  "Caso": "P34",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T17:37:30.7194167+00:00",
+  "Metodo": "P34_VisitorDetalleYPeso",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionComportamientoTests.cs",
+  "Esperado": "Visita anidada con detalle P01/P02/P03 y peso 1.00kg",
+  "Obtenido": {
+    "Unidades": {
+      "P01": 1,
+      "P02": 1,
+      "P03": 1
+    },
+    "PesoKg": 1.0
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [],
+  "Traza": [],
+  "CobrosSimulados": []
+}

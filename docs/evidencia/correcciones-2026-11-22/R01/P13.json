@@ -1,0 +1,48 @@
+{
+  "Caso": "P13",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T17:37:14.4413272+00:00",
+  "Metodo": "P13_BuilderValidoEIncompleto",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionPatronesTests.cs",
+  "Esperado": "Sin cliente/lineas rechazado; agregado valido de varias lineas",
+  "Obtenido": {
+    "Valores": {
+      "Subtotal": 70.0,
+      "Descuento": 7.00,
+      "Tarifa": 5,
+      "Total": 68.00,
+      "Promocion": "VIP10",
+      "Unidades": 5
+    },
+    "Lineas": 2
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [],
+  "Traza": [],
+  "CobrosSimulados": []
+}

@@ -47,7 +47,8 @@ internal sealed class UnidadTrabajoEf : IUnidadTrabajo
     public async Task ConfirmarAsync(CancellationToken ct = default)
     {
         if (!_escritura) throw new InvalidOperationException("Unidad de consulta sin permiso de escritura.");
-        if (_demo.FallarPersistencia) throw new IOException("Fallo de persistencia inducido antes del commit.");
+        if (_demo.FallarPersistencia && _db.ChangeTracker.Entries<PagoFila>().Any(x => x.State == EntityState.Added))
+            throw new IOException("Fallo de persistencia del cobro inducido despues de la aceptacion y antes del commit. Reintente confirmar para conciliar.");
         await _db.SaveChangesAsync(ct);
         await _transaccion!.CommitAsync(ct);
     }

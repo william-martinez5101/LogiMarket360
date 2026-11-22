@@ -15,6 +15,7 @@ public sealed class AuditoriaVista : VistaBase
     private readonly DataGridView _auditoria = Ui.Tabla("Auditoria de negocio y comandos"), _outbox = Ui.Tabla("Eventos Outbox"), _avisos = Ui.Tabla("Notificaciones locales"), _trazas = Ui.Tabla("Trazas de colaboradores"), _flyweight = Ui.Tabla("Mil filas Flyweight");
     private readonly ComboBox _proveedor = Ui.Combo("Proveedor demostracion", 160), _canal = Ui.Combo("Canal de aviso", 110);
     private readonly CheckBox _falloCobro = new() { Text = "Rechazar cobro", AutoSize = true, Margin = new(8) }, _falloAviso = new() { Text = "Fallar notificador", AutoSize = true, Margin = new(8) };
+    private readonly CheckBox _falloPersistencia = new() { Text = "Fallar guardado del cobro", AccessibleName = "Fallar guardado del cobro tras aceptacion", AutoSize = true, Margin = new(8) };
     private readonly Label _metricas = Ui.Texto("", 11, true); private readonly MetricasSesion _sesion; private readonly IBitacoraTecnica _tecnica;
     private readonly CatalogoVisualFlyweightFactory _fabrica;
     private IReadOnlyList<FilaCatalogoVisual> _filasFlyweight = [];
@@ -27,12 +28,12 @@ public sealed class AuditoriaVista : VistaBase
         _sesion = metricas; _tecnica = tecnica; _fabrica = fabrica; _proveedor.DataSource = new[] { "LEGADO", "ALTERNATIVO" }; _proveedor.SelectedItem = demo.Proveedor;
         _canal.DataSource = new[] { "EMAIL", "SMS" }; _canal.SelectedItem = demo.Canal;
         var aplicar = Ui.Boton("Aplicar escenario", () => Operacion("Escenario aplicado. Los fallos afectan las proximas operaciones reales de demostracion.", () => {
-            demostracion.Configurar((string)_proveedor.SelectedItem!, (string)_canal.SelectedItem!, _falloCobro.Checked, _falloAviso.Checked); return Task.CompletedTask;
+            demostracion.Configurar((string)_proveedor.SelectedItem!, (string)_canal.SelectedItem!, _falloCobro.Checked, _falloAviso.Checked, _falloPersistencia.Checked); return Task.CompletedTask;
         }, false));
         var reprocesar = Ui.Boton("Reprocesar Outbox", () => Operacion("Outbox reprocesado. Revise pendientes e intentos.", async () => {
             Permisos.Exigir(sesion); await procesador.ProcesarAsync();
         }), true);
-        aplicar.Enabled = reprocesar.Enabled = _falloAviso.Enabled = _falloCobro.Enabled = _proveedor.Enabled = _canal.Enabled = sesion.Exigir().Rol == Rol.ADMIN;
+        aplicar.Enabled = reprocesar.Enabled = _falloPersistencia.Enabled = _falloAviso.Enabled = _falloCobro.Enabled = _proveedor.Enabled = _canal.Enabled = sesion.Exigir().Rol == Rol.ADMIN;
         var tabs = new TabControl { Dock = DockStyle.Fill, AccessibleName = "Registros de auditoria" };
         foreach (var (titulo, control) in new[] { ("Auditoria", _auditoria), ("Outbox", _outbox), ("Notificaciones", _avisos), ("Trazas", _trazas), ("Flyweight 1000", _flyweight) })
         {
@@ -44,7 +45,7 @@ public sealed class AuditoriaVista : VistaBase
         var pie = Ui.Fila(_metricas); pie.Dock = DockStyle.Bottom;
         Contenido.Controls.Add(tabs); Contenido.Controls.Add(pie);
         Contenido.Controls.Add(Ui.Fila(Ui.Boton("Demostrar Flyweight", Flyweight), Ui.Boton("Recorrer kit (Iterator/Visitor)", RecorrerKit)));
-        Contenido.Controls.Add(Ui.Fila(_proveedor, _canal, _falloCobro, _falloAviso, aplicar, reprocesar));
+        Contenido.Controls.Add(Ui.Fila(_proveedor, _canal, _falloCobro, _falloAviso, _falloPersistencia, aplicar, reprocesar));
     }
     protected override void Mostrar(EstadoConsultas d)
     {

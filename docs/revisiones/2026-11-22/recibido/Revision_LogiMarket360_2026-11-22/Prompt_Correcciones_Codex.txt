@@ -1,0 +1,41 @@
+Continúa sobre el repositorio local existente:
+C:\Users\ASUS\source\repos\LogiMarket360
+
+Esta petición se refiere a la copia real de trabajo revisada, con 12 commits en codex/completar-logimarket360 y HEAD revisado b494016a280e1b32cd5b8d4b97f530a0bd550fb3. Verifica primero el estado actual, ya que puede haber avances posteriores. Conserva los commits existentes y los cambios del usuario.
+
+Lee el PDF original y los archivos de requisitos en docs/requisitos. Adjunto Revision_LogiMarket360_2026-11-22.zip, con una revisión independiente, pruebas adicionales y registros reales. La solución recibida compiló con 0 errores/advertencias y aprobó las 109 pruebas originales. Cinco casos adicionales fallaron y reproducen cuatro problemas. Hay además un problema de selección del carrito identificado por inspección, pendiente de prueba interactiva Windows.
+
+Autorizo corregir estos problemas, agregar pruebas de regresión, compilar, verificar el programa y realizar commits por correcciones funcionales comprobadas. Trabaja en la rama codex/completar-logimarket360 si sigue siendo la rama de desarrollo actual. No reinicialices el repositorio ni reescribas sus commits. GitHub y el informe académico formal siguen aplazados.
+
+Correcciones requeridas:
+
+1. COBRO DUPLICADO TRAS FALLO DE PERSISTENCIA.
+En ConfirmacionPedidoFacade y el diario de la pasarela se deduplica por clave, pero el intento aceptado no queda ligado durablemente al pedido si falla el commit local. Reproducción real: Ana 59.00; FallarPersistencia=true; confirmar con clave A; ocurre IOException después de que el proveedor acepta; desactivar fallo; reintentar el mismo pedido con clave B. Resultado actual: 1 pago local y 2 cobros del proveedor por 118.00.
+Asegura una identidad de cobro estable por pedido y recuperación/reconciliación durable del intento antes de volver a cobrar. Un cambio de clave debe recuperar el intento original o rechazarse sin segundo cargo. Protege las llamadas a Application y la recuperación tras reiniciar; bloquear solo el textbox no basta. Verifica también reutilización de clave en otro pedido, cambio de pasarela, movimientos una sola vez, concurrencia y Outbox.
+
+2. SEED QUE DESHACE BAJAS DEL CATALOGO.
+InicializadorBase.MigrarYSeedAsync inserta cada SKU inicial si falta en cada arranque. Eliminar P04 sin referencias mediante CatalogoServicio funciona, pero reiniciar sobre la misma base lo vuelve a crear con el stock original.
+Distingue la primera inicialización de los siguientes arranques de forma persistente y transaccional. Una base nueva debe seguir teniendo los datos oficiales; una base en uso debe conservar bajas y ediciones. Revisa también los clientes iniciales, cuya existencia se comprueba por nombre, y los kits iniciales. Agrega prueba de borrado P04 seguido de reinicio y prueba de renombrar cliente inicial seguido de reinicio. Mantener el seed idempotente y permitir la recuperación de una inicialización interrumpida.
+
+3. SELECCION EQUIVOCADA AL ORDENAR EL CARRITO.
+CarritoVista.Índice() usa CurrentRow.Index. Ui.Cargar crea una proyección separada y ListaOrdenable permite ordenar las filas visibles; esa posición deja de corresponder a _borrador.Líneas.
+Reproduce en Windows: agregar P04 y luego P01; ordenar Articulo ascendente; seleccionar P01; Quitar línea o Cambiar cantidad debe afectar a P01. Resuelve la identidad desde el dato enlazado/identificador estable, incluyendo líneas duplicadas del mismo SKU. Comprueba Deshacer/Rehacer, totales, orden ascendente/descendente y guardado/recarga. Conserva evidencia real del control funcionando.
+
+4. VALIDACION DE INSTANTANEAS AL REGISTRAR NUEVAS LINEAS.
+PedidosServicio.RegistrarAsync copia las LineaPedido suministradas por el llamador sin garantizar que sus precios/composición procedan del catálogo. Una prueba directa de Application con Luis, P01 a precio inventado 1.00 y envío 5.00 cobra 6.00, aunque el catálogo tiene P01 a 20.00. El formulario actual normalmente captura el precio correcto; la brecha está en el caso de uso.
+Captura o valida en Application el catálogo para las nuevas líneas, incluyendo composición/cantidades de kits. Define cómo tratar instantáneas históricas legítimas. Conserva las instantáneas históricas y no recalcules pedidos pagados al cambiar el catálogo. Verifica precios alterados, composición alterada y que pagos/devoluciones históricos se mantienen.
+
+5. VALIDACION DE SINTAXIS DEL INTERPRETER.
+FiltroPedidosParser acepta CLIENTE = = y CLIENTE = >= como si el operador fuera un nombre. Haz que los tipos de token de valor sean válidos y que estos casos produzcan FormatException/error legible con posición. Conserva nombres entre comillas, los filtros válidos, la precedencia AND/OR y los paréntesis. Mantener el AST y evitar SQL concatenado.
+
+Verificación y commits:
+- Reproduce los casos antes de corregir y guarda los resultados.
+- Conserva las 109 pruebas originales; agrega regresiones significativas para lo corregido.
+- Las pruebas adjuntas están en un proyecto separado. Para ejecutarlas desde su carpeta:
+  dotnet test .\pruebas\RevisionProbes.csproj -p:LogiMarketRepo="C:\Users\ASUS\source\repos\LogiMarket360" --configuration Release
+- Usa bases temporales para las pruebas y conserva la base de uso del usuario.
+- Ejecuta restauración bloqueada, compilación Release con advertencias como errores, suite original, pruebas adicionales y las aceptaciones afectadas. Verifica la interfaz real en Windows, especialmente el carrito ordenado y el cobro con fallo/reintento.
+- Haz commits por correcciones funcionales comprobadas, sin una cuota artificial. Ejemplos de mensajes: fix(payments): evitar cobros duplicados tras rollback; fix(seed): conservar cambios del catálogo tras reiniciar; fix(winforms): respetar la línea seleccionada al ordenar; fix(orders): validar origen de instantáneas nuevas; fix(filters): rechazar operadores como valores de cliente.
+- Actualiza las afirmaciones de estado y las evidencias para que correspondan con lo ejecutado. No marques verificaciones de interfaz como aprobadas si no se han ejecutado.
+- Regenera el ZIP limpio en artifacts con fuentes, manifiesto, HEAD actualizado y registros reales. Excluye archivos del entorno de desarrollo y bases de uso. Conserva el repositorio de trabajo con todo su historial.
+- Al terminar, informa commits creados, resultados de pruebas, verificaciones de interfaz y cualquier pendiente real. Entrega el ZIP limpio actualizado para otra revisión.

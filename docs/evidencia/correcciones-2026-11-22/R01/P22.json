@@ -1,0 +1,42 @@
+{
+  "Caso": "P22",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T17:37:25.3124031+00:00",
+  "Metodo": "P22_ProxyDeniegaAntesDeLogYCobro",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionPatronesTests.cs",
+  "Esperado": "CONSULTA/BODEGA: 0 log de pago, 0 proveedor, 0 efectos",
+  "Obtenido": {
+    "Antes": 0,
+    "Despues": 0,
+    "Cobros": 0
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [],
+  "Traza": [],
+  "CobrosSimulados": []
+}

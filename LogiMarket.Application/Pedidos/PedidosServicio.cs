@@ -5,7 +5,7 @@ using LogiMarket.Domain.Ventas;
 namespace LogiMarket.Application.Pedidos;
 
 public sealed class PedidosServicio(IUnidadTrabajoFactory unidades, SesionUsuario sesion, IReloj reloj,
-    CalculadoraPedido calculadora, IEnumerable<FabricaEntrega> entregas, IDemostracion demo)
+    CalculadoraPedido calculadora, IEnumerable<FabricaEntrega> entregas, IDemostracion demo, IIntentosCobro intentos)
 {
     public async Task<Guid> RegistrarAsync(PedidoBorrador borrador, Guid? editarId = null, long? versionEsperada = null)
     {
@@ -41,7 +41,10 @@ public sealed class PedidosServicio(IUnidadTrabajoFactory unidades, SesionUsuari
     public async Task<string> CancelarAsync(Guid id)
     {
         Permisos.Exigir(sesion, Rol.VENTAS); await using var u = await unidades.AbrirAsync(true);
-        var p = await ExigirPedido(u, id); p.Cancelar(reloj.Ahora, sesion.Exigir().Usuario);
+        var p = await ExigirPedido(u, id);
+        if ((await intentos.BuscarAsync(id))?.Aprobacion is not null)
+            throw new InvalidOperationException("Hay un cobro aceptado. Concilie confirmando el pedido; si ya esta pagado, utilice devolucion.");
+        p.Cancelar(reloj.Ahora, sesion.Exigir().Usuario);
         await u.Pedidos.GuardarAsync(p); await u.ConfirmarAsync(); return "CANCELADO";
     }
     public async Task<DespachoRegistrado> DespacharAsync(Guid id)

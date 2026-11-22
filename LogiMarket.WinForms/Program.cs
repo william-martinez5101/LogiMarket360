@@ -66,6 +66,7 @@ internal static class Program
         s.AddSingleton<IDescuento, Mayorista15>(); s.AddSingleton<IDescuento, Vip10>(); s.AddSingleton<IDescuento, SinDescuento>(); s.AddSingleton<CalculadoraPedido>();
         s.AddSingleton<FabricaEntrega, EntregaEstandarFactory>(); s.AddSingleton<FabricaEntrega, EntregaExpresFactory>();
         s.AddSingleton<DiarioCobrosSimulados>(); s.AddSingleton<PasarelaLegadaSimulada>(); s.AddSingleton<PasarelaLegadaAdapter>(); s.AddSingleton<PasarelaAlternativa>(); s.AddSingleton<SelectorPasarela>();
+        s.AddSingleton<IIntentosCobro>(sp => sp.GetRequiredService<DiarioCobrosSimulados>());
         s.AddSingleton<IPasarelaPago>(sp => new PagoAutorizadoProxy(new AuditoriaPagoDecorator(sp.GetRequiredService<SelectorPasarela>(), sp.GetRequiredService<IBitacoraTecnica>()), sp.GetRequiredService<SesionUsuario>()));
         s.AddSingleton<CadenaConfirmacion>(); s.AddSingleton<ConfirmacionPedidoFacade>(); s.AddSingleton<InvocadorComandos>();
         s.AddSingleton<CreadorNotificacion, CreadorEmail>(); s.AddSingleton<CreadorNotificacion, CreadorSms>();

@@ -88,6 +88,13 @@ public interface IBitacoraTecnica
     IReadOnlyList<EntradaBitacora> Leer();
 }
 public sealed record RespuestaCobro(bool Aprobado, string Referencia, string Proveedor, string Mensaje);
+public sealed record IntentoCobro(Guid PedidoId, decimal Importe, RespuestaCobro? Aprobacion);
+// La identidad durable es el pedido. Las claves de reintento quedan reservadas a su propietario.
+public interface IIntentosCobro
+{
+    Task<IntentoCobro> PrepararAsync(Guid pedidoId, string clave, decimal importe, CancellationToken ct = default);
+    Task<IntentoCobro?> BuscarAsync(Guid pedidoId, CancellationToken ct = default);
+}
 // Contrato comun: monto positivo con dos decimales y clave no vacia; mismos errores de entrada.
 public interface IPasarelaPago { Task<RespuestaCobro> CobrarAsync(decimal monto, string clave, CancellationToken ct = default); }
 public interface INotificador { Task NotificarAsync(EventoNegocio evento, IUnidadTrabajo unidad); }

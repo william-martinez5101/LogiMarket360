@@ -49,10 +49,10 @@ public sealed class Escenario : IAsyncDisposable
         Creadores = [new CreadorEmail(Demo, Reloj, Log), new CreadorSms(Demo, Reloj, Log)];
         var selector = new SelectorPasarela(new(new(Diario, Demo, Log)), new(Diario, Demo, Log), Demo);
         Pasarela = new PagoAutorizadoProxy(new AuditoriaPagoDecorator(selector, Log), Sesion);
-        Consultas = new(Unidades, Sesion, Metricas); Pedidos = new(Unidades, Sesion, Reloj, Calculadora, Entregas, Demo);
+        Consultas = new(Unidades, Sesion, Metricas); Pedidos = new(Unidades, Sesion, Reloj, Calculadora, Entregas, Demo, Diario);
         Devoluciones = new(Unidades, Sesion, Reloj, [new DevolucionDefecto(), new DevolucionArrepentimiento()], Demo);
         Catalogo = new(Unidades, Sesion, Reloj); Clientes = new(Unidades, Sesion);
-        Facade = new(Unidades, Sesion, new(), Pasarela, Reloj, Demo); Invocador = new(Unidades, Reloj, Sesion, Log);
+        Facade = new(Unidades, Sesion, new(), Pasarela, Reloj, Demo, Diario); Invocador = new(Unidades, Reloj, Sesion, Log);
         Outbox = new(Unidades, new([new AuditoriaObserver(Reloj), new MetricasObserver(), new NotificacionObserver(Creadores)]), Metricas, Reloj, Log);
         Acceso = new(new UsuariosEf(Config), Hash, Sesion);
     }

@@ -1,0 +1,62 @@
+{
+  "Caso": "P06",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T17:37:15.481717+00:00",
+  "Metodo": "P06_CobroRechazadoSinEfectos",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Esperado": "Rechazo sin pago, stock ni evento",
+  "Obtenido": {
+    "Message": "Cobro rechazado: Rechazo simulado."
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [],
+  "Traza": [
+    {
+      "Id": "f654800f-d3d0-4677-aebb-f4efcdb5bc57",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "rechazo",
+      "Mensaje": "Importe=59,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "70b44f75-0e1e-4580-888e-94ae04cebbce",
+      "Tipo": "PASARELA",
+      "Correlacion": "rechazo",
+      "Mensaje": "LEGADO: 5900 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "73f8f67d-b973-4e8d-92c4-472e2b4ccb12",
+      "Tipo": "PAGO_ERROR",
+      "Correlacion": "rechazo",
+      "Mensaje": "LEGADO; aprobado=False; Rechazo simulado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": []
+}
