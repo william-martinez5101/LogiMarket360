@@ -1,0 +1,8 @@
+Serie de pruebas para C:\Users\ASUS\source\repos\LogiMarket360\tmp\revision-limpia-sdk8\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll (.NETCoreApp,Version=v8.0)
+Versión 17.11.1 (x64) de VSTest
+
+Iniciando la ejecución de pruebas, espere...
+1 archivos de prueba en total coincidieron con el patrón especificado.
+Archivo de resultados: C:\Users\ASUS\source\repos\LogiMarket360\docs\evidencia\build-limpio\limpio-sdk8.trx
+
+Correctas! - Con error:     0, Superado:   109, Omitido:     0, Total:   109, Duración: 16 s - LogiMarket.Tests.dll (net8.0)

@@ -36,6 +36,7 @@
 | 76a1aff | Doce vistas y recorrido real Windows con reinicios |
 | f11f10b | Edicion persistida por orden logico,109 pruebas, .sln compatible y dependencias fijadas |
 | a643962 | README reproducible, mapas de requisitos, arquitectura, matriz GoF y evidencia Windows |
+| b9213bc | Build limpio Release con SDK8,109 pruebas y comparacion SHA-256 de84 archivos de codigo |
 
 Se preservan 88393c6, ce88f5c, 3d747f8 y1c6501d. Los commits posteriores de documentacion/evidencia se incluyen en HISTORIAL_COMMITS.txt al empaquetar. No se creo remoto ni se hizo push. El informe academico formal esta aplazado.
 

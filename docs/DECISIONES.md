@@ -21,6 +21,7 @@ El punto de partida 1c6501d tenia clientes, productos y Composite con 52 pruebas
 | EF interpreta hijos con Guid asignado como filas existentes | ValueGeneratedNever para identidades asignadas por la aplicacion | **Fallo observado:** 8/10 integraciones fallaron; corregido a 10/10, luego suite completa. TRX integracion-inicial e integracion-reparada |
 | Reducir lineas depende del orden accidental de una consulta SQL | Eliminar detalles por propiedad Orden, no por indice de lista | Hallazgo de revision; no se afirma un fallo previo reproducido. EdicionPersistidaTests conserva exactamente una linea y rechaza version obsoleta |
 | Miles de nodos de accesibilidad demoran la herramienta de control | 1000 filas retenidas, presentacion paginada de 50 | Se observaron timeouts y titulo temporal No responde; diagnostico guardado. Proceso respondia y su hilo esperaba mensajes. Capturas37/38/39 prueban avance y salida de la nueva vista |
+| La regla global de Git para .log excluye evidencia del ZIP basado en archivos versionados | Excepcion limitada a docs/evidencia/**/*.log | Revision del ZIP detecto seis logs ausentes; se incluyeron y se verificaron las rutas enlazadas desde la matriz |
 
 ## Consistencia del proveedor simulado
 

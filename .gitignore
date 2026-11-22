@@ -495,3 +495,6 @@ appsettings.Local.json
 tmp/
 artifacts/
 TestResults/
+
+# Conservar los registros reales de verificacion incluidos en la revision.
+!docs/evidencia/**/*.log
