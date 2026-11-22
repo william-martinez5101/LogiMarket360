@@ -1,0 +1,43 @@
+Thread (0x8CA4):
+  [Native Frames]
+  System.Windows.Forms.Primitives.il!Windows.Win32.PInvoke.WaitMessage()
+  System.Windows.Forms.il!System.Windows.Forms.Application+ComponentManager.Microsoft.Office.IMsoComponentManager.FPushMessageLoop(unsigned int,value class Microsoft.Office.msoloop,void*)
+  System.Windows.Forms.il!System.Windows.Forms.Application+ThreadContext.RunMessageLoopInner(value class Microsoft.Office.msoloop,class System.Windows.Forms.ApplicationContext)
+  System.Windows.Forms.il!System.Windows.Forms.Application+ThreadContext.RunMessageLoop(value class Microsoft.Office.msoloop,class System.Windows.Forms.ApplicationContext)
+  LogiMarket.WinForms!LogiMarket.WinForms.Program.Main(class System.String[])
+
+Thread (0x888):
+  [Native Frames]
+  System.Private.CoreLib.il!System.Threading.WaitHandle.WaitOneNoCheck(int32)
+  System.Private.CoreLib.il!System.Threading.PortableThreadPool+GateThread.GateThreadStart()
+
+Thread (0xAAD8):
+  [Native Frames]
+  System.Private.CoreLib.il!System.Threading.WaitHandle.WaitOneNoCheck(int32)
+  System.Private.CoreLib.il!System.Threading.TimerQueue.TimerThread()
+
+Thread (0xA978):
+  [Native Frames]
+  ?!?
+  Microsoft.Win32.SystemEvents.il!Microsoft.Win32.SystemEvents.WindowThreadProc()
+
+Thread (0x9820):
+  [Native Frames]
+  System.Private.CoreLib.il!System.Threading.PortableThreadPool+IOCompletionPoller.Poll()
+
+Thread (0x220C):
+  [Native Frames]
+  System.Private.CoreLib.il!System.Threading.PortableThreadPool+IOCompletionPoller.Poll()
+
+Thread (0x7E98):
+  [Native Frames]
+  System.Private.CoreLib.il!System.Threading.LowLevelLifoSemaphore.WaitForSignal(int32)
+  System.Private.CoreLib.il!System.Threading.LowLevelLifoSemaphore.Wait(int32,bool)
+  System.Private.CoreLib.il!System.Threading.PortableThreadPool+WorkerThread.WorkerThreadStart()
+
+Thread (0x7344):
+  [Native Frames]
+  System.Private.CoreLib.il!System.Threading.LowLevelLifoSemaphore.WaitForSignal(int32)
+  System.Private.CoreLib.il!System.Threading.LowLevelLifoSemaphore.Wait(int32,bool)
+  System.Private.CoreLib.il!System.Threading.PortableThreadPool+WorkerThread.WorkerThreadStart()
+

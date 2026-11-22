@@ -1,0 +1,8 @@
+LOGIMARKET 360 - COMPROBANTE INTERNO DEVOLUCION
+Simulacion sin validez tributaria
+Pedido: df995c67-5056-4dbe-9afc-95a70328a5b6
+Cliente: Ana
+Motivo: DEFECTO
+REEMBOLSO USD 54.00
+Sin tarifa de envio
+Referencia: REEMBOLSO-df995c6750564dbe9afc95a70328a5b6

@@ -1,0 +1,12 @@
+{
+  "fechaUtc": "2026-11-22T00:38:17.033Z",
+  "ventana": {
+    "app": "process:C:\\Users\\ASUS\\source\\repos\\LogiMarket360\\LogiMarket.WinForms\\bin\\Debug\\net8.0-windows\\LogiMarket.WinForms.exe",
+    "id": 68484,
+    "title": "Nuevo cliente"
+  },
+  "accesibilidad": {
+    "focused_element": "3 text field (editar) (settable, string) Nombre cliente",
+    "tree": "Window: \"Nuevo cliente\", App: LogiMarket.WinForms.exe.\n\t0 window (ventana) Nuevo cliente Secondary Actions: Raise\n\t\t1 pane (panel)\n\t\t\t20 group (grupo) Proveedor de errores\n\t\t\t\t21 image (imagen) (disabled) Campo obligatorio.\n\t\t\t2 text (texto) Nombre\n\t\t\t3 text field (editar) (settable, string) Nombre cliente\n\t\t\t4 text (texto) Categoria\n\t\t\t5 combo box (cuadro combinado) (settable, string) Categoria cliente Value: Normal\n\t\t\t\t6 text (texto) Categoria cliente\n\t\t\t\t7 button (botón) Abrir\n\t\t\t8 text (texto) Estado\n\t\t\t9 checkbox (casilla) Cliente activo\n\t\t10 text (texto)\n\t\t11 pane (panel)\n\t\t\t12 button (botón) Guardar\n\t\t\t13 button (botón) Cancelar\n\t\t14 title bar (barra de título) (settable, string) Value: Nuevo cliente\n\t\t\t15 menu bar (barra de menús) Sistema ID: MenuBar\n\t\t\t\t16 menu item (elemento de menú) Sistema\n\t\t\t17 button (botón) Minimizar\n\t\t\t18 button (botón) Maximizar\n\t\t\t19 button (botón) Cerrar\n\nThe focused UI element is 3 text field (editar) (settable, string) Nombre cliente."
+  }
+}

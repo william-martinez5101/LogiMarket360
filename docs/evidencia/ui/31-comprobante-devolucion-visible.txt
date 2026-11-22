@@ -1,0 +1,13 @@
+{
+  "fechaUtc": "2026-11-22T00:50:53.853Z",
+  "ventana": {
+    "app": "process:C:\\Users\\ASUS\\source\\repos\\LogiMarket360\\LogiMarket.WinForms\\bin\\Debug\\net8.0-windows\\LogiMarket.WinForms.exe",
+    "id": 265220,
+    "title": "Vista previa - DEVOLUCION-df995c6750564dbe9afc95a70328a5b6"
+  },
+  "accesibilidad": {
+    "document_text": "LOGIMARKET 360 - COMPROBANTE INTERNO DEVOLUCION\nSimulacion sin validez tributaria\nPedido: df995c67-5056-4dbe-9afc-95a70328a5b6\nCliente: Ana\nMotivo: DEFECTO\nREEMBOLSO USD 54.00\nSin tarifa de envio\nReferencia: REEMBOLSO-df995c6750564dbe9afc95a70328a5b6",
+    "focused_element": "1 text field (editar) Contenido del comprobante Value: LOGIMARKET 360 - COMPROBANTE INTERNO DEVOLUCION Simulacion sin validez tributaria Pedido: df995c67-5056-4dbe-9afc-95a70328a5b6 Cliente: Ana Motivo: DEFECTO REEMBOLSO USD 54.00 Sin tarifa de envio Referencia: REEMBOLSO-df995c6750564dbe9afc95a70328a5b6",
+    "tree": "Window: \"Vista previa - DEVOLUCION-df995c6750564dbe9afc95a70328a5b6\", App: LogiMarket.WinForms.exe.\n\t0 window (ventana) Vista previa - DEVOLUCION-df995c6750564dbe9afc95a70328a5b6 Secondary Actions: Raise\n\t\t1 text field (editar) Contenido del comprobante Value: LOGIMARKET 360 - COMPROBANTE INTERNO DEVOLUCION Simulacion sin validez tributaria Pedido: df995c67-5056-4dbe-9afc-95a70328a5b6 Cliente: Ana Motivo: DEFECTO REEMBOLSO USD 54.00 Sin tarifa de envio Referencia: REEMBOLSO-df995c6750564dbe9afc95a70328a5b6\n\t\t\t2 scroll bar (barra de desplazamiento) (disabled, settable, float) Vertical Value: 0 ID: NonClientVerticalScrollBar\n\t\t\t\t3 button (botón) (disabled) Línea arriba ID: UpButton\n\t\t\t\t4 button (botón) (disabled) Línea abajo ID: DownButton\n\t\t\t5 scroll bar (barra de desplazamiento) (disabled, settable, float) Horizontal Value: 0 ID: NonClientHorizontalScrollBar\n\t\t\t\t6 button (botón) (disabled) Columna a la izquierda ID: UpButton\n\t\t\t\t7 button (botón) (disabled) Columna a la derecha ID: DownButton\n\t\t\t8 thumb (miniatura) Cuadro \"Ajustar tamaño\"\n\t\t9 title bar (barra de título) (settable, string) Value: Vista previa - DEVOLUCION-df995c6750564dbe9afc95a70328a5b6\n\t\t\t10 menu bar (barra de menús) Sistema ID: MenuBar\n\t\t\t\t11 menu item (elemento de menú) Sistema\n\t\t\t12 button (botón) Minimizar\n\t\t\t13 button (botón) Maximizar\n\t\t\t14 button (botón) Cerrar\n\nDocument text: ```\nLOGIMARKET 360 - COMPROBANTE INTERNO DEVOLUCION\nSimulacion sin validez tributaria\nPedido: df995c67-5056-4dbe-9afc-95a70328a5b6\nCliente: Ana\nMotivo: DEFECTO\nREEMBOLSO USD 54.00\nSin tarifa de envio\nReferencia: REEMBOLSO-df995c6750564dbe9afc95a70328a5b6\n```"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "fechaUtc": "2026-11-22T00:52:11.264Z",
+  "ventana": {
+    "app": "process:C:\\Users\\ASUS\\source\\repos\\LogiMarket360\\LogiMarket.WinForms\\bin\\Debug\\net8.0-windows\\LogiMarket.WinForms.exe",
+    "id": 854454,
+    "title": "LogiMarket 360 - Ventas y logistica"
+  },
+  "accesibilidad": null
+}
