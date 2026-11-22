@@ -1,0 +1,10 @@
+{
+  "FechaUtc": "2026-11-22T18:06:14.8230919+00:00",
+  "Base": "%LOCALAPPDATA%\\LogiMarket360\\logimarket.db",
+  "SHA256Antes": "844728F6EB67A110CB542A809855C23FB3B8D529EAF92BB3BD743DDFA80DB6D8",
+  "SHA256Despues": "844728F6EB67A110CB542A809855C23FB3B8D529EAF92BB3BD743DDFA80DB6D8",
+  "LongitudAntes": 290816,
+  "LongitudDespues": 290816,
+  "Resultado": "CONSERVADA_SIN_CAMBIOS",
+  "Pruebas": "Solo bases aisladas; base normal sin migrar, sembrar ni escribir"
+}

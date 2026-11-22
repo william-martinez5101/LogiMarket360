@@ -1,5 +1,7 @@
 # Recorrido real en Windows
 
+Este recorrido corresponde a la primera entrega y se conserva como registro historico. El [recorrido de correcciones del 22/11/2026](correcciones-2026-11-22/RESULTADOS.md) incorpora capturas nuevas del carrito ordenado y del cobro aceptado con fallo local, reinicios y otras claves/proveedor.
+
 Ejecutado el 21 de noviembre de 2026, America/Guayaquil. Las marcas JSON/TRX se conservan en UTC. Aplicacion WinForms real, cuentas ficticias y base aislada `tmp/ui-verificacion/logimarket.db`. No se incluye ese archivo SQLite en el ZIP.
 
 Pedido del recorrido: **df995c67-5056-4dbe-9afc-95a70328a5b6**. Pago: **SIM-714feb2f54e946b888cdff4d90ab4475**. Se utilizo admin.demo para venta/devolucion y bodega.demo para despacho/entrega.

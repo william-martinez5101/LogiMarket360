@@ -1,0 +1,59 @@
+{
+  "Caso": "P14",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T17:59:37.0403834+00:00",
+  "Metodo": "P14_PrototypeProfundoPersistido",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionPatronesTests.cs",
+  "Esperado": "Tres identidades; editar copia2 no cambia plantilla ni copia1",
+  "Obtenido": [
+    {
+      "Id": "62803076-b41d-4c83-9a4f-bf35a804ec4e",
+      "Cantidad": 2
+    },
+    {
+      "Id": "70ad6bde-4109-4740-a1ac-e1e0f59d7e7f",
+      "Cantidad": 1
+    },
+    {
+      "Id": "82e52a12-17a1-4d1d-a829-093872b98d9e",
+      "Cantidad": 1
+    }
+  ],
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T17:59:36.4473708+00:00"
+    }
+  ],
+  "Traza": [],
+  "CobrosSimulados": []
+}

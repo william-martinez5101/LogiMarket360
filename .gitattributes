@@ -1,0 +1,2 @@
+# Conservar exactamente los bytes de la revision independiente y su manifiesto.
+docs/revisiones/** -text

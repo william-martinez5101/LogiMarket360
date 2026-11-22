@@ -1,0 +1,147 @@
+{
+  "Caso": "P07",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T17:59:28.2618882+00:00",
+  "Metodo": "P07_IdempotenciaTrasPagadoYReinicio",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Esperado": "Mismo resultado tras reiniciar; un pago y un movimiento por SKU",
+  "Obtenido": {
+    "primero": {
+      "Id": "63dd42ee-990f-4ccf-ad3c-92c4abf1c348",
+      "PedidoId": "5b4ebb81-6b72-4b2b-9e34-b9b6d9653262",
+      "Clave": "unica",
+      "Referencia": "SIM-726920696b3c4f01975d74e1a257f343",
+      "Importe": 59.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    "repetido": {
+      "Id": "63dd42ee-990f-4ccf-ad3c-92c4abf1c348",
+      "PedidoId": "5b4ebb81-6b72-4b2b-9e34-b9b6d9653262",
+      "Clave": "unica",
+      "Referencia": "SIM-726920696b3c4f01975d74e1a257f343",
+      "Importe": 59.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 7
+    },
+    {
+      "Sku": "P02",
+      "Stock": 4
+    },
+    {
+      "Sku": "P03",
+      "Stock": 19
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [
+    {
+      "Id": "63dd42ee-990f-4ccf-ad3c-92c4abf1c348",
+      "PedidoId": "5b4ebb81-6b72-4b2b-9e34-b9b6d9653262",
+      "Clave": "unica",
+      "Referencia": "SIM-726920696b3c4f01975d74e1a257f343",
+      "Importe": 59.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Movimientos": [
+    {
+      "Id": "226b871b-88ab-4ecc-8f79-50053e884cb0",
+      "PedidoId": "5b4ebb81-6b72-4b2b-9e34-b9b6d9653262",
+      "Sku": "P03",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "63dd42ee-990f-4ccf-ad3c-92c4abf1c348",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "4151c97d-4c6f-4bb8-a077-d5ea1592722a",
+      "PedidoId": "5b4ebb81-6b72-4b2b-9e34-b9b6d9653262",
+      "Sku": "P02",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "63dd42ee-990f-4ccf-ad3c-92c4abf1c348",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "b48ee126-265a-416c-9c5b-dcfd28116f9f",
+      "PedidoId": "5b4ebb81-6b72-4b2b-9e34-b9b6d9653262",
+      "Sku": "P01",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "63dd42ee-990f-4ccf-ad3c-92c4abf1c348",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Eventos": [
+    {
+      "Evento": {
+        "Id": "566dff2b-1ce7-4303-9325-966d44638b9a",
+        "PedidoId": "5b4ebb81-6b72-4b2b-9e34-b9b6d9653262",
+        "Tipo": "PedidoPagado",
+        "Importe": 59.0,
+        "Canal": "EMAIL",
+        "Fecha": "2026-11-21T17:00:00+00:00"
+      },
+      "Intentos": 0,
+      "Procesado": null,
+      "Error": null
+    }
+  ],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T17:59:27.7002565+00:00"
+    }
+  ],
+  "Traza": [
+    {
+      "Id": "804166db-14ac-484c-99d2-3d7a275c29bd",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "unica",
+      "Mensaje": "Importe=59,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "4dd54949-d467-4a40-9a59-9a3cedb6291a",
+      "Tipo": "PASARELA",
+      "Correlacion": "unica",
+      "Mensaje": "LEGADO: 5900 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "78b186ed-2a1c-4b3a-9f25-2e3f199fd863",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "unica",
+      "Mensaje": "LEGADO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": [
+    {
+      "Clave": "unica",
+      "Monto": 59,
+      "Referencia": "SIM-726920696b3c4f01975d74e1a257f343",
+      "Proveedor": "LEGADO",
+      "PedidoId": "5b4ebb81-6b72-4b2b-9e34-b9b6d9653262"
+    }
+  ]
+}

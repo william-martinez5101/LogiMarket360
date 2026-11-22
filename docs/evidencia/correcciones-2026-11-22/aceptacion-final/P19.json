@@ -1,0 +1,192 @@
+{
+  "Caso": "P19",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T17:59:41.2795822+00:00",
+  "Metodo": "P19_DecoratorOrdenYResultado",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionPatronesTests.cs",
+  "Esperado": "INICIO-\u003EPASARELA-\u003EFIN/ERROR; resultado preservado",
+  "Obtenido": [
+    {
+      "Id": "b7a8583b-549d-43cb-960e-6169bee316d7",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "decorador-exito",
+      "Mensaje": "Importe=59,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "d6fc3d51-002b-48b2-9ba7-97add5119fd5",
+      "Tipo": "PASARELA",
+      "Correlacion": "decorador-exito",
+      "Mensaje": "LEGADO: 5900 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "cc6a9998-e24d-471f-828a-91bbd196845d",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "decorador-exito",
+      "Mensaje": "LEGADO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "a7be06d2-1a98-4b2c-a8f1-8493dcdc7233",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "decorador-fallo",
+      "Mensaje": "Importe=10,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "e826ba6c-198e-40da-9589-3c9751ad0209",
+      "Tipo": "PASARELA",
+      "Correlacion": "decorador-fallo",
+      "Mensaje": "LEGADO: 1000 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "ce6b8279-8db3-4379-a308-d2d5aa8f6bc0",
+      "Tipo": "PAGO_ERROR",
+      "Correlacion": "decorador-fallo",
+      "Mensaje": "LEGADO; aprobado=False; Rechazo simulado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 7
+    },
+    {
+      "Sku": "P02",
+      "Stock": 4
+    },
+    {
+      "Sku": "P03",
+      "Stock": 19
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [
+    {
+      "Id": "a91e52cc-349f-4cd9-ba78-95c8ff516584",
+      "PedidoId": "1bd35719-45c6-4933-b438-05bc55a9fd7e",
+      "Clave": "decorador-exito",
+      "Referencia": "SIM-5907be5ed72343ad9f5dd255553a4a15",
+      "Importe": 59.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Movimientos": [
+    {
+      "Id": "7d34a781-e9c4-4868-bf6e-9b1a01509200",
+      "PedidoId": "1bd35719-45c6-4933-b438-05bc55a9fd7e",
+      "Sku": "P01",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "a91e52cc-349f-4cd9-ba78-95c8ff516584",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "e97c91cb-774e-45e4-acbf-ec4868588090",
+      "PedidoId": "1bd35719-45c6-4933-b438-05bc55a9fd7e",
+      "Sku": "P03",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "a91e52cc-349f-4cd9-ba78-95c8ff516584",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "f4087cb2-5386-48dc-8ef8-130876d087c1",
+      "PedidoId": "1bd35719-45c6-4933-b438-05bc55a9fd7e",
+      "Sku": "P02",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "a91e52cc-349f-4cd9-ba78-95c8ff516584",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Eventos": [
+    {
+      "Evento": {
+        "Id": "dd6f5797-b775-4398-8a1e-c67919cb6325",
+        "PedidoId": "1bd35719-45c6-4933-b438-05bc55a9fd7e",
+        "Tipo": "PedidoPagado",
+        "Importe": 59.0,
+        "Canal": "EMAIL",
+        "Fecha": "2026-11-21T17:00:00+00:00"
+      },
+      "Intentos": 0,
+      "Procesado": null,
+      "Error": null
+    }
+  ],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T17:59:40.6701937+00:00"
+    }
+  ],
+  "Traza": [
+    {
+      "Id": "b7a8583b-549d-43cb-960e-6169bee316d7",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "decorador-exito",
+      "Mensaje": "Importe=59,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "d6fc3d51-002b-48b2-9ba7-97add5119fd5",
+      "Tipo": "PASARELA",
+      "Correlacion": "decorador-exito",
+      "Mensaje": "LEGADO: 5900 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "cc6a9998-e24d-471f-828a-91bbd196845d",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "decorador-exito",
+      "Mensaje": "LEGADO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "a7be06d2-1a98-4b2c-a8f1-8493dcdc7233",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "decorador-fallo",
+      "Mensaje": "Importe=10,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "e826ba6c-198e-40da-9589-3c9751ad0209",
+      "Tipo": "PASARELA",
+      "Correlacion": "decorador-fallo",
+      "Mensaje": "LEGADO: 1000 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "ce6b8279-8db3-4379-a308-d2d5aa8f6bc0",
+      "Tipo": "PAGO_ERROR",
+      "Correlacion": "decorador-fallo",
+      "Mensaje": "LEGADO; aprobado=False; Rechazo simulado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": [
+    {
+      "Clave": "decorador-exito",
+      "Monto": 59,
+      "Referencia": "SIM-5907be5ed72343ad9f5dd255553a4a15",
+      "Proveedor": "LEGADO",
+      "PedidoId": "1bd35719-45c6-4933-b438-05bc55a9fd7e"
+    }
+  ]
+}

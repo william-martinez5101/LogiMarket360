@@ -1,5 +1,7 @@
 # Matriz de aceptacion P01-P38
 
+Actualizacion del 22/11/2026: esta matriz conserva la evidencia de la entrega anterior (109 pruebas). La [matriz posterior a las correcciones](correcciones-2026-11-22/P01-P38.md) registra nuevamente todos los casos con su resultado real; la suite actual aprueba 149/149 y las cinco pruebas adjuntas aprueban 5/5. Vease el [registro de correcciones](correcciones-2026-11-22/RESULTADOS.md).
+
 Fuente: GUIA_APE_04.pdf, paginas17-18; contraste completo con reglas, patrones, doce vistas y requisitos de integridad de las20 paginas. Los casos oficiales usan bases nuevas independientes salvo los escenarios de persistencia, acumulacion o concurrencia.
 
 Resultado automatico final: **109/109 pruebas aprobadas, 0 fallidas, 0 omitidas**, incluidas las38 aceptaciones. El recorrido Windows complementa P10/P17/P24/P28/P37 y las pantallas. Cada JSON adjunta entrada esperada, resultado real, stock, pagos, movimientos, eventos, avisos, auditoria y traza.

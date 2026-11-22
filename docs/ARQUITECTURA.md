@@ -116,6 +116,7 @@ sequenceDiagram
     participant F as ConfirmacionPedidoFacade
     participant DB as UoW SQLite
     participant P as Proxy / Decorator / Adapter
+    participant I as Intentos durables por pedido
     participant O as Outbox / Observers
     Operador->>UI: confirmar
     UI->>C: ConfirmarPedidoCommand
@@ -123,8 +124,13 @@ sequenceDiagram
     F->>DB: BEGIN IMMEDIATE
     F->>DB: consultar idempotencia y stock
     F->>F: Chain y State
-    F->>P: CobrarAsync(total, clave)
-    P-->>F: referencia durable simulada
+    F->>I: reservar clave y recuperar aceptacion por pedido
+    alt Aceptacion previa existente
+        I-->>F: referencia y proveedor originales
+    else Sin aceptacion previa
+        F->>P: CobrarAsync(total, clave)
+        P-->>F: referencia durable ligada al pedido
+    end
     F->>DB: pago + stock + movimientos + estado + evento
     F->>DB: COMMIT
     F-->>UI: pago original

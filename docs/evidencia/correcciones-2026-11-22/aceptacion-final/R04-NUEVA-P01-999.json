@@ -1,0 +1,137 @@
+{
+  "Caso": "R04-NUEVA-P01-999",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T17:59:09.8865013+00:00",
+  "Metodo": "NuevasLineas_SeCapturanDelCatalogoNoDelLlamador",
+  "Fuente": "LogiMarket.Tests/Integracion/RegresionesInstantaneasRevisionTests.cs",
+  "Esperado": "Precio, raiz y composicion capturados del catalogo en Application",
+  "Obtenido": {
+    "pago": {
+      "Id": "42389cb5-3db0-43f4-9f5d-52ef133a313d",
+      "PedidoId": "d039ac78-bddf-4d4e-aa40-780cb8ee16cf",
+      "Clave": "canonico",
+      "Referencia": "SIM-b63382af847a46549c194fa55972e3e0",
+      "Importe": 25.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    "Lineas": [
+      {
+        "Elemento": {
+          "Codigo": "P01",
+          "Nombre": "Mouse USB",
+          "Cantidad": 1,
+          "Precio": 20.0,
+          "PesoKg": 0.2,
+          "Hijos": []
+        },
+        "Cantidad": 1,
+        "Codigo": "P01",
+        "PrecioUnitario": 20.0,
+        "Importe": 20.0,
+        "Unidades": 1
+      }
+    ]
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 7
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [
+    {
+      "Id": "42389cb5-3db0-43f4-9f5d-52ef133a313d",
+      "PedidoId": "d039ac78-bddf-4d4e-aa40-780cb8ee16cf",
+      "Clave": "canonico",
+      "Referencia": "SIM-b63382af847a46549c194fa55972e3e0",
+      "Importe": 25.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Movimientos": [
+    {
+      "Id": "b2628712-f137-48e0-9837-c3ed52c7e911",
+      "PedidoId": "d039ac78-bddf-4d4e-aa40-780cb8ee16cf",
+      "Sku": "P01",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "42389cb5-3db0-43f4-9f5d-52ef133a313d",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Eventos": [
+    {
+      "Evento": {
+        "Id": "4a3c3e96-41a0-435d-81c7-64952947d2d2",
+        "PedidoId": "d039ac78-bddf-4d4e-aa40-780cb8ee16cf",
+        "Tipo": "PedidoPagado",
+        "Importe": 25.0,
+        "Canal": "EMAIL",
+        "Fecha": "2026-11-21T17:00:00+00:00"
+      },
+      "Intentos": 0,
+      "Procesado": null,
+      "Error": null
+    }
+  ],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T17:59:09.3424465+00:00"
+    }
+  ],
+  "Traza": [
+    {
+      "Id": "5f627e77-9b51-4cdb-ab07-a158dfd713a1",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "canonico",
+      "Mensaje": "Importe=25,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "4740e0ec-2eed-430c-bb0b-9db57beda46b",
+      "Tipo": "PASARELA",
+      "Correlacion": "canonico",
+      "Mensaje": "LEGADO: 2500 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "9b31b194-f6bc-4262-bd20-169aa89d9cf9",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "canonico",
+      "Mensaje": "LEGADO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": [
+    {
+      "Clave": "canonico",
+      "Monto": 25,
+      "Referencia": "SIM-b63382af847a46549c194fa55972e3e0",
+      "Proveedor": "LEGADO",
+      "PedidoId": "d039ac78-bddf-4d4e-aa40-780cb8ee16cf"
+    }
+  ]
+}

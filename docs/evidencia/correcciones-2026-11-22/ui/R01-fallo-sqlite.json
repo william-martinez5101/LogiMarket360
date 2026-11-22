@@ -1,0 +1,171 @@
+{
+  "Fase": "fallo",
+  "Resultado": "APROBADO",
+  "FechaUtc": "2026-11-22T17:54:17.345307+00:00",
+  "BaseTemporal": "tmp\\ui-revision-despues\\datos\\logimarket.db",
+  "Integridad": "ok",
+  "ErroresFK": [],
+  "Datos": {
+    "Pedidos": [
+      {
+        "Id": "7C57D0F9-2FE4-43B3-A77F-B09933924957",
+        "ClienteId": "6E1C4BE8-2FE6-47A3-9652-2BDBE55C5566",
+        "ClienteNombre": "Ana",
+        "Categoria": 1,
+        "Estado": 0,
+        "TipoEntrega": 0,
+        "Dias": 3,
+        "Guia": "GUIA-ESTANDAR-7c57d0f92fe443b3a77fb09933924957",
+        "Subtotal": "80.0",
+        "Descuento": "8.0",
+        "Tarifa": "5.0",
+        "Total": "77.0",
+        "Promocion": "VIP10",
+        "Unidades": 3,
+        "Creado": "2026-11-22 17:51:57.7759125+00:00",
+        "Entregado": null,
+        "Devuelto": 0,
+        "Version": 1
+      },
+      {
+        "Id": "8EC4C452-64B8-4371-96EE-5C5E99C81AC4",
+        "ClienteId": "6E1C4BE8-2FE6-47A3-9652-2BDBE55C5566",
+        "ClienteNombre": "Ana",
+        "Categoria": 1,
+        "Estado": 1,
+        "TipoEntrega": 0,
+        "Dias": 3,
+        "Guia": "GUIA-ESTANDAR-8ec4c45264b8437196ee5c5e99c81ac4",
+        "Subtotal": "60.0",
+        "Descuento": "6.0",
+        "Tarifa": "5.0",
+        "Total": "59.0",
+        "Promocion": "VIP10",
+        "Unidades": 3,
+        "Creado": "2026-11-22 17:53:22.8813907+00:00",
+        "Entregado": null,
+        "Devuelto": 0,
+        "Version": 2
+      }
+    ],
+    "PedidoDetalles": [
+      {
+        "Id": "180D5484-9651-4922-A308-9698B4684159",
+        "PedidoId": "7C57D0F9-2FE4-43B3-A77F-B09933924957",
+        "Orden": 1,
+        "Codigo": "P01",
+        "Cantidad": 2,
+        "Precio": "20.0",
+        "ArbolJson": "{\"Codigo\":\"P01\",\"Nombre\":\"Mouse USB\",\"Cantidad\":1,\"Precio\":20.0,\"PesoKg\":0.2,\"Hijos\":[]}"
+      },
+      {
+        "Id": "2E371DCC-CEF7-44F0-A529-136C8BC74AD9",
+        "PedidoId": "7C57D0F9-2FE4-43B3-A77F-B09933924957",
+        "Orden": 0,
+        "Codigo": "P04",
+        "Cantidad": 1,
+        "Precio": "40.0",
+        "ArbolJson": "{\"Codigo\":\"P04\",\"Nombre\":\"Webcam\",\"Cantidad\":1,\"Precio\":40.0,\"PesoKg\":0.35,\"Hijos\":[]}"
+      },
+      {
+        "Id": "14A74CB3-CB9D-4161-BD30-08D8F37351AF",
+        "PedidoId": "8EC4C452-64B8-4371-96EE-5C5E99C81AC4",
+        "Orden": 0,
+        "Codigo": "KIT_TELETRABAJO",
+        "Cantidad": 1,
+        "Precio": "60.0",
+        "ArbolJson": "{\"Codigo\":\"KIT_TELETRABAJO\",\"Nombre\":\"Kit teletrabajo\",\"Cantidad\":1,\"Precio\":60.0,\"PesoKg\":0,\"Hijos\":[{\"Codigo\":\"KIT_OFICINA\",\"Nombre\":\"Kit oficina\",\"Cantidad\":1,\"Precio\":50.0,\"PesoKg\":0,\"Hijos\":[{\"Codigo\":\"P01\",\"Nombre\":\"Mouse USB\",\"Cantidad\":1,\"Precio\":20.0,\"PesoKg\":0.2,\"Hijos\":[]},{\"Codigo\":\"P02\",\"Nombre\":\"Teclado\",\"Cantidad\":1,\"Precio\":30.0,\"PesoKg\":0.7,\"Hijos\":[]}]},{\"Codigo\":\"P03\",\"Nombre\":\"Memoria USB\",\"Cantidad\":1,\"Precio\":10.0,\"PesoKg\":0.1,\"Hijos\":[]}]}"
+      }
+    ],
+    "Productos": [
+      {
+        "Id": "04AFD35A-215C-4F00-A43C-1E1C49B2BE9D",
+        "Sku": "P03",
+        "Nombre": "Memoria USB",
+        "Precio": "10.0",
+        "PesoKg": "0.1",
+        "Stock": 20
+      },
+      {
+        "Id": "0828F9DA-3DC5-4019-9511-49CD5525CDD3",
+        "Sku": "P02",
+        "Nombre": "Teclado",
+        "Precio": "30.0",
+        "PesoKg": "0.7",
+        "Stock": 5
+      },
+      {
+        "Id": "2CD8589B-4876-46B1-9EF7-9830878C4889",
+        "Sku": "P01",
+        "Nombre": "Mouse USB",
+        "Precio": "20.0",
+        "PesoKg": "0.2",
+        "Stock": 8
+      },
+      {
+        "Id": "7F7D3F3B-69CC-4FCE-AF9F-19D1556BAD54",
+        "Sku": "P04",
+        "Nombre": "Webcam",
+        "Precio": "40.0",
+        "PesoKg": "0.35",
+        "Stock": 4
+      },
+      {
+        "Id": "D7941CE1-9504-41BB-AF65-7E029371EFBB",
+        "Sku": "P05",
+        "Nombre": "Alfombrilla",
+        "Precio": "5.0",
+        "PesoKg": "0.1",
+        "Stock": 30
+      }
+    ],
+    "Pagos": [],
+    "MovimientosInventario": [],
+    "EventosOutbox": [],
+    "Notificaciones": [],
+    "EntregasOutbox": [],
+    "MetricasEventos": [],
+    "Auditorias": [
+      {
+        "Id": "C3C36000-2026-4000-8000-000000000001",
+        "Tipo": "INICIALIZACION",
+        "Correlacion": "DATOS_DEMO_V1",
+        "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+        "Fecha": "2026-11-22 17:47:57.3526445+00:00"
+      },
+      {
+        "Id": "291CEB22-EDF8-4165-B1AE-DFD25E0211A1",
+        "Tipo": "COMMAND",
+        "Correlacion": "ce4caa36-350b-48d0-b8f6-933da2d8b27d",
+        "Mensaje": "ConfirmarPedidoCommand; admin.demo; INICIO; Pedido=8ec4c452-64b8-4371-96ee-5c5e99c81ac4; clave=UI-INTENTO-A; ",
+        "Fecha": "2026-11-22 17:54:14.4761374+00:00"
+      },
+      {
+        "Id": "A4FB805F-100B-4765-B77C-98FAB700B8CA",
+        "Tipo": "COMMAND",
+        "Correlacion": "ce4caa36-350b-48d0-b8f6-933da2d8b27d",
+        "Mensaje": "ConfirmarPedidoCommand; admin.demo; ERROR; Pedido=8ec4c452-64b8-4371-96ee-5c5e99c81ac4; clave=UI-INTENTO-A; Fallo de persistencia del cobro inducido despues de la aceptacion y antes del commit. Reintente confirmar para conciliar.",
+        "Fecha": "2026-11-22 17:54:14.6479859+00:00"
+      }
+    ]
+  },
+  "CobrosSimulados": [
+    {
+      "Clave": "UI-INTENTO-A",
+      "Monto": 59,
+      "Referencia": "SIM-d4fb0f2a61e141709997e71b93f5ecd4",
+      "Proveedor": "LEGADO",
+      "PedidoId": "8ec4c452-64b8-4371-96ee-5c5e99c81ac4"
+    }
+  ],
+  "IntentosDurables": [
+    {
+      "PedidoId": "8ec4c452-64b8-4371-96ee-5c5e99c81ac4",
+      "Importe": 59.0,
+      "Claves": [
+        "UI-INTENTO-A"
+      ]
+    }
+  ],
+  "SHA256Base": "3b7aaf30e9b9048171ef2704804d8d53337bda7bd1e2f62cbc385996f14df44c"
+}
