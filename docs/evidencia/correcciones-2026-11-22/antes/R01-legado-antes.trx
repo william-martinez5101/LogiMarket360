@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="98755983-575e-43ac-8b19-a0cacdb354c7" name="ASUS@DESKTOP-4NJRTFA 2026-11-22 12:56:22" runUser="DESKTOP-4NJRTFA\ASUS" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-22T12:56:22.2900826-05:00" queuing="2026-11-22T12:56:22.2900837-05:00" start="2026-11-22T12:56:17.3300750-05:00" finish="2026-11-22T12:56:23.1061612-05:00" />
+  <TestSettings name="default" id="6b477ce0-43b7-4250-ad83-0ee4a95651f8">
+    <Deployment runDeploymentRoot="ASUS_DESKTOP-4NJRTFA_2026-11-22_12_56_22" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="2d4690a5-ff8a-4796-9326-1c1db17602f6" testId="be51fc99-17dc-6374-616f-a7d9de4ce39d" testName="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.DiarioAnteriorConPagosYaConciliados_PermiteNuevasVentasYRecuperaElPago" computerName="DESKTOP-4NJRTFA" duration="00:00:00.7683065" startTime="2026-11-22T12:56:23.0020777-05:00" endTime="2026-11-22T12:56:23.0020793-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2d4690a5-ff8a-4796-9326-1c1db17602f6" />
+    <UnitTestResult executionId="2f6652c1-8223-4a5e-939a-12df97092773" testId="e3ebebb2-2e15-39ed-4d9d-70bce431acc9" testName="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.DiarioDeVersionAnteriorConAceptacionSinPedido_ImpideOtroCargoHastaConciliar" computerName="DESKTOP-4NJRTFA" duration="00:00:02.9959899" startTime="2026-11-22T12:56:22.2401174-05:00" endTime="2026-11-22T12:56:22.2401409-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2f6652c1-8223-4a5e-939a-12df97092773">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Throws() Failure: No exception was thrown&#xD;
+Expected: typeof(System.InvalidOperationException)</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.DiarioDeVersionAnteriorConAceptacionSinPedido_ImpideOtroCargoHastaConciliar() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesCobroRevisionTests.cs:line 16&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.DiarioDeVersionAnteriorConAceptacionSinPedido_ImpideOtroCargoHastaConciliar() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesCobroRevisionTests.cs:line 17&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.DiarioDeVersionAnteriorConAceptacionSinPedido_ImpideOtroCargoHastaConciliar() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesCobroRevisionTests.cs:line 17&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.DiarioDeVersionAnteriorConAceptacionSinPedido_ImpideOtroCargoHastaConciliar" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="e3ebebb2-2e15-39ed-4d9d-70bce431acc9">
+      <Execution id="2f6652c1-8223-4a5e-939a-12df97092773" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests" name="DiarioDeVersionAnteriorConAceptacionSinPedido_ImpideOtroCargoHastaConciliar" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.DiarioAnteriorConPagosYaConciliados_PermiteNuevasVentasYRecuperaElPago" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="be51fc99-17dc-6374-616f-a7d9de4ce39d">
+      <Execution id="2d4690a5-ff8a-4796-9326-1c1db17602f6" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests" name="DiarioAnteriorConPagosYaConciliados_PermiteNuevasVentasYRecuperaElPago" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="be51fc99-17dc-6374-616f-a7d9de4ce39d" executionId="2d4690a5-ff8a-4796-9326-1c1db17602f6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e3ebebb2-2e15-39ed-4d9d-70bce431acc9" executionId="2f6652c1-8223-4a5e-939a-12df97092773" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="2" executed="2" passed="1" failed="1" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.34)&#xD;
+[xUnit.net 00:00:00.61]   Discovering: LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.74]   Discovered:  LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.75]   Starting:    LogiMarket.Tests&#xD;
+[xUnit.net 00:00:03.85]       Assert.Throws() Failure: No exception was thrown&#xD;
+[xUnit.net 00:00:03.85]       Expected: typeof(System.InvalidOperationException)&#xD;
+[xUnit.net 00:00:03.85]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.85]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesCobroRevisionTests.cs(16,0): at LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.DiarioDeVersionAnteriorConAceptacionSinPedido_ImpideOtroCargoHastaConciliar()&#xD;
+[xUnit.net 00:00:03.85]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesCobroRevisionTests.cs(17,0): at LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.DiarioDeVersionAnteriorConAceptacionSinPedido_ImpideOtroCargoHastaConciliar()&#xD;
+[xUnit.net 00:00:03.85]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesCobroRevisionTests.cs(17,0): at LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.DiarioDeVersionAnteriorConAceptacionSinPedido_ImpideOtroCargoHastaConciliar()&#xD;
+[xUnit.net 00:00:03.85]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:04.62]   Finished:    LogiMarket.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:56:22.2361832-05:00">
+        <Text>[xUnit.net 00:00:03.85]     LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.DiarioDeVersionAnteriorConAceptacionSinPedido_ImpideOtroCargoHastaConciliar [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

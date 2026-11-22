@@ -92,7 +92,7 @@ public sealed record IntentoCobro(Guid PedidoId, decimal Importe, RespuestaCobro
 // La identidad durable es el pedido. Las claves de reintento quedan reservadas a su propietario.
 public interface IIntentosCobro
 {
-    Task<IntentoCobro> PrepararAsync(Guid pedidoId, string clave, decimal importe, CancellationToken ct = default);
+    Task<IntentoCobro> PrepararAsync(Guid pedidoId, string clave, decimal importe, IReadOnlyCollection<string> referenciasConfirmadas, CancellationToken ct = default);
     Task<IntentoCobro?> BuscarAsync(Guid pedidoId, CancellationToken ct = default);
 }
 // Contrato comun: monto positivo con dos decimales y clave no vacia; mismos errores de entrada.

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="563c0d11-1ae2-4302-a4dc-5327960e1ac3" name="ASUS@DESKTOP-4NJRTFA 2026-11-22 12:57:07" runUser="DESKTOP-4NJRTFA\ASUS" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-22T12:57:07.6085116-05:00" queuing="2026-11-22T12:57:07.6085138-05:00" start="2026-11-22T12:57:02.0683432-05:00" finish="2026-11-22T12:57:12.4929136-05:00" />
+  <TestSettings name="default" id="c7ba98ec-220f-4216-ae53-129f26bc3a4b">
+    <Deployment runDeploymentRoot="ASUS_DESKTOP-4NJRTFA_2026-11-22_12_57_07" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="dec95597-47a4-4428-8dcc-cd289ea627de" testId="5bfe53a3-d79d-1a60-5385-45ca8b8599fa" testName="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.ClavesAlternativasDelPagoConfirmado_ConservanSuPropietario" computerName="DESKTOP-4NJRTFA" duration="00:00:00.6605377" startTime="2026-11-22T12:57:10.2112272-05:00" endTime="2026-11-22T12:57:10.2112276-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dec95597-47a4-4428-8dcc-cd289ea627de" />
+    <UnitTestResult executionId="82e53c2f-f2f4-4b98-97d5-9698ecbb4cf5" testId="9cffc088-39e0-e6e9-c1a1-e31126a2cb0b" testName="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.RollbackOtraClaveReinicioYOtroProveedor_RecuperaUnSoloCobro(primero: &quot;ALTERNATIVO&quot;, segundo: &quot;LEGADO&quot;)" computerName="DESKTOP-4NJRTFA" duration="00:00:03.7620136" startTime="2026-11-22T12:57:07.5694586-05:00" endTime="2026-11-22T12:57:07.5694804-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="82e53c2f-f2f4-4b98-97d5-9698ecbb4cf5" />
+    <UnitTestResult executionId="7bd7c028-d463-4625-8621-2757b3f7fd0e" testId="cebb530f-2f60-5c86-6c53-40c6b29c02f7" testName="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.FalloDePersistenciaDelCobro_NoImpideRegistrarElComandoNiSuError" computerName="DESKTOP-4NJRTFA" duration="00:00:00.4772445" startTime="2026-11-22T12:57:12.3736371-05:00" endTime="2026-11-22T12:57:12.3736373-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7bd7c028-d463-4625-8621-2757b3f7fd0e" />
+    <UnitTestResult executionId="1d6dd539-abde-4e7b-8c05-6774f65b81ea" testId="e3ebebb2-2e15-39ed-4d9d-70bce431acc9" testName="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.DiarioDeVersionAnteriorConAceptacionSinPedido_ImpideOtroCargoHastaConciliar" computerName="DESKTOP-4NJRTFA" duration="00:00:00.4931059" startTime="2026-11-22T12:57:08.8853433-05:00" endTime="2026-11-22T12:57:08.8853437-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1d6dd539-abde-4e7b-8c05-6774f65b81ea" />
+    <UnitTestResult executionId="21bad280-aaaa-4b26-ba81-bfc83e40c66e" testId="fb9fbe91-9b37-200e-f92e-f067bd106c24" testName="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.CancelarDespuesDeUnCobroAceptadoPendiente_ExigeConciliar" computerName="DESKTOP-4NJRTFA" duration="00:00:00.4088028" startTime="2026-11-22T12:57:11.1407339-05:00" endTime="2026-11-22T12:57:11.1407347-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="21bad280-aaaa-4b26-ba81-bfc83e40c66e" />
+    <UnitTestResult executionId="21ee9234-b82a-48ed-a1e5-abbf279cc887" testId="eba8835d-3d93-1947-689d-28abfe0158f4" testName="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.ReintentosConcurrentesConClavesDistintas_DevuelvenElMismoPago" computerName="DESKTOP-4NJRTFA" duration="00:00:00.7535368" startTime="2026-11-22T12:57:11.8961260-05:00" endTime="2026-11-22T12:57:11.8961290-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="21ee9234-b82a-48ed-a1e5-abbf279cc887" />
+    <UnitTestResult executionId="4145b683-6690-420e-9ba1-19d369768ab6" testId="e57f7b1e-5244-9a7d-7fc5-094300bfd687" testName="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.ClaveDeIntentoRevertido_NoPuedePasarAOtroPedido" computerName="DESKTOP-4NJRTFA" duration="00:00:00.5193335" startTime="2026-11-22T12:57:10.7310440-05:00" endTime="2026-11-22T12:57:10.7310472-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4145b683-6690-420e-9ba1-19d369768ab6" />
+    <UnitTestResult executionId="ad1e69ca-ed4b-4ac4-98f5-e3800b238f87" testId="be51fc99-17dc-6374-616f-a7d9de4ce39d" testName="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.DiarioAnteriorConPagosYaConciliados_PermiteNuevasVentasYRecuperaElPago" computerName="DESKTOP-4NJRTFA" duration="00:00:00.6628747" startTime="2026-11-22T12:57:09.5501134-05:00" endTime="2026-11-22T12:57:09.5501155-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ad1e69ca-ed4b-4ac4-98f5-e3800b238f87" />
+    <UnitTestResult executionId="2e13ff33-4a16-49bb-b106-16c6dca7e2ef" testId="4515870b-e063-eb9e-1e41-ddc413079b02" testName="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.RollbackOtraClaveReinicioYOtroProveedor_RecuperaUnSoloCobro(primero: &quot;LEGADO&quot;, segundo: &quot;ALTERNATIVO&quot;)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.8153511" startTime="2026-11-22T12:57:08.3902796-05:00" endTime="2026-11-22T12:57:08.3902801-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2e13ff33-4a16-49bb-b106-16c6dca7e2ef" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.RollbackOtraClaveReinicioYOtroProveedor_RecuperaUnSoloCobro(primero: &quot;LEGADO&quot;, segundo: &quot;ALTERNATIVO&quot;)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="4515870b-e063-eb9e-1e41-ddc413079b02">
+      <Execution id="2e13ff33-4a16-49bb-b106-16c6dca7e2ef" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests" name="RollbackOtraClaveReinicioYOtroProveedor_RecuperaUnSoloCobro" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.ReintentosConcurrentesConClavesDistintas_DevuelvenElMismoPago" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="eba8835d-3d93-1947-689d-28abfe0158f4">
+      <Execution id="21ee9234-b82a-48ed-a1e5-abbf279cc887" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests" name="ReintentosConcurrentesConClavesDistintas_DevuelvenElMismoPago" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.ClavesAlternativasDelPagoConfirmado_ConservanSuPropietario" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="5bfe53a3-d79d-1a60-5385-45ca8b8599fa">
+      <Execution id="dec95597-47a4-4428-8dcc-cd289ea627de" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests" name="ClavesAlternativasDelPagoConfirmado_ConservanSuPropietario" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.CancelarDespuesDeUnCobroAceptadoPendiente_ExigeConciliar" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="fb9fbe91-9b37-200e-f92e-f067bd106c24">
+      <Execution id="21bad280-aaaa-4b26-ba81-bfc83e40c66e" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests" name="CancelarDespuesDeUnCobroAceptadoPendiente_ExigeConciliar" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.DiarioDeVersionAnteriorConAceptacionSinPedido_ImpideOtroCargoHastaConciliar" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="e3ebebb2-2e15-39ed-4d9d-70bce431acc9">
+      <Execution id="1d6dd539-abde-4e7b-8c05-6774f65b81ea" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests" name="DiarioDeVersionAnteriorConAceptacionSinPedido_ImpideOtroCargoHastaConciliar" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.FalloDePersistenciaDelCobro_NoImpideRegistrarElComandoNiSuError" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="cebb530f-2f60-5c86-6c53-40c6b29c02f7">
+      <Execution id="7bd7c028-d463-4625-8621-2757b3f7fd0e" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests" name="FalloDePersistenciaDelCobro_NoImpideRegistrarElComandoNiSuError" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.DiarioAnteriorConPagosYaConciliados_PermiteNuevasVentasYRecuperaElPago" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="be51fc99-17dc-6374-616f-a7d9de4ce39d">
+      <Execution id="ad1e69ca-ed4b-4ac4-98f5-e3800b238f87" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests" name="DiarioAnteriorConPagosYaConciliados_PermiteNuevasVentasYRecuperaElPago" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.ClaveDeIntentoRevertido_NoPuedePasarAOtroPedido" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="e57f7b1e-5244-9a7d-7fc5-094300bfd687">
+      <Execution id="4145b683-6690-420e-9ba1-19d369768ab6" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests" name="ClaveDeIntentoRevertido_NoPuedePasarAOtroPedido" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests.RollbackOtraClaveReinicioYOtroProveedor_RecuperaUnSoloCobro(primero: &quot;ALTERNATIVO&quot;, segundo: &quot;LEGADO&quot;)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="9cffc088-39e0-e6e9-c1a1-e31126a2cb0b">
+      <Execution id="82e53c2f-f2f4-4b98-97d5-9698ecbb4cf5" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesCobroRevisionTests" name="RollbackOtraClaveReinicioYOtroProveedor_RecuperaUnSoloCobro" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="5bfe53a3-d79d-1a60-5385-45ca8b8599fa" executionId="dec95597-47a4-4428-8dcc-cd289ea627de" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9cffc088-39e0-e6e9-c1a1-e31126a2cb0b" executionId="82e53c2f-f2f4-4b98-97d5-9698ecbb4cf5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cebb530f-2f60-5c86-6c53-40c6b29c02f7" executionId="7bd7c028-d463-4625-8621-2757b3f7fd0e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e3ebebb2-2e15-39ed-4d9d-70bce431acc9" executionId="1d6dd539-abde-4e7b-8c05-6774f65b81ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fb9fbe91-9b37-200e-f92e-f067bd106c24" executionId="21bad280-aaaa-4b26-ba81-bfc83e40c66e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eba8835d-3d93-1947-689d-28abfe0158f4" executionId="21ee9234-b82a-48ed-a1e5-abbf279cc887" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e57f7b1e-5244-9a7d-7fc5-094300bfd687" executionId="4145b683-6690-420e-9ba1-19d369768ab6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="be51fc99-17dc-6374-616f-a7d9de4ce39d" executionId="ad1e69ca-ed4b-4ac4-98f5-e3800b238f87" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4515870b-e063-eb9e-1e41-ddc413079b02" executionId="2e13ff33-4a16-49bb-b106-16c6dca7e2ef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="9" executed="9" passed="9" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.34)&#xD;
+[xUnit.net 00:00:00.52]   Discovering: LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.65]   Discovered:  LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.66]   Starting:    LogiMarket.Tests&#xD;
+[xUnit.net 00:00:09.32]   Finished:    LogiMarket.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

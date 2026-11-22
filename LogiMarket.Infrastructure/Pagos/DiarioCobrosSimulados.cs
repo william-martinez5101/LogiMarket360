@@ -29,12 +29,16 @@ public sealed class DiarioCobrosSimulados(ConfiguracionBase configuracion) : IIn
     private static RespuestaCobro Respuesta(CobroSimulado cobro)
         => new(true, cobro.Referencia, cobro.Proveedor, "Resultado original recuperado.");
 
-    public Task<IntentoCobro> PrepararAsync(Guid pedidoId, string clave, decimal importe, CancellationToken ct = default)
+    public Task<IntentoCobro> PrepararAsync(Guid pedidoId, string clave, decimal importe, IReadOnlyCollection<string> referenciasConfirmadas, CancellationToken ct = default)
     {
         ct.ThrowIfCancellationRequested(); ValidacionCobro.Exigir(importe, clave);
         if (pedidoId == Guid.Empty) throw new ArgumentException("Pedido obligatorio.");
         using var cerrojo = Bloquear();
         var reservas = LeerArchivo<Reserva>(RutaIntentos); var cobros = LeerArchivo<CobroSimulado>(RutaCobros);
+        // Un diario antiguo sin PedidoId no permite atribuir con certeza una aceptacion
+        // huerfana. Se exige revision en vez de arriesgar otro cargo con una nueva clave.
+        if (cobros.Any(x => x.PedidoId is null && !referenciasConfirmadas.Contains(x.Referencia)))
+            throw new InvalidOperationException("Hay un cobro de una version anterior sin conciliacion. Revise el diario y los pagos antes de realizar nuevos cargos.");
         var propietario = reservas.SingleOrDefault(x => x.Claves.Contains(clave));
         if (propietario is not null && propietario.PedidoId != pedidoId)
             throw new InvalidOperationException("La clave ya pertenece a otro pedido, incluso si se revirtio su guardado local.");

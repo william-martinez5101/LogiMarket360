@@ -6,6 +6,32 @@ namespace LogiMarket.Tests.Integracion;
 
 public sealed class RegresionesCobroRevisionTests
 {
+    [Fact]
+    public async Task DiarioDeVersionAnteriorConAceptacionSinPedido_ImpideOtroCargoHastaConciliar()
+    {
+        await using var e = await Escenario.CrearAsync(); var id = await e.ValidadoAsync();
+        // Formato anterior: el proveedor acepto sin guardar la identidad del pedido.
+        e.Diario.Aprobar(59, "clave-version-anterior", "LEGADO");
+        await using var r = new Escenario(e.Config.Ruta); await r.InicializarAsync();
+        var error = await Assert.ThrowsAsync<InvalidOperationException>(() => r.Facade.ConfirmarAsync(id, "nueva-clave"));
+        Assert.Contains("conciliacion", error.Message); Assert.Single(r.Diario.Leer()); Assert.Empty((await r.Consultas.CargarAsync()).Pagos);
+    }
+
+    [Fact]
+    public async Task DiarioAnteriorConPagosYaConciliados_PermiteNuevasVentasYRecuperaElPago()
+    {
+        await using var e = await Escenario.CrearAsync(); var id = await e.PagadoAsync();
+        var original = (await e.Consultas.CargarAsync()).Pagos.Single();
+        var ruta = Path.Combine(e.Config.Directorio, "cobros-simulados.json");
+        var anteriores = e.Diario.Leer().Select(x => new { x.Clave, x.Monto, x.Referencia, x.Proveedor });
+        await File.WriteAllTextAsync(ruta, System.Text.Json.JsonSerializer.Serialize(anteriores));
+        await using var r = new Escenario(e.Config.Ruta); await r.InicializarAsync();
+        Assert.Equal(original, await r.Facade.ConfirmarAsync(id, "alias-del-pago-anterior"));
+        var nuevo = await r.ValidadoAsync("Luis", TipoEntrega.ESTANDAR, ("P05", 1));
+        await r.Facade.ConfirmarAsync(nuevo, "venta-nueva"); Assert.Equal(2, r.Diario.Leer().Count);
+        Assert.Equal(2, (await r.Consultas.CargarAsync()).Pagos.Count);
+    }
+
     [Theory]
     [InlineData("LEGADO", "ALTERNATIVO")]
     [InlineData("ALTERNATIVO", "LEGADO")]
