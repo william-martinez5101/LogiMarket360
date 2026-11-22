@@ -23,7 +23,8 @@
 - 109/109 pruebas aprobadas, incluidas P01-P38; conservadas las52 originales.
 - Recorrido Windows hasta devolucion: pago59.00, reembolso54.00, persistencia tras reinicios y Outbox recuperado.
 - Estado final de la base aislada: un pago, una devolucion, seis movimientos, tres eventos procesados y tres avisos unicos; integridad ok y sin FK rotas.
-- Falta en este punto registrar la compilacion desde el ZIP limpio; el resultado se completara antes de entregar.
+- Copia limpia del ZIP verificada con SDK8.0.420: restore locked, build Release con advertencias como errores (0/0) y109/109 pruebas; migracion desde cero y seed doble por los comandos del README.
+- Sin comprobaciones funcionales pendientes de P01-P38. ZIP limpio con manifiesto SHA-256 e historial de commits; codigo comparado contra la copia limpia probada.
 
 ## Commits de avance
 
@@ -34,6 +35,7 @@
 | 4e05ff1 | Persistencia, transacciones, patrones y108 pruebas |
 | 76a1aff | Doce vistas y recorrido real Windows con reinicios |
 | f11f10b | Edicion persistida por orden logico,109 pruebas, .sln compatible y dependencias fijadas |
+| a643962 | README reproducible, mapas de requisitos, arquitectura, matriz GoF y evidencia Windows |
 
 Se preservan 88393c6, ce88f5c, 3d747f8 y1c6501d. Los commits posteriores de documentacion/evidencia se incluyen en HISTORIAL_COMMITS.txt al empaquetar. No se creo remoto ni se hizo push. El informe academico formal esta aplazado.
 

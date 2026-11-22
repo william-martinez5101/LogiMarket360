@@ -94,6 +94,8 @@ Cada escenario crea un archivo SQLite nuevo en `%TEMP%\LogiMarket360Tests\<guid>
 - [Riesgos, reparaciones y limites](docs/DECISIONES.md).
 - [Estado y commits de entrega](docs/ESTADO.md).
 
+Resultado de entrega: **109/109 pruebas, P01-P38 aprobadas, 23/23 patrones**. La copia limpia del ZIP tambien compilo con SDK8.0.420, Release y advertencias como errores, y paso109/109. No quedan comprobaciones funcionales pendientes; los limites de medicion y de inspeccion de accesibilidad se detallan en DECISIONES.md.
+
 Los JSON por aceptacion contienen esperado, obtenido, fecha, metodo, stock, pagos, eventos y trazas. Los TRX conservan tanto la ejecucion inicial fallida como las reparaciones y la verificacion final. Las capturas proceden de la aplicacion ejecutada; los wireframes del PDF son referencias.
 
 ## Garantias y alcance tecnico

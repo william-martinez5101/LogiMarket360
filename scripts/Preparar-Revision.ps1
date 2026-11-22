@@ -32,7 +32,11 @@ try {
     $entrada = $archivoZip.CreateEntry('LogiMarket360/MANIFIESTO_REVISION.json')
     $escritor = [IO.StreamWriter]::new($entrada.Open(), [Text.UTF8Encoding]::new($false))
     try { $escritor.Write(($manifiesto | ConvertTo-Json -Depth 6)) } finally { $escritor.Dispose() }
+    $historial = & git -C $raizProyecto log --date=iso-strict --pretty=format:'%h | %ad | %s'
+    $entradaHistorial = $archivoZip.CreateEntry('LogiMarket360/HISTORIAL_COMMITS.txt')
+    $escritorHistorial = [IO.StreamWriter]::new($entradaHistorial.Open(), [Text.UTF8Encoding]::new($false))
+    try { $escritorHistorial.Write(($historial -join [Environment]::NewLine) + [Environment]::NewLine) } finally { $escritorHistorial.Dispose() }
 } finally { $archivoZip.Dispose(); $flujoZip.Dispose() }
 $hashZip = (Get-FileHash -LiteralPath $rutaZip -Algorithm SHA256).Hash.ToLowerInvariant()
 [IO.File]::WriteAllText($rutaZip + '.sha256', $hashZip + '  ' + [IO.Path]::GetFileName($rutaZip) + [Environment]::NewLine)
-[ordered]@{ ZIP = $rutaZip; Archivos = $archivosRevision.Count + 1; Commit = $commitRevision; SHA256 = $hashZip } | ConvertTo-Json
+[ordered]@{ ZIP = $rutaZip; Archivos = $archivosRevision.Count + 2; Commit = $commitRevision; SHA256 = $hashZip } | ConvertTo-Json

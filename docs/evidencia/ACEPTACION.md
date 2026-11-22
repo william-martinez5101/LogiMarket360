@@ -56,10 +56,16 @@ Resultado automatico final: **109/109 pruebas aprobadas, 0 fallidas, 0 omitidas*
 
 ## Compilacion limpia y ZIP
 
-PENDIENTE DE REGISTRAR: restauracion, build Release y pruebas desde copia limpia con SDK8. Esta marca se sustituira por el resultado observado antes de entregar.
+**APROBADO.** Se extrajo el ZIP a un directorio nuevo sin bin/obj/.vs y se selecciono SDK **8.0.420** mediante un global.json exclusivo de esa copia de prueba. `dotnet restore LogiMarket360.sln --locked-mode` completo; `dotnet build LogiMarket360.sln --configuration Release --no-restore -warnaserror` completo con **0 errores y 0 advertencias**; `dotnet test ... --configuration Release --no-build` obtuvo **109/109, 0 fallidas y 0 omitidas**.
+
+Tambien se ejecutaron desde esa copia `dotnet tool restore`, `dotnet ef database update --project LogiMarket.Infrastructure --configuration Release --no-build` sobre un archivo inexistente y `dotnet run --project LogiMarket.WinForms --configuration Release --no-build -- --initialize` dos veces. La migracion Inicial se aplico y la semilla permanecio unica. Logs: [SDK](build-limpio/sdk.txt), [restore](build-limpio/restore.log), [build](build-limpio/build.log), [pruebas](build-limpio/tests.log), [TRX](build-limpio/limpio-sdk8.trx), [herramienta](build-limpio/tools.log), [migracion](build-limpio/migracion.log), [seed](build-limpio/seed.log).
+
+El codigo de los cinco proyectos del ZIP final se compara por SHA-256 con el codigo de esta copia limpia. Los cambios posteriores al build limpio corresponden a documentacion, evidencia y empaquetado.
 
 ## Evidencia operacional
 
 [Recorrido real Windows](RECORRIDO_WINDOWS.md) contiene valores, identidades, capturas originales, reinicios y comprobantes. `ui/43-datos-finales.json` conserva la consulta real: un pago, una devolucion, seis movimientos, tres eventos, nueve entregas de suscriptor y tres avisos; integrity_check=ok y sin FK rotas.
+
+**Comprobaciones funcionales pendientes: ninguna de P01-P38.** Se conserva expresamente el limite de inspeccion automatica de accesibilidad de tablas grandes descrito en DECISIONES.md; el conjunto paginado y su navegacion se verificaron en Windows.
 
 Pendiente por decision del usuario: publicacion GitHub e informe academico formal. No son comprobaciones del programa ni se presentan como finalizados.
