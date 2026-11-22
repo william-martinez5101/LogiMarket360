@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="9a532c3f-7a41-48c1-9b33-9fa88b17fb64" name="ASUS@DESKTOP-4NJRTFA 2026-11-22 12:44:16" runUser="DESKTOP-4NJRTFA\ASUS" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-22T12:44:16.7813901-05:00" queuing="2026-11-22T12:44:16.7813914-05:00" start="2026-11-22T12:44:14.5374082-05:00" finish="2026-11-22T12:44:16.8696273-05:00" />
+  <TestSettings name="default" id="18d8f7ec-d481-4825-b57f-f8101a5ad7e8">
+    <Deployment runDeploymentRoot="ASUS_DESKTOP-4NJRTFA_2026-11-22_12_44_16" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="7d067108-439a-40a4-9043-448b0d88bf2a" testId="6285b81b-4aaa-97e1-6e85-2f9edb2b84f4" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;  CLIENTE  =  &gt;=&quot;, posicion: 15)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0001591" startTime="2026-11-22T12:44:16.7101663-05:00" endTime="2026-11-22T12:44:16.7101664-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7d067108-439a-40a4-9043-448b0d88bf2a">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Throws() Failure: No exception was thrown&#xD;
+Expected: typeof(System.FormatException)</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(String texto, Int32 posicion) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs:line 21&#xD;
+   at InvokeStub_RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7a01a3a1-1d1e-4299-8aa3-508823fbcd40" testId="bab20a9a-ccfe-d699-fdd7-ac9356fe4921" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;CLIENTE = '  '&quot;, posicion: 11)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0002655" startTime="2026-11-22T12:44:16.7095138-05:00" endTime="2026-11-22T12:44:16.7095139-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7a01a3a1-1d1e-4299-8aa3-508823fbcd40" />
+    <UnitTestResult executionId="124a8cef-ecbd-445e-9826-e180f3e88eb5" testId="ea99975d-3e38-80bd-8c69-761fee9f6d31" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;CLIENTE = or&quot;, posicion: 11)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0028554" startTime="2026-11-22T12:44:16.6348975-05:00" endTime="2026-11-22T12:44:16.6348978-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="124a8cef-ecbd-445e-9826-e180f3e88eb5">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Throws() Failure: No exception was thrown&#xD;
+Expected: typeof(System.FormatException)</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(String texto, Int32 posicion) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs:line 21&#xD;
+   at InvokeStub_RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8e4c1396-bfa5-44b5-8847-38b48d3dea32" testId="4ed8d6bd-d753-bee5-0f93-e10d0fd69ec6" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(texto: &quot;CLIENTE = Ángela&quot;, esperado: &quot;Ángela&quot;)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0005535" startTime="2026-11-22T12:44:16.6205471-05:00" endTime="2026-11-22T12:44:16.6205473-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8e4c1396-bfa5-44b5-8847-38b48d3dea32">
+      <Output>
+        <ErrorInfo>
+          <Message>System.FormatException : Caracter no permitido en posicion 10.</Message>
+          <StackTrace>   at LogiMarket.Application.Consultas.FiltroPedidosParser.Interpretar(String texto) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Consultas\FiltroPedidos.cs:line 27&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(String texto, String esperado) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs:line 33&#xD;
+   at InvokeStub_RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ed72db7d-8a8d-4398-a410-08b9488ed234" testId="b69a6aa4-777c-0b9b-ef47-c671edd7e0d0" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(texto: &quot;cliente = Ana&quot;, esperado: &quot;Ana&quot;)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0000339" startTime="2026-11-22T12:44:16.6180422-05:00" endTime="2026-11-22T12:44:16.6180423-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed72db7d-8a8d-4398-a410-08b9488ed234" />
+    <UnitTestResult executionId="a498ad96-ac78-477f-a639-3c980f72167e" testId="f32eaca2-746c-74a2-c801-168848c01ada" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;CLIENTE = 123&quot;, posicion: 11)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0005254" startTime="2026-11-22T12:44:16.7088371-05:00" endTime="2026-11-22T12:44:16.7088373-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a498ad96-ac78-477f-a639-3c980f72167e">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Throws() Failure: No exception was thrown&#xD;
+Expected: typeof(System.FormatException)</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(String texto, Int32 posicion) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs:line 21&#xD;
+   at InvokeStub_RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f810a578-429e-432b-866f-add59728868a" testId="85732426-41b9-2394-5950-d4a3ffdad384" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.PrecedenciaYParentesis_ConservanElAst" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0012689" startTime="2026-11-22T12:44:16.7103864-05:00" endTime="2026-11-22T12:44:16.7103865-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f810a578-429e-432b-866f-add59728868a" />
+    <UnitTestResult executionId="6f746d5a-8571-4d5c-9dda-0e1cf9dd9e1a" testId="f79c052d-7162-cd38-0acd-c2507e38a795" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;CLIENTE = and&quot;, posicion: 11)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0002091" startTime="2026-11-22T12:44:16.7094046-05:00" endTime="2026-11-22T12:44:16.7094047-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6f746d5a-8571-4d5c-9dda-0e1cf9dd9e1a">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Throws() Failure: No exception was thrown&#xD;
+Expected: typeof(System.FormatException)</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(String texto, Int32 posicion) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs:line 21&#xD;
+   at InvokeStub_RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1f3f1692-be08-4f43-b745-0619acc529de" testId="75eca1aa-8112-9b5b-70b6-54aeb230ce8d" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;TOTAL &gt;= '50'&quot;, posicion: 10)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0173302" startTime="2026-11-22T12:44:16.6229102-05:00" endTime="2026-11-22T12:44:16.6229106-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1f3f1692-be08-4f43-b745-0619acc529de" />
+    <UnitTestResult executionId="5bd5d68f-ca0d-4dc3-8e89-f3fd4b26efb5" testId="2cfddfe9-619d-9d0d-0cde-61b9f6c2f7e4" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(texto: &quot;CLIENTE = '='&quot;, esperado: &quot;=&quot;)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0039734" startTime="2026-11-22T12:44:16.6162793-05:00" endTime="2026-11-22T12:44:16.6162799-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5bd5d68f-ca0d-4dc3-8e89-f3fd4b26efb5" />
+    <UnitTestResult executionId="eee7222f-4434-4329-84ee-c4af6a47049a" testId="87664e38-278a-136d-35b2-0f2ea363ab8d" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;CLIENTE = ''&quot;, posicion: 11)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0002100" startTime="2026-11-22T12:44:16.7063465-05:00" endTime="2026-11-22T12:44:16.7063466-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eee7222f-4434-4329-84ee-c4af6a47049a" />
+    <UnitTestResult executionId="2884248c-592f-4da0-b856-d32928783b8d" testId="d36ea008-9d0d-ad38-c569-81b0560861a0" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;CLIENTE = &gt;=&quot;, posicion: 11)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0001572" startTime="2026-11-22T12:44:16.7071847-05:00" endTime="2026-11-22T12:44:16.7071849-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2884248c-592f-4da0-b856-d32928783b8d">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Throws() Failure: No exception was thrown&#xD;
+Expected: typeof(System.FormatException)</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(String texto, Int32 posicion) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs:line 21&#xD;
+   at InvokeStub_RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f1f2697b-ff73-4e3f-ae06-11e23cb52f2d" testId="1f28078c-7533-1544-152e-00f886cc417b" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;CLIENTE =&quot;, posicion: 10)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0030434" startTime="2026-11-22T12:44:16.7079164-05:00" endTime="2026-11-22T12:44:16.7079165-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f1f2697b-ff73-4e3f-ae06-11e23cb52f2d">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Contains() Failure: Sub-string not found&#xD;
+String:    "Expresion incompleta, posicion 9."&#xD;
+Not found: "posicion 10."</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(String texto, Int32 posicion) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs:line 22&#xD;
+   at InvokeStub_RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="de952683-f577-455e-a993-34f767b4d929" testId="3fb3e6fe-c60b-a7af-e927-fa5ccc8b9304" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(texto: &quot;CLIENTE = 'Ana Maria'&quot;, esperado: &quot;Ana Maria&quot;)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0001894" startTime="2026-11-22T12:44:16.6169362-05:00" endTime="2026-11-22T12:44:16.6169363-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="de952683-f577-455e-a993-34f767b4d929" />
+    <UnitTestResult executionId="71bf8a50-12cc-41ff-8047-aa18b6e5fad0" testId="2592eda3-ded9-c0b5-9e9f-0d97d9527920" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(texto: &quot;CLIENTE = \&quot;Ángela Núñez\&quot;&quot;, esperado: &quot;Ángela Núñez&quot;)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0001290" startTime="2026-11-22T12:44:16.6206977-05:00" endTime="2026-11-22T12:44:16.6206978-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="71bf8a50-12cc-41ff-8047-aa18b6e5fad0" />
+    <UnitTestResult executionId="8d06131a-ac96-42ac-bdbf-2a49e7e38db3" testId="0fcae6b7-87b2-a492-96dc-3fb2e2c713dc" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;CLIENTE = =&quot;, posicion: 11)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0002511" startTime="2026-11-22T12:44:16.6354960-05:00" endTime="2026-11-22T12:44:16.6354961-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8d06131a-ac96-42ac-bdbf-2a49e7e38db3">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Throws() Failure: No exception was thrown&#xD;
+Expected: typeof(System.FormatException)</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(String texto, Int32 posicion) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs:line 21&#xD;
+   at InvokeStub_RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="897098b9-cf55-4648-9029-eeff5368aaf9" testId="d2ae277c-1737-c750-f18d-292d7473102c" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;ESTADO = 2&quot;, posicion: 10)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0019257" startTime="2026-11-22T12:44:16.7057330-05:00" endTime="2026-11-22T12:44:16.7057333-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="897098b9-cf55-4648-9029-eeff5368aaf9">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Throws() Failure: No exception was thrown&#xD;
+Expected: typeof(System.FormatException)</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(String texto, Int32 posicion) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs:line 21&#xD;
+   at InvokeStub_RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(Object, Span`1)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f6c36398-9e46-44d1-8615-fe5fc99a5f65" testId="33574345-45dc-662a-2daf-23365e5a2e5c" testName="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(texto: &quot;CLIENTE = 'AND'&quot;, esperado: &quot;AND&quot;)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0123315" startTime="2026-11-22T12:44:16.6090904-05:00" endTime="2026-11-22T12:44:16.6091125-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f6c36398-9e46-44d1-8615-fe5fc99a5f65">
+      <Output>
+        <ErrorInfo>
+          <Message>System.FormatException : CLIENTE requiere un nombre, posicion 11.</Message>
+          <StackTrace>   at LogiMarket.Application.Consultas.FiltroPedidosParser.Primaria(Int32 nivel) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Consultas\FiltroPedidos.cs:line 58&#xD;
+   at LogiMarket.Application.Consultas.FiltroPedidosParser.And(Int32 nivel) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Consultas\FiltroPedidos.cs:line 36&#xD;
+   at LogiMarket.Application.Consultas.FiltroPedidosParser.Or(Int32 nivel) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Consultas\FiltroPedidos.cs:line 34&#xD;
+   at LogiMarket.Application.Consultas.FiltroPedidosParser.Interpretar(String texto) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Consultas\FiltroPedidos.cs:line 30&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(String texto, String esperado) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs:line 33&#xD;
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;CLIENTE = and&quot;, posicion: 11)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="f79c052d-7162-cd38-0acd-c2507e38a795">
+      <Execution id="6f746d5a-8571-4d5c-9dda-0e1cf9dd9e1a" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="ValoresInvalidos_InformanLaPosicionDelToken" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;CLIENTE = or&quot;, posicion: 11)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="ea99975d-3e38-80bd-8c69-761fee9f6d31">
+      <Execution id="124a8cef-ecbd-445e-9826-e180f3e88eb5" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="ValoresInvalidos_InformanLaPosicionDelToken" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;TOTAL &gt;= '50'&quot;, posicion: 10)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="75eca1aa-8112-9b5b-70b6-54aeb230ce8d">
+      <Execution id="1f3f1692-be08-4f43-b745-0619acc529de" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="ValoresInvalidos_InformanLaPosicionDelToken" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(texto: &quot;CLIENTE = '='&quot;, esperado: &quot;=&quot;)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="2cfddfe9-619d-9d0d-0cde-61b9f6c2f7e4">
+      <Execution id="5bd5d68f-ca0d-4dc3-8e89-f3fd4b26efb5" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="NombresValidos_ConservanSuTexto" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;CLIENTE = '  '&quot;, posicion: 11)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="bab20a9a-ccfe-d699-fdd7-ac9356fe4921">
+      <Execution id="7a01a3a1-1d1e-4299-8aa3-508823fbcd40" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="ValoresInvalidos_InformanLaPosicionDelToken" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(texto: &quot;CLIENTE = \&quot;Ángela Núñez\&quot;&quot;, esperado: &quot;Ángela Núñez&quot;)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="2592eda3-ded9-c0b5-9e9f-0d97d9527920">
+      <Execution id="71bf8a50-12cc-41ff-8047-aa18b6e5fad0" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="NombresValidos_ConservanSuTexto" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;CLIENTE =&quot;, posicion: 10)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="1f28078c-7533-1544-152e-00f886cc417b">
+      <Execution id="f1f2697b-ff73-4e3f-ae06-11e23cb52f2d" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="ValoresInvalidos_InformanLaPosicionDelToken" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;CLIENTE = ''&quot;, posicion: 11)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="87664e38-278a-136d-35b2-0f2ea363ab8d">
+      <Execution id="eee7222f-4434-4329-84ee-c4af6a47049a" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="ValoresInvalidos_InformanLaPosicionDelToken" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.PrecedenciaYParentesis_ConservanElAst" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="85732426-41b9-2394-5950-d4a3ffdad384">
+      <Execution id="f810a578-429e-432b-866f-add59728868a" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="PrecedenciaYParentesis_ConservanElAst" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(texto: &quot;cliente = Ana&quot;, esperado: &quot;Ana&quot;)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="b69a6aa4-777c-0b9b-ef47-c671edd7e0d0">
+      <Execution id="ed72db7d-8a8d-4398-a410-08b9488ed234" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="NombresValidos_ConservanSuTexto" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;CLIENTE = &gt;=&quot;, posicion: 11)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="d36ea008-9d0d-ad38-c569-81b0560861a0">
+      <Execution id="2884248c-592f-4da0-b856-d32928783b8d" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="ValoresInvalidos_InformanLaPosicionDelToken" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;CLIENTE = =&quot;, posicion: 11)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="0fcae6b7-87b2-a492-96dc-3fb2e2c713dc">
+      <Execution id="8d06131a-ac96-42ac-bdbf-2a49e7e38db3" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="ValoresInvalidos_InformanLaPosicionDelToken" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(texto: &quot;CLIENTE = 'Ana Maria'&quot;, esperado: &quot;Ana Maria&quot;)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="3fb3e6fe-c60b-a7af-e927-fa5ccc8b9304">
+      <Execution id="de952683-f577-455e-a993-34f767b4d929" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="NombresValidos_ConservanSuTexto" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;ESTADO = 2&quot;, posicion: 10)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="d2ae277c-1737-c750-f18d-292d7473102c">
+      <Execution id="897098b9-cf55-4648-9029-eeff5368aaf9" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="ValoresInvalidos_InformanLaPosicionDelToken" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;CLIENTE = 123&quot;, posicion: 11)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="f32eaca2-746c-74a2-c801-168848c01ada">
+      <Execution id="a498ad96-ac78-477f-a639-3c980f72167e" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="ValoresInvalidos_InformanLaPosicionDelToken" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(texto: &quot;CLIENTE = 'AND'&quot;, esperado: &quot;AND&quot;)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="33574345-45dc-662a-2daf-23365e5a2e5c">
+      <Execution id="f6c36398-9e46-44d1-8615-fe5fc99a5f65" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="NombresValidos_ConservanSuTexto" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(texto: &quot;CLIENTE = Ángela&quot;, esperado: &quot;Ángela&quot;)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="4ed8d6bd-d753-bee5-0f93-e10d0fd69ec6">
+      <Execution id="8e4c1396-bfa5-44b5-8847-38b48d3dea32" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="NombresValidos_ConservanSuTexto" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: &quot;  CLIENTE  =  &gt;=&quot;, posicion: 15)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="6285b81b-4aaa-97e1-6e85-2f9edb2b84f4">
+      <Execution id="7d067108-439a-40a4-9043-448b0d88bf2a" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests" name="ValoresInvalidos_InformanLaPosicionDelToken" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="6285b81b-4aaa-97e1-6e85-2f9edb2b84f4" executionId="7d067108-439a-40a4-9043-448b0d88bf2a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bab20a9a-ccfe-d699-fdd7-ac9356fe4921" executionId="7a01a3a1-1d1e-4299-8aa3-508823fbcd40" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ea99975d-3e38-80bd-8c69-761fee9f6d31" executionId="124a8cef-ecbd-445e-9826-e180f3e88eb5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4ed8d6bd-d753-bee5-0f93-e10d0fd69ec6" executionId="8e4c1396-bfa5-44b5-8847-38b48d3dea32" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b69a6aa4-777c-0b9b-ef47-c671edd7e0d0" executionId="ed72db7d-8a8d-4398-a410-08b9488ed234" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f32eaca2-746c-74a2-c801-168848c01ada" executionId="a498ad96-ac78-477f-a639-3c980f72167e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="85732426-41b9-2394-5950-d4a3ffdad384" executionId="f810a578-429e-432b-866f-add59728868a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f79c052d-7162-cd38-0acd-c2507e38a795" executionId="6f746d5a-8571-4d5c-9dda-0e1cf9dd9e1a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="75eca1aa-8112-9b5b-70b6-54aeb230ce8d" executionId="1f3f1692-be08-4f43-b745-0619acc529de" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2cfddfe9-619d-9d0d-0cde-61b9f6c2f7e4" executionId="5bd5d68f-ca0d-4dc3-8e89-f3fd4b26efb5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="87664e38-278a-136d-35b2-0f2ea363ab8d" executionId="eee7222f-4434-4329-84ee-c4af6a47049a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d36ea008-9d0d-ad38-c569-81b0560861a0" executionId="2884248c-592f-4da0-b856-d32928783b8d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1f28078c-7533-1544-152e-00f886cc417b" executionId="f1f2697b-ff73-4e3f-ae06-11e23cb52f2d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3fb3e6fe-c60b-a7af-e927-fa5ccc8b9304" executionId="de952683-f577-455e-a993-34f767b4d929" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2592eda3-ded9-c0b5-9e9f-0d97d9527920" executionId="71bf8a50-12cc-41ff-8047-aa18b6e5fad0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0fcae6b7-87b2-a492-96dc-3fb2e2c713dc" executionId="8d06131a-ac96-42ac-bdbf-2a49e7e38db3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d2ae277c-1737-c750-f18d-292d7473102c" executionId="897098b9-cf55-4648-9029-eeff5368aaf9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="33574345-45dc-662a-2daf-23365e5a2e5c" executionId="f6c36398-9e46-44d1-8615-fe5fc99a5f65" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="18" executed="18" passed="8" failed="10" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.34)&#xD;
+[xUnit.net 00:00:00.66]   Discovering: LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.81]   Discovered:  LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.82]   Starting:    LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.93]       System.FormatException : CLIENTE requiere un nombre, posicion 11.&#xD;
+[xUnit.net 00:00:00.94]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.94]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Consultas\FiltroPedidos.cs(58,0): at LogiMarket.Application.Consultas.FiltroPedidosParser.Primaria(Int32 nivel)&#xD;
+[xUnit.net 00:00:00.94]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Consultas\FiltroPedidos.cs(36,0): at LogiMarket.Application.Consultas.FiltroPedidosParser.And(Int32 nivel)&#xD;
+[xUnit.net 00:00:00.94]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Consultas\FiltroPedidos.cs(34,0): at LogiMarket.Application.Consultas.FiltroPedidosParser.Or(Int32 nivel)&#xD;
+[xUnit.net 00:00:00.94]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Consultas\FiltroPedidos.cs(30,0): at LogiMarket.Application.Consultas.FiltroPedidosParser.Interpretar(String texto)&#xD;
+[xUnit.net 00:00:00.94]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs(33,0): at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(String texto, String esperado)&#xD;
+[xUnit.net 00:00:00.94]            at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)&#xD;
+[xUnit.net 00:00:00.94]            at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)&#xD;
+[xUnit.net 00:00:00.95]       System.FormatException : Caracter no permitido en posicion 10.&#xD;
+[xUnit.net 00:00:00.95]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.95]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Consultas\FiltroPedidos.cs(27,0): at LogiMarket.Application.Consultas.FiltroPedidosParser.Interpretar(String texto)&#xD;
+[xUnit.net 00:00:00.95]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs(33,0): at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(String texto, String esperado)&#xD;
+[xUnit.net 00:00:00.95]            at InvokeStub_RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(Object, Span`1)&#xD;
+[xUnit.net 00:00:00.95]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:00.96]       Assert.Throws() Failure: No exception was thrown&#xD;
+[xUnit.net 00:00:00.96]       Expected: typeof(System.FormatException)&#xD;
+[xUnit.net 00:00:00.96]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.96]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs(21,0): at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(String texto, Int32 posicion)&#xD;
+[xUnit.net 00:00:00.96]            at InvokeStub_RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(Object, Span`1)&#xD;
+[xUnit.net 00:00:00.96]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:00.96]       Assert.Throws() Failure: No exception was thrown&#xD;
+[xUnit.net 00:00:00.97]       Expected: typeof(System.FormatException)&#xD;
+[xUnit.net 00:00:00.97]       Stack Trace:&#xD;
+[xUnit.net 00:00:00.97]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs(21,0): at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(String texto, Int32 posicion)&#xD;
+[xUnit.net 00:00:00.97]            at InvokeStub_RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(Object, Span`1)&#xD;
+[xUnit.net 00:00:00.97]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:01.03]       Assert.Throws() Failure: No exception was thrown&#xD;
+[xUnit.net 00:00:01.04]       Expected: typeof(System.FormatException)&#xD;
+[xUnit.net 00:00:01.04]       Stack Trace:&#xD;
+[xUnit.net 00:00:01.04]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs(21,0): at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(String texto, Int32 posicion)&#xD;
+[xUnit.net 00:00:01.04]            at InvokeStub_RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(Object, Span`1)&#xD;
+[xUnit.net 00:00:01.04]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:01.04]       Assert.Throws() Failure: No exception was thrown&#xD;
+[xUnit.net 00:00:01.04]       Expected: typeof(System.FormatException)&#xD;
+[xUnit.net 00:00:01.04]       Stack Trace:&#xD;
+[xUnit.net 00:00:01.04]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs(21,0): at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(String texto, Int32 posicion)&#xD;
+[xUnit.net 00:00:01.04]            at InvokeStub_RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(Object, Span`1)&#xD;
+[xUnit.net 00:00:01.04]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:01.04]       Assert.Contains() Failure: Sub-string not found&#xD;
+[xUnit.net 00:00:01.04]       String:    "Expresion incompleta, posicion 9."&#xD;
+[xUnit.net 00:00:01.04]       Not found: "posicion 10."&#xD;
+[xUnit.net 00:00:01.04]       Stack Trace:&#xD;
+[xUnit.net 00:00:01.04]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs(22,0): at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(String texto, Int32 posicion)&#xD;
+[xUnit.net 00:00:01.04]            at InvokeStub_RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(Object, Span`1)&#xD;
+[xUnit.net 00:00:01.04]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:01.04]       Assert.Throws() Failure: No exception was thrown&#xD;
+[xUnit.net 00:00:01.04]       Expected: typeof(System.FormatException)&#xD;
+[xUnit.net 00:00:01.04]       Stack Trace:&#xD;
+[xUnit.net 00:00:01.04]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs(21,0): at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(String texto, Int32 posicion)&#xD;
+[xUnit.net 00:00:01.04]            at InvokeStub_RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(Object, Span`1)&#xD;
+[xUnit.net 00:00:01.04]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:01.04]       Assert.Throws() Failure: No exception was thrown&#xD;
+[xUnit.net 00:00:01.04]       Expected: typeof(System.FormatException)&#xD;
+[xUnit.net 00:00:01.04]       Stack Trace:&#xD;
+[xUnit.net 00:00:01.04]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs(21,0): at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(String texto, Int32 posicion)&#xD;
+[xUnit.net 00:00:01.04]            at InvokeStub_RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(Object, Span`1)&#xD;
+[xUnit.net 00:00:01.04]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:01.04]       Assert.Throws() Failure: No exception was thrown&#xD;
+[xUnit.net 00:00:01.04]       Expected: typeof(System.FormatException)&#xD;
+[xUnit.net 00:00:01.04]       Stack Trace:&#xD;
+[xUnit.net 00:00:01.04]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesFiltrosRevisionTests.cs(21,0): at LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(String texto, Int32 posicion)&#xD;
+[xUnit.net 00:00:01.04]            at InvokeStub_RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(Object, Span`1)&#xD;
+[xUnit.net 00:00:01.04]            at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)&#xD;
+[xUnit.net 00:00:01.05]   Finished:    LogiMarket.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:44:16.6057677-05:00">
+        <Text>[xUnit.net 00:00:00.93]     LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(texto: "CLIENTE = 'AND'", esperado: "AND") [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:44:16.6210858-05:00">
+        <Text>[xUnit.net 00:00:00.95]     LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.NombresValidos_ConservanSuTexto(texto: "CLIENTE = Ángela", esperado: "Ángela") [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:44:16.6352549-05:00">
+        <Text>[xUnit.net 00:00:00.96]     LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: "CLIENTE = or", posicion: 11) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:44:16.6354372-05:00">
+        <Text>[xUnit.net 00:00:00.96]     LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: "CLIENTE = =", posicion: 11) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:44:16.8042019-05:00">
+        <Text>[xUnit.net 00:00:01.03]     LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: "ESTADO = 2", posicion: 10) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:44:16.8043543-05:00">
+        <Text>[xUnit.net 00:00:01.04]     LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: "CLIENTE = &gt;=", posicion: 11) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:44:16.8045613-05:00">
+        <Text>[xUnit.net 00:00:01.04]     LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: "CLIENTE =", posicion: 10) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:44:16.8047084-05:00">
+        <Text>[xUnit.net 00:00:01.04]     LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: "CLIENTE = 123", posicion: 11) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:44:16.8048284-05:00">
+        <Text>[xUnit.net 00:00:01.04]     LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: "CLIENTE = and", posicion: 11) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:44:16.8050075-05:00">
+        <Text>[xUnit.net 00:00:01.04]     LogiMarket.Tests.Integracion.RegresionesFiltrosRevisionTests.ValoresInvalidos_InformanLaPosicionDelToken(texto: "  CLIENTE  =  &gt;=", posicion: 15) [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>
