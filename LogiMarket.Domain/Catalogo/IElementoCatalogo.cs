@@ -8,6 +8,7 @@ namespace LogiMarket.Domain.Catalogo;
 
 public interface IElementoCatalogo
 {
+    void Aceptar(IVisitanteCatalogo visitante, int cantidad = 1);
     Guid Id { get; }
 
     string Codigo { get; }

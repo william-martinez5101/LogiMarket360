@@ -8,6 +8,9 @@ namespace LogiMarket.Domain.Catalogo;
 
 public sealed class ProductoSimple : IElementoCatalogo
 {
+    public void Aceptar(IVisitanteCatalogo visitante, int cantidad = 1)
+        => visitante.Visitar(this, Cantidades.Validar(cantidad));
+
     public Guid Id { get; private set; }
 
     public string Sku { get; private set; } = string.Empty;

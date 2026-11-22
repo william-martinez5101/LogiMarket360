@@ -8,6 +8,9 @@ namespace LogiMarket.Domain.Catalogo;
 
 public sealed class KitCompuesto : IElementoCatalogo
 {
+    public void Aceptar(IVisitanteCatalogo visitante, int cantidad = 1)
+        => visitante.Visitar(this, Cantidades.Validar(cantidad));
+
     private readonly List<ComponenteKit> _componentes = new();
 
     public Guid Id { get; private set; }
