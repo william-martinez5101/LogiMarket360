@@ -39,7 +39,8 @@ public sealed class CarritoVista : VistaBase
         _cliente.SelectedIndexChanged += async (_, _) => { if (!_cargando && _cliente.SelectedItem is Ui.Opcion) await Editar(SincronizarCliente); };
         _entrega.SelectedIndexChanged += async (_, _) => { if (!_cargando) await Editar(b => b.SeleccionarEntrega((TipoEntrega)_entrega.SelectedItem!)); };
     }
-    private int Indice() => _lineas.CurrentRow?.Index ?? throw new InvalidOperationException("Seleccione una linea.");
+    private int Indice() => _lineas.CurrentRow?.DataBoundItem is FilaLineaCarrito fila
+        ? fila.IndiceEn(_borrador.Lineas) : throw new InvalidOperationException("Seleccione una linea.");
     private void SincronizarCliente(PedidoBorrador b) { b.SeleccionarCliente((Guid)Ui.Elegido(_cliente)); b.SeleccionarEntrega((TipoEntrega)_entrega.SelectedItem!); }
     private Task Editar(Action<PedidoBorrador> accion) => Operacion("Borrador actualizado. Puede deshacer o rehacer.", () => {
         _historial.Editar(accion); TieneCambios = true; Renderizar(); return Task.CompletedTask;
@@ -66,7 +67,7 @@ public sealed class CarritoVista : VistaBase
         _cargando = true;
         for (int i = 0; i < _cliente.Items.Count; i++) if (_cliente.Items[i] is Ui.Opcion opcion && opcion.Clave.Equals(_borrador.ClienteId)) _cliente.SelectedIndex = i;
         _entrega.SelectedItem = _borrador.Entrega; _cargando = false;
-        Ui.Cargar(_lineas, _borrador.Lineas.Select((l, i) => new { Linea = i + 1, Articulo = l.Codigo, l.Cantidad, Precio = l.PrecioUnitario, l.Importe, UnidadesFisicas = l.Unidades }));
+        Ui.Cargar(_lineas, FilaLineaCarrito.Crear(_borrador.Lineas));
         var v = _valorador.Valorar(_borrador, Datos?.Clientes.SingleOrDefault(c => c.Id == _borrador.ClienteId));
         _totales.Text = v is null ? "Agregue lineas para calcular el pedido." : $"Subtotal USD {v.Subtotal:N2}   |   {v.Promocion}: -{v.Descuento:N2}   |   Entrega USD {v.Tarifa:N2}   |   TOTAL USD {v.Total:N2}\nUnidades fisicas: {v.Unidades}  |  {(_bloqueado ? "Registrado y bloqueado" : "Edicion de borrador")}  |  {(_editando?.ToString() ?? "Sin registrar")}";
     }
