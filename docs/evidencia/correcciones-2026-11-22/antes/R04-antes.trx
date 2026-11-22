@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="1870a54f-a0b4-4833-a0ba-3bf7a21e6490" name="ASUS@DESKTOP-4NJRTFA 2026-11-22 12:42:17" runUser="DESKTOP-4NJRTFA\ASUS" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-22T12:42:18.0047416-05:00" queuing="2026-11-22T12:42:18.0047426-05:00" start="2026-11-22T12:42:13.0411611-05:00" finish="2026-11-22T12:42:21.0670245-05:00" />
+  <TestSettings name="default" id="c078449d-fb5d-4401-bb00-b42260a02cb7">
+    <Deployment runDeploymentRoot="ASUS_DESKTOP-4NJRTFA_2026-11-22_12_42_17" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="60ead17f-5d88-48a1-b540-d913afaf8e48" testId="b1025b7d-a9fe-81fe-946c-96cc10292bb7" testName="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: &quot;KIT_TELETRABAJO&quot;, precio: 900, cantidadRaiz: 1)" computerName="DESKTOP-4NJRTFA" duration="00:00:03.1828432" startTime="2026-11-22T12:42:17.9358491-05:00" endTime="2026-11-22T12:42:17.9358828-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="60ead17f-5d88-48a1-b540-d913afaf8e48">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: 65&#xD;
+Actual:   770,0</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(String codigo, Decimal precio, Int32 cantidadRaiz) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs:line 20&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(String codigo, Decimal precio, Int32 cantidadRaiz) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs:line 23&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="86eab0c5-6848-4608-91c0-c11041d25890" testId="76813060-4d0c-d002-aefe-4e271fa0c1bc" testName="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: &quot;KIT_TELETRABAJO&quot;, precio: 1, cantidadRaiz: 7)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.2826000" startTime="2026-11-22T12:42:19.0245479-05:00" endTime="2026-11-22T12:42:19.0245481-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="86eab0c5-6848-4608-91c0-c11041d25890">
+      <Output>
+        <ErrorInfo>
+          <Message>System.InvalidOperationException : Stock insuficiente para P05: requiere 140, disponible 30.</Message>
+          <StackTrace>   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 38&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(String codigo, Decimal precio, Int32 cantidadRaiz) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs:line 18&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(String codigo, Decimal precio, Int32 cantidadRaiz) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs:line 23&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="50915e85-e988-4344-810f-6d5460cc0751" testId="53fcddc4-8cfa-e38f-b269-c615215465b5" testName="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CodigoNoCatalogado_NoSePersisteNiCobra" computerName="DESKTOP-4NJRTFA" duration="00:00:00.3173957" startTime="2026-11-22T12:42:19.3716242-05:00" endTime="2026-11-22T12:42:19.3716248-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="50915e85-e988-4344-810f-6d5460cc0751">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Throws() Failure: Exception type was not an exact match&#xD;
+Expected: typeof(System.InvalidOperationException)&#xD;
+Actual:   typeof(Microsoft.EntityFrameworkCore.DbUpdateException)&#xD;
+---- Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while saving the entity changes. See the inner exception for details.&#xD;
+-------- Microsoft.Data.Sqlite.SqliteException : SQLite Error 19: 'FOREIGN KEY constraint failed'.</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CodigoNoCatalogado_NoSePersisteNiCobra() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs:line 70&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CodigoNoCatalogado_NoSePersisteNiCobra() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs:line 71&#xD;
+--- End of stack trace from previous location ---&#xD;
+----- Inner Stack Trace -----&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs:line 52&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.RegistrarAsync(PedidoBorrador borrador, Nullable`1 editarId, Nullable`1 versionEsperada) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 24&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.RegistrarAsync(PedidoBorrador borrador, Nullable`1 editarId, Nullable`1 versionEsperada) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 24&#xD;
+----- Inner Stack Trace -----&#xD;
+   at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)&#xD;
+   at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()&#xD;
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)&#xD;
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+   at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="860240bc-ad80-4264-9a8f-49c519c69396" testId="c4629840-5d5a-f142-1ee1-4f1959a94441" testName="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.EditarBorrador_ConservaHistoricasYCapturaNuevasIncluidosDuplicados" computerName="DESKTOP-4NJRTFA" duration="00:00:00.3913609" startTime="2026-11-22T12:42:20.4974327-05:00" endTime="2026-11-22T12:42:20.4974330-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="860240bc-ad80-4264-9a8f-49c519c69396">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Collections differ&#xD;
+                                                         ↓ (pos 1)&#xD;
+Expected: decimal[]                                 [20, 30]&#xD;
+Actual:   SelectIListIterator&lt;LineaPedido, decimal&gt; [20,0, 20,0]&#xD;
+                                                           ↑ (pos 1)</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.EditarBorrador_ConservaHistoricasYCapturaNuevasIncluidosDuplicados() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs:line 35&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.EditarBorrador_ConservaHistoricasYCapturaNuevasIncluidosDuplicados() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs:line 39&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="acbebdc0-a481-47f8-a8d2-3f6bb7138208" testId="4f68f263-d9d9-bf31-e30e-a375beb94f60" testName="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CopiaAlteradaDeLineaHistorica_NoIntroducePrecioNiComposicionAjena" computerName="DESKTOP-4NJRTFA" duration="00:00:00.4325165" startTime="2026-11-22T12:42:20.9307406-05:00" endTime="2026-11-22T12:42:20.9307431-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="acbebdc0-a481-47f8-a8d2-3f6bb7138208">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Collections differ&#xD;
+                                             ↓ (pos 0)&#xD;
+Expected: string[]                          ["P01", "P02", "P03"]&#xD;
+Actual:   OrderedEnumerable&lt;string, string&gt; ["P05"]&#xD;
+                                             ↑ (pos 0)</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CopiaAlteradaDeLineaHistorica_NoIntroducePrecioNiComposicionAjena() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs:line 50&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CopiaAlteradaDeLineaHistorica_NoIntroducePrecioNiComposicionAjena() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs:line 50&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="be3eea11-d816-4047-9c54-d29fa93aca58" testId="b998b48b-9654-ef3a-8436-f92caee2a5d3" testName="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: &quot;P01&quot;, precio: 1, cantidadRaiz: 1)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.4972338" startTime="2026-11-22T12:42:18.4257380-05:00" endTime="2026-11-22T12:42:18.4257400-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="be3eea11-d816-4047-9c54-d29fa93aca58">
+      <Output>
+        <ErrorInfo>
+          <Message>Assert.Equal() Failure: Values differ&#xD;
+Expected: 25&#xD;
+Actual:   5,85</Message>
+          <StackTrace>   at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(String codigo, Decimal precio, Int32 cantidadRaiz) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs:line 20&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(String codigo, Decimal precio, Int32 cantidadRaiz) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs:line 23&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="69d3b7d6-dea4-4e54-ad3c-1e6c48065b54" testId="1c7cdc68-e518-f56d-61ae-f472152e1051" testName="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CambioCatalogo_NoRecalculaPagoNiDevolucionHistoricos" computerName="DESKTOP-4NJRTFA" duration="00:00:00.7279902" startTime="2026-11-22T12:42:20.1033730-05:00" endTime="2026-11-22T12:42:20.1033737-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="69d3b7d6-dea4-4e54-ad3c-1e6c48065b54" />
+    <UnitTestResult executionId="6d080d2f-93fb-4bfa-a1b1-f24f6c74ae87" testId="9f06b56d-2973-dcf3-3361-f8ab46a35377" testName="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: &quot;P01&quot;, precio: 999, cantidadRaiz: 8)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.2963362" startTime="2026-11-22T12:42:18.7421523-05:00" endTime="2026-11-22T12:42:18.7421530-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="6d080d2f-93fb-4bfa-a1b1-f24f6c74ae87">
+      <Output>
+        <ErrorInfo>
+          <Message>System.InvalidOperationException : Stock insuficiente para P05: requiere 160, disponible 30.</Message>
+          <StackTrace>   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 38&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(String codigo, Decimal precio, Int32 cantidadRaiz) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs:line 18&#xD;
+   at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(String codigo, Decimal precio, Int32 cantidadRaiz) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs:line 23&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.EditarBorrador_ConservaHistoricasYCapturaNuevasIncluidosDuplicados" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="c4629840-5d5a-f142-1ee1-4f1959a94441">
+      <Execution id="860240bc-ad80-4264-9a8f-49c519c69396" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests" name="EditarBorrador_ConservaHistoricasYCapturaNuevasIncluidosDuplicados" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: &quot;P01&quot;, precio: 999, cantidadRaiz: 8)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="9f06b56d-2973-dcf3-3361-f8ab46a35377">
+      <Execution id="6d080d2f-93fb-4bfa-a1b1-f24f6c74ae87" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests" name="NuevasLineas_SeCapturanDelCatalogoNoDelLlamador" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: &quot;P01&quot;, precio: 1, cantidadRaiz: 1)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="b998b48b-9654-ef3a-8436-f92caee2a5d3">
+      <Execution id="be3eea11-d816-4047-9c54-d29fa93aca58" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests" name="NuevasLineas_SeCapturanDelCatalogoNoDelLlamador" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CambioCatalogo_NoRecalculaPagoNiDevolucionHistoricos" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="1c7cdc68-e518-f56d-61ae-f472152e1051">
+      <Execution id="69d3b7d6-dea4-4e54-ad3c-1e6c48065b54" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests" name="CambioCatalogo_NoRecalculaPagoNiDevolucionHistoricos" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: &quot;KIT_TELETRABAJO&quot;, precio: 900, cantidadRaiz: 1)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="b1025b7d-a9fe-81fe-946c-96cc10292bb7">
+      <Execution id="60ead17f-5d88-48a1-b540-d913afaf8e48" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests" name="NuevasLineas_SeCapturanDelCatalogoNoDelLlamador" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CopiaAlteradaDeLineaHistorica_NoIntroducePrecioNiComposicionAjena" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="4f68f263-d9d9-bf31-e30e-a375beb94f60">
+      <Execution id="acbebdc0-a481-47f8-a8d2-3f6bb7138208" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests" name="CopiaAlteradaDeLineaHistorica_NoIntroducePrecioNiComposicionAjena" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: &quot;KIT_TELETRABAJO&quot;, precio: 1, cantidadRaiz: 7)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="76813060-4d0c-d002-aefe-4e271fa0c1bc">
+      <Execution id="86eab0c5-6848-4608-91c0-c11041d25890" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests" name="NuevasLineas_SeCapturanDelCatalogoNoDelLlamador" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CodigoNoCatalogado_NoSePersisteNiCobra" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="53fcddc4-8cfa-e38f-b269-c615215465b5">
+      <Execution id="50915e85-e988-4344-810f-6d5460cc0751" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests" name="CodigoNoCatalogado_NoSePersisteNiCobra" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="b1025b7d-a9fe-81fe-946c-96cc10292bb7" executionId="60ead17f-5d88-48a1-b540-d913afaf8e48" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="76813060-4d0c-d002-aefe-4e271fa0c1bc" executionId="86eab0c5-6848-4608-91c0-c11041d25890" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="53fcddc4-8cfa-e38f-b269-c615215465b5" executionId="50915e85-e988-4344-810f-6d5460cc0751" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c4629840-5d5a-f142-1ee1-4f1959a94441" executionId="860240bc-ad80-4264-9a8f-49c519c69396" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4f68f263-d9d9-bf31-e30e-a375beb94f60" executionId="acbebdc0-a481-47f8-a8d2-3f6bb7138208" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b998b48b-9654-ef3a-8436-f92caee2a5d3" executionId="be3eea11-d816-4047-9c54-d29fa93aca58" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1c7cdc68-e518-f56d-61ae-f472152e1051" executionId="69d3b7d6-dea4-4e54-ad3c-1e6c48065b54" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9f06b56d-2973-dcf3-3361-f8ab46a35377" executionId="6d080d2f-93fb-4bfa-a1b1-f24f6c74ae87" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="8" executed="8" passed="1" failed="7" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.34)&#xD;
+[xUnit.net 00:00:00.47]   Discovering: LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.59]   Discovered:  LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.60]   Starting:    LogiMarket.Tests&#xD;
+[xUnit.net 00:00:03.87]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:03.87]       Expected: 65&#xD;
+[xUnit.net 00:00:03.87]       Actual:   770,0&#xD;
+[xUnit.net 00:00:03.87]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.87]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs(20,0): at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(String codigo, Decimal precio, Int32 cantidadRaiz)&#xD;
+[xUnit.net 00:00:03.87]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs(23,0): at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(String codigo, Decimal precio, Int32 cantidadRaiz)&#xD;
+[xUnit.net 00:00:03.87]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:04.37]       Assert.Equal() Failure: Values differ&#xD;
+[xUnit.net 00:00:04.37]       Expected: 25&#xD;
+[xUnit.net 00:00:04.37]       Actual:   5,85&#xD;
+[xUnit.net 00:00:04.37]       Stack Trace:&#xD;
+[xUnit.net 00:00:04.37]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs(20,0): at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(String codigo, Decimal precio, Int32 cantidadRaiz)&#xD;
+[xUnit.net 00:00:04.37]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs(23,0): at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(String codigo, Decimal precio, Int32 cantidadRaiz)&#xD;
+[xUnit.net 00:00:04.37]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:04.68]       System.InvalidOperationException : Stock insuficiente para P05: requiere 160, disponible 30.&#xD;
+[xUnit.net 00:00:04.68]       Stack Trace:&#xD;
+[xUnit.net 00:00:04.68]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(38,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:04.68]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:04.68]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs(18,0): at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(String codigo, Decimal precio, Int32 cantidadRaiz)&#xD;
+[xUnit.net 00:00:04.68]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs(23,0): at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(String codigo, Decimal precio, Int32 cantidadRaiz)&#xD;
+[xUnit.net 00:00:04.68]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:04.97]       System.InvalidOperationException : Stock insuficiente para P05: requiere 140, disponible 30.&#xD;
+[xUnit.net 00:00:04.97]       Stack Trace:&#xD;
+[xUnit.net 00:00:04.97]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(38,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:04.97]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:04.97]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs(18,0): at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(String codigo, Decimal precio, Int32 cantidadRaiz)&#xD;
+[xUnit.net 00:00:04.97]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs(23,0): at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(String codigo, Decimal precio, Int32 cantidadRaiz)&#xD;
+[xUnit.net 00:00:04.97]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:05.31]       Assert.Throws() Failure: Exception type was not an exact match&#xD;
+[xUnit.net 00:00:05.31]       Expected: typeof(System.InvalidOperationException)&#xD;
+[xUnit.net 00:00:05.31]       Actual:   typeof(Microsoft.EntityFrameworkCore.DbUpdateException)&#xD;
+[xUnit.net 00:00:05.31]       ---- Microsoft.EntityFrameworkCore.DbUpdateException : An error occurred while saving the entity changes. See the inner exception for details.&#xD;
+[xUnit.net 00:00:05.31]       -------- Microsoft.Data.Sqlite.SqliteException : SQLite Error 19: 'FOREIGN KEY constraint failed'.&#xD;
+[xUnit.net 00:00:05.31]       Stack Trace:&#xD;
+[xUnit.net 00:00:05.31]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs(70,0): at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CodigoNoCatalogado_NoSePersisteNiCobra()&#xD;
+[xUnit.net 00:00:05.31]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs(71,0): at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CodigoNoCatalogado_NoSePersisteNiCobra()&#xD;
+[xUnit.net 00:00:05.31]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:05.31]         ----- Inner Stack Trace -----&#xD;
+[xUnit.net 00:00:05.31]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.31]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.31]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.31]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.31]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.31]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.31]            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.31]            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.31]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs(52,0): at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct)&#xD;
+[xUnit.net 00:00:05.31]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(24,0): at LogiMarket.Application.Pedidos.PedidosServicio.RegistrarAsync(PedidoBorrador borrador, Nullable`1 editarId, Nullable`1 versionEsperada)&#xD;
+[xUnit.net 00:00:05.31]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(24,0): at LogiMarket.Application.Pedidos.PedidosServicio.RegistrarAsync(PedidoBorrador borrador, Nullable`1 editarId, Nullable`1 versionEsperada)&#xD;
+[xUnit.net 00:00:05.31]         ----- Inner Stack Trace -----&#xD;
+[xUnit.net 00:00:05.31]            at Microsoft.Data.Sqlite.SqliteException.ThrowExceptionForRC(Int32 rc, sqlite3 db)&#xD;
+[xUnit.net 00:00:05.31]            at Microsoft.Data.Sqlite.SqliteDataReader.NextResult()&#xD;
+[xUnit.net 00:00:05.31]            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReader(CommandBehavior behavior)&#xD;
+[xUnit.net 00:00:05.31]            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.31]            at Microsoft.Data.Sqlite.SqliteCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.31]            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.31]            at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.31]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:06.44]       Assert.Equal() Failure: Collections differ&#xD;
+[xUnit.net 00:00:06.44]                                                                ↓ (pos 1)&#xD;
+[xUnit.net 00:00:06.44]       Expected: decimal[]                                 [20, 30]&#xD;
+[xUnit.net 00:00:06.44]       Actual:   SelectIListIterator&lt;LineaPedido, decimal&gt; [20,0, 20,0]&#xD;
+[xUnit.net 00:00:06.44]                                                                  ↑ (pos 1)&#xD;
+[xUnit.net 00:00:06.44]       Stack Trace:&#xD;
+[xUnit.net 00:00:06.44]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs(35,0): at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.EditarBorrador_ConservaHistoricasYCapturaNuevasIncluidosDuplicados()&#xD;
+[xUnit.net 00:00:06.44]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs(39,0): at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.EditarBorrador_ConservaHistoricasYCapturaNuevasIncluidosDuplicados()&#xD;
+[xUnit.net 00:00:06.44]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:06.87]       Assert.Equal() Failure: Collections differ&#xD;
+[xUnit.net 00:00:06.87]                                                    ↓ (pos 0)&#xD;
+[xUnit.net 00:00:06.87]       Expected: string[]                          ["P01", "P02", "P03"]&#xD;
+[xUnit.net 00:00:06.87]       Actual:   OrderedEnumerable&lt;string, string&gt; ["P05"]&#xD;
+[xUnit.net 00:00:06.87]                                                    ↑ (pos 0)&#xD;
+[xUnit.net 00:00:06.87]       Stack Trace:&#xD;
+[xUnit.net 00:00:06.87]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs(50,0): at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CopiaAlteradaDeLineaHistorica_NoIntroducePrecioNiComposicionAjena()&#xD;
+[xUnit.net 00:00:06.87]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\RegresionesInstantaneasRevisionTests.cs(50,0): at LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CopiaAlteradaDeLineaHistorica_NoIntroducePrecioNiComposicionAjena()&#xD;
+[xUnit.net 00:00:06.87]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:06.88]   Finished:    LogiMarket.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:42:17.9314849-05:00">
+        <Text>[xUnit.net 00:00:03.87]     LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: "KIT_TELETRABAJO", precio: 900, cantidadRaiz: 1) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:42:18.4258917-05:00">
+        <Text>[xUnit.net 00:00:04.37]     LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: "P01", precio: 1, cantidadRaiz: 1) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:42:18.7428820-05:00">
+        <Text>[xUnit.net 00:00:04.68]     LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: "P01", precio: 999, cantidadRaiz: 8) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:42:19.0245265-05:00">
+        <Text>[xUnit.net 00:00:04.97]     LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: "KIT_TELETRABAJO", precio: 1, cantidadRaiz: 7) [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:42:19.3704801-05:00">
+        <Text>[xUnit.net 00:00:05.31]     LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CodigoNoCatalogado_NoSePersisteNiCobra [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:42:20.4971746-05:00">
+        <Text>[xUnit.net 00:00:06.44]     LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.EditarBorrador_ConservaHistoricasYCapturaNuevasIncluidosDuplicados [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-22T12:42:20.9309783-05:00">
+        <Text>[xUnit.net 00:00:06.87]     LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CopiaAlteradaDeLineaHistorica_NoIntroducePrecioNiComposicionAjena [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

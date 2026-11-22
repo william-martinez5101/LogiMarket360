@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="bf16ff81-6226-4f2a-97e3-7668de0a1386" name="ASUS@DESKTOP-4NJRTFA 2026-11-22 12:43:04" runUser="DESKTOP-4NJRTFA\ASUS" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-22T12:43:04.6632435-05:00" queuing="2026-11-22T12:43:04.6632438-05:00" start="2026-11-22T12:43:01.1821712-05:00" finish="2026-11-22T12:43:08.5161991-05:00" />
+  <TestSettings name="default" id="bfe8c5e6-de8f-4cc2-b8c3-5edb9ebb4f13">
+    <Deployment runDeploymentRoot="ASUS_DESKTOP-4NJRTFA_2026-11-22_12_43_04" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="714a6204-e063-4acd-b977-e1246b78e95d" testId="a8a6fbde-76d7-9d4f-7b11-755bd345afc6" testName="LogiMarket.Tests.Integracion.AceptacionTests.P08_PagadoInmutable" computerName="DESKTOP-4NJRTFA" duration="00:00:00.3829597" startTime="2026-11-22T12:43:07.6750293-05:00" endTime="2026-11-22T12:43:07.6750297-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="714a6204-e063-4acd-b977-e1246b78e95d" />
+    <UnitTestResult executionId="15b72ba8-b040-400a-9d65-553757c04485" testId="86910877-c442-329f-c6c5-1467962d9d7d" testName="LogiMarket.Tests.Integracion.AceptacionTests.P35_DevolucionUnica54SinFlete" computerName="DESKTOP-4NJRTFA" duration="00:00:00.3921421" startTime="2026-11-22T12:43:08.4482263-05:00" endTime="2026-11-22T12:43:08.4482265-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="15b72ba8-b040-400a-9d65-553757c04485" />
+    <UnitTestResult executionId="dc803626-8929-4e75-af32-da738ae0cea6" testId="f72d41b0-ce05-dc03-498f-976caea18546" testName="LogiMarket.Tests.Integracion.AceptacionTests.P29_MementoTresEdicionesDosUndoUnRedo" computerName="DESKTOP-4NJRTFA" duration="00:00:00.3046515" startTime="2026-11-22T12:43:07.2916501-05:00" endTime="2026-11-22T12:43:07.2916504-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="dc803626-8929-4e75-af32-da738ae0cea6" />
+    <UnitTestResult executionId="be7f5cc2-e1d7-4f81-ae35-e2ba2dc08c43" testId="9f06b56d-2973-dcf3-3361-f8ab46a35377" testName="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: &quot;P01&quot;, precio: 999, cantidadRaiz: 8)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.3439871" startTime="2026-11-22T12:43:04.9180533-05:00" endTime="2026-11-22T12:43:04.9180540-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="be7f5cc2-e1d7-4f81-ae35-e2ba2dc08c43" />
+    <UnitTestResult executionId="9f828a72-a5b8-4c56-b0e9-39d4dcfd5e0b" testId="70907a84-773b-937f-3dcd-910c8388e3f2" testName="LogiMarket.Tests.Integracion.AceptacionTests.P13_BuilderValidoEIncompleto" computerName="DESKTOP-4NJRTFA" duration="00:00:00.2422672" startTime="2026-11-22T12:43:06.9865431-05:00" endTime="2026-11-22T12:43:06.9865433-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9f828a72-a5b8-4c56-b0e9-39d4dcfd5e0b" />
+    <UnitTestResult executionId="e36a6b5a-d091-4d52-afd2-a1ff24f367e6" testId="b998b48b-9654-ef3a-8436-f92caee2a5d3" testName="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: &quot;P01&quot;, precio: 1, cantidadRaiz: 1)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.3968022" startTime="2026-11-22T12:43:04.5735811-05:00" endTime="2026-11-22T12:43:04.5735815-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e36a6b5a-d091-4d52-afd2-a1ff24f367e6" />
+    <UnitTestResult executionId="5f18c966-0b81-4dbe-bf99-e1dedac85395" testId="c4629840-5d5a-f142-1ee1-4f1959a94441" testName="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.EditarBorrador_ConservaHistoricasYCapturaNuevasIncluidosDuplicados" computerName="DESKTOP-4NJRTFA" duration="00:00:00.4085366" startTime="2026-11-22T12:43:06.4445171-05:00" endTime="2026-11-22T12:43:06.4445173-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5f18c966-0b81-4dbe-bf99-e1dedac85395" />
+    <UnitTestResult executionId="64f7cf5a-f567-436f-b4ee-db0c7d085289" testId="4f68f263-d9d9-bf31-e30e-a375beb94f60" testName="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CopiaAlteradaDeLineaHistorica_NoIntroducePrecioNiComposicionAjena" computerName="DESKTOP-4NJRTFA" duration="00:00:00.2957919" startTime="2026-11-22T12:43:06.7403839-05:00" endTime="2026-11-22T12:43:06.7403842-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="64f7cf5a-f567-436f-b4ee-db0c7d085289" />
+    <UnitTestResult executionId="914a174a-2daf-4f19-a681-36bc5f0eff71" testId="76813060-4d0c-d002-aefe-4e271fa0c1bc" testName="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: &quot;KIT_TELETRABAJO&quot;, precio: 1, cantidadRaiz: 7)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.3943025" startTime="2026-11-22T12:43:05.3127874-05:00" endTime="2026-11-22T12:43:05.3127877-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="914a174a-2daf-4f19-a681-36bc5f0eff71" />
+    <UnitTestResult executionId="3ca37938-488f-4c02-9446-65ecf46098a5" testId="b1025b7d-a9fe-81fe-946c-96cc10292bb7" testName="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: &quot;KIT_TELETRABAJO&quot;, precio: 900, cantidadRaiz: 1)" computerName="DESKTOP-4NJRTFA" duration="00:00:02.0825782" startTime="2026-11-22T12:43:04.1762981-05:00" endTime="2026-11-22T12:43:04.1763188-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ca37938-488f-4c02-9446-65ecf46098a5" />
+    <UnitTestResult executionId="355ccc06-db91-4e80-8acf-ef48beb64634" testId="09bcb22b-3254-aebd-69bb-ceb3d3d28f63" testName="LogiMarket.Tests.Integracion.AceptacionTests.P14_PrototypeProfundoPersistido" computerName="DESKTOP-4NJRTFA" duration="00:00:00.3801404" startTime="2026-11-22T12:43:08.0556615-05:00" endTime="2026-11-22T12:43:08.0556624-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="355ccc06-db91-4e80-8acf-ef48beb64634" />
+    <UnitTestResult executionId="2f271e13-c498-41a7-a52e-3ee479008920" testId="1c7cdc68-e518-f56d-61ae-f472152e1051" testName="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CambioCatalogo_NoRecalculaPagoNiDevolucionHistoricos" computerName="DESKTOP-4NJRTFA" duration="00:00:00.4631121" startTime="2026-11-22T12:43:06.0357400-05:00" endTime="2026-11-22T12:43:06.0357402-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2f271e13-c498-41a7-a52e-3ee479008920" />
+    <UnitTestResult executionId="bb89aa71-f093-4e5a-ad73-4a63c9355162" testId="53fcddc4-8cfa-e38f-b269-c615215465b5" testName="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CodigoNoCatalogado_NoSePersisteNiCobra" computerName="DESKTOP-4NJRTFA" duration="00:00:00.2582291" startTime="2026-11-22T12:43:05.5722938-05:00" endTime="2026-11-22T12:43:05.5722940-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bb89aa71-f093-4e5a-ad73-4a63c9355162" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.EditarBorrador_ConservaHistoricasYCapturaNuevasIncluidosDuplicados" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="c4629840-5d5a-f142-1ee1-4f1959a94441">
+      <Execution id="5f18c966-0b81-4dbe-bf99-e1dedac85395" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests" name="EditarBorrador_ConservaHistoricasYCapturaNuevasIncluidosDuplicados" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.AceptacionTests.P29_MementoTresEdicionesDosUndoUnRedo" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="f72d41b0-ce05-dc03-498f-976caea18546">
+      <Execution id="dc803626-8929-4e75-af32-da738ae0cea6" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.AceptacionTests" name="P29_MementoTresEdicionesDosUndoUnRedo" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: &quot;P01&quot;, precio: 999, cantidadRaiz: 8)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="9f06b56d-2973-dcf3-3361-f8ab46a35377">
+      <Execution id="be7f5cc2-e1d7-4f81-ae35-e2ba2dc08c43" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests" name="NuevasLineas_SeCapturanDelCatalogoNoDelLlamador" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: &quot;P01&quot;, precio: 1, cantidadRaiz: 1)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="b998b48b-9654-ef3a-8436-f92caee2a5d3">
+      <Execution id="e36a6b5a-d091-4d52-afd2-a1ff24f367e6" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests" name="NuevasLineas_SeCapturanDelCatalogoNoDelLlamador" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.AceptacionTests.P14_PrototypeProfundoPersistido" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="09bcb22b-3254-aebd-69bb-ceb3d3d28f63">
+      <Execution id="355ccc06-db91-4e80-8acf-ef48beb64634" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.AceptacionTests" name="P14_PrototypeProfundoPersistido" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.AceptacionTests.P13_BuilderValidoEIncompleto" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="70907a84-773b-937f-3dcd-910c8388e3f2">
+      <Execution id="9f828a72-a5b8-4c56-b0e9-39d4dcfd5e0b" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.AceptacionTests" name="P13_BuilderValidoEIncompleto" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CambioCatalogo_NoRecalculaPagoNiDevolucionHistoricos" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="1c7cdc68-e518-f56d-61ae-f472152e1051">
+      <Execution id="2f271e13-c498-41a7-a52e-3ee479008920" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests" name="CambioCatalogo_NoRecalculaPagoNiDevolucionHistoricos" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: &quot;KIT_TELETRABAJO&quot;, precio: 900, cantidadRaiz: 1)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="b1025b7d-a9fe-81fe-946c-96cc10292bb7">
+      <Execution id="3ca37938-488f-4c02-9446-65ecf46098a5" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests" name="NuevasLineas_SeCapturanDelCatalogoNoDelLlamador" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CopiaAlteradaDeLineaHistorica_NoIntroducePrecioNiComposicionAjena" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="4f68f263-d9d9-bf31-e30e-a375beb94f60">
+      <Execution id="64f7cf5a-f567-436f-b4ee-db0c7d085289" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests" name="CopiaAlteradaDeLineaHistorica_NoIntroducePrecioNiComposicionAjena" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.NuevasLineas_SeCapturanDelCatalogoNoDelLlamador(codigo: &quot;KIT_TELETRABAJO&quot;, precio: 1, cantidadRaiz: 7)" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="76813060-4d0c-d002-aefe-4e271fa0c1bc">
+      <Execution id="914a174a-2daf-4f19-a681-36bc5f0eff71" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests" name="NuevasLineas_SeCapturanDelCatalogoNoDelLlamador" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.AceptacionTests.P08_PagadoInmutable" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="a8a6fbde-76d7-9d4f-7b11-755bd345afc6">
+      <Execution id="714a6204-e063-4acd-b977-e1246b78e95d" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.AceptacionTests" name="P08_PagadoInmutable" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.AceptacionTests.P35_DevolucionUnica54SinFlete" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="86910877-c442-329f-c6c5-1467962d9d7d">
+      <Execution id="15b72ba8-b040-400a-9d65-553757c04485" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.AceptacionTests" name="P35_DevolucionUnica54SinFlete" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests.CodigoNoCatalogado_NoSePersisteNiCobra" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\release\net8.0\logimarket.tests.dll" id="53fcddc4-8cfa-e38f-b269-c615215465b5">
+      <Execution id="bb89aa71-f093-4e5a-ad73-4a63c9355162" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.RegresionesInstantaneasRevisionTests" name="CodigoNoCatalogado_NoSePersisteNiCobra" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="a8a6fbde-76d7-9d4f-7b11-755bd345afc6" executionId="714a6204-e063-4acd-b977-e1246b78e95d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="86910877-c442-329f-c6c5-1467962d9d7d" executionId="15b72ba8-b040-400a-9d65-553757c04485" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f72d41b0-ce05-dc03-498f-976caea18546" executionId="dc803626-8929-4e75-af32-da738ae0cea6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9f06b56d-2973-dcf3-3361-f8ab46a35377" executionId="be7f5cc2-e1d7-4f81-ae35-e2ba2dc08c43" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="70907a84-773b-937f-3dcd-910c8388e3f2" executionId="9f828a72-a5b8-4c56-b0e9-39d4dcfd5e0b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b998b48b-9654-ef3a-8436-f92caee2a5d3" executionId="e36a6b5a-d091-4d52-afd2-a1ff24f367e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c4629840-5d5a-f142-1ee1-4f1959a94441" executionId="5f18c966-0b81-4dbe-bf99-e1dedac85395" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4f68f263-d9d9-bf31-e30e-a375beb94f60" executionId="64f7cf5a-f567-436f-b4ee-db0c7d085289" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="76813060-4d0c-d002-aefe-4e271fa0c1bc" executionId="914a174a-2daf-4f19-a681-36bc5f0eff71" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b1025b7d-a9fe-81fe-946c-96cc10292bb7" executionId="3ca37938-488f-4c02-9446-65ecf46098a5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="09bcb22b-3254-aebd-69bb-ceb3d3d28f63" executionId="355ccc06-db91-4e80-8acf-ef48beb64634" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="1c7cdc68-e518-f56d-61ae-f472152e1051" executionId="2f271e13-c498-41a7-a52e-3ee479008920" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="53fcddc4-8cfa-e38f-b269-c615215465b5" executionId="bb89aa71-f093-4e5a-ad73-4a63c9355162" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="13" executed="13" passed="13" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.34)&#xD;
+[xUnit.net 00:00:00.24]   Discovering: LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.29]   Discovered:  LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.30]   Starting:    LogiMarket.Tests&#xD;
+[xUnit.net 00:00:06.69]   Finished:    LogiMarket.Tests&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

@@ -1,0 +1,189 @@
+{
+  "Caso": "R04-NUEVA-KIT_TELETRABAJO-1",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T17:43:05.3102459+00:00",
+  "Metodo": "NuevasLineas_SeCapturanDelCatalogoNoDelLlamador",
+  "Fuente": "LogiMarket.Tests/Integracion/RegresionesInstantaneasRevisionTests.cs",
+  "Esperado": "Precio, raiz y composicion capturados del catalogo en Application",
+  "Obtenido": {
+    "pago": {
+      "Id": "7790141c-0e46-459f-8c6a-42e1d654c075",
+      "PedidoId": "1610cda4-e824-400e-8b16-4c896527aa5d",
+      "Clave": "canonico",
+      "Referencia": "SIM-28abb2d2ad1d499f8deb0f2e171bf80b",
+      "Importe": 65.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    "Lineas": [
+      {
+        "Elemento": {
+          "Codigo": "KIT_TELETRABAJO",
+          "Nombre": "Kit teletrabajo",
+          "Cantidad": 1,
+          "Precio": 60.0,
+          "PesoKg": 0,
+          "Hijos": [
+            {
+              "Codigo": "KIT_OFICINA",
+              "Nombre": "Kit oficina",
+              "Cantidad": 1,
+              "Precio": 50.0,
+              "PesoKg": 0,
+              "Hijos": [
+                {
+                  "Codigo": "P01",
+                  "Nombre": "Mouse USB",
+                  "Cantidad": 1,
+                  "Precio": 20.0,
+                  "PesoKg": 0.2,
+                  "Hijos": []
+                },
+                {
+                  "Codigo": "P02",
+                  "Nombre": "Teclado",
+                  "Cantidad": 1,
+                  "Precio": 30.0,
+                  "PesoKg": 0.7,
+                  "Hijos": []
+                }
+              ]
+            },
+            {
+              "Codigo": "P03",
+              "Nombre": "Memoria USB",
+              "Cantidad": 1,
+              "Precio": 10.0,
+              "PesoKg": 0.1,
+              "Hijos": []
+            }
+          ]
+        },
+        "Cantidad": 1,
+        "Codigo": "KIT_TELETRABAJO",
+        "PrecioUnitario": 60.0,
+        "Importe": 60.0,
+        "Unidades": 3
+      }
+    ]
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 7
+    },
+    {
+      "Sku": "P02",
+      "Stock": 4
+    },
+    {
+      "Sku": "P03",
+      "Stock": 19
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [
+    {
+      "Id": "7790141c-0e46-459f-8c6a-42e1d654c075",
+      "PedidoId": "1610cda4-e824-400e-8b16-4c896527aa5d",
+      "Clave": "canonico",
+      "Referencia": "SIM-28abb2d2ad1d499f8deb0f2e171bf80b",
+      "Importe": 65.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Movimientos": [
+    {
+      "Id": "3acb8a3a-5c00-40c6-8ebe-9aeb645f67cd",
+      "PedidoId": "1610cda4-e824-400e-8b16-4c896527aa5d",
+      "Sku": "P01",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "7790141c-0e46-459f-8c6a-42e1d654c075",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "591e9a6a-47d4-44af-abe4-2b64bbe01ed8",
+      "PedidoId": "1610cda4-e824-400e-8b16-4c896527aa5d",
+      "Sku": "P03",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "7790141c-0e46-459f-8c6a-42e1d654c075",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "a9642d4a-365e-4898-af09-c3b1c6a36895",
+      "PedidoId": "1610cda4-e824-400e-8b16-4c896527aa5d",
+      "Sku": "P02",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "7790141c-0e46-459f-8c6a-42e1d654c075",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Eventos": [
+    {
+      "Evento": {
+        "Id": "9ce4087c-4ec3-4133-a02a-6dee29159d31",
+        "PedidoId": "1610cda4-e824-400e-8b16-4c896527aa5d",
+        "Tipo": "PedidoPagado",
+        "Importe": 65.0,
+        "Canal": "EMAIL",
+        "Fecha": "2026-11-21T17:00:00+00:00"
+      },
+      "Intentos": 0,
+      "Procesado": null,
+      "Error": null
+    }
+  ],
+  "Avisos": [],
+  "Auditoria": [
+    {
+      "Id": "c3c36000-2026-4000-8000-000000000001",
+      "Tipo": "INICIALIZACION",
+      "Correlacion": "DATOS_DEMO_V1",
+      "Mensaje": "Datos oficiales V1 inicializados una sola vez.",
+      "Fecha": "2026-11-22T17:43:04.9721314+00:00"
+    }
+  ],
+  "Traza": [
+    {
+      "Id": "cd67078e-ffb9-4b46-a3cb-07cf9c90d18c",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "canonico",
+      "Mensaje": "Importe=65,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "ff44b848-dba4-4f5b-a1fb-37aabc0025b6",
+      "Tipo": "PASARELA",
+      "Correlacion": "canonico",
+      "Mensaje": "LEGADO: 6500 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "230ae2c2-6699-4677-8795-efd92fed8279",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "canonico",
+      "Mensaje": "LEGADO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": [
+    {
+      "Clave": "canonico",
+      "Monto": 65,
+      "Referencia": "SIM-28abb2d2ad1d499f8deb0f2e171bf80b",
+      "Proveedor": "LEGADO",
+      "PedidoId": "1610cda4-e824-400e-8b16-4c896527aa5d"
+    }
+  ]
+}

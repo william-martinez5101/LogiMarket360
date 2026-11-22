@@ -1,5 +1,6 @@
 using LogiMarket.Application.Contratos;
 using LogiMarket.Application.Seguridad;
+using LogiMarket.Domain.Catalogo;
 using LogiMarket.Domain.Ventas;
 
 namespace LogiMarket.Application.Pedidos;
@@ -12,13 +13,19 @@ public sealed class PedidosServicio(IUnidadTrabajoFactory unidades, SesionUsuari
         Permisos.Exigir(sesion, Rol.VENTAS); await using var u = await unidades.AbrirAsync(true);
         var cliente = (await u.Clientes.ListarAsync()).SingleOrDefault(x => x.Id == borrador.ClienteId)
             ?? throw new InvalidOperationException("Seleccione un cliente.");
-        var builder = new PedidoBuilder(calculadora, entregas).ParaCliente(cliente).ConEntrega(borrador.Entrega);
-        foreach (var linea in borrador.Lineas) builder.AgregarInstantanea(linea);
-        var nuevo = builder.Construir(reloj.Ahora, sesion.Exigir().Usuario);
-        if (editarId is Guid id)
+        var anterior = editarId is Guid id ? await ExigirPedido(u, id) : null;
+        if (anterior is not null)
         {
-            var anterior = await ExigirPedido(u, id);
+            if (anterior.Estado != EstadoPedido.BORRADOR) throw new InvalidOperationException("Solo se puede editar un borrador.");
             if (versionEsperada != anterior.Version) throw new InvalidOperationException("El borrador cambio en otra sesion. Recargue.");
+        }
+        var catalogo = (await u.Catalogo.ProductosAsync()).Cast<IElementoCatalogo>().Concat(await u.Catalogo.KitsAsync());
+        var capturador = new CapturadorLineasPedido(catalogo, anterior?.Lineas ?? []);
+        var builder = new PedidoBuilder(calculadora, entregas).ParaCliente(cliente).ConEntrega(borrador.Entrega);
+        foreach (var linea in borrador.Lineas) builder.AgregarInstantanea(capturador.Capturar(linea));
+        var nuevo = builder.Construir(reloj.Ahora, sesion.Exigir().Usuario);
+        if (anterior is not null)
+        {
             anterior.EditarDesde(nuevo); nuevo = anterior;
         }
         await u.Pedidos.GuardarAsync(nuevo); await u.ConfirmarAsync(); return nuevo.Id;
