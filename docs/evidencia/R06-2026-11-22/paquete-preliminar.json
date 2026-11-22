@@ -1,0 +1,11 @@
+{
+  "FechaUtc": "2026-11-22T23:10:38.474802+00:00",
+  "Resultado": "APROBADO",
+  "ZIP": "APE04_LogiMarket360_R06_2026-11-22.zip",
+  "Commit": "87ac3089701f477dbbe9215917f7a7ecc0aba457",
+  "Entradas": 616,
+  "ArchivosConSHA256Verificado": 614,
+  "SHA256ZIP": "106178661f44416713af4ca519a8f05f3ddea16c8312b603364203ed8b8b620a",
+  "Exclusiones": "Sin .git/.vs/bin/obj/tmp/artifacts/TestResults, bases de uso o .env",
+  "DestinoTemporal": "tmp\\R06-copia-sdk8-20261122"
+}

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="58fd5fff-7cc8-426e-831c-a8833b09b416" name="ASUS@DESKTOP-4NJRTFA 2026-11-22 18:13:38" runUser="DESKTOP-4NJRTFA\ASUS" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-22T18:13:38.2163571-05:00" queuing="2026-11-22T18:13:38.2163579-05:00" start="2026-11-22T18:13:30.6547400-05:00" finish="2026-11-22T18:13:39.6445864-05:00" />
+  <TestSettings name="default" id="2ee4b1e6-80f0-4abe-91c2-d559df42fab1">
+    <Deployment runDeploymentRoot="ASUS_DESKTOP-4NJRTFA_2026-11-22_18_13_38" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="975e67f7-0963-4180-a6d8-0fad6e3ee54a" testId="ea5e14ec-e774-a770-9bb7-6912a23d2957" testName="RevisionLogiMarket360.RevisionAdicionalTests.REV04_Interpreter_RechazaUnOperadorComoValorDeCliente(filtro: &quot;CLIENTE = =&quot;)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0002105" startTime="2026-11-22T18:13:38.1923923-05:00" endTime="2026-11-22T18:13:38.1923925-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="975e67f7-0963-4180-a6d8-0fad6e3ee54a">
+      <Output>
+        <StdOut>Filtro invalido: CLIENTE = =</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3e988ed4-e80e-4366-935c-937b977d5403" testId="9ddb65f2-4fbf-c547-1793-397291192912" testName="RevisionLogiMarket360.RevisionAdicionalTests.REV02_ProductoEliminado_DebeSeguirEliminadoTrasReiniciar" computerName="DESKTOP-4NJRTFA" duration="00:00:03.8766892" startTime="2026-11-22T18:13:38.1757247-05:00" endTime="2026-11-22T18:13:38.1757569-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3e988ed4-e80e-4366-935c-937b977d5403">
+      <Output>
+        <StdOut>Productos antes del reinicio: 4&#xD;
+Productos despues del reinicio: 4&#xD;
+P04 reaparece: False</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="fdd05d0a-1414-4c75-b8c3-3b9f98eafe55" testId="b8b1c658-c0e0-e82f-a043-9428bf1eca3d" testName="RevisionLogiMarket360.RevisionAdicionalTests.REV03_RegistrarPedido_NoDebeAceptarPrecioInventadoPorElLlamador" computerName="DESKTOP-4NJRTFA" duration="00:00:00.8532963" startTime="2026-11-22T18:13:39.0349478-05:00" endTime="2026-11-22T18:13:39.0349481-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fdd05d0a-1414-4c75-b8c3-3b9f98eafe55">
+      <Output>
+        <StdOut>Precio real del SKU P01: 20,0&#xD;
+Precio aportado por el llamador: 1.00&#xD;
+Total cobrado con tarifa 5.00: 25,0</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f9eb530f-c54d-4e97-8419-c0cdf92c34e6" testId="c569dc66-1f72-5a7d-e4e6-5963980efc18" testName="RevisionLogiMarket360.RevisionAdicionalTests.REV04_Interpreter_RechazaUnOperadorComoValorDeCliente(filtro: &quot;CLIENTE = &gt;=&quot;)" computerName="DESKTOP-4NJRTFA" duration="00:00:00.0068850" startTime="2026-11-22T18:13:38.1915854-05:00" endTime="2026-11-22T18:13:38.1915854-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f9eb530f-c54d-4e97-8419-c0cdf92c34e6">
+      <Output>
+        <StdOut>Filtro invalido: CLIENTE = &gt;=</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0bd1d8b4-30df-43a6-b2f7-d28676713a37" testId="3bab5080-1d02-914c-41ff-cb28d27e8205" testName="RevisionLogiMarket360.RevisionAdicionalTests.REV01_ReintentoConOtraClaveTrasRollback_NoDebeDuplicarCobro" computerName="DESKTOP-4NJRTFA" duration="00:00:00.5099832" startTime="2026-11-22T18:13:39.5449808-05:00" endTime="2026-11-22T18:13:39.5449814-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0bd1d8b4-30df-43a6-b2f7-d28676713a37">
+      <Output>
+        <StdOut>Pedido: 8f83e0fe-72b4-419a-af7c-f34edb7cd17b&#xD;
+Pagos locales: 1&#xD;
+Cobros aceptados del proveedor: 1&#xD;
+Importe aceptado acumulado: 59&#xD;
+revision-intento-1: 59, SIM-68198aedac374ad1945822ca27d2396e</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="RevisionLogiMarket360.RevisionAdicionalTests.REV04_Interpreter_RechazaUnOperadorComoValorDeCliente(filtro: &quot;CLIENTE = &gt;=&quot;)" storage="c:\users\asus\source\repos\logimarket360\tmp\r06-copia-sdk8-20261122\logimarket360\docs\revisiones\2026-11-22\recibido\revision_logimarket360_2026-11-22\pruebas\bin\release\net8.0\revisionprobes.dll" id="c569dc66-1f72-5a7d-e4e6-5963980efc18">
+      <Execution id="f9eb530f-c54d-4e97-8419-c0cdf92c34e6" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\tmp\R06-copia-sdk8-20261122\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\bin\Release\net8.0\RevisionProbes.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RevisionLogiMarket360.RevisionAdicionalTests" name="REV04_Interpreter_RechazaUnOperadorComoValorDeCliente" />
+    </UnitTest>
+    <UnitTest name="RevisionLogiMarket360.RevisionAdicionalTests.REV04_Interpreter_RechazaUnOperadorComoValorDeCliente(filtro: &quot;CLIENTE = =&quot;)" storage="c:\users\asus\source\repos\logimarket360\tmp\r06-copia-sdk8-20261122\logimarket360\docs\revisiones\2026-11-22\recibido\revision_logimarket360_2026-11-22\pruebas\bin\release\net8.0\revisionprobes.dll" id="ea5e14ec-e774-a770-9bb7-6912a23d2957">
+      <Execution id="975e67f7-0963-4180-a6d8-0fad6e3ee54a" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\tmp\R06-copia-sdk8-20261122\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\bin\Release\net8.0\RevisionProbes.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RevisionLogiMarket360.RevisionAdicionalTests" name="REV04_Interpreter_RechazaUnOperadorComoValorDeCliente" />
+    </UnitTest>
+    <UnitTest name="RevisionLogiMarket360.RevisionAdicionalTests.REV03_RegistrarPedido_NoDebeAceptarPrecioInventadoPorElLlamador" storage="c:\users\asus\source\repos\logimarket360\tmp\r06-copia-sdk8-20261122\logimarket360\docs\revisiones\2026-11-22\recibido\revision_logimarket360_2026-11-22\pruebas\bin\release\net8.0\revisionprobes.dll" id="b8b1c658-c0e0-e82f-a043-9428bf1eca3d">
+      <Execution id="fdd05d0a-1414-4c75-b8c3-3b9f98eafe55" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\tmp\R06-copia-sdk8-20261122\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\bin\Release\net8.0\RevisionProbes.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RevisionLogiMarket360.RevisionAdicionalTests" name="REV03_RegistrarPedido_NoDebeAceptarPrecioInventadoPorElLlamador" />
+    </UnitTest>
+    <UnitTest name="RevisionLogiMarket360.RevisionAdicionalTests.REV02_ProductoEliminado_DebeSeguirEliminadoTrasReiniciar" storage="c:\users\asus\source\repos\logimarket360\tmp\r06-copia-sdk8-20261122\logimarket360\docs\revisiones\2026-11-22\recibido\revision_logimarket360_2026-11-22\pruebas\bin\release\net8.0\revisionprobes.dll" id="9ddb65f2-4fbf-c547-1793-397291192912">
+      <Execution id="3e988ed4-e80e-4366-935c-937b977d5403" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\tmp\R06-copia-sdk8-20261122\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\bin\Release\net8.0\RevisionProbes.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RevisionLogiMarket360.RevisionAdicionalTests" name="REV02_ProductoEliminado_DebeSeguirEliminadoTrasReiniciar" />
+    </UnitTest>
+    <UnitTest name="RevisionLogiMarket360.RevisionAdicionalTests.REV01_ReintentoConOtraClaveTrasRollback_NoDebeDuplicarCobro" storage="c:\users\asus\source\repos\logimarket360\tmp\r06-copia-sdk8-20261122\logimarket360\docs\revisiones\2026-11-22\recibido\revision_logimarket360_2026-11-22\pruebas\bin\release\net8.0\revisionprobes.dll" id="3bab5080-1d02-914c-41ff-cb28d27e8205">
+      <Execution id="0bd1d8b4-30df-43a6-b2f7-d28676713a37" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\tmp\R06-copia-sdk8-20261122\LogiMarket360\docs\revisiones\2026-11-22\recibido\Revision_LogiMarket360_2026-11-22\pruebas\bin\Release\net8.0\RevisionProbes.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="RevisionLogiMarket360.RevisionAdicionalTests" name="REV01_ReintentoConOtraClaveTrasRollback_NoDebeDuplicarCobro" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="ea5e14ec-e774-a770-9bb7-6912a23d2957" executionId="975e67f7-0963-4180-a6d8-0fad6e3ee54a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="9ddb65f2-4fbf-c547-1793-397291192912" executionId="3e988ed4-e80e-4366-935c-937b977d5403" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b8b1c658-c0e0-e82f-a043-9428bf1eca3d" executionId="fdd05d0a-1414-4c75-b8c3-3b9f98eafe55" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c569dc66-1f72-5a7d-e4e6-5963980efc18" executionId="f9eb530f-c54d-4e97-8419-c0cdf92c34e6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3bab5080-1d02-914c-41ff-cb28d27e8205" executionId="0bd1d8b4-30df-43a6-b2f7-d28676713a37" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="5" executed="5" passed="5" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.34)&#xD;
+[xUnit.net 00:00:01.83]   Discovering: RevisionProbes&#xD;
+[xUnit.net 00:00:01.89]   Discovered:  RevisionProbes&#xD;
+[xUnit.net 00:00:01.89]   Starting:    RevisionProbes&#xD;
+[xUnit.net 00:00:07.19]   Finished:    RevisionProbes&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

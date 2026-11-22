@@ -1,0 +1,13 @@
+  LogiMarket.Domain -> C:\Users\ASUS\source\repos\LogiMarket360\tmp\R06-copia-sdk8-20261122\LogiMarket360\LogiMarket.Domain\bin\Release\net8.0\LogiMarket.Domain.dll
+  LogiMarket.Application -> C:\Users\ASUS\source\repos\LogiMarket360\tmp\R06-copia-sdk8-20261122\LogiMarket360\LogiMarket.Application\bin\Release\net8.0\LogiMarket.Application.dll
+  LogiMarket.Infrastructure -> C:\Users\ASUS\source\repos\LogiMarket360\tmp\R06-copia-sdk8-20261122\LogiMarket360\LogiMarket.Infrastructure\bin\Release\net8.0\LogiMarket.Infrastructure.dll
+  LogiMarket.Tests -> C:\Users\ASUS\source\repos\LogiMarket360\tmp\R06-copia-sdk8-20261122\LogiMarket360\LogiMarket.Tests\bin\Release\net8.0\LogiMarket.Tests.dll
+  RevisionProbes -> C:\Users\ASUS\source\repos\LogiMarket360\tmp\R06-copia-sdk8-20261122\LogiMarket360\docs\revisiones\segunda-2026-11-22\recibido\Segunda_Revision_LogiMarket360_2026-11-22\prueba_nueva\bin\Release\net8.0\RevisionProbes.dll
+Serie de pruebas para C:\Users\ASUS\source\repos\LogiMarket360\tmp\R06-copia-sdk8-20261122\LogiMarket360\docs\revisiones\segunda-2026-11-22\recibido\Segunda_Revision_LogiMarket360_2026-11-22\prueba_nueva\bin\Release\net8.0\RevisionProbes.dll (.NETCoreApp,Version=v8.0)
+Versión 17.11.1 (x64) de VSTest
+
+Iniciando la ejecución de pruebas, espere...
+1 archivos de prueba en total coincidieron con el patrón especificado.
+Archivo de resultados: C:\Users\ASUS\source\repos\LogiMarket360\docs\evidencia\R06-2026-11-22\copia-limpia\R06-sdk8.trx
+
+Correctas! - Con error:     0, Superado:     1, Omitido:     0, Total:     1, Duración: < 1 ms - RevisionProbes.dll (net8.0)

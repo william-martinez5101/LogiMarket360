@@ -32,6 +32,7 @@ No se omite la validacion de stock, no se introduce stock negativo y no se cambi
 | Cinco externas de la primera revision | 5/5 aprobadas | [TRX de las cinco](final/cinco-anteriores.trx) |
 | Aceptaciones del PDF | P01-P38 aprobadas nuevamente | [Matriz con valores reales](P01-P38.md) |
 | Restore bloqueado y build Release -warnaserror | 0 errores, 0 advertencias | [Restore](final/restore.log), [build](despues/build-winforms.log) |
+| Copia limpia del ZIP con SDK 8.0.420 | 163/163 +5/5 +1/1; build Release -warnaserror sin errores/advertencias | [Verificacion de la extraccion](copia-limpia/verificacion.json) |
 
 Las 149 anteriores se compararon por nombre y multiplicidad con las 163 finales; no se elimino ninguna. Los catorce casos agregados cubren ambos proveedores, rollback reiterado, otra clave/proveedor, cancelacion segura, rechazo y posterior aceptacion, unidades libres, ajustes negativos, kits y SKU repetidos, cambio posterior del catalogo, dos instancias competidoras, dos aceptaciones nuevas concurrentes, reinicio, bloqueo/cancelacion de lectura y Outbox fallido/reprocesado sin duplicados.
 
@@ -65,7 +66,17 @@ La base normal `C:\Users\ASUS\AppData\Local\LogiMarket360\logimarket.db` conserv
 | bc9b3bf | Reserva equivalente durable, validacion de disponibilidad, proteccion de ajustes, espera del diario y catorce regresiones |
 | dbfe6dc | Existencias en WinForms y evidencia de 163 pruebas, P01-P38, dos procesos y reinicio real |
 
-Los commits posteriores registran esta documentacion y la comprobacion de la copia limpia. El paquete `artifacts/APE04_LogiMarket360_R06_2026-11-22.zip` incluye HEAD, historial y SHA-256 de cada archivo en su manifiesto; conserva las revisiones originales y la evidencia anterior/despues, excluyendo Git interno, binarios generados, temporales y bases de ejecucion. La comprobacion de la copia limpia se incorpora al terminar ese empaquetado.
+Los commits posteriores registran esta documentacion y la comprobacion de la copia limpia. El paquete `artifacts/APE04_LogiMarket360_R06_2026-11-22.zip` incluye HEAD, historial y SHA-256 de cada archivo en su manifiesto; conserva las revisiones originales y la evidencia anterior/despues, excluyendo Git interno, binarios generados, temporales y bases de ejecucion.
+
+## Copia limpia comprobada con .NET 8
+
+Se genero y extrajo un paquete del commit documental `87ac3089701f477dbbe9215917f7a7ecc0aba457`, verificando sus 614 archivos y las exclusiones antes de compilar. [Registro del paquete previo a incluir esta evidencia](paquete-preliminar.json). Dentro de la extraccion temporal se fijo el SDK **8.0.420** mediante un global.json; ese archivo de comprobacion no cambia el destino .NET 8 del proyecto ni se agrega al ZIP entregable.
+
+Desde esa copia se ejecutaron `dotnet tool restore`, restore de la solucion con `--locked-mode`, build Release `--no-restore -warnaserror` y pruebas: **163/163**, **5/5 externas anteriores** y **1/1 externa R06**, sin omitidas. [SDK real](copia-limpia/sdk-info.log), [build](copia-limpia/build.log), [suite](copia-limpia/suite-sdk8.trx), [cinco externas](copia-limpia/adjuntas-sdk8.trx) y [externa R06](copia-limpia/R06-sdk8.trx).
+
+Tambien se creo una base inexistente por CLI con LOGIMARKET_DB apuntando a `tmp/cli-desde-cero/logimarket.db`: `dotnet ef database update --project .\LogiMarket.Infrastructure --configuration Release --no-build` aplico `20261122001802_Inicial`. Luego se ejecuto WinForms con `--initialize` y nuevamente con `--seed`, sin abrir su ventana. Resultado SQL real: cinco productos, dos kits, tres clientes y cuatro usuarios; stock P01-P05 8/5/20/4/30; una marca de seed y cero pagos, movimientos o eventos. Integridad `ok`, sin errores FK. [Migraciones](copia-limpia/migraciones.log), [seed inicial](copia-limpia/seed-inicial.log), [seed repetido](copia-limpia/seed-repetido.log).
+
+La [verificacion automatizada](../../../scripts/Comprobar-Copia-Limpia.py), ejecutada con `python .\scripts\Comprobar-Copia-Limpia.py .\tmp\R06-copia-sdk8-20261122\LogiMarket360 --r06`, comparo los **100 archivos de codigo y dependencias** de la extraccion con el repositorio y el manifiesto, ademas de los dos adjuntos originales. Todos coinciden por SHA-256. El ZIP final se regenera incluyendo estos registros y su HEAD documental actualizado; su codigo y dependencias siguen siendo los mismos que superaron esta comprobacion.
 
 ## Comandos de reproduccion
 
