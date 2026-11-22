@@ -1,0 +1,40 @@
+{
+  "Caso": "P05",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T00:22:57.7803382+00:00",
+  "Metodo": "P05_StockInsuficienteSinEfectos",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Esperado": "Rechazo por P02; cero efectos",
+  "Obtenido": {
+    "Message": "Stock insuficiente para P02: requiere 6, disponible 5."
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [],
+  "Traza": [],
+  "CobrosSimulados": []
+}

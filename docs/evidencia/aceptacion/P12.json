@@ -1,0 +1,51 @@
+{
+  "Caso": "P12",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T00:22:50.3649003+00:00",
+  "Metodo": "P12_AbstractFactoryFamilias",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Esperado": "Tarifas 5/12, plazos 3/1, guias compatibles y mezcla rechazada",
+  "Obtenido": {
+    "a": {
+      "Tipo": 0,
+      "Tarifa": 5,
+      "Dias": 3,
+      "Guia": "GUIA-ESTANDAR-43612cfe8cd645948e3ba09ea72b227e"
+    },
+    "b": {
+      "Tipo": 1,
+      "Tarifa": 12,
+      "Dias": 1,
+      "Guia": "GUIA-EXPRES-43612cfe8cd645948e3ba09ea72b227e"
+    }
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [],
+  "Traza": [],
+  "CobrosSimulados": []
+}

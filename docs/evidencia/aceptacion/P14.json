@@ -1,0 +1,51 @@
+{
+  "Caso": "P14",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T00:22:55.7069881+00:00",
+  "Metodo": "P14_PrototypeProfundoPersistido",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Esperado": "Tres identidades; editar copia2 no cambia plantilla ni copia1",
+  "Obtenido": [
+    {
+      "Id": "075225d5-43a8-48d4-baea-9ea691059830",
+      "Cantidad": 1
+    },
+    {
+      "Id": "0b72f316-e093-4ad1-9cf6-86a6cfb7f10c",
+      "Cantidad": 2
+    },
+    {
+      "Id": "a0b177f7-ba86-4eb4-bef1-b817923ac4ed",
+      "Cantidad": 1
+    }
+  ],
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [],
+  "Traza": [],
+  "CobrosSimulados": []
+}

@@ -1,0 +1,143 @@
+{
+  "Caso": "P20",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T00:22:42.0151883+00:00",
+  "Metodo": "P20_FacadeRollbackYRecuperacionIdempotente",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Esperado": "Fallo antes de commit sin persistencia parcial; reintento recupera cobro original",
+  "Obtenido": {
+    "PagoLocalAntes": 0,
+    "CobrosProveedorFinales": 1
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 7
+    },
+    {
+      "Sku": "P02",
+      "Stock": 4
+    },
+    {
+      "Sku": "P03",
+      "Stock": 19
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [
+    {
+      "Id": "f87da931-bcb8-44d1-acd8-952db0aa21f9",
+      "PedidoId": "f9525026-a554-4604-861d-c90d18815a2a",
+      "Clave": "rollback",
+      "Referencia": "SIM-c7332d54d61f4bd3817c2e964095ac89",
+      "Importe": 59.0,
+      "Proveedor": "LEGADO",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Movimientos": [
+    {
+      "Id": "c06614bc-46e7-442f-8314-ac96f8de8d87",
+      "PedidoId": "f9525026-a554-4604-861d-c90d18815a2a",
+      "Sku": "P02",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "f87da931-bcb8-44d1-acd8-952db0aa21f9",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "c9067ae2-6736-45e0-b829-98cb172a0982",
+      "PedidoId": "f9525026-a554-4604-861d-c90d18815a2a",
+      "Sku": "P01",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "f87da931-bcb8-44d1-acd8-952db0aa21f9",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "e5ac5013-b702-43ec-b058-16986360b74b",
+      "PedidoId": "f9525026-a554-4604-861d-c90d18815a2a",
+      "Sku": "P03",
+      "Cantidad": -1,
+      "Motivo": "VENTA",
+      "Referencia": "f87da931-bcb8-44d1-acd8-952db0aa21f9",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "Eventos": [
+    {
+      "Evento": {
+        "Id": "b66ae082-3b19-45d1-9462-74fcc0daea30",
+        "PedidoId": "f9525026-a554-4604-861d-c90d18815a2a",
+        "Tipo": "PedidoPagado",
+        "Importe": 59.0,
+        "Canal": "EMAIL",
+        "Fecha": "2026-11-21T17:00:00+00:00"
+      },
+      "Intentos": 0,
+      "Procesado": null,
+      "Error": null
+    }
+  ],
+  "Avisos": [],
+  "Auditoria": [],
+  "Traza": [
+    {
+      "Id": "7baf8ec3-52f6-4ce4-a8b9-3a21f20f112e",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "rollback",
+      "Mensaje": "Importe=59,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "a87495d7-0994-4444-98fe-1fedf07d3ad3",
+      "Tipo": "PASARELA",
+      "Correlacion": "rollback",
+      "Mensaje": "LEGADO: 5900 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "83dfad37-14cf-4cc7-a52d-58a73bc8d1be",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "rollback",
+      "Mensaje": "LEGADO; aprobado=True; Cobro simulado aprobado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "ef87a580-66c0-4f0a-aaa5-79a7eb3d37aa",
+      "Tipo": "PAGO_INICIO",
+      "Correlacion": "rollback",
+      "Mensaje": "Importe=59,00",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "a349a577-6969-4344-99f2-b9ff43af858a",
+      "Tipo": "PASARELA",
+      "Correlacion": "rollback",
+      "Mensaje": "LEGADO: 5900 centavos",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    },
+    {
+      "Id": "58261ffe-d88e-4cca-8fe2-fa5f679d141b",
+      "Tipo": "PAGO_FIN",
+      "Correlacion": "rollback",
+      "Mensaje": "LEGADO; aprobado=True; Resultado original recuperado.",
+      "Fecha": "2026-11-21T17:00:00+00:00"
+    }
+  ],
+  "CobrosSimulados": [
+    {
+      "Clave": "rollback",
+      "Monto": 59,
+      "Referencia": "SIM-c7332d54d61f4bd3817c2e964095ac89",
+      "Proveedor": "LEGADO"
+    }
+  ]
+}

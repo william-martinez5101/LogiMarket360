@@ -1,0 +1,45 @@
+{
+  "Caso": "P21",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T00:22:55.3843039+00:00",
+  "Metodo": "P21_FlyweightMilFilasMedicionEquivalente",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Esperado": "1000 filas identicas en ambos escenarios; 5 vs 1000 metadatos; bytes asignados del mismo hilo con calentamiento",
+  "Obtenido": {
+    "Filas": 1000,
+    "ObjetosCompartidos": 5,
+    "ObjetosSinCompartir": 1000,
+    "IdentidadCompartida": true,
+    "BytesCompartidos": 58104,
+    "BytesSinCompartir": 104232
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [],
+  "Traza": [],
+  "CobrosSimulados": []
+}

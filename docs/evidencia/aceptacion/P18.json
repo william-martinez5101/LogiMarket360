@@ -1,0 +1,42 @@
+{
+  "Caso": "P18",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T00:22:48.6596884+00:00",
+  "Metodo": "P18_CompositeYCiclosPersistidos",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Esperado": "Precios 50/60; expansion P01/P02/P03; ciclo sin cambios",
+  "Obtenido": {
+    "P01": 1,
+    "P02": 1,
+    "P03": 1
+  },
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [],
+  "Traza": [],
+  "CobrosSimulados": []
+}

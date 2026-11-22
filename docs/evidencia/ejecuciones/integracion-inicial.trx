@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="45d47dcf-44e5-4a70-bbeb-3a58dd941137" name="ASUS@DESKTOP-4NJRTFA 2026-11-21 19:17:19" runUser="DESKTOP-4NJRTFA\ASUS" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-11-21T19:17:19.1753831-05:00" queuing="2026-11-21T19:17:19.1753838-05:00" start="2026-11-21T19:17:15.4710780-05:00" finish="2026-11-21T19:17:21.8006076-05:00" />
+  <TestSettings name="default" id="066b9f13-d6f1-4d35-87c2-c29957dec5be">
+    <Deployment runDeploymentRoot="ASUS_DESKTOP-4NJRTFA_2026-11-21_19_17_19" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="4182366b-1614-486b-8a8b-97c11dad83cb" testId="a8a6fbde-76d7-9d4f-7b11-755bd345afc6" testName="LogiMarket.Tests.Integracion.AceptacionTests.P08_PagadoInmutable" computerName="DESKTOP-4NJRTFA" duration="00:00:00.2426403" startTime="2026-11-21T19:17:20.8671407-05:00" endTime="2026-11-21T19:17:20.8671408-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4182366b-1614-486b-8a8b-97c11dad83cb">
+      <Output>
+        <ErrorInfo>
+          <Message>Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException : The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See https://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.</Message>
+          <StackTrace>   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs:line 51&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Tests.Integracion.Escenario.ValidadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs:line 76&#xD;
+   at LogiMarket.Tests.Integracion.Escenario.PagadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs:line 78&#xD;
+   at LogiMarket.Tests.Integracion.AceptacionTests.P08_PagadoInmutable() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs:line 73&#xD;
+   at LogiMarket.Tests.Integracion.AceptacionTests.P08_PagadoInmutable() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs:line 78&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ff581db5-11f1-48a7-a559-f33da928b798" testId="f5ac199a-a989-d8a7-77f6-4e31fbb968a9" testName="LogiMarket.Tests.Integracion.AceptacionTests.P04_Carmen90" computerName="DESKTOP-4NJRTFA" duration="00:00:00.2340260" startTime="2026-11-21T19:17:19.8776249-05:00" endTime="2026-11-21T19:17:19.8776250-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ff581db5-11f1-48a7-a559-f33da928b798">
+      <Output>
+        <ErrorInfo>
+          <Message>Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException : The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See https://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.</Message>
+          <StackTrace>   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs:line 51&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Tests.Integracion.Escenario.ValidadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs:line 76&#xD;
+   at LogiMarket.Tests.Integracion.Escenario.PagadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs:line 78&#xD;
+   at LogiMarket.Tests.Integracion.AceptacionTests.P04_Carmen90() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs:line 45&#xD;
+   at LogiMarket.Tests.Integracion.AceptacionTests.P04_Carmen90() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs:line 47&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3d058735-2399-4db8-b4bb-5f4d88864894" testId="67705202-8895-0f24-6186-93160056b72f" testName="LogiMarket.Tests.Integracion.AceptacionTests.P06_CobroRechazadoSinEfectos" computerName="DESKTOP-4NJRTFA" duration="00:00:02.4752606" startTime="2026-11-21T19:17:19.1440845-05:00" endTime="2026-11-21T19:17:19.1441063-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3d058735-2399-4db8-b4bb-5f4d88864894">
+      <Output>
+        <ErrorInfo>
+          <Message>Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException : The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See https://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.</Message>
+          <StackTrace>   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs:line 51&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Tests.Integracion.Escenario.ValidadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs:line 76&#xD;
+   at LogiMarket.Tests.Integracion.AceptacionTests.P06_CobroRechazadoSinEfectos() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs:line 59&#xD;
+   at LogiMarket.Tests.Integracion.AceptacionTests.P06_CobroRechazadoSinEfectos() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs:line 62&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0d438ecb-0196-47db-be00-89ab4c834386" testId="e5f88c2c-e96c-58b2-dd5c-28b2cd81d359" testName="LogiMarket.Tests.Integracion.AceptacionTests.P01_MigracionesYSeedIdempotente" computerName="DESKTOP-4NJRTFA" duration="00:00:00.4966120" startTime="2026-11-21T19:17:20.6216588-05:00" endTime="2026-11-21T19:17:20.6216591-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0d438ecb-0196-47db-be00-89ab4c834386" />
+    <UnitTestResult executionId="c35873db-146b-411e-8e5a-24817cf5ad87" testId="46bc9e14-6154-1541-cd92-e2b7fb1e5619" testName="LogiMarket.Tests.Integracion.AceptacionTests.P09_DespachoYEntregaConBodega" computerName="DESKTOP-4NJRTFA" duration="00:00:00.2700020" startTime="2026-11-21T19:17:21.1382126-05:00" endTime="2026-11-21T19:17:21.1382136-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c35873db-146b-411e-8e5a-24817cf5ad87">
+      <Output>
+        <ErrorInfo>
+          <Message>Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException : The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See https://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.</Message>
+          <StackTrace>   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs:line 51&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Tests.Integracion.Escenario.ValidadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs:line 76&#xD;
+   at LogiMarket.Tests.Integracion.Escenario.PagadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs:line 78&#xD;
+   at LogiMarket.Tests.Integracion.AceptacionTests.P09_DespachoYEntregaConBodega() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs:line 82&#xD;
+   at LogiMarket.Tests.Integracion.AceptacionTests.P09_DespachoYEntregaConBodega() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs:line 85&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9699e8f1-47e9-4913-8c99-fb199d756b1a" testId="992866b1-6641-45a1-32bd-f1fd0af29b3e" testName="LogiMarket.Tests.Integracion.AceptacionTests.P07_IdempotenciaTrasPagadoYReinicio" computerName="DESKTOP-4NJRTFA" duration="00:00:00.2523003" startTime="2026-11-21T19:17:19.6427998-05:00" endTime="2026-11-21T19:17:19.6428000-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9699e8f1-47e9-4913-8c99-fb199d756b1a">
+      <Output>
+        <ErrorInfo>
+          <Message>Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException : The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See https://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.</Message>
+          <StackTrace>   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs:line 51&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Tests.Integracion.Escenario.ValidadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs:line 76&#xD;
+   at LogiMarket.Tests.Integracion.AceptacionTests.P07_IdempotenciaTrasPagadoYReinicio() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs:line 66&#xD;
+   at LogiMarket.Tests.Integracion.AceptacionTests.P07_IdempotenciaTrasPagadoYReinicio() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs:line 69&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7fd50779-c231-4ef6-9c5b-a811ee8897d8" testId="19c14843-f9cc-fda9-94f0-9f31215a390d" testName="LogiMarket.Tests.Integracion.AceptacionTests.P10_PersistenciaEntreInstancias" computerName="DESKTOP-4NJRTFA" duration="00:00:00.2525208" startTime="2026-11-21T19:17:19.3897565-05:00" endTime="2026-11-21T19:17:19.3897566-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7fd50779-c231-4ef6-9c5b-a811ee8897d8">
+      <Output>
+        <ErrorInfo>
+          <Message>Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException : The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See https://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.</Message>
+          <StackTrace>   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs:line 51&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Tests.Integracion.Escenario.ValidadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs:line 76&#xD;
+   at LogiMarket.Tests.Integracion.Escenario.PagadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs:line 78&#xD;
+   at LogiMarket.Tests.Integracion.AceptacionTests.P10_PersistenciaEntreInstancias() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs:line 89&#xD;
+   at LogiMarket.Tests.Integracion.AceptacionTests.P10_PersistenciaEntreInstancias() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs:line 92&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="34f02183-37f5-4c56-85bf-aa7a101220c6" testId="57fd873d-3c78-870d-694a-6230dccd1ca6" testName="LogiMarket.Tests.Integracion.AceptacionTests.P03_Luis102" computerName="DESKTOP-4NJRTFA" duration="00:00:00.2432386" startTime="2026-11-21T19:17:20.1218580-05:00" endTime="2026-11-21T19:17:20.1218584-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="34f02183-37f5-4c56-85bf-aa7a101220c6">
+      <Output>
+        <ErrorInfo>
+          <Message>Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException : The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See https://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.</Message>
+          <StackTrace>   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs:line 51&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Tests.Integracion.Escenario.ValidadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs:line 76&#xD;
+   at LogiMarket.Tests.Integracion.Escenario.PagadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs:line 78&#xD;
+   at LogiMarket.Tests.Integracion.AceptacionTests.P03_Luis102() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs:line 39&#xD;
+   at LogiMarket.Tests.Integracion.AceptacionTests.P03_Luis102() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs:line 41&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7362eca3-d37a-4d41-b60f-8cd140b0e33b" testId="480d9080-7669-80d8-2d53-9aacac0b74f1" testName="LogiMarket.Tests.Integracion.AceptacionTests.P05_StockInsuficienteSinEfectos" computerName="DESKTOP-4NJRTFA" duration="00:00:00.3305221" startTime="2026-11-21T19:17:21.7271561-05:00" endTime="2026-11-21T19:17:21.7271566-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7362eca3-d37a-4d41-b60f-8cd140b0e33b" />
+    <UnitTestResult executionId="4bdc0908-9b46-4486-9383-ed79799d79fd" testId="640620fb-0f7e-9049-913b-752a2558b361" testName="LogiMarket.Tests.Integracion.AceptacionTests.P02_Ana59" computerName="DESKTOP-4NJRTFA" duration="00:00:00.2578586" startTime="2026-11-21T19:17:21.3973477-05:00" endTime="2026-11-21T19:17:21.3973480-05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="4bdc0908-9b46-4486-9383-ed79799d79fd">
+      <Output>
+        <ErrorInfo>
+          <Message>Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException : The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See https://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.</Message>
+          <StackTrace>   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+   at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs:line 51&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs:line 39&#xD;
+   at LogiMarket.Tests.Integracion.Escenario.ValidadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs:line 76&#xD;
+   at LogiMarket.Tests.Integracion.Escenario.PagadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas) in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs:line 78&#xD;
+   at LogiMarket.Tests.Integracion.AceptacionTests.P02_Ana59() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs:line 32&#xD;
+   at LogiMarket.Tests.Integracion.AceptacionTests.P02_Ana59() in C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs:line 35&#xD;
+--- End of stack trace from previous location ---</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="LogiMarket.Tests.Integracion.AceptacionTests.P09_DespachoYEntregaConBodega" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\debug\net8.0\logimarket.tests.dll" id="46bc9e14-6154-1541-cd92-e2b7fb1e5619">
+      <Execution id="c35873db-146b-411e-8e5a-24817cf5ad87" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Debug\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.AceptacionTests" name="P09_DespachoYEntregaConBodega" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.AceptacionTests.P05_StockInsuficienteSinEfectos" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\debug\net8.0\logimarket.tests.dll" id="480d9080-7669-80d8-2d53-9aacac0b74f1">
+      <Execution id="7362eca3-d37a-4d41-b60f-8cd140b0e33b" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Debug\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.AceptacionTests" name="P05_StockInsuficienteSinEfectos" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.AceptacionTests.P03_Luis102" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\debug\net8.0\logimarket.tests.dll" id="57fd873d-3c78-870d-694a-6230dccd1ca6">
+      <Execution id="34f02183-37f5-4c56-85bf-aa7a101220c6" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Debug\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.AceptacionTests" name="P03_Luis102" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.AceptacionTests.P02_Ana59" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\debug\net8.0\logimarket.tests.dll" id="640620fb-0f7e-9049-913b-752a2558b361">
+      <Execution id="4bdc0908-9b46-4486-9383-ed79799d79fd" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Debug\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.AceptacionTests" name="P02_Ana59" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.AceptacionTests.P04_Carmen90" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\debug\net8.0\logimarket.tests.dll" id="f5ac199a-a989-d8a7-77f6-4e31fbb968a9">
+      <Execution id="ff581db5-11f1-48a7-a559-f33da928b798" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Debug\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.AceptacionTests" name="P04_Carmen90" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.AceptacionTests.P01_MigracionesYSeedIdempotente" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\debug\net8.0\logimarket.tests.dll" id="e5f88c2c-e96c-58b2-dd5c-28b2cd81d359">
+      <Execution id="0d438ecb-0196-47db-be00-89ab4c834386" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Debug\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.AceptacionTests" name="P01_MigracionesYSeedIdempotente" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.AceptacionTests.P08_PagadoInmutable" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\debug\net8.0\logimarket.tests.dll" id="a8a6fbde-76d7-9d4f-7b11-755bd345afc6">
+      <Execution id="4182366b-1614-486b-8a8b-97c11dad83cb" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Debug\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.AceptacionTests" name="P08_PagadoInmutable" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.AceptacionTests.P07_IdempotenciaTrasPagadoYReinicio" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\debug\net8.0\logimarket.tests.dll" id="992866b1-6641-45a1-32bd-f1fd0af29b3e">
+      <Execution id="9699e8f1-47e9-4913-8c99-fb199d756b1a" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Debug\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.AceptacionTests" name="P07_IdempotenciaTrasPagadoYReinicio" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.AceptacionTests.P10_PersistenciaEntreInstancias" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\debug\net8.0\logimarket.tests.dll" id="19c14843-f9cc-fda9-94f0-9f31215a390d">
+      <Execution id="7fd50779-c231-4ef6-9c5b-a811ee8897d8" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Debug\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.AceptacionTests" name="P10_PersistenciaEntreInstancias" />
+    </UnitTest>
+    <UnitTest name="LogiMarket.Tests.Integracion.AceptacionTests.P06_CobroRechazadoSinEfectos" storage="c:\users\asus\source\repos\logimarket360\logimarket.tests\bin\debug\net8.0\logimarket.tests.dll" id="67705202-8895-0f24-6186-93160056b72f">
+      <Execution id="3d058735-2399-4db8-b4bb-5f4d88864894" />
+      <TestMethod codeBase="C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\bin\Debug\net8.0\LogiMarket.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="LogiMarket.Tests.Integracion.AceptacionTests" name="P06_CobroRechazadoSinEfectos" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="a8a6fbde-76d7-9d4f-7b11-755bd345afc6" executionId="4182366b-1614-486b-8a8b-97c11dad83cb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f5ac199a-a989-d8a7-77f6-4e31fbb968a9" executionId="ff581db5-11f1-48a7-a559-f33da928b798" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="67705202-8895-0f24-6186-93160056b72f" executionId="3d058735-2399-4db8-b4bb-5f4d88864894" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e5f88c2c-e96c-58b2-dd5c-28b2cd81d359" executionId="0d438ecb-0196-47db-be00-89ab4c834386" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="46bc9e14-6154-1541-cd92-e2b7fb1e5619" executionId="c35873db-146b-411e-8e5a-24817cf5ad87" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="992866b1-6641-45a1-32bd-f1fd0af29b3e" executionId="9699e8f1-47e9-4913-8c99-fb199d756b1a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="19c14843-f9cc-fda9-94f0-9f31215a390d" executionId="7fd50779-c231-4ef6-9c5b-a811ee8897d8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="57fd873d-3c78-870d-694a-6230dccd1ca6" executionId="34f02183-37f5-4c56-85bf-aa7a101220c6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="480d9080-7669-80d8-2d53-9aacac0b74f1" executionId="7362eca3-d37a-4d41-b60f-8cd140b0e33b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="640620fb-0f7e-9049-913b-752a2558b361" executionId="4bdc0908-9b46-4486-9383-ed79799d79fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Resultados sin formato de lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Failed">
+    <Counters total="10" executed="10" passed="2" failed="8" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.5.3.1+6b60a9e56a (64-bit .NET 8.0.34)&#xD;
+[xUnit.net 00:00:00.38]   Discovering: LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.43]   Discovered:  LogiMarket.Tests&#xD;
+[xUnit.net 00:00:00.44]   Starting:    LogiMarket.Tests&#xD;
+[xUnit.net 00:00:03.01]       Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException : The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See https://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.&#xD;
+[xUnit.net 00:00:03.01]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.01]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.01]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.01]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.01]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.01]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.01]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.01]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.01]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.01]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.01]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.01]            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.01]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs(51,0): at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct)&#xD;
+[xUnit.net 00:00:03.01]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:03.01]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:03.01]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs(76,0): at LogiMarket.Tests.Integracion.Escenario.ValidadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas)&#xD;
+[xUnit.net 00:00:03.01]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs(59,0): at LogiMarket.Tests.Integracion.AceptacionTests.P06_CobroRechazadoSinEfectos()&#xD;
+[xUnit.net 00:00:03.01]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs(62,0): at LogiMarket.Tests.Integracion.AceptacionTests.P06_CobroRechazadoSinEfectos()&#xD;
+[xUnit.net 00:00:03.01]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:03.25]       Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException : The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See https://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.&#xD;
+[xUnit.net 00:00:03.25]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.25]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.26]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.26]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.26]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.26]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.26]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.26]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.26]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.26]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.26]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.26]            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.26]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs(51,0): at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct)&#xD;
+[xUnit.net 00:00:03.26]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:03.26]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:03.26]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs(76,0): at LogiMarket.Tests.Integracion.Escenario.ValidadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas)&#xD;
+[xUnit.net 00:00:03.26]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs(78,0): at LogiMarket.Tests.Integracion.Escenario.PagadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas)&#xD;
+[xUnit.net 00:00:03.26]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs(89,0): at LogiMarket.Tests.Integracion.AceptacionTests.P10_PersistenciaEntreInstancias()&#xD;
+[xUnit.net 00:00:03.26]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs(92,0): at LogiMarket.Tests.Integracion.AceptacionTests.P10_PersistenciaEntreInstancias()&#xD;
+[xUnit.net 00:00:03.26]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:03.51]       Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException : The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See https://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.&#xD;
+[xUnit.net 00:00:03.51]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.51]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.51]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.51]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.51]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.51]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.51]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.51]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.51]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.51]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.51]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.51]            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.51]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs(51,0): at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct)&#xD;
+[xUnit.net 00:00:03.51]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:03.51]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:03.51]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs(76,0): at LogiMarket.Tests.Integracion.Escenario.ValidadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas)&#xD;
+[xUnit.net 00:00:03.51]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs(66,0): at LogiMarket.Tests.Integracion.AceptacionTests.P07_IdempotenciaTrasPagadoYReinicio()&#xD;
+[xUnit.net 00:00:03.51]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs(69,0): at LogiMarket.Tests.Integracion.AceptacionTests.P07_IdempotenciaTrasPagadoYReinicio()&#xD;
+[xUnit.net 00:00:03.51]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:03.74]       Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException : The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See https://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.&#xD;
+[xUnit.net 00:00:03.74]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.74]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.74]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.74]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.74]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.74]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.74]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.74]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.74]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.74]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.74]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.74]            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.74]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs(51,0): at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct)&#xD;
+[xUnit.net 00:00:03.74]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:03.74]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:03.74]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs(76,0): at LogiMarket.Tests.Integracion.Escenario.ValidadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas)&#xD;
+[xUnit.net 00:00:03.74]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs(78,0): at LogiMarket.Tests.Integracion.Escenario.PagadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas)&#xD;
+[xUnit.net 00:00:03.74]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs(45,0): at LogiMarket.Tests.Integracion.AceptacionTests.P04_Carmen90()&#xD;
+[xUnit.net 00:00:03.74]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs(47,0): at LogiMarket.Tests.Integracion.AceptacionTests.P04_Carmen90()&#xD;
+[xUnit.net 00:00:03.74]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:03.99]       Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException : The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See https://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.&#xD;
+[xUnit.net 00:00:03.99]       Stack Trace:&#xD;
+[xUnit.net 00:00:03.99]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.99]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.99]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.99]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.99]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.99]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.99]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.99]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.99]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.99]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.99]            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:03.99]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs(51,0): at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct)&#xD;
+[xUnit.net 00:00:03.99]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:03.99]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:03.99]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs(76,0): at LogiMarket.Tests.Integracion.Escenario.ValidadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas)&#xD;
+[xUnit.net 00:00:03.99]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs(78,0): at LogiMarket.Tests.Integracion.Escenario.PagadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas)&#xD;
+[xUnit.net 00:00:03.99]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs(39,0): at LogiMarket.Tests.Integracion.AceptacionTests.P03_Luis102()&#xD;
+[xUnit.net 00:00:03.99]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs(41,0): at LogiMarket.Tests.Integracion.AceptacionTests.P03_Luis102()&#xD;
+[xUnit.net 00:00:03.99]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:04.73]       Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException : The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See https://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.&#xD;
+[xUnit.net 00:00:04.73]       Stack Trace:&#xD;
+[xUnit.net 00:00:04.73]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:04.73]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:04.73]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:04.73]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:04.73]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:04.73]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:04.73]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:04.73]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:04.73]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:04.73]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:04.73]            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:04.73]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs(51,0): at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct)&#xD;
+[xUnit.net 00:00:04.73]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:04.73]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:04.73]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs(76,0): at LogiMarket.Tests.Integracion.Escenario.ValidadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas)&#xD;
+[xUnit.net 00:00:04.73]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs(78,0): at LogiMarket.Tests.Integracion.Escenario.PagadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas)&#xD;
+[xUnit.net 00:00:04.73]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs(73,0): at LogiMarket.Tests.Integracion.AceptacionTests.P08_PagadoInmutable()&#xD;
+[xUnit.net 00:00:04.73]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs(78,0): at LogiMarket.Tests.Integracion.AceptacionTests.P08_PagadoInmutable()&#xD;
+[xUnit.net 00:00:04.73]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:05.00]       Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException : The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See https://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.&#xD;
+[xUnit.net 00:00:05.00]       Stack Trace:&#xD;
+[xUnit.net 00:00:05.00]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.00]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.00]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.00]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.00]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.00]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.00]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.00]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.00]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.00]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.00]            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.00]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs(51,0): at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct)&#xD;
+[xUnit.net 00:00:05.00]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:05.00]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:05.00]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs(76,0): at LogiMarket.Tests.Integracion.Escenario.ValidadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas)&#xD;
+[xUnit.net 00:00:05.00]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs(78,0): at LogiMarket.Tests.Integracion.Escenario.PagadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas)&#xD;
+[xUnit.net 00:00:05.00]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs(82,0): at LogiMarket.Tests.Integracion.AceptacionTests.P09_DespachoYEntregaConBodega()&#xD;
+[xUnit.net 00:00:05.00]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs(85,0): at LogiMarket.Tests.Integracion.AceptacionTests.P09_DespachoYEntregaConBodega()&#xD;
+[xUnit.net 00:00:05.00]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:05.26]       Microsoft.EntityFrameworkCore.DbUpdateConcurrencyException : The database operation was expected to affect 1 row(s), but actually affected 0 row(s); data may have been modified or deleted since entities were loaded. See https://go.microsoft.com/fwlink/?LinkId=527962 for information on understanding and handling optimistic concurrency exceptions.&#xD;
+[xUnit.net 00:00:05.26]       Stack Trace:&#xD;
+[xUnit.net 00:00:05.26]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ThrowAggregateUpdateConcurrencyExceptionAsync(RelationalDataReader reader, Int32 commandIndex, Int32 expectedRowsAffected, Int32 rowsAffected, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.26]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.26]            at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.26]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.26]            at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.26]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.26]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.26]            at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.26]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.26]            at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.26]            at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)&#xD;
+[xUnit.net 00:00:05.26]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Infrastructure\Persistencia\UnidadTrabajoEf.cs(51,0): at LogiMarket.Infrastructure.Persistencia.UnidadTrabajoEf.ConfirmarAsync(CancellationToken ct)&#xD;
+[xUnit.net 00:00:05.26]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:05.26]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Application\Pedidos\PedidosServicio.cs(39,0): at LogiMarket.Application.Pedidos.PedidosServicio.ValidarAsync(Guid id)&#xD;
+[xUnit.net 00:00:05.26]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs(76,0): at LogiMarket.Tests.Integracion.Escenario.ValidadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas)&#xD;
+[xUnit.net 00:00:05.26]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\Escenario.cs(78,0): at LogiMarket.Tests.Integracion.Escenario.PagadoAsync(String cliente, TipoEntrega entrega, ValueTuple`2[] lineas)&#xD;
+[xUnit.net 00:00:05.26]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs(32,0): at LogiMarket.Tests.Integracion.AceptacionTests.P02_Ana59()&#xD;
+[xUnit.net 00:00:05.26]         C:\Users\ASUS\source\repos\LogiMarket360\LogiMarket.Tests\Integracion\AceptacionTests.cs(35,0): at LogiMarket.Tests.Integracion.AceptacionTests.P02_Ana59()&#xD;
+[xUnit.net 00:00:05.26]         --- End of stack trace from previous location ---&#xD;
+[xUnit.net 00:00:05.60]   Finished:    LogiMarket.Tests&#xD;
+</StdOut>
+    </Output>
+    <RunInfos>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-21T19:17:19.1397365-05:00">
+        <Text>[xUnit.net 00:00:03.00]     LogiMarket.Tests.Integracion.AceptacionTests.P06_CobroRechazadoSinEfectos [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-21T19:17:19.3893171-05:00">
+        <Text>[xUnit.net 00:00:03.25]     LogiMarket.Tests.Integracion.AceptacionTests.P10_PersistenciaEntreInstancias [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-21T19:17:19.6424241-05:00">
+        <Text>[xUnit.net 00:00:03.51]     LogiMarket.Tests.Integracion.AceptacionTests.P07_IdempotenciaTrasPagadoYReinicio [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-21T19:17:19.8775929-05:00">
+        <Text>[xUnit.net 00:00:03.74]     LogiMarket.Tests.Integracion.AceptacionTests.P04_Carmen90 [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-21T19:17:20.1211237-05:00">
+        <Text>[xUnit.net 00:00:03.99]     LogiMarket.Tests.Integracion.AceptacionTests.P03_Luis102 [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-21T19:17:20.8666833-05:00">
+        <Text>[xUnit.net 00:00:04.73]     LogiMarket.Tests.Integracion.AceptacionTests.P08_PagadoInmutable [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-21T19:17:21.1376332-05:00">
+        <Text>[xUnit.net 00:00:05.00]     LogiMarket.Tests.Integracion.AceptacionTests.P09_DespachoYEntregaConBodega [FAIL]</Text>
+      </RunInfo>
+      <RunInfo computerName="DESKTOP-4NJRTFA" outcome="Error" timestamp="2026-11-21T19:17:21.3965456-05:00">
+        <Text>[xUnit.net 00:00:05.26]     LogiMarket.Tests.Integracion.AceptacionTests.P02_Ana59 [FAIL]</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+</TestRun>

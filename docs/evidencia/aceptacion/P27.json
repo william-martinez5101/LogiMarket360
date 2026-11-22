@@ -1,0 +1,42 @@
+{
+  "Caso": "P27",
+  "Estado": "APROBADO",
+  "FechaUtc": "2026-11-22T00:22:54.8094023+00:00",
+  "Metodo": "P27_IteratorFisicoPropagaCantidad",
+  "Fuente": "LogiMarket.Tests/Integracion/AceptacionTests.cs",
+  "Esperado": "P01,P02,P03; fin estable; multiplicador 2 llega a todas las hojas",
+  "Obtenido": [
+    "P01",
+    "P02",
+    "P03"
+  ],
+  "Stock": [
+    {
+      "Sku": "P01",
+      "Stock": 8
+    },
+    {
+      "Sku": "P02",
+      "Stock": 5
+    },
+    {
+      "Sku": "P03",
+      "Stock": 20
+    },
+    {
+      "Sku": "P04",
+      "Stock": 4
+    },
+    {
+      "Sku": "P05",
+      "Stock": 30
+    }
+  ],
+  "Pagos": [],
+  "Movimientos": [],
+  "Eventos": [],
+  "Avisos": [],
+  "Auditoria": [],
+  "Traza": [],
+  "CobrosSimulados": []
+}
