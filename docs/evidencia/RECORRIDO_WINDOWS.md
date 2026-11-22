@@ -1,5 +1,7 @@
 # Recorrido real en Windows
 
+La segunda revision agrega el [recorrido R06 en dos procesos Windows y con reinicio](R06-2026-11-22/RESULTADOS.md): compromiso4/disponible0 tras rollback, B sin cargo y A recuperado una sola vez. Las capturas de los recorridos anteriores permanecen conservadas.
+
 Este recorrido corresponde a la primera entrega y se conserva como registro historico. El [recorrido de correcciones del 22/11/2026](correcciones-2026-11-22/RESULTADOS.md) incorpora capturas nuevas del carrito ordenado y del cobro aceptado con fallo local, reinicios y otras claves/proveedor.
 
 Ejecutado el 21 de noviembre de 2026, America/Guayaquil. Las marcas JSON/TRX se conservan en UTC. Aplicacion WinForms real, cuentas ficticias y base aislada `tmp/ui-verificacion/logimarket.db`. No se incluye ese archivo SQLite en el ZIP.

@@ -1,5 +1,7 @@
 # Correcciones verificadas el 22 de noviembre de 2026
 
+Registro historico de R01-R05 y del HEAD b2754b0. La segunda revision encontro R06, fuera de esa cobertura; su [solucion,163 pruebas y recorrido Windows actual](../R06-2026-11-22/RESULTADOS.md) se documentan por separado. Se conservan intactos los TRX/JSON/capturas anteriores.
+
 Repositorio: `C:\Users\ASUS\source\repos\LogiMarket360`, rama `codex/completar-logimarket360`. Inicio real: `b494016a280e1b32cd5b8d4b97f530a0bd550fb3`, arbol limpio y doce commits conservados. Se leyeron LEEME_Revision.md y Prompt_Correcciones_Codex.txt del adjunto, se verifico su manifiesto y se conservaron sus archivos en docs/revisiones/2026-11-22/recibido. La autorizacion de trabajo procede de la peticion del usuario; el adjunto aporta los hallazgos y casos de prueba adoptados por esa peticion.
 
 ## Resultado actual

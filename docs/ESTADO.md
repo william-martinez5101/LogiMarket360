@@ -1,5 +1,17 @@
 # Estado de construccion
 
+## Estado actual tras la segunda revision: R06
+
+- Inicio comprobado: rama codex/completar-logimarket360, HEAD b2754b0013e000bd8e89d8bc9616d96a15c6e31b, arbol limpio y veinte commits conservados.
+- Adjunto Segunda_Revision leido y sus quince archivos originales verificados por SHA-256. Antes de corregir: 149 pruebas aprobadas; externa R06 fallida con dos aceptaciones por 330.00, B PAGADO y A bloqueado por STOCK.
+- Corregida la disponibilidad de las aceptaciones pendientes mediante el diario durable y las instantaneas inmutables de VALIDADO, bajo BEGIN IMMEDIATE. A conserva sus unidades; B solo puede vender cantidades libres. Se protegen tambien ajustes negativos. No cambia Domain ni la migracion original.
+- Resultado actual: **163/163** (149 conservadas +14 nuevas), **5/5 externas anteriores**, **1/1 externa R06**; P01-P38 nuevamente aprobadas. Build Release -warnaserror con 0 errores/advertencias.
+- Windows real con dos procesos sobre la misma base temporal: A aceptado por 165.00 y rollback, fisico 4 / comprometido 4 / disponible 0; B rechazado antes del proveedor; reinicio de A y otra clave/proveedor recuperan la referencia original; un cargo/pago/movimiento/evento/aviso y fisico 0 / comprometido 0 / disponible 0. Outbox reprocesado dos veces desde la otra ventana sin duplicados.
+- Base normal del usuario conservada por SHA-256. No quedan comprobaciones funcionales pendientes de R06; GitHub y el informe academico formal siguen aplazados.
+- Commits funcionales R06: bc9b3bf, proteccion durable y regresiones; dbfe6dc, interfaz y verificacion Windows. Los siguientes commits de documentacion y empaquetado quedan registrados en el manifiesto e historial del ZIP actualizado.
+
+Evidencia actual: [RESULTADOS R06](evidencia/R06-2026-11-22/RESULTADOS.md), [P01-P38](evidencia/R06-2026-11-22/P01-P38.md) y [resumen comprobado](evidencia/R06-2026-11-22/resumen.json). Los apartados siguientes conservan el historial de las entregas anteriores.
+
 ## Punto inicial comprobado
 
 - Rama main, HEAD 1c6501d; se preservan los cuatro commits existentes.
@@ -26,13 +38,13 @@
 - Copia limpia del ZIP verificada con SDK8.0.420: restore locked, build Release con advertencias como errores (0/0) y109/109 pruebas; migracion desde cero y seed doble por los comandos del README.
 - Las P01-P38 de esa entrega estaban aprobadas. La revision independiente posterior encontro cinco puntos fuera de la cobertura original; se reproducen y corrigen en el apartado siguiente.
 
-## Correcciones verificadas el 22/11/2026
+## Primera revision R01-R05 (evidencia historica del 22/11/2026)
 
 - Estado inicial real: rama `codex/completar-logimarket360`, HEAD `b494016`, arbol limpio; conservados los doce commits recibidos.
 - Se descomprimio y verifico el adjunto; se leyeron LEEME_Revision.md y Prompt_Correcciones_Codex.txt. La peticion del usuario adopta sus cinco correcciones; los requisitos originales permanecen sin cambios.
 - Reproduccion: 109/109 originales aprobadas y 5/5 casos adjuntos fallidos. El fallo de seleccion del carrito tambien se reprodujo en la aplicacion Windows anterior, con capturas.
 - Corregidos: identidad durable del cobro por pedido y conciliacion antes de reintentar; seed transaccional una sola vez; seleccion de la linea enlazada al ordenar; captura de instantaneas nuevas en Application; tokens validos del Interpreter con posicion de error.
-- Resultado actual: **149/149** (109 originales +40 regresiones), **5/5 adjuntas**, **P01-P38 aprobadas**; restore bloqueado y build Release con advertencias como errores, 0/0. Se mantienen .NET8/WinForms/EF Core8 y las capas independientes.
+- Resultado de esa revision: **149/149** (109 originales +40 regresiones), **5/5 adjuntas**, **P01-P38 aprobadas**; restore bloqueado y build Release con advertencias como errores, 0/0. Se mantienen .NET8/WinForms/EF Core8 y las capas independientes.
 - Windows real: quitar/cambiar tras ordenar, SKU repetidos, Deshacer/Rehacer, guardado/recarga tras reinicio; cobro59 aceptado con fallo local, reinicio, clave/proveedor distintos, misma referencia original, otro reinicio y tercera clave. Estado real: un cargo/pago/aviso, tres movimientos y un evento procesado; integridad `ok`, sin errores FK.
 - La base de uso del usuario conserva el SHA-256 inicial; las pruebas usaron bases temporales.
 - La extraccion limpia tambien aprueba149/149 y5/5 con SDK8.0.420 y build sin advertencias. Migracion desde cero y seed doble por CLI: datos oficiales sin duplicados, integridad ok. Sus94 archivos de codigo/dependencias coinciden con el codigo entregado; registros en evidencia/correcciones-2026-11-22/copia-limpia.
@@ -47,7 +59,7 @@
 | c6d9f5f | Carrito enlazado por linea; duplicados, ordenacion, historial, pruebas y capturas |
 | 53583a7 | Compatibilidad segura con diarios anteriores: no duplicar aceptaciones sin conciliar |
 
-Detalle actual: [RESULTADOS.md](evidencia/correcciones-2026-11-22/RESULTADOS.md), [P01-P38.md](evidencia/correcciones-2026-11-22/P01-P38.md) y los TRX/JSON/capturas conservados junto a ellos. El manifiesto del ZIP registra el HEAD completo y su historial, incluidos los commits posteriores de evidencia.
+Detalle de R01-R05: [RESULTADOS.md](evidencia/correcciones-2026-11-22/RESULTADOS.md), [P01-P38.md](evidencia/correcciones-2026-11-22/P01-P38.md) y los TRX/JSON/capturas conservados junto a ellos. La segunda revision encontro R06, fuera de la cobertura anterior; su solucion y resultados actuales constan al inicio de este documento.
 
 ## Commits de avance
 

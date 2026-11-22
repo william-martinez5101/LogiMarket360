@@ -9,15 +9,20 @@ import xml.etree.ElementTree as ET
 
 parser = argparse.ArgumentParser()
 parser.add_argument("copia", type=Path)
+parser.add_argument("--r06", action="store_true", help="Comprueba la entrega R06 (163+5+1 pruebas).")
 args = parser.parse_args()
 raiz = Path(__file__).resolve().parent.parent
 copia = args.copia.resolve(strict=True)
 if not copia.is_relative_to(raiz / "tmp"):
     raise ValueError("Se necesita una copia temporal dentro de tmp.")
-salida = raiz / "docs/evidencia/correcciones-2026-11-22/copia-limpia"
+salida = raiz / ("docs/evidencia/R06-2026-11-22/copia-limpia" if args.r06 else "docs/evidencia/correcciones-2026-11-22/copia-limpia")
 ns = {"t": "http://microsoft.com/schemas/VisualStudio/TeamTest/2010"}
 pruebas = {}
-for archivo, cantidad in [("suite-sdk8.trx", 149), ("adjuntas-sdk8.trx", 5)]:
+esperadas = [("suite-sdk8.trx", 163 if args.r06 else 149), ("adjuntas-sdk8.trx", 5)]
+if args.r06:
+    esperadas.append(("R06-sdk8.trx", 1))
+    assert (salida / "sdk-version.log").read_text(encoding="utf-8-sig").strip() == "8.0.420"
+for archivo, cantidad in esperadas:
     arbol = ET.parse(salida / archivo)
     casos = arbol.findall(".//t:UnitTestResult", ns)
     assert len(casos) == cantidad and all(x.attrib["outcome"] == "Passed" for x in casos)
@@ -45,13 +50,18 @@ integridad = db.execute("PRAGMA integrity_check").fetchone()[0]
 foraneas = list(db.execute("PRAGMA foreign_key_check"))
 assert marcas == 1 and migraciones == ["20261122001802_Inicial"] and integridad == "ok" and not foraneas
 db.close()
-recibido = copia / "docs/revisiones/2026-11-22/recibido/Revision_LogiMarket360_2026-11-22"
-originales = json.loads((recibido / "MANIFEST_SHA256.json").read_text(encoding="utf-8-sig"))
-assert all(hashlib.sha256((recibido / x["archivo"]).read_bytes()).hexdigest() == x["sha256"] for x in originales)
+manifiestos = [copia / "docs/revisiones/2026-11-22/recibido/Revision_LogiMarket360_2026-11-22/MANIFEST_SHA256.json"]
+if args.r06:
+    manifiestos.append(copia / "docs/revisiones/segunda-2026-11-22/recibido/Segunda_Revision_LogiMarket360_2026-11-22/MANIFEST_SHA256.json")
+adjuntos = {}
+for recibido in manifiestos:
+    originales = json.loads(recibido.read_text(encoding="utf-8-sig"))
+    assert all(hashlib.sha256((recibido.parent / x["archivo"]).read_bytes()).hexdigest() == x["sha256"] for x in originales)
+    adjuntos[str(recibido.parent.relative_to(copia))] = len(originales)
 resultado = {"FechaUtc": datetime.datetime.now(datetime.timezone.utc).isoformat(), "Resultado": "APROBADO", "SDK": "8.0.420",
     "CommitExtraido": manifiesto["Commit"], "Restauracion": "locked-mode", "Build": "Release -warnaserror: 0 errores, 0 advertencias",
     "Pruebas": pruebas, "ArchivosCodigoYDependenciasIdenticos": len(insumos), "InsumosVerificados": insumos,
     "InicializacionPorCLI": {"Datos": cantidades, "Stock": stock, "MarcasSeed": marcas, "Migraciones": migraciones,
-        "Integridad": integridad, "ErroresFK": foraneas, "BaseTemporal": str(base.relative_to(raiz))}, "ArchivosAdjuntoOriginalVerificados": len(originales)}
+        "Integridad": integridad, "ErroresFK": foraneas, "BaseTemporal": str(base.relative_to(raiz))}, "ArchivosAdjuntosOriginalesVerificados": adjuntos}
 (salida / "verificacion.json").write_text(json.dumps(resultado, ensure_ascii=False, indent=2), encoding="utf-8")
-print(f"APROBADO: SDK8, 149+5 pruebas, {len(insumos)} archivos identicos; migracion real, seed doble sin duplicados; adjunto original intacto.")
+print(f"APROBADO: SDK8, {'163+5+1' if args.r06 else '149+5'} pruebas, {len(insumos)} archivos identicos; migracion real, seed doble sin duplicados; adjuntos originales intactos.")

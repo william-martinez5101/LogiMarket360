@@ -2,6 +2,8 @@
 
 Aplicacion de escritorio C# **.NET 8 / Windows Forms**, con **SQLite y Entity Framework Core 8.0.34**. Incluye ventas, inventario, pagos simulados, despacho, entrega, devoluciones, auditoria, Outbox y los 23 patrones GoF integrados. No calcula IVA. Los comprobantes son internos y todas las integraciones son locales.
 
+Actualizacion R06: los cobros aceptados pendientes de commit comprometen sus unidades de forma durable. Las otras ventas y los ajustes negativos solo pueden consumir unidades libres; el propietario recupera su cobro y consume sus propias unidades una sola vez. [Diseno de la reserva equivalente](docs/RESERVAS_EXISTENCIAS.md) y [resultados/evidencia R06](docs/evidencia/R06-2026-11-22/RESULTADOS.md).
+
 ## Requisitos e instalacion
 
 Windows 10/11, SDK .NET 8 y Windows Desktop Runtime 8; Git para preparar nuevamente el ZIP; Visual Studio con desarrollo de escritorio .NET si se utiliza el IDE. Un SDK posterior tambien compila los destinos net8.0/net8.0-windows. La solucion `.sln` permite usar el SDK 8; se conserva la `.slnx` original para herramientas compatibles.
@@ -19,7 +21,7 @@ Desde la carpeta de la solucion:
 ```powershell
 dotnet tool restore
 dotnet restore .\LogiMarket360.sln --locked-mode
-dotnet build .\LogiMarket360.sln --configuration Release --no-restore
+dotnet build .\LogiMarket360.sln --configuration Release --no-restore -warnaserror
 ```
 
 El manifiesto fija dotnet-ef 8.0.34. Infrastructure fija Microsoft.EntityFrameworkCore.Sqlite y Design 8.0.34; WinForms fija Microsoft.Extensions.DependencyInjection 8.0.1. Los archivos packages.lock.json conservan las dependencias transitivas. Domain y Application no tienen dependencias de EF, SQLite ni WinForms.
@@ -82,6 +84,8 @@ Para demostrar la recuperacion del cobro, active **Fallar guardado del cobro** y
 
 Application captura del catalogo los precios y la composicion de las lineas nuevas. Al editar un borrador, solo conserva instantaneas historicas que coincidan completamente con lineas previamente persistidas de ese pedido, una vez por ocurrencia; cambiar cantidad conserva su instantanea, agregar otra linea captura el catalogo actual. Los pedidos pagados y sus devoluciones mantienen sus valores historicos. En el carrito, ordenar la tabla no cambia la identidad de la linea seleccionada, incluso con SKU repetidos.
 
+Para repetir R06 con datos nuevos: cree y valide A y B de Luis, cada uno P04 x4 y ESTANDAR, total 165.00. Active el fallo del guardado y confirme A. Inventario muestra P04 fisico 4 / comprometido 4 / disponible 0. Desactive el fallo o use otra instancia sobre la misma base: confirmar B se rechaza antes de cobrar. Cierre/reabra y confirme A con otra clave: recupera su referencia, queda PAGADO y las existencias son 0/0/0. Solo se comprometen las cantidades de A; los SKU y cantidades libres siguen vendiendose. Una aceptacion que aun no tiene pago local se protege usando el diario y las lineas inmutables persistidas del pedido VALIDADO. Al confirmar el pago, ese mismo commit consume el compromiso; no hay una liberacion posterior que pueda perderse.
+
 ## Pruebas y evidencia
 
 ```powershell
@@ -98,6 +102,14 @@ dotnet restore $proyectoRevision "-p:LogiMarketRepo=$repoRevision" --locked-mode
 dotnet test $proyectoRevision "-p:LogiMarketRepo=$repoRevision" --configuration Release --no-restore --logger 'trx;LogFileName=adjuntas.trx' --results-directory .\docs\evidencia\reproduccion
 ```
 
+Nueva prueba externa de la segunda revision (tambien incorporada al proyecto principal, sin cambiar su cuerpo/aserciones):
+
+```powershell
+$proyectoR06 = '.\docs\revisiones\segunda-2026-11-22\recibido\Segunda_Revision_LogiMarket360_2026-11-22\prueba_nueva\RevisionProbes.csproj'
+dotnet restore $proyectoR06 "-p:LogiMarketRepo=$repoRevision" --locked-mode
+dotnet test $proyectoR06 "-p:LogiMarketRepo=$repoRevision" --configuration Release --no-restore --logger 'trx;LogFileName=R06.trx' --results-directory .\docs\evidencia\reproduccion
+```
+
 Cada escenario crea un archivo SQLite nuevo en `%TEMP%\LogiMarket360Tests\<guid>\prueba.db`, con un directorio independiente y migraciones reales. No utiliza EF InMemory ni la base normal. P36 abre servicios y conexiones independientes y coordina dos confirmaciones concurrentes. Las pruebas de rechazo verifican ausencia de efectos indebidos.
 
 - [Matriz P01-P38 y resultados reales](docs/evidencia/ACEPTACION.md).
@@ -107,9 +119,9 @@ Cada escenario crea un archivo SQLite nuevo en `%TEMP%\LogiMarket360Tests\<guid>
 - [Riesgos, reparaciones y limites](docs/DECISIONES.md).
 - [Estado y commits de entrega](docs/ESTADO.md).
 
-Resultado despues de la revision del 22/11/2026: **149/149 pruebas** (109 originales conservadas y 40 regresiones), **5/5 pruebas adjuntas**, P01-P38 aprobadas y 23/23 patrones. Restore bloqueado y build Release con advertencias como errores: 0 errores, 0 advertencias. El [registro de correcciones](docs/evidencia/correcciones-2026-11-22/RESULTADOS.md) contiene fallos previos, commits, comandos, capturas reales del carrito ordenado y del cobro con fallo/reinicio/reintentos, y las inspecciones de SQLite. La base de uso del usuario se conservo sin cambios. Los registros de la entrega anterior con 109 pruebas se conservan como evidencia historica.
+Resultado actual R06: **163/163 pruebas** (149 anteriores conservadas y 14 casos nuevos), **5/5 externas anteriores** y **1/1 externa R06**; P01-P38 aprobadas nuevamente. Restore bloqueado y build Release con advertencias como errores: 0 errores, 0 advertencias. El [registro R06](docs/evidencia/R06-2026-11-22/RESULTADOS.md) conserva el fallo previo por 330.00, las regresiones y el recorrido real con dos procesos Windows, reinicio, A recuperado por 165.00 y B sin cobro. La base de uso del usuario conserva su huella inicial. Las evidencias anteriores de 109 y 149 pruebas, incluidas las correcciones R01-R05, se conservan como registros historicos.
 
-La copia limpia extraida tambien compilo con SDK8.0.420, aprobo149/149 y5/5, y ejecuto la migracion inicial y el seed doble del README. Los94 archivos de codigo/dependencias probados coinciden con los entregados; [registro de la copia limpia](docs/evidencia/correcciones-2026-11-22/copia-limpia/verificacion.json).
+La entrega anterior de R01-R05 tambien se verifico desde una copia limpia con SDK8.0.420,149/149 y5/5, migracion y seed doble. Su [registro historico](docs/evidencia/correcciones-2026-11-22/copia-limpia/verificacion.json) corresponde a ese codigo anterior; la verificacion del paquete R06 se registra junto a su evidencia actual.
 
 Los JSON por aceptacion contienen esperado, obtenido, fecha, metodo, stock, pagos, eventos y trazas. Los TRX conservan tanto la ejecucion inicial fallida como las reparaciones y la verificacion final. Las capturas proceden de la aplicacion ejecutada; los wireframes del PDF son referencias.
 
@@ -119,12 +131,14 @@ Pedido/pago/stock/movimientos/Outbox se confirman en una transaccion SQLite de e
 
 Cada entrega Outbox se confirma junto con el efecto del suscriptor y su clave evento/suscriptor. Las notificaciones son registros locales durables. MetricasSesion es unico en DI y sincroniza ids durables sin volver a sumarlos; la base es la fuente de verdad. Las fechas de operacion se almacenan en UTC y se muestran en la zona local de Windows; los plazos de devolucion comparan fechas UTC, incluyendo el dia limite.
 
+La disponibilidad se comprueba bajo ese mismo BEGIN IMMEDIATE descontando, por SKU agregado, las aceptaciones pendientes de otros pedidos. Se consulta el stock fisico real y las instantaneas persistidas; no se omite la validacion al reintentar. Un rechazo del proveedor no compromete unidades; un pago confirmado deja de contarse como compromiso porque ya desconto el stock en su transaccion. Inventario y Catalogo distinguen Fisico, Comprometido y Disponible. La base normal no se modifica para las pruebas y esta correccion no necesita una migracion adicional.
+
 ## ZIP para revision
 
 ```powershell
 powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\Preparar-Revision.ps1
-# Nombre especifico de esta revision corregida:
-powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\Preparar-Revision.ps1 -Destino .\artifacts\APE04_LogiMarket360_Correcciones_2026-11-22.zip
+# Nombre especifico del paquete actual R06:
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\Preparar-Revision.ps1 -Destino .\artifacts\APE04_LogiMarket360_R06_2026-11-22.zip
 ```
 
-El script genera `artifacts\APE04_LogiMarket360_Revision.zip` a partir de archivos versionados, con manifiesto y huella SHA-256. Excluye .git, .vs, bin, obj, tmp, bases de ejecucion, configuraciones locales y secretos. El historial Git se conserva en el repositorio y se resume en la documentacion del ZIP. GitHub y el informe academico formal permanecen fuera de esta entrega por solicitud del usuario.
+El comando con Destino genera `artifacts\APE04_LogiMarket360_R06_2026-11-22.zip`; sin ese parametro usa el nombre general `APE04_LogiMarket360_Revision.zip`. Solo incluye archivos versionados, con HEAD, historial, manifiesto y huella SHA-256. Excluye .git, .vs, bin, obj, tmp, bases de ejecucion, configuraciones locales y secretos. El historial Git completo se conserva en el repositorio. GitHub y el informe academico formal permanecen fuera de esta entrega por solicitud del usuario.

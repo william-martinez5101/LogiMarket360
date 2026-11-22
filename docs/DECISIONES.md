@@ -1,5 +1,11 @@
 # Decisiones, riesgos y reparaciones
 
+## Segunda revision: disponibilidad comprometida R06
+
+La deduplicacion por pedido de R01 funcionaba, pero la prueba R06 reprodujo dos aceptaciones330 para pedidos distintos y solo un pago local: A aceptado con rollback perdia sus unidades cuando B las vendia. Se corrigio con una reserva equivalente derivada de la aceptacion durable y las lineas inmutables de VALIDADO. La validacion bajo BEGIN IMMEDIATE descuenta compromisos de otros pedidos y conserva las unidades propias para conciliar. La presencia del pago local consume el compromiso en el mismo commit que desconto stock; no requiere liberar una segunda tabla despues del commit. Se aplican las mismas disponibilidades a validacion y ajustes negativos.
+
+Se comprueban cantidades libres, otros SKU, kits/lineas repetidas, rechazos, cancelacion impaga, dos instancias concurrentes, dos rollback del mismo intento, reinicios, Outbox y acceso concurrente al diario. El control de archivo espera brevemente y respeta cancelacion. Los registros originales de R01-R05 se conservan. [Diseno y limites](RESERVAS_EXISTENCIAS.md); [evidencia R06](evidencia/R06-2026-11-22/RESULTADOS.md).
+
 ## Registro honesto de construccion
 
 El punto de partida 1c6501d tenia clientes, productos y Composite con 52 pruebas. Los servicios y la interfaz funcional aun no existian. La siguiente tabla distingue riesgos de diseño tratados al construir las funciones de fallos efectivamente observados. No se introdujeron defectos ni se crearon commits vacios para simular evolucion.
